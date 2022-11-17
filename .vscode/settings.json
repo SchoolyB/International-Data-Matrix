@@ -1,0 +1,25 @@
+{
+  "better-comments.highlightPlainText": true,
+  "css.validate": false,
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.scrollBeyondLastColumn": 2,
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "stylelint.enable": true,
+  "workbench.colorTheme": "Material Theme",
+  "workbench.enableExperiments": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.view.alwaysShowHeaderActions": true,
+  "editor.rulers": [
+      100, 120
+  ]
+}
