@@ -1,0 +1,7 @@
+APIs to use for Capstone:
+
+for current events use - https://mediastack.com/documentation
+
+for translations use -  https://cloud.google.com/translate
+
+TODO: FIND APIs for country data. Probrably use wikipedias
