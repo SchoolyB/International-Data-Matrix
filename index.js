@@ -19,7 +19,7 @@ function render(state = store.Home) {
 router
   .on({
     "/": () => render(),
-    view: params => {
+    ":view": params => {
       let view = capitalize(params.data.view);
       render(store[view]);
     }
