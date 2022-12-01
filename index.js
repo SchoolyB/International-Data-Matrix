@@ -5,13 +5,13 @@ import { capitalize } from "lodash";
 
 const router = new Navigo("/");
 
-function render(state = store.LandingPage) {
+function render(state = store.Home) {
+  console.log(state);
   document.querySelector("#root").innerHTML = `
   ${Header(state)},
   ${Main(state)},
   ${Nav(store.Links)},
   ${Footer(state)},
-  ${Translator(state)},
 `;
   router.updatePageLinks();
 }
