@@ -6,6 +6,7 @@ import { capitalize } from "lodash";
 const router = new Navigo("/");
 
 function render(state = store.Home) {
+  console.log(store.Links)
   console.log(state);
   document.querySelector("#root").innerHTML = `
   ${Header(state)},
@@ -19,7 +20,7 @@ function render(state = store.Home) {
 router
   .on({
     "/": () => render(),
-    view: params => {
+    ":view": params => {
       let view = capitalize(params.data.view);
       render(store[view]);
     }
