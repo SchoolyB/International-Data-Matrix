@@ -1,5 +1,5 @@
 import html from "html-literal";
-export default () =>
+export default () => html`
   <header>
     <h1 id="mainHeading">
       The International Data Matrix
@@ -7,4 +7,5 @@ export default () =>
     <h3 id="subHeading">
       The Entire World At Your Finger Tips
     </h3>
-  </header>;
+  </header>
+`;
