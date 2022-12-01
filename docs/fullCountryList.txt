@@ -1,0 +1,193 @@
+   <div class = "Asia" id = 'Afghanistan'>Afghanistan</div>
+    <div class = "Europe" id = 'Albania'>Albania</div>
+    <div class = "Africa" id = 'Algeria'>Algeria</div>
+    <div class = "Europe" id = 'Andorra'>Andorra</div>
+    <div class = "Africa" id = 'Angola'>Angola</div>
+    <div class = "North America" id = 'Antigua and Barbuda'>Antigua and Barbuda</div>
+    <div class = "South America" id = 'Argentina'>Argentina</div>
+    <div class = "Europe" id = 'Armenia'>Armenia</div>
+    <div class = "Australia" id = 'Australia'>Australia</div>
+    <div class = "Europe" id = 'Austria'>Austria</div>
+    <div class = "Europe" id = 'Azerbaijan'>Azerbaijan</div>
+    <div class = "North America" id = 'Bahamas'>Bahamas</div>
+    <div class = "Asia" id = 'Bahrain'>Bahrain</div>
+    <div class = "Asia" id = 'Bangladesh'>Bangladesh</div>
+    <div class = "North America" id = 'Barbados'></div>
+    <div class = "Europe" id = 'Belarus'></div>
+    <div class = "Europe" id = 'Belgium'></div>
+    <div class = "South America" id = 'Belize'></div>
+    <div class = "Africa" id = 'Benin'></div>
+    <div class = "Asia" id = 'Bhutan'></div>
+    <div class = "South America" id = 'Bolivia'></div>
+    <div class = "Europe" id = 'Bosnia and Herzegovina'></div>
+    <div class = "Africa" id = 'Botswana'></div>
+    <div class = "South America" id = 'Brazil'></div>
+    <div class = "Asia" id = 'Brunei'></div>
+    <div class = "Europe" id = 'Bulgaria'></div>
+    <div class = "Africa" id = 'Burkina Faso'></div>
+    <div class = "Africa" id = 'Burundi'></div>
+    <div class = "Africa" id = "Côte d'Ivoire"></div>
+    <div class = "Europe" id = 'Cape Verde'></div>
+    <div class = "Asia" id = 'Cambodia'></div>
+    <div class = "Asia" id = 'Cameroon'></div>
+    <div class = "North" id = 'Canada'></div>
+    <div class = "Africa" id = 'Central African Republic'></div>
+    <div class = "Africa" id = 'Chad'></div>
+    <div class = "South America" id = 'Chile'></div>
+    <div class = "Asia" id = 'China'></div>
+    <div class = "South America"  id = 'Colombia'></div>
+    <div class = "Africa"  id = 'Comoros'></div>
+    <div class = "Africa"  id = 'Congo'></div>
+    <div class = "North America"  id = 'Costa Rica'></div>
+    <div class = "Europe"  id = 'Croatia'></div>
+    <div class = "North America"  id = 'Cuba'></div>
+    <div class = "Europe"  id = 'Cyprus'></div>
+    <div class = "Europe"  id = 'Czechia'></div>
+    <div class = "Africa"  id = 'Democratic Republic of the Congo'></div>
+    <div class = "Europe"  id = 'Denmark'></div>
+    <div class = "Africa"  id = 'Djbouti'></div>
+    <div class = "North America"  id = 'Dominica'></div>
+    <div class = "North America"  id = 'Dominican Republic'></div>
+    <div class = "South America"  id = 'Ecuador'></div>
+    <div class = "Africa"  id = 'Egypt'></div>
+    <div class = "South America"  id = 'El Salvador'></div>
+    <div class = "Africa"  id = 'Equatorial Guinea'></div>
+    <div class = "Africa"  id = 'Eritrea'></div>
+    <div class = "Europe"  id = 'Estonia'></div>
+    <div class = "Africa"  id = 'Eswatini'></div>
+    <div class = "Africa"  id = 'Ethiopia'></div>
+    <div class = "Asia"  id = 'Fiji'></div>
+    <div class = "Europe"  id = 'Finland'></div>
+    <div class = "Europe"  id = 'France'></div>
+    <div class = "Africa"  id = 'Gabon'></div>
+    <div class = "Africa"  id = 'Gambia'></div>
+    <div class = "Europe"  id = 'Georgia'></div>
+    <div class = "Europe"  id = 'Germany'></div>
+    <div class = "Africa"  id = 'Ghana'></div>
+    <div class = "Europe"  id = 'Greece'></div>
+    <div class = "North America"  id = 'Grenada'></div>
+    <div class = "South America"  id = 'Guatemala'></div>
+    <div class = "Africa"  id = 'Guinea'></div>
+    <div class = "South America"  id = 'Guyana'></div>
+    <div class = "North America"  id = 'Haiti'></div>
+    <div class = "Europe"  id = 'Holy See'></div>
+    <div class = "North America"  id = 'Honduras'></div>
+    <div class = "Europe"  id = 'Hungary'></div>
+    <div class = "Europe"  id = 'Iceland'></div>
+    <div class = "Asia"  id = 'India'></div>
+    <div class = "Asia"  id = 'Indonesia'></div>
+    <div class = "Asia"  id = 'Iran'></div>
+    <div class = "Asia"  id = 'Iraq'></div>
+    <div class = "Europe"  id = 'Ireland'></div>
+    <div class = "Asia"  id = 'Israel'></div>
+    <div class = "Europe"  id = 'Italy'></div>
+    <div class = "North America"  id = 'Jamaica'></div>
+    <div class = "Asia"  id = 'Japan'></div>
+    <div class = "Asia"  id = 'Jordan'></div>
+    <div class = "Asia"  id = 'Kazakhstan'></div>
+    <div class = "Africa"  id = 'Kenya'></div>
+    <div class = "Asia"  id = 'Kiribati'></div>
+    <div class = "Asia"  id = 'Kuwait'></div>
+    <div class = "Asia"  id = 'Kyrgyzstan'></div>
+    <div class = "Asia"  id = 'Laos'></div>
+    <div class = "Europe"  id = 'Latvia'></div>
+    <div class = "Asia"  id = 'Lebanon'></div>
+    <div class = "Africa"  id = 'Lesotho'></div>
+    <div class = "Africa"  id = 'Liberia'></div>
+    <div class = "Africa"  id = 'Libya'></div>
+    <div class = "Europe"  id = 'Liechtenstein'></div>
+    <div class = "Europe"  id = 'Lithuania'></div>
+    <div class = "Europe"  id = 'Luxembourg'></div>
+    <div class = "Africa"  id = 'Madagascar'></div>
+    <div class = "Africa"  id = 'Malawi'></div>
+    <div class = "Asia"  id = 'Malaysia'></div>
+    <div class = "Asia"  id = 'Maldives'></div>
+    <div class = "Africa"  id = 'Mali'></div>
+    <div class = "Europe"  id = 'Malta'></div>
+    <div class = "Asia"  id = 'Marshall Islands'></div>
+    <div class = "Africa"  id = 'Mauritania'></div>
+    <div class = "Africa"  id = 'Mauritius'></div>
+    <div class = "North America"  id = 'Mexico'></div>
+    <div class = "Asia"  id = 'Micronesia'></div>
+    <div class = "Europe"  id = 'Moldova'></div>
+    <div class = "Europe"  id = 'Monaco'></div>
+    <div class = "Asia"  id = 'Mongolia'></div>
+    <div class = "Europe"  id = 'Montenegro'></div>
+    <div class = "Africa"  id = 'Morocco'></div>
+    <div class = "Africa"  id = 'Mozambique'></div>
+    <div class = "Asia"  id = 'Myanmar'></div>
+    <div class = "Africa"  id = 'Namibia'></div>
+    <div class = "Asia"  id = 'Nauru'></div>
+    <div class = "Asia"  id = 'Nepal'></div>
+    <div class = "Europe"  id = 'Netherlands'></div>
+    <div class = "Australia"  id = 'New Zealand'></div>
+    <div class = "South America"  id = 'Nicaragua'></div>
+    <div class = "Africa"  id = 'Niger'></div>
+    <div class = "Africa"  id = 'Nigeria'></div>
+    <div class = "Asia"  id = 'North Korea'></div>
+    <div class = "Europe"  id = 'North Macedonia'></div>
+    <div class = "Europe"  id = 'Norway'></div>
+    <div class = "Asia"  id = 'Oman'></div>
+    <div class = "Asia"  id = 'Pakistan'></div>
+    <div class = "Asia"  id = 'Palau'></div>
+    <div class = "Asia"  id = 'Palestine'></div>
+    <div class = "North America"  id = 'Panama'></div>
+    <div class = "Asia"  id = 'Papua New Guinea'></div>
+    <div class = "South America"  id = 'Paraguay'></div>
+    <div class = "South America"  id = 'Peru'></div>
+    <div class = "Asia"  id = 'Philippines'></div>
+    <div class = "Europe"  id = 'Poland'></div>
+    <div class = "Europe"  id = 'Portugal'></div>
+    <div class = "Asia"  id = 'Qatar'></div>
+    <div class = "Europe"  id = 'Romania'></div>
+    <div class = "Asia"  id = 'Russia'></div>
+    <div class = "Africa"  id = 'Rwanda'></div>
+    <div class = "North America"  id = 'Saint Kitts and Nevis'></div>
+    <div class = "North America"  id = 'Saint Lucia'></div>
+    <div class = "North America"  id = 'Saint Vincent and the Grenadines'></div>
+    <div class = "Asia"  id = 'Samoa'></div>
+    <div class = "Europe"  id = 'San Marino'></div>
+    <div class = "Africa"  id = 'Sao Tome and Principe'></div>
+    <div class = "Asia"  id = 'Saudi Arabia'></div>
+    <div class = "Africa"  id = 'Senegal'></div>
+    <div class = "Europe"  id = 'Serbia'></div>
+    <div class = "Africa"  id = 'Seychelles'></div>
+    <div class = "Africa"  id = 'Sierra Leone'></div>
+    <div class = "Asia" id = 'Singapore'></div>
+    <div class = "Europe" id = 'Slovakia'></div>
+    <div class = "Europe" id = 'Slovenia'></div>
+    <div class = "Asia" id = 'Solomon Islands'></div>
+    <div class = "Africa" id = 'Somalia'></div>
+    <div class = "Africa" id = 'South Africa'></div>
+    <div class = "Asia" id = 'South Korea'></div>
+    <div class = "Africa" id = 'South Sudan'></div>
+    <div class = "Europe" id = 'Spain'></div>
+    <div class = "Asia" id = 'Sri Lanka'></div>
+    <div class = "Africa" id = 'Sudan'></div>
+    <div class = "Africa" id = 'Suriname'></div>
+    <div class = "Europe" id = 'Sweden'></div>
+    <div class = "Europe" id = 'Switzerland'></div>
+    <div class = "Asia" id = 'Syria'></div>
+    <div class = "Asia" id = 'Tajikistan'></div>
+    <div class = "Africa" id = 'Tanzania'></div>
+    <div class = "Asia" id = 'Thailand'></div>
+    <div class = "Asia" id = 'Timor-Leste'></div>
+    <div class = "Africa" id = 'Togo'></div>
+    <div class = "North America" id = 'Trinidad and Tobago'></div>
+    <div class = "Africa" id = 'Tunisia'></div>
+    <div class = "Asia" id = 'Turkey'></div>
+    <div class = "Asia" id = 'Turkmenistan'></div>
+    <div class = "Asia" id = 'Tuvalu'></div>
+    <div class = "Africa" id = 'Uganda'></div>
+    <div class = "Europe" id = 'Ukraine'></div>
+    <div class = "Asia" id = 'United Arab Emirates'></div>
+    <div class = "Europe" id = 'United Kingdom'></div>
+    <div class = "North America" id = 'United States of America'></div>
+    <div class = "South America" id = 'Uruguay'></div>
+    <div class = "Asia" id = 'Uzbekistan'></div>
+    <div class = "Asia" id = 'Vanuatu'></div>
+    <div class = "South America" id = 'Venezuela'></div>
+    <div class = "Asia" id = 'Vietnam'></div>
+    <div class = "Asia" id = 'Yemen'></div>
+    <div class = "Africa" id = 'Zambia'></div>
+    <div class = "Africa" id = 'Zimbabwe'></div>
