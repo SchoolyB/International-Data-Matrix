@@ -1,3 +1,7 @@
+import Navigo from "navigo";
+import { capitalize } from "lodash";
+const router = new Navigo("/");
+
 import {
   Header,
   Main,
