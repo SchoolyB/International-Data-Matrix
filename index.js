@@ -1,31 +1,27 @@
+import { Header, Nav, Main, Footer } from "./components";
+import * as store from "./store"; //importing everything from "./store" as an object called "store"
 import Navigo from "navigo";
 import { capitalize } from "lodash";
+
 const router = new Navigo("/");
 
-import {
-  Header,
-  Main,
-  Nav,
-  Footer,
-  Translator,
-  Belarus,
-  Japan,
-  Morocco,
-  Usa
-} from "../Capstone/components";
-
-function render() {
+function render(state = store.LandingPage) {
   document.querySelector("#root").innerHTML = `
-  ${Header()},
-  ${Main()},
-  ${Nav()},
-  ${Footer()},
-  ${Translator()},
-  ${Belarus()},
-  ${Japan()},
-  ${Morocco()},
-  ${Usa()}
-  `;
+  ${Header(state)},
+  ${Main(state)},
+  ${Nav(store.Links)},
+  ${Footer(state)},
+  ${Translator(state)},
+`;
+  router.updatePageLinks();
 }
 
-render();
+router
+  .on({
+    "/": () => render(),
+    view: params => {
+      let view = capitalize(params.data.view);
+      render(store[view]);
+    }
+  })
+  .resolve();
