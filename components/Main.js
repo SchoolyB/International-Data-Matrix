@@ -2,8 +2,7 @@ import html from "html-literal";
 
 import * as countries from "./countries";
 export default () => html`
-  ${countries["Belarus"]()},
-  ${countries["Japan"]()},
-  ${countries["Morocco"]()},
-  ${countries["Usa"]()},
+  ${countries[state.countries](state)}
 `;
+
+//the export above is importing all the objects from "./countries"
