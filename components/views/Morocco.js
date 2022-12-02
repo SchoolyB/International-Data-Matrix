@@ -1,9 +1,17 @@
 import html from "html-literal";
+import flag from "../../assets/images/flag-of-Morocco.png";
 export default () => html`
   <div class="countryInfo" id="moroccoInfo">
-  <img class="countryInfoFlag" id="moroccoInfoFlag" src="/assets/images/flag-of-Morocco.png" alt = The Flag of Morocco>
-    <h1>Morocco</h1>
-    <h2>المملكة المغربية</h2>
+    <img
+      class="countryInfoFlag"
+      id="moroccoInfoFlag"
+      src=${flag}
+      alt="The
+      Flag
+      of
+      Morocco"
+    />
+    <h1>Morocco | المملكة المغربية</h1>
     <section class="history" id="moroccoHistory">
       <h3>
         History
