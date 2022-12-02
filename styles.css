@@ -1,0 +1,38 @@
+body{
+  background-color: #4c8bf5;
+}
+
+.country{
+  /*changes the home screen countries div css  */
+  background-color: white;
+  border: solid 2px black;
+  box-shadow:black;
+  width: 25%;
+
+}
+
+.countryInfo{
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  border-top: 5px solid black;
+  text-align: center;
+}
+
+footer > ul{
+  /* takes away bullet points on footer */
+  list-style-type: none;
+}

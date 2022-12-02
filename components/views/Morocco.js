@@ -1,6 +1,7 @@
 import html from "html-literal";
 export default () => html`
   <div class="countryInfo" id="moroccoInfo">
+  <img class="countryInfoFlag" id="moroccoInfoFlag" src="/assets/images/flag-of-Morocco.png" alt = The Flag of Morocco>
     <h1>Morocco</h1>
     <h2>المملكة المغربية</h2>
     <section class="history" id="moroccoHistory">

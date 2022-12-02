@@ -14,7 +14,7 @@ export default () => html`
         </h3>
         <img
           class="flag"
-          id="belarusFlag"
+          id="belarusFlagHome"
           src="assets/images/flag-of-Belarus.png"
           alt="Flag of Belarus"
         />
@@ -31,7 +31,7 @@ export default () => html`
         </h3>
         <img
           class="flag"
-          id="japanFlag"
+          id="japanFlagHome"
           src="assets/images/flag-of-Japan.png"
           alt="Flag of Japan"
         />
@@ -47,7 +47,7 @@ export default () => html`
         </h3>
         <img
           class="flag"
-          id="moroccoFlag"
+          id="moroccoFlagHome"
           src="assets/images/flag-of-Morocco.png"
           alt="Flag of Morocco"
         />
@@ -63,7 +63,7 @@ export default () => html`
         </h3>
         <img
           class="flag"
-          id="usaFlag"
+          id="usaFlagHome"
           src="assets/images/flag-of-United-States-of-America.png"
           alt="Flag of The United States of America"
         />

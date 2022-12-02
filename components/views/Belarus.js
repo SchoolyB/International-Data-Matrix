@@ -1,8 +1,10 @@
 import html from "html-literal";
 export default () => html`
   <div class="countryInfo" id="belarusInfo">
+    <img class="countryInfoFlag" id="belarusInfoFlag" src="/assets/images/flag-of-Belarus.png" alt = The Flag of Belarus>
     <h1>Belarus</h1>
     <h2>Рэспубліка Беларусь</h2>
+    <img src="../"
     <section class="history" id="belarusHistory">
       <h3>
         History
