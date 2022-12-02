@@ -6,5 +6,6 @@ export default [
   //the text represents the links text
   { title: "Belarus", text: "Learn About Belarus" },
   { title: "Japan", text: "Learn About Japan" },
-  { title: "Morocco", text: "Learn About Morocco" }
+  { title: "Morocco", text: "Learn About Morocco" },
+  { title: "Usa", text: "Learn About The United States Of America" }
 ];

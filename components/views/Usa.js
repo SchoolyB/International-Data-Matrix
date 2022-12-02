@@ -1,11 +1,22 @@
 import html from "html-literal";
+import flag from "../../assets/images/flag-of-United-States-of-America.png";
 export default () => html`
   <div class="countryInfo" id="moroccoInfo">
-  <img class="countryInfoFlag" id="usaInfoFlag" src="/assets/images/flag-of-United-States-of-America.png" alt = The Flag of The United States of America>
+    <img
+      class="countryInfoFlag"
+      id="usaInfoFlag"
+      src=${flag}
+      alt="The
+      Flag
+      of
+      The
+      United
+      States
+      of
+      America"
+    />
     <h1>The United States Of America</h1>
-    <h2>
-      United States Estados Unidos de America
-    </h2>
+
     <section class="history" id="usaHistory">
       <h3>
         History

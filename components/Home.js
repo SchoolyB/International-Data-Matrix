@@ -1,4 +1,9 @@
 import html from "html-literal";
+import flagA from "../assets/images/flag-of-Belarus.png";
+import flagB from "../assets/images/flag-of-Japan.png";
+import flagC from "../assets/images/flag-of-Morocco.png";
+import flagD from "../assets/images/flag-of-United-States-of-America.png";
+
 export default () => html`
   <html lang="en">
     <head>
@@ -15,7 +20,7 @@ export default () => html`
         <img
           class="flag"
           id="belarusFlagHome"
-          src="assets/images/flag-of-Belarus.png"
+          src=${flagA}
           alt="Flag of Belarus"
         />
         <p>Population:</p>
@@ -23,23 +28,16 @@ export default () => html`
         <p>Land Mass: 80,155 square miles</p>
         <!--Land mass is in square miles or "mi2"-->
       </div>
-      ;
 
       <div class="country" id="japan">
         <h3>
           Japan
         </h3>
-        <img
-          class="flag"
-          id="japanFlagHome"
-          src="assets/images/flag-of-Japan.png"
-          alt="Flag of Japan"
-        />
+        <img class="flag" id="japanFlagHome" src=${flagB} alt="Flag of Japan" />
         <p>Population:</p>
         <p>GDP: 4.93 trillion USD</p>
         <p>Land Mass: 145,937 square miles</p>
       </div>
-      ;
 
       <div class="country" id="morocco">
         <h3>
@@ -48,14 +46,13 @@ export default () => html`
         <img
           class="flag"
           id="moroccoFlagHome"
-          src="assets/images/flag-of-Morocco.png"
+          src=${flagC}
           alt="Flag of Morocco"
         />
         <p>Population:</p>
         <p>GDP: 132.70 billion USD</p>
         <p>Land Mass: 274,461 square miles</p>
       </div>
-      ;
 
       <div class="country" id="usa">
         <h3>
@@ -64,14 +61,13 @@ export default () => html`
         <img
           class="flag"
           id="usaFlagHome"
-          src="assets/images/flag-of-United-States-of-America.png"
+          src=${flagD}
           alt="Flag of The United States of America"
         />
         <p>Population:</p>
         <p>GDP: 23 trillion USD</p>
         <p>Land Mass: 3.797 million square miles</p>
       </div>
-      ;
     </body>
   </html>
 `;

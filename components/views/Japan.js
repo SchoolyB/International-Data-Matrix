@@ -1,9 +1,15 @@
 import html from "html-literal";
+import flag from "../../assets/images/flag-of-Japan.png";
 export default () => html`
   <div class="countryInfo" id="japanInfo">
-  <img class="countryInfoFlag" id="japanInfoFlag" src="/assets/images/flag-of-japan.png" alt = The Flag of Japan>
-    <h1>Japan</h1>
-    <h2>日本国</h2>
+    <img
+      class="countryInfoFlag"
+      id="japanInfoFlag"
+      src=${flag}
+      alt="The Flag
+    of Japan"
+    />
+    <h1>Japan | 日本国</h1>
     <section class="history" id="japanHistory">
       <h3>
         History

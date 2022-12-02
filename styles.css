@@ -4,7 +4,7 @@ body{
 
 .country{
   /*changes the home screen countries div css  */
-  background-color: white;
+  background-color: gray;
   border: solid 2px black;
   box-shadow:black;
   width: 25%;

@@ -1,10 +1,18 @@
 import html from "html-literal";
+import flag from "../../assets/images/flag-of-Belarus.png";
 export default () => html`
   <div class="countryInfo" id="belarusInfo">
-    <img class="countryInfoFlag" id="belarusInfoFlag" src="/assets/images/flag-of-Belarus.png" alt = The Flag of Belarus>
-    <h1>Belarus</h1>
-    <h2>Рэспубліка Беларусь</h2>
-    <img src="../"
+    <img
+      class="countryInfoFlag"
+      id="belarusInfoFlag"
+      src=${flag}
+      alt="The
+      Flag
+      of
+      Belarus"
+    />
+    <h1>Belarus | Рэспубліка Беларусь</h1>
+
     <section class="history" id="belarusHistory">
       <h3>
         History
