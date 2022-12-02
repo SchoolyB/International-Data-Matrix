@@ -1,28 +1,58 @@
+header{
+  text-align: center;
+}
+
 body{
   background-color: #4c8bf5;
+  padding: 0px;
+  margin: 0px;
+}
+
+#container{ /*modifies the container that all countries are within to flex */
+  display: grid;
+  grid-template-columns: 260px 260px 260px; /*makes columns in grid on home page 3 equally sized columns */
+  justify-content: center;
+
+
+}
+
+.countryHeading{ /* changes the css of the heading of each countries names */
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 1px;
 }
 
 .country{
-  /*changes the home screen countries div css  */
+  /*changes the countries div css within  the "../components/Home.js" file  */
   background-color: gray;
-  border: solid 2px black;
+  border: solid 2px white;
   box-shadow:black;
-  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 16px;
 
 }
 
-.countryInfo{
+.country > .flag{ /*changes the size of the country flags img  on the home page  */
+  width: 125px;
+  height: auto;
+  padding: 3px;
+  display:grid;
+  position: relative;left: 55px ;
+
+}
+
+
+
+.country > .data{
+  font-size: smaller;
+}
+
+
+.countryInfo { /*changes color of country info pages */
   background-color: white;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -30,9 +60,26 @@ body{
 footer{
   border-top: 5px solid black;
   text-align: center;
+
 }
 
 footer > ul{
   /* takes away bullet points on footer */
   list-style-type: none;
+
 }
+
+.footerIcon{ /*resizing the icons ion the footer*/
+  height: auto;
+  width: 30px;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+#footerIconContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
