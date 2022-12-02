@@ -6,8 +6,10 @@ import footer4 from "../assets/images/home.png";
 
 export default () => html`
   <footer>
-    <ul>
+    <ul id="webPageInfo">
       <li>Author: Marshall Burns</li>
+    </ul>
+    <ul id="footerIconContainer">
       <li>
         <a href="https://github.com/SchoolyB/Capstone/blob/master/README.md"
           ><img class="footerIcon" id="docIcon" src=${footer1}
