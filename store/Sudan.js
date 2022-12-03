@@ -1,4 +1,4 @@
 export default {
-  header: "Welcome To Sudan",
+  header: "Now Discovering : SUDAN | السودان",
   view: "Sudan"
 };

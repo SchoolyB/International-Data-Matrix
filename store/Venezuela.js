@@ -1,4 +1,4 @@
 export default {
-  header: "Welcome To Venezuela",
+  header: "Now Discovering : VENEZUELA | República Bolivariana de Venezuela",
   view: "Venezuela"
 };

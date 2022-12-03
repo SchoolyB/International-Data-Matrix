@@ -1,4 +1,4 @@
 export default {
-  header: "Welcome To Nepal",
+  header: "Now Discovering : NEPAL | नेपाल",
   view: "Nepal"
 };

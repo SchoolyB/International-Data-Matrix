@@ -2,7 +2,6 @@ import { Header, Nav, Main, Footer } from "./components";
 import * as store from "./store"; //importing everything from "./store" as an object called "store"
 import Navigo from "navigo";
 import { capitalize } from "lodash";
-import { showTime } from "./components/clocks/userLocalClock";
 
 const router = new Navigo("/");
 
