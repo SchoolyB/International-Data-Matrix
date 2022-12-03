@@ -1,11 +1,21 @@
+
 header{
   text-align: center;
+  background-color: white;
+  margin-top:-35px;
+  height: 70px;
+  margin-bottom: 100px;
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+
 }
 
 body{
   background-color: #4c8bf5;
   padding: 0px;
   margin: 0px;
+  font-family: ;
 }
 
 #container{ /*modifies the container that all countries are within to flex */
@@ -17,21 +27,23 @@ body{
 }
 
 .countryHeading{ /* changes the css of the heading of each countries names */
-  font-weight: bolder;
+  font-family: "Raleway";
+  font-weight:bolder;
   text-align: center;
-  margin-top: 1px;
+  margin-top: 2px;
+  font-size: 20px;
 }
 
 .country{
   /*changes the countries div css within  the "../components/Home.js" file  */
   background-color: gray;
   border: solid 2px white;
-  box-shadow:black;
   display: flex;
   flex-direction: column;
   margin: 15px;
   margin-bottom: 50px;
   font-size: 16px;
+  box-shadow: 5px 10px 18px black;
 }
 
 .country * .flag{ /*changes the size of the country flags img  on the home page  */
@@ -40,21 +52,28 @@ body{
   padding: 3px;
   display:grid;
   position: relative;left: 50px ;
-
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
 }
-
-
 
 .country > .data{
   font-size: smaller;
 }
 
-
 .countryInfo { /*changes color of country info pages */
   background-color: white;
 }
 
-
+.countryInfoFlag{ /*changes some css for flags on country pages  */
+  margin-top:10px;
+  border: solid 1px black;
+}
 
 
 footer{
@@ -76,8 +95,8 @@ footer > ul{
 
 .footerIcon{ /*resizing the icons ion the footer*/
   height: auto;
-  width: 30px;
-  margin-right: 10px;
+  width: 40px;
+  margin-right: 20px;
   margin-top: 0px;
 }
 
@@ -87,13 +106,33 @@ footer > ul{
   justify-content: center;
 }
 
-#localTime {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  transform: translateX(-10%)translateY(-50%);
-  color: black;
-  font-size: 30px;
-  font-family: 'Trebuchet MS';
-  letter-spacing: 7px;
-  }
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+
+
+.flag:hover {
+  cursor: pointer;
+  -moz-animation-name: bounce;
+  animation-name: bounce;
+
+}
+
+.country:hover h3{
+  opacity: 0;
+}

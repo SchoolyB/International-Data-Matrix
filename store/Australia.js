@@ -1,4 +1,4 @@
 export default {
-  header: "Welcome to Australia",
+  header: "Now Discovering : AUSTRALIA",
   view: "Australia"
 };

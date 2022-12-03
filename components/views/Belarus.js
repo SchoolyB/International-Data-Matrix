@@ -11,7 +11,7 @@ export default () => html`
       of
       Belarus"
     />
-    <h1>Belarus | Рэспубліка Беларусь</h1>
+    <h1>Belarus</h1>
 
     <section class="history" id="belarusHistory">
       <h3>

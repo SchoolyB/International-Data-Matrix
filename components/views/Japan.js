@@ -9,7 +9,7 @@ export default () => html`
       alt="The Flag
     of Japan"
     />
-    <h1>Japan | 日本国</h1>
+    <h1>Japan</h1>
     <section class="history" id="japanHistory">
       <h3>
         History

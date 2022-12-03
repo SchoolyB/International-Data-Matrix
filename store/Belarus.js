@@ -1,4 +1,4 @@
 export default {
-  header: "Welcome to Belarus",
+  header: "Now Discovering : BELARUS | Рэспубліка Беларусь",
   view: "Belarus"
 };
