@@ -1,4 +1,4 @@
 export default {
-  header: "JAPAN",
+  header: "Welcome To Japan",
   view: "Japan"
 };
