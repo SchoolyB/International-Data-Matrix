@@ -3,6 +3,7 @@ import footer1 from "../assets/images/document.png";
 import footer2 from "../assets/images/github.png";
 import footer3 from "../assets/images/translation.png";
 import footer4 from "../assets/images/home.png";
+import footer5 from "../assets/images/email.png";
 
 export default () => html`
   <footer>
@@ -28,6 +29,11 @@ export default () => html`
       <li>
         <a href="Home"
           ><img class="footerIcon" id="homeIcon" src=${footer4}
+        /></a>
+      </li>
+      <li id="footerContactIcon">
+        <a href="Contact"
+          ><img class="footerIcon" id="ContactIcon" src=${footer5}
         /></a>
       </li>
     </ul>

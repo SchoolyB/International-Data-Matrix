@@ -29,8 +29,11 @@ body{
   box-shadow:black;
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 15px;
+  margin-bottom: 50px;
   font-size: 16px;
+
+
 
 }
 
@@ -39,7 +42,7 @@ body{
   height: auto;
   padding: 3px;
   display:grid;
-  position: relative;left: 55px ;
+  position: relative;left: 50px ;
 
 }
 
@@ -60,6 +63,11 @@ body{
 footer{
   border-top: 5px solid black;
   text-align: center;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 
 }
 
@@ -81,5 +89,4 @@ footer > ul{
   flex-direction: row;
   justify-content: center;
 }
-
 

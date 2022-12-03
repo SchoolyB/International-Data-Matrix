@@ -7,5 +7,10 @@ export default [
   { title: "Belarus", text: "Learn About Belarus" },
   { title: "Japan", text: "Learn About Japan" },
   { title: "Morocco", text: "Learn About Morocco" },
-  { title: "Usa", text: "Learn About The United States Of America" }
+  { title: "Usa", text: "Learn About The United States Of America" },
+  { title: "Greece", text: "Learn About Greece" },
+  { title: "Nepal", text: "Learn About Nepal" },
+  { title: "Sudan", text: "Learn About Sudan" },
+  { title: "Australia", text: "Learn About Australia" },
+  { title: "Venezuela", text: "Learn About Venezuela" }
 ];

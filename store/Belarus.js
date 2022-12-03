@@ -1,4 +1,4 @@
 export default {
-  header: "BELARUS",
+  header: "Welcome to Belarus",
   view: "Belarus"
 };
