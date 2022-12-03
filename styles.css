@@ -32,12 +32,9 @@ body{
   margin: 15px;
   margin-bottom: 50px;
   font-size: 16px;
-
-
-
 }
 
-.country > .flag{ /*changes the size of the country flags img  on the home page  */
+.country * .flag{ /*changes the size of the country flags img  on the home page  */
   width: 125px;
   height: auto;
   padding: 3px;
@@ -90,3 +87,13 @@ footer > ul{
   justify-content: center;
 }
 
+#localTime {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  transform: translateX(-10%)translateY(-50%);
+  color: black;
+  font-size: 30px;
+  font-family: 'Trebuchet MS';
+  letter-spacing: 7px;
+  }

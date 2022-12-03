@@ -8,27 +8,20 @@ import flagF from "../assets/images/flag-of-Greece.png";
 import flagG from "../assets/images/flag-of-Nepal.png";
 import flagH from "../assets/images/flag-of-Sudan.png";
 import flagI from "../assets/images/flag-of-Venezuela.png";
-
 export default () => html`
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-    </head>
     <body>
       <div id="container">
         <div class="country" id="australia">
           <h3 class="countryHeading">
             Australia
           </h3>
-          <img
-            class="flag"
-            id="australiaFlagHome"
-            src=${flagE}
-            alt="Flag of Australia"
-          />
+          <a href="Australia">
+            <img
+              class="flag"
+              id="australiaFlagHome"
+              src=${flagE}
+              alt="Flag of Australia"
+          /></a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 1.54 trillion USD</p>
@@ -40,12 +33,13 @@ export default () => html`
           <h3 class="countryHeading">
             Belarus
           </h3>
-          <img
-            class="flag"
-            id="belarusFlagHome"
-            src=${flagA}
-            alt="Flag of Belarus"
-          />
+          <a href="Belarus">
+            <img
+              class="flag"
+              id="belarusFlagHome"
+              src=${flagA}
+              alt="Flag of Belarus"
+          /></a>
           <div class="data">
             <p class="stats">Population:</p>
             <p class="stats">GDP: 68.22 billion USD</p>
@@ -58,12 +52,13 @@ export default () => html`
           <h3 class="countryHeading">
             Greece
           </h3>
-          <img
-            class="flag"
-            id="greeceFlagHome"
-            src=${flagF}
-            alt="Flag of Greece"
-          />
+          <a href="Greece">
+            <img
+              class="flag"
+              id="greeceFlagHome"
+              src=${flagF}
+              alt="Flag of Greece"
+          /></a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 216.20 billion USD</p>
@@ -75,12 +70,14 @@ export default () => html`
           <h3 class="countryHeading">
             Japan
           </h3>
-          <img
-            class="flag"
-            id="japanFlagHome"
-            src=${flagB}
-            alt="Flag of Japan"
-          />
+          <a href="Japan">
+            <img
+              class="flag"
+              id="japanFlagHome"
+              src=${flagB}
+              alt="Flag of Japan"
+            />
+          </a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 4.93 trillion USD</p>
@@ -92,12 +89,14 @@ export default () => html`
           <h3 class="countryHeading">
             Morocco
           </h3>
-          <img
-            class="flag"
-            id="moroccoFlagHome"
-            src=${flagC}
-            alt="Flag of Morocco"
-          />
+          <a href="Morocco">
+            <img
+              class="flag"
+              id="moroccoFlagHome"
+              src=${flagC}
+              alt="Flag of Morocco"
+            />
+          </a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 132.70 billion USD</p>
@@ -109,12 +108,13 @@ export default () => html`
           <h3 class="countryHeading">
             Nepal
           </h3>
-          <img
-            class="flag"
-            id="nepalFlagHome"
-            src=${flagG}
-            alt="Flag of Nepal"
-          />
+          <a href="Nepal">
+            <img
+              class="flag"
+              id="nepalFlagHome"
+              src=${flagG}
+              alt="Flag of Nepal"
+          /></a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 36.29 billion USD</p>
@@ -126,12 +126,13 @@ export default () => html`
           <h3 class="countryHeading">
             Sudan
           </h3>
-          <img
-            class="flag"
-            id="sudanFlagHome"
-            src=${flagH}
-            alt="Flag of Sudan"
-          />
+          <a href="Sudan">
+            <img
+              class="flag"
+              id="sudanFlagHome"
+              src=${flagH}
+              alt="Flag of Sudan"
+          /></a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 34.33 billion USD</p>
@@ -143,12 +144,13 @@ export default () => html`
           <h3 class="countryHeading">
             United States of America
           </h3>
-          <img
-            class="flag"
-            id="usaFlagHome"
-            src=${flagD}
-            alt="Flag of The United States of America"
-          />
+          <a href="Usa">
+            <img
+              class="flag"
+              id="usaFlagHome"
+              src=${flagD}
+              alt="Flag of The United States of America"
+          /></a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 23 trillion USD</p>
@@ -160,12 +162,13 @@ export default () => html`
           <h3 class="countryHeading">
             Venezuela
           </h3>
-          <img
-            class="flag"
-            id="venezuelaFlagHome"
-            src=${flagI}
-            alt="Flag of Venezuela"
-          />
+          <a href="Venezuela">
+            <img
+              class="flag"
+              id="venezuelaFlagHome"
+              src=${flagI}
+              alt="Flag of Venezuela"
+          /></a>
           <div class="data">
             <p>Population:</p>
             <p>GDP: 150 billion USD</p>
