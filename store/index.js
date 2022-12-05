@@ -9,4 +9,3 @@ export { default as Sudan } from "./Sudan";
 export { default as Venezuela } from "./Venezuela";
 export { default as Home } from "./Home";
 export { default as Links } from "./Links";
-export { default as Translator } from "./Translator";

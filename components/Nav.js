@@ -11,5 +11,10 @@ export default links => html`
         )
         .join("")}
     </ul>
+    <form action="http://localhost:1234" method="get">
+    <label for="countryFilter">Filter Countries</label>
+    <input id="countryFilter" name="countryFilter" type="text"></input>
+    <input type="submit">
+    </form>
   </nav>
 `;
