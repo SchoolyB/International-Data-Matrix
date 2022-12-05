@@ -17,15 +17,23 @@ body{
   margin: 0px;
 
 }
+#test{
+
+}
 
 
  /*modifies the container that all countries are within to flex */
  #container{
 
   display: grid;
-  background-color: red ;
+   ;
   grid-template-columns:  260px 260px 260px ;
   justify-content: center;
+ }
+
+ #test{
+  grid-template-columns:  260px 260px 260px ;
+
  }
 
 .countryHeading{ /* changes the css of the heading of each countries names */
@@ -136,9 +144,7 @@ footer > ul{
   animation-name: bounce;
 
 }
-.country:hover h3{
-  opacity: 0;
-}
+
 /* everything below this line changes very specific css
 of specific countries on the home page BE VERY CAREFUL*/
 

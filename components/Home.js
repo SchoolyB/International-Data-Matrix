@@ -2,7 +2,6 @@ import html from "html-literal";
 import { countryInfo } from "../store/CountryData/homeScreenCountryData";
 
 const createCountry = countryObj => {
-  console.log("hi");
   //dereferencing
   const {
     countryClass,
@@ -18,7 +17,7 @@ const createCountry = countryObj => {
 
   return `
 
-  <div id ="container">
+<div id="overAllContainer">
     <div class= "country" id="${countryID}">
     <h3 class="countryHeading">${countryName}</h3>
     <a href="${countryLink}">
@@ -34,8 +33,9 @@ const createCountry = countryObj => {
         <p>Land Mass: ${countryLandMass}</p>
         <p>
       </div>
-    </div>
   </div>
+</div>
+
 
     `;
 };
@@ -61,7 +61,10 @@ if (countryFilter) {
 
 const render = countriesArr.map(country => createCountry(country));
 
+
 export default () =>
   html`
-    ${render}
+    <div id="container">
+      ${render}
+    </div>
   `;
