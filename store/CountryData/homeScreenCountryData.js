@@ -1,0 +1,111 @@
+import flagA from "../../assets/images/flag-of-Australia.png";
+import flagB from "../../assets/images/flag-of-Belarus.png";
+import flagC from "../../assets/images/flag-of-Greece.png";
+import flagD from "../../assets/images/flag-of-Japan.png";
+import flagE from "../../assets/images/flag-of-Morocco.png";
+import flagF from "../../assets/images/flag-of-Nepal.png";
+import flagG from "../../assets/images/flag-of-Sudan.png";
+import flagH from "../../assets/images/flag-of-United-States-of-America.png";
+import flagI from "../../assets/images/flag-of-Venezuela.png";
+
+export const countryInfo = [
+  {
+    countryClass: "country",
+    countryID: "Australia",
+    countryName: "Australia",
+    countryLink: "Australia",
+    countryFlag: flagA,
+    countryFlagAltText: "Flag of Australia",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 1.54 trillion USD",
+    countryLandMass: "Land Mass: 2.968 million square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Belarus",
+    countryName: "Belarus",
+    countryLink: "Belarus",
+    countryFlag: flagB,
+    countryFlagAltText: "Flag of Belarus",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 68.22 billion USD",
+    countryLandMass: "Land Mass: 80,155 square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Greece",
+    countryName: "Greece",
+    countryLink: "Greece",
+    countryFlag: flagC,
+    countryFlagAltText: "Flag of Greece",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 216.20 billion USD",
+    countryLandMass: "Land Mass: 50,949 square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Japan",
+    countryName: "Japan",
+    countryLink: "Japan",
+    countryFlag: flagD,
+    countryFlagAltText: "Flag of Japan",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 4.93 trillion USD",
+    countryLandMass: "Land Mass: 145,937 square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Morocco",
+    countryName: "Morocco",
+    countryLink: "Morocco",
+    countryFlag: flagE,
+    countryFlagAltText: "Flag of Morocco",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 132.70 billion USD",
+    countryLandMass: "Land Mass: 274,461 square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Nepal",
+    countryName: "Nepal",
+    countryLink: "",
+    countryFlag: flagF,
+    countryFlagAltText: "Flag of Nepal",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "36.29 billion USD",
+    countryLandMass: "Land Mass: 56,827 square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Sudan",
+    countryName: "Sudan",
+    countryLink: "Sudan",
+    countryFlag: flagG,
+    countryFlagAltText: "Flag of Sudan",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 34.33 billion USD",
+    countryLandMass: "Land Mass: 718,700 square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Usa",
+    countryName: "Usa",
+    countryLink: "Usa",
+    countryFlag: flagH,
+    countryFlagAltText: "Flag of The United States",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 23 trillion USD",
+    countryLandMass: "Land Mass: 3.797 million square miles"
+  },
+  {
+    countryClass: "country",
+    countryID: "Venezuela",
+    countryName: "Venezuela",
+    countryLink: "Venezuela",
+    countryFlag: flagI,
+    countryFlagAltText: "Flag of Venezuela",
+    countryPopulation: 1, //correct later possibly use data from API
+    countryGrossDomesticProduct: "GDP: 150 billion USD",
+    countryLandMass: "Land Mass: 353,841 square miles"
+  }
+];

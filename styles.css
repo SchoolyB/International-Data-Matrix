@@ -15,23 +15,25 @@ body{
   background-color: #4c8bf5;
   padding: 0px;
   margin: 0px;
-  font-family: ;
+
 }
 
-#container{ /*modifies the container that all countries are within to flex */
+
+ /*modifies the container that all countries are within to flex */
+ #container{
+
   display: grid;
-  grid-template-columns: 260px 260px 260px; /*makes columns in grid on home page 3 equally sized columns */
+  background-color: red ;
+  grid-template-columns:  260px 260px 260px ;
   justify-content: center;
-
-
-}
+ }
 
 .countryHeading{ /* changes the css of the heading of each countries names */
   font-family: "Raleway";
   font-weight:bolder;
   text-align: center;
   margin-top: 2px;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .country{
@@ -45,6 +47,8 @@ body{
   font-size: 16px;
   box-shadow: 5px 10px 18px black;
 }
+
+
 
 .country * .flag{ /*changes the size of the country flags img  on the home page  */
   width: 125px;
@@ -80,7 +84,7 @@ footer{
   border-top: 5px solid black;
   text-align: center;
   background-color: white;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -132,7 +136,38 @@ footer > ul{
   animation-name: bounce;
 
 }
-
 .country:hover h3{
   opacity: 0;
 }
+/* everything below this line changes very specific css
+of specific countries on the home page BE VERY CAREFUL*/
+
+#Australia{
+
+}
+#Belarus{
+
+}
+#Greece{
+  ;
+}
+#Japan{
+  ;
+}
+#Morocco{
+  ;
+}
+#Nepal{
+  ;
+}
+#Sudan{
+  ;
+}
+#Usa{
+  ;
+}
+#Venezuela{
+  ;
+}
+
+
