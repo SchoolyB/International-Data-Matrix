@@ -2,25 +2,58 @@
 header{
   text-align: center;
   background-color: white;
+  background-image: url("./assets/images/Branding/png/logo-no-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top:-35px;
-  height: 70px;
+  height: 250px;
   margin-bottom: 100px;
   font-size: 24px;
   font-family: 'Raleway', sans-serif;
   font-style: italic;
+  color: transparent;
 
+}
+#searchBarLabel{
+  /* this is for the label for the search bar
+   on the home screen */
+  color: black;
+  font-weight: bolder;
+  position: relative; top: -1em;
+  position: relative; left: 10em;
+}
+
+#searchForm{
+  position: relative;left: 10em;
+  position: relative; top: -2em;
+}
+
+#countryFilter{
+  /* this is for the actual input field of the
+   search bar on home screen */
+  background-color: white;
+  height: 20px;
+  width: 15em;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+#submitBtn{
+  /* corrects the size of the submit button(plane)
+  on the home screen */
+  height: 50px;
+  width: auto;
+  position: relative;left:1em;
+  position: relative;top:1em;
+  ;
 }
 
 body{
-  background-color: #4c8bf5;
+  background-color: white;
   padding: 0px;
   margin: 0px;
 
 }
-#test{
-
-}
-
 
  /*modifies the container that all countries are within to flex */
  #container{
@@ -54,6 +87,7 @@ body{
   margin-bottom: 50px;
   font-size: 16px;
   box-shadow: 5px 10px 18px black;
+
 }
 
 
@@ -75,7 +109,9 @@ body{
 }
 
 .country > .data{
-  font-size: smaller;
+  font-size: 14px;
+  padding-left: 10px;
+
 }
 
 .countryInfo { /*changes color of country info pages */
@@ -91,7 +127,7 @@ body{
 footer{
   border-top: 5px solid black;
   text-align: center;
-  background-color: white;
+  background-color: gray;
   position: relative;
   width: 100%;
   bottom: 0;

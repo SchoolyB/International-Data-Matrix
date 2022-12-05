@@ -61,10 +61,12 @@ if (countryFilter) {
 
 const render = countriesArr.map(country => createCountry(country));
 
-
 export default () =>
   html`
     <div id="container">
       ${render}
     </div>
   `;
+
+// everything below this line is JS for the NAV menu
+
