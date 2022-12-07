@@ -8,7 +8,7 @@ const router = new Navigo("/");
 function render(state = store.Home) {
   console.table(`${state}`);
   document.querySelector("#root").innerHTML = `
-  ${Nav(store.Links)},
+
   ${Header(state)},
   ${Main(state)},
   ${Footer(state)},
@@ -25,3 +25,5 @@ router
     }
   })
   .resolve();
+
+//${Nav(store.Links)}, add to line 11 when done working on css

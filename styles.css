@@ -1,17 +1,67 @@
+#renderedBody{
+  background-image: url("./assets/images/flagOfTheWorld.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px ;
+  width: 1920px;
+  overflow-x: hidden;
+
+}
+
+#renderedBody * #welcomeContainer{
+  display: grid;
+  justify-content: center;
+  color: white;
+
+}
+
+
+#renderedBody * #welcomeMainHeading{
+  height: 20px;
+  font-size: 40px;
+}
+
+
+#renderedBody * #welcomeParagraph{
+line-height: 24px ;
+font-size: 18px;
+}
+
+
+#welcomeBtn{
+  text-align: center;
+  width: 20%;
+  position:relative; left: 400px;
+  background-color: white;
+  border-radius:25px;
+  height: 30px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  padding-top: 5px;
+
+}
+
 
 header{
   text-align: center;
-  background-color: white;
+  background-color: transparent;
   background-image: url("./assets/images/Branding/png/logo-no-background.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position:center ;
   margin-top:-35px;
-  height: 250px;
+  height: 260px;
+  margin-top: 1px;
   margin-bottom: 100px;
   font-size: 24px;
   font-family: 'Raleway', sans-serif;
   font-style: italic;
   color: transparent;
+
 
 }
 #searchBarLabel{
@@ -49,25 +99,28 @@ header{
 }
 
 body{
-  background-color: white;
+
   padding: 0px;
   margin: 0px;
-
 }
 
- /*modifies the container that all countries are within to flex */
- #container{
+#homePageBody{
+  background-color: black;
+}
+/*modifies the container that all countries are within to flex */
+#container{
 
   display: grid;
-   ;
   grid-template-columns:  260px 260px 260px ;
   justify-content: center;
- }
+  position: relative;bottom: 120px;
+  height: 600px;
+  margin-top: 20px;
+}
 
- #test{
-  grid-template-columns:  260px 260px 260px ;
+#welcomeContainer{
 
- }
+}
 
 .countryHeading{ /* changes the css of the heading of each countries names */
   font-family: "Raleway";
@@ -89,6 +142,7 @@ body{
   box-shadow: 5px 10px 18px black;
 
 }
+
 
 
 
@@ -125,13 +179,12 @@ body{
 
 
 footer{
-  border-top: 5px solid black;
+  color: white;
   text-align: center;
-  background-color: gray;
-  position: relative;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+  background-color: transparent;
+  position: relative;top: 400px ;
+
+
 
 }
 
@@ -155,13 +208,13 @@ footer > ul{
 }
 
 @keyframes bounce {
-	0%, 100%, 20%, 50%, 80% {
-		-webkit-transform: translateY(0);
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
 		-ms-transform:     translateY(0);
 		transform:         translateY(0)
 	}
 	40% {
-		-webkit-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
 		-ms-transform:     translateY(-30px);
 		transform:         translateY(-30px)
 	}
@@ -211,5 +264,3 @@ of specific countries on the home page BE VERY CAREFUL*/
 #Venezuela{
   ;
 }
-
-
