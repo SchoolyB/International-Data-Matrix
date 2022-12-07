@@ -1,72 +1,16 @@
 import html from "html-literal";
-import { countryInfo } from "../store/CountryData/homeScreenCountryData";
 
-const createCountry = countryObj => {
-  //dereferencing
-  const {
-    countryClass,
-    countryID,
-    countryName,
-    countryLink,
-    countryFlag,
-    countryFlagAltText,
-    countryPopulation, //correct later possibly use data from API
-    countryGrossDomesticProduct,
-    countryLandMass
-  } = countryObj;
-
-  return `
-
-<div id="overAllContainer">
-    <div class= "country" id="${countryID}">
-    <h3 class="countryHeading">${countryName}</h3>
-    <a href="${countryLink}">
-      <img
-        class="flag"
-        src=${countryFlag}
-        alt=${countryFlagAltText}
-      />
-    </a>
-      <div class="data">
-        <p>Population: ${countryPopulation}</p>
-        <p> ${countryGrossDomesticProduct} </p>
-        <p>Land Mass: ${countryLandMass}</p>
-        <p>
-      </div>
+export default () => html`
+  <div id="welcomeContainer">
+    <h1 id="welcomeMainHeading">The Entire World All In One Place</h1>
+    <p id="welcomeParagraph">
+      The International Data Matrix or "IDM" acts as a central place on the
+      internet that anyone can access to gain<br />
+      historical, cultural, religious, geographical, geo-economical and
+      geo-political understanding about any country in the world<br />
+      and the people that reside in them. To get started click on the button
+      below or search for a country in the search field above.
+    </p>
+    <a href="Countries" role="button" id="welcomeBtn">View Countries</a>
   </div>
-</div>
-
-
-    `;
-};
-
-let countryFilter = "";
-
-const params = window.location.search;
-const getParams = new URLSearchParams(params);
-
-if (params) {
-  countryFilter = getParams.get("countryFilter").toUpperCase();
-  console.log(`paramFilter: ${countryFilter}`);
-}
-
-let countriesArr = countryInfo;
-
-if (countryFilter) {
-  countriesArr = countryInfo.filter(country =>
-    country.countryName.toUpperCase().includes(countryFilter)
-  );
-  console.log(countriesArr);
-}
-
-const render = countriesArr.map(country => createCountry(country));
-
-export default () =>
-  html`
-    <div id="container">
-      ${render}
-    </div>
-  `;
-
-// everything below this line is JS for the NAV menu
-
+`;
