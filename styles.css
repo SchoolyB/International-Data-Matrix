@@ -1,18 +1,22 @@
+#root{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
 #renderedBody{
   background-image: url("./assets/images/flagOfTheWorld.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 1000px ;
-  width: 1920px;
-  overflow-x: hidden;
-
 }
+
 
 #renderedBody * #welcomeContainer{
   display: grid;
   justify-content: center;
   color: white;
+  position: relative; bottom: 150px;
 
 }
 
@@ -116,11 +120,11 @@ body{
   position: relative;bottom: 120px;
   height: 600px;
   margin-top: 20px;
+
+  overflow-y:scroll ;
 }
 
-#welcomeContainer{
 
-}
 
 .countryHeading{ /* changes the css of the heading of each countries names */
   font-family: "Raleway";
@@ -182,7 +186,14 @@ footer{
   color: white;
   text-align: center;
   background-color: transparent;
-  position: relative;top: 400px ;
+  display: block;
+  bottom: 0;
+  padding-bottom: 0px;
+  height: 30px;
+  padding-top: 14px;
+padding-bottom: 14px;
+padding-left: 24px;
+height: 6px;
 
 
 
