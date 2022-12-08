@@ -20,7 +20,7 @@ url("./assets/images/flagOfTheWorld.png");
   justify-content: center;
   color: white;
   position: relative; bottom: 150px;
-  text-align: center;
+  text-align: left;
 
 }
 
@@ -40,7 +40,7 @@ font-size: 19px;
 #welcomeBtn{
   text-align: center;
   width: 20%;
-  position:relative; left: 410px;
+  position:relative; left: 400px; top: 20px;
   background-color: white;
   border-radius:25px;
   height: 30px;
@@ -50,25 +50,25 @@ font-size: 19px;
   font-weight: bolder;
   word-spacing: 2px;
   letter-spacing: 1px;
-  padding-top: 5px;
+  padding-top: 6px;
+  margin-top: 1px;
 
 }
 
 #pageHeading{
-position: relative; left: 165px;
+position: relative; left: 125px;
 }
 
 
 #mainLogo{
-  height: 150px;
+  height: 100px;
   padding-left: 9px;
-  position: relative; top: -120px;
+  position: relative; top: -110px;
 }
 
 header{
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position:center ;
   margin-top:-35px;
   height: 260px;
   margin-top: 1px;
@@ -80,9 +80,9 @@ header{
 
 .searchForm{
   color: white;
-  width: 25%;
-  position: relative;left: 1550px;
-  position: relative; top: -270px;
+  width: 20%;
+  position: relative;left: 1600px;
+  position: relative; top: -220px;
 
 
 
@@ -99,11 +99,11 @@ header{
    search bar on home screen */
   background-color: transparent;
   height: 25px;
-  width: 15em;
+  width: 12em;
   color: black;
   font-size: 16px;
   font-weight: 900;
-  border: solid black 4px;
+  border: solid white 4px;
   border-radius: 25px;
   color: white;
   padding-left: 11px;
@@ -251,7 +251,38 @@ footer > ul{
 
 }
 
-/* everything below this line changes very specific css
+/* CONTACT PAGE STUFF BELOW THIS LINE  */
+#contactContainer{
+display: grid;
+grid-template-columns: 260px  ;
+justify-content: center;
+text-align: center;
+height: 400px;
+width: 600px;
+padding: 100px;
+position: relative; top:-100px;
+position:relative; left: 570px;
+color: white;
+background-color: transparent
+}
+
+
+.contactInput{
+border: none;
+font-size: 22px;
+}
+
+#contactTextArea{
+  resize: none;
+  font-size: 20px
+
+}
+
+
+
+
+
+/* everything below THIS line changes very specific css
 of specific countries on the home page BE VERY CAREFUL*/
 
 #Australia{
