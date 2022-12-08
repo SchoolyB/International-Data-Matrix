@@ -1,40 +1,34 @@
 import html from "html-literal";
-import footer1 from "../assets/images/document.png";
-import footer2 from "../assets/images/github.png";
-import footer3 from "../assets/images/translation.png";
-import footer4 from "../assets/images/home.png";
-import footer5 from "../assets/images/email.png";
+import footer1 from "../assets/images/Branding/home.svg";
+import footer2 from "../assets/images/Branding/mail.svg";
+import footer3 from "../assets/images/Branding/page.svg";
+import footer4 from "../assets/images/Branding/comments.svg";
 
 export default () => html`
   <footer>
     <ul id="webPageInfo">
       <li>Author: Marshall Burns</li>
-    </ul>
+      </ul>
     <ul id="footerIconContainer">
       <li>
       <li>
         <a href="Home"
-          ><img class="footerIcon" id="homeIcon" src=${footer4}
+          ><img class="footerIcon" id="homeIcon" src=${footer1}
         /></a>
       </li>
         <a href="https://github.com/SchoolyB/Capstone/blob/master/README.md"
-          ><img class="footerIcon" id="docIcon" src=${footer1}
-        /></a>
-      </li>
-      <li>
-        <a href="https://github.com/SchoolyB"
-          ><img class="footerIcon" id="githubIcon" src=${footer2}
+          ><img class="footerIcon" id="docIcon" src=${footer3}
         /></a>
       </li>
       <li>
         <a href="#Translator"
-          ><img class="footerIcon" id="translateIcon" src=${footer3}
+          ><img class="footerIcon" id="translateIcon" src=${footer4}
         /></a>
       </li>
 
       <li id="footerContactIcon">
         <a href="Contact"
-          ><img class="footerIcon" id="ContactIcon" src=${footer5}
+          ><img class="footerIcon" id="ContactIcon" src=${footer3}
         /></a>
       </li>
     </ul>
