@@ -28,7 +28,7 @@ export default () => html`
 
       <li id="footerContactIcon">
         <a href="Contact"
-          ><img class="footerIcon" id="ContactIcon" src=${footer3}
+          ><img class="footerIcon" id="ContactIcon" src=${footer2}
         /></a>
       </li>
     </ul>

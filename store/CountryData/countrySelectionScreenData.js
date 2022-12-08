@@ -18,7 +18,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Australia",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 1.54 trillion USD",
-    countryLandMass: "Land Mass: 2.968 million square miles"
+    countryLandMass: "Land Mass: 2.968 million mi2"
   },
   {
     countryClass: "country",
@@ -29,7 +29,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Belarus",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 68.22 billion USD",
-    countryLandMass: "Land Mass: 80,155 square miles"
+    countryLandMass: "Land Mass: 80,155 mi2"
   },
   {
     countryClass: "country",
@@ -40,7 +40,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Greece",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 216.20 billion USD",
-    countryLandMass: "Land Mass: 50,949 square miles"
+    countryLandMass: "Land Mass: 50,949 mi2"
   },
   {
     countryClass: "country",
@@ -51,7 +51,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Japan",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 4.93 trillion USD",
-    countryLandMass: "Land Mass: 145,937 square miles"
+    countryLandMass: "Land Mass: 145,937 mi2"
   },
   {
     countryClass: "country",
@@ -62,7 +62,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Morocco",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 132.70 billion USD",
-    countryLandMass: "Land Mass: 274,461 square miles"
+    countryLandMass: "Land Mass: 274,461 mi2"
   },
   {
     countryClass: "country",
@@ -73,7 +73,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Nepal",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "36.29 billion USD",
-    countryLandMass: "Land Mass: 56,827 square miles"
+    countryLandMass: "Land Mass: 56,827 mi2"
   },
   {
     countryClass: "country",
@@ -84,7 +84,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Sudan",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 34.33 billion USD",
-    countryLandMass: "Land Mass: 718,700 square miles"
+    countryLandMass: "Land Mass: 718,700 mi2"
   },
   {
     countryClass: "country",
@@ -95,7 +95,7 @@ export const countryInfo = [
     countryFlagAltText: "Flag of The United States",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 23 trillion USD",
-    countryLandMass: "Land Mass: 3.797 million square miles"
+    countryLandMass: "Land Mass: 3.797 million mi2"
   },
   {
     countryClass: "country",
@@ -106,6 +106,6 @@ export const countryInfo = [
     countryFlagAltText: "Flag of Venezuela",
     countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 150 billion USD",
-    countryLandMass: "Land Mass: 353,841 square miles"
+    countryLandMass: "Land Mass: 353,841 mi2"
   }
 ];
