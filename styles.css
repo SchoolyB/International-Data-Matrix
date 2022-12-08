@@ -5,10 +5,16 @@
     min-height: 100vh;
 }
 #renderedBody{
-  background-image: url("./assets/images/flagOfTheWorld.png");
-  background-position: center;
+  background-image:
   background-size: cover;
   background-repeat: no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.45),
+  rgb(96,96,96)
+
+),
+url("./assets/images/flagOfTheWorld.png");
+
+
 }
 
 
@@ -128,16 +134,17 @@ body{
 
 .countryHeading{ /* changes the css of the heading of each countries names */
   font-family: "Raleway";
-  font-weight:bolder;
+  font-weight:900;
   text-align: center;
   margin-top: 2px;
-  font-size: 21px;
+  font-size: 23px;
+
 }
 
 .country{
   /*changes the countries div css within  the "../components/Home.js" file  */
-  background-color: gray;
-  border: solid 2px white;
+  background-color: white;
+  border: solid 2px black;
   display: flex;
   flex-direction: column;
   margin: 15px;
@@ -153,7 +160,6 @@ body{
 .country * .flag{ /*changes the size of the country flags img  on the home page  */
   width: 125px;
   height: auto;
-  padding: 3px;
   display:grid;
   position: relative;left: 50px ;
   -webkit-animation-duration: 1s;
@@ -164,6 +170,7 @@ body{
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+  border: solid black 1px;
 }
 
 .country > .data{

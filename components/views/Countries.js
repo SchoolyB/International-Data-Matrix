@@ -30,7 +30,7 @@ const createCountry = countryObj => {
       <div class="data">
         <p>Population: ${countryPopulation}</p>
         <p> ${countryGrossDomesticProduct} </p>
-        <p>Land Mass: ${countryLandMass}</p>
+        <p>${countryLandMass}</p>
         <p>
       </div>
   </div>
