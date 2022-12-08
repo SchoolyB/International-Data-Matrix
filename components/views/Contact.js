@@ -1,17 +1,17 @@
 import html from "html-literal";
 export default () => html`
-  <div>
+  <div id="contactContainer">
     <form action="https://formspree.io/f/mknelldn" method="POST">
       <label>
-        Your email:
-        <input type="email" name="email" />
+        <input type="text" name = "name" placeholder="Enter your name"></input>
       </label>
       <label>
-        Your message:
-        <textarea name="message"></textarea>
+        <input type="email" name="email" placeholder="Enter your email" />
       </label>
-      <!-- your other form fields go here -->
-      <button type="submit">Send</button>
+      <label>
+        <textarea name="message" placeholder="Enter your message"></textarea>
+      </label>
+      <button  id="contactSubmitBtn" type="submit">Send</button>
     </form>
   </div>
 `;
