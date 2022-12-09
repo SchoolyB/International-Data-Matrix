@@ -1,4 +1,4 @@
 export default {
-  header: "Click On A Countries Flag To Learn More",
+  header: "Click On A Country's Flag To Learn More",
   view: "Countries"
 };
