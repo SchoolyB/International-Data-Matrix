@@ -179,14 +179,61 @@ body{
 
 }
 
-.countryInfo { /*changes color of country info pages */
+/* everything below this line modifies country page css */
+
+
+.countryInfo { /*changes css of country info pages */
   background-color: white;
+  padding: 20px;
+  margin-top: -200px;
+
+
+
 }
 
 .countryInfoFlag{ /*changes some css for flags on country pages  */
   margin-top:10px;
   border: solid 1px black;
+  height: 300px;
+  border-radius: 25px;
+  position: relative; left: 1250px;
 }
+
+
+.countryNameHeader{
+  font-size: 73px;
+  position: relative; top: -350px;
+}
+
+.topic{
+
+  text-align: left;
+  width: 65%;
+  padding-bottom: 2px;
+  position: relative; top: -430px;
+  word-wrap: break-word;
+}
+
+.topic > h3{
+  font-size: 50px;
+
+}
+
+.topic > p{
+
+  font-size: 18px;
+}
+.genInformationContainer{
+position: relative; left:  1320px;
+position: relative; top: -100px;
+background-color: red;
+width: 25%;
+text-align: center;
+
+}
+
+
+/* everything below this line modifies footer css */
 
 
 footer{
@@ -279,36 +326,3 @@ font-size: 22px;
 }
 
 
-
-
-
-/* everything below THIS line changes very specific css
-of specific countries on the home page BE VERY CAREFUL*/
-
-#Australia{
-
-}
-#Belarus{
-
-}
-#Greece{
-  ;
-}
-#Japan{
-  ;
-}
-#Morocco{
-  ;
-}
-#Nepal{
-  ;
-}
-#Sudan{
-  ;
-}
-#Usa{
-  ;
-}
-#Venezuela{
-  ;
-}

@@ -9,6 +9,11 @@ TODO: UPDATE CONTACT FORM AND GIVE IT STYLE
 TODO: make image in header smaller and justify it to the left. then add words "The International Data Matrix" To header
 TODO: find a way to hide the  background image in the country selection page
 TODO: continue working on documentation(README.md)
+TODO: add home button to header
+TODO: add country name in native language under country's name in country page LOL alot of country goin on
+TODO: add a "jump to" feature on a country so that the user can quickly find specific section on page
+TODO: add native saying next to sections on country page EX: History | historia or whatever
+
 
 ***COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
