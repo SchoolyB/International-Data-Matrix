@@ -94,11 +94,6 @@ Mauris volutpat placerat pretium. Cras non dolor in dui ornare bibendum id quis 
         Current Events
       </h3>
       <p>
-      Headline: ${}
-      Headline:
-      Headline:
-      Headline:
-      Headline:
       </p>
     </section>
   </div>
