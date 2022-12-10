@@ -3,7 +3,7 @@ import flag from "../../assets/images/grc.png";
 export default () => html`
   <div class="countryInfo" id="greeceInfo">
     <img
-      class="countryInfoFlag"
+      class="shortCountryInfoFlag"
       id="australiaInfoFlag"
       src=${flag}
       alt="The
@@ -18,6 +18,7 @@ export default () => html`
       <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
     </div>
   </section>
+  <h2 class = "nativeName">Ελλάδα</h2>
     <section class="history topic" id="greeceHistory">
       <h3>
         History

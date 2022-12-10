@@ -1,4 +1,4 @@
 export default {
-  header: "Now Discovering : NEPAL | नेपाल",
+  header: "Now Discovering:",
   view: "Nepal"
 };

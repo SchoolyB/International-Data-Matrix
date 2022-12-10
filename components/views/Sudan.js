@@ -3,7 +3,7 @@ import flag from "../../assets/images/sdn.png";
 export default () => html`
   <div class="countryInfo" id="sudanInfo">
     <img
-      class="countryInfoFlag"
+      class="longCountryInfoFlag"
       id="sudanInfoFlag"
       src=${flag}
       alt="The
@@ -18,6 +18,7 @@ export default () => html`
       <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
     </div>
   </section>
+  <h2 class = "nativeName">السودان</h2>
     <section class="history topic" id="sudanHistory">
       <h3>
         History

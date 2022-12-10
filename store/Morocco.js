@@ -1,4 +1,4 @@
 export default {
-  header: "Now Discovering : MOROCCO |المملكة المغربية",
+  header: "Now Discovering:",
   view: "Morocco"
 };

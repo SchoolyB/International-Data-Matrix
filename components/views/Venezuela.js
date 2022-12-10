@@ -3,7 +3,7 @@ import flag from "../../assets/images/ven.png";
 export default () => html`
   <div class="countryInfo" id="venezuelaInfo">
     <img
-      class="countryInfoFlag"
+      class="shortCountryInfoFlag"
       id="venezuelaInfoFlag"
       src=${flag}
       alt="The
@@ -18,6 +18,7 @@ export default () => html`
       <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
     </div>
   </section>
+  <h2 class = "nativeName">República Bolivariana de Venezuela</h2>
     <section class="history topic" id="venezuelaHistory">
       <h3>
         History

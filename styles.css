@@ -191,13 +191,27 @@ body{
 
 }
 
-.countryInfoFlag{ /*changes some css for flags on country pages  */
+.longCountryInfoFlag{ /*changes some css for flags on country pages  */
   margin-top:10px;
   border: solid 1px black;
   height: 300px;
   border-radius: 25px;
   position: relative; left: 1250px;
 }
+
+.shortCountryInfoFlag{
+  margin-top:10px;
+  border: solid 1px black;
+  height: 300px;
+  border-radius: 25px;
+  position: relative; left: 1325px;
+}
+#nepalInfoFlag{
+  /* specific only to nepal because its flag isnt usually a full rectangle  */
+  position: relative; left: 1425px;
+
+}
+
 
 
 .countryNameHeader{
@@ -210,12 +224,12 @@ body{
   text-align: left;
   width: 65%;
   padding-bottom: 2px;
-  position: relative; top: -430px;
+  position: relative; top: -450px;
   word-wrap: break-word;
 }
 
 .topic > h3{
-  font-size: 50px;
+  font-size: 43px;
 
 }
 
@@ -230,6 +244,10 @@ background-color: red;
 width: 25%;
 text-align: center;
 
+}
+
+.nativeName{
+  position: relative; top: -500px;
 }
 
 

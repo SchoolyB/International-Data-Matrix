@@ -3,7 +3,7 @@ import flag from "../../assets/images/jpn.png";
 export default () => html`
   <div class="countryInfo" id="japanInfo">
     <img
-      class="countryInfoFlag"
+      class="shortCountryInfoFlag"
       id="japanInfoFlag"
       src=${flag}
       alt="The
@@ -18,6 +18,7 @@ export default () => html`
       <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
     </div>
   </section>
+  <h2 class = "nativeName">日本国</h2>
     <section class="history topic" id="japanHistory">
       <h3>
         History

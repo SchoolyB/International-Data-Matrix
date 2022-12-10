@@ -3,7 +3,7 @@ import flag from "../../assets/images/npl.png";
 export default () => html`
   <div class="countryInfo" id="nepalInfo">
     <img
-      class="countryInfoFlag"
+      class="shortCountryInfoFlag"
       id="nepalInfoFlag"
       src=${flag}
       alt="The
@@ -18,6 +18,7 @@ export default () => html`
       <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
     </div>
   </section>
+  <h2 class = "nativeName">नेपाल</h2>
     <section class="history topic" id="nepalHistory">
       <h3>
         History

@@ -3,7 +3,7 @@ import flag from "../../assets/images/blr.png";
 export default () => html`
   <div class="countryInfo" id="belarusInfo">
     <img
-      class="countryInfoFlag"
+      class="longCountryInfoFlag"
       id="belarusInfoFlag"
       src=${flag}
       alt="The
@@ -18,6 +18,7 @@ export default () => html`
       <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
     </div>
   </section>
+  <h2 class = "nativeName">Рэспубліка Беларусь</h2>
     <section class="history topic" id="belarusHistory">
       <h3>
         History

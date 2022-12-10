@@ -3,7 +3,7 @@ import flag from "../../assets/images/mar.png";
 export default () => html`
   <div class="countryInfo" id="moroccoInfo">
     <img
-      class="countryInfoFlag"
+      class="shortCountryInfoFlag"
       id="moroccoInfoFlag"
       src=${flag}
       alt="The
@@ -18,6 +18,7 @@ export default () => html`
       <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
     </div>
   </section>
+  <h2 class = "nativeName">المملكة المغربية</h2>
     <section class="history topic" id="moroccoHistory">
       <h3>
         History
