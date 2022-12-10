@@ -68,7 +68,7 @@ export const countryInfo = [
     countryClass: "country",
     countryID: "Nepal",
     countryName: "Nepal",
-    countryLink: "",
+    countryLink: "Nepal",
     countryFlag: flagF,
     countryFlagAltText: "Flag of Nepal",
     countryPopulation: 1, //correct later possibly use data from API

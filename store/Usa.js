@@ -1,4 +1,4 @@
 export default {
-  header: "Now Discovering : The United States of America",
+  header: "Now Discovering:",
   view: "Usa"
 };
