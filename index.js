@@ -12,9 +12,9 @@ function render(state = store.Home) {
   console.table(`${state}`);
   document.querySelector("#root").innerHTML = `
 
-  ${Header(state)},
-  ${Main(state)},
-  ${Footer(state)},
+  ${Header(state)}
+  ${Main(state)}
+  ${Footer(state)}
 `;
   router.updatePageLinks();
 }
