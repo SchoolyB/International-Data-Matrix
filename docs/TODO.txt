@@ -1,7 +1,6 @@
 !!!NEED TO BE DONE!!!
 TODO: UTILIZE NEW OUTLET API FOR "CURRENT EVENT" SECTIONS ON COUNTRY INFO PAGES now need to get data to post on screen
 TODO: STYLE PAGES
-TODO: ADD MEDIA QUERY FOR HOME PAGE SO THAT WHEN ON SMALLER SCREEN COLUMNS COLLAPSE INTO ONE
 TODO: ADD NAV MENU
 TODO: TRY TO UTILIZE WIKIPEDIA API FOR "GOVERNMENT,HISTORY,ECONOMY,CULTURE,RELIGION" SECTIONS ON COUNTRY INFO PAGES
 TODO: possibly use OPENWEATHERMAP to add weather data to countries
@@ -12,7 +11,8 @@ TODO: add home button to header
 TODO: add country name in native language under country's name in country page LOL alot of country goin on
 TODO: add a "jump to" feature on a country so that the user can quickly find specific section on page
 TODO: add native saying next to sections on country page EX: History | historia or whatever
-
+TODO:  fix deployed version links
+TODO: ADD MEDIA QUERY FOR HOME PAGE SO THAT WHEN ON SMALLER SCREEN COLUMNS COLLAPSE INTO ONE
 
 ***COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
