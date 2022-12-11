@@ -12,6 +12,8 @@ export default () => html`
       the button below or search for a country<br />in the search field located
       in the top right corner of your screen.
     </p>
-    <a href="Countries" role="button" id="welcomeBtn">View Countries</a>
+    <div id="welcomeBtnContainer">
+      <a href="Countries" role="button" id="welcomeBtn">View Countries</a>
+      </div>
   </div>
 `;

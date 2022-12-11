@@ -6,9 +6,7 @@
     overflow-x: hidden;
 }
 #renderedBody{
-  background: linear-gradient( rgba(0, 0, 0, 0.45),
-  rgb(96,96,96)
-),
+  background: linear-gradient( #000000aa , #000000aa),
 url("./assets/images/flagOfTheWorld.png");
 
 
@@ -19,8 +17,8 @@ url("./assets/images/flagOfTheWorld.png");
   display: grid;
   justify-content: center;
   color: white;
-  position: relative; bottom: 150px;
-  text-align: left;
+  position: relative; bottom: 90px;
+
 
 }
 
@@ -38,55 +36,73 @@ font-size: 19px;
 
 
 #welcomeBtn{
-  text-align: center;
-  width: 20%;
-  position:relative; left: 400px; top: 20px;
   background-color: white;
   border-radius:25px;
-  height: 30px;
   color: black;
   text-decoration: none;
   font-size: 18px;
   font-weight: bolder;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-  padding-top: 6px;
-  margin-top: 1px;
-
+  padding: 1rem 2rem;
 }
 
-#pageHeading{
-position: relative; left: 125px;
+#welcomeBtnContainer{
+  display: flex;
+  justify-content:center ;
 }
 
 
 #mainLogo{
   height: 100px;
-  padding-left: 9px;
-  position: relative; top: -110px;
+  width: auto;
 }
 
 header{
-  background-color: transparent;
-  background-repeat: no-repeat;
-  margin-top:-35px;
-  height: 260px;
-  margin-top: 1px;
-  margin-bottom: 100px;
-  font-size: 24px;
+  font-size: 30px;
   font-family: 'Raleway', sans-serif;
   color: white;
+  margin-bottom: 200px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 1em;
+
+
+
 }
+
+
+
+header * img{
+  /* background-color: red ; */
+}
+
+header > h1{
+  /* background-color: blue; */
+margin-top: 15px;
+
+}
+
+
+#searchContainer{
+
+  display: block;
+  float: right;
+  margin-top: -11px
+
+
+
+;
+    }
+
 
 .searchForm{
   color: white;
-  width: 20%;
-  position: relative;left: 1600px;
-  position: relative; top: -220px;
+
+
 
 
 
 }
+
 #searchBtn{
   height: 50px;
   width: auto;
@@ -125,8 +141,6 @@ body{
   justify-content: center;
   position: relative;bottom: 120px;
   height: 600px;
-
-
   overflow-y:scroll ;
 }
 
@@ -257,14 +271,8 @@ text-align: center;
 footer{
   color: white;
   text-align: center;
-  background-color: transparent;
-  display: block;
-  bottom: 0;
-  height: 30px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 24px;
-  height: 6px;
+
+
 
 
 
@@ -277,10 +285,8 @@ footer > ul{
 }
 
 .footerIcon{ /*resizing the icons ion the footer*/
-  height: auto;
-  width: 40px;
-  margin-right: 10px;
-  margin-top: 0px;
+  width: 42px;
+  padding: 1px;
 }
 
 #footerIconContainer{
