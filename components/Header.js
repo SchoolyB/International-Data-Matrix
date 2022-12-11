@@ -11,7 +11,7 @@ export default state => html`
       <h1 id="pageHeading">
         ${state.header}
         <div id="searchContainer">
-          <form class="searchForm "action="http://localhost:1234/Countries" method="get">
+          <form class="searchForm "action="/Countries" method="get">
             <input placeholder="Search Countries" id="countryFilter" name="countryFilter" type="text"></input>
             <input id="searchBtn" type="image" src=${globe} atl="TEST"></input>
           </form>
