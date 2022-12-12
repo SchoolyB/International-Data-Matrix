@@ -199,70 +199,90 @@ body{
 .countryInfo { /*changes css of country info pages */
   background-color: white;
   padding: 20px;
-  margin-top: -200px;
+  margin-top: -210px;
 
 
-
-}
-
-.longCountryInfoFlag{ /*changes some css for flags on country pages  */
-  margin-top:10px;
-  border: solid 1px black;
-  height: 300px;
-  border-radius: 25px;
-  position: relative; left: 1250px;
-}
-
-.shortCountryInfoFlag{
-  margin-top:10px;
-  border: solid 1px black;
-  height: 300px;
-  border-radius: 25px;
-  position: relative; left: 1325px;
-}
-#nepalInfoFlag{
-  /* specific only to nepal because its flag isnt usually a full rectangle  */
-  position: relative; left: 1425px;
 
 }
 
 
 
 .countryNameHeader{
-  font-size: 73px;
-  position: relative; top: -350px;
+  font-size: 75px;
+  margin-bottom:  -15px;
+
+
+}
+.nativeName{
+
 }
 
 .topic{
 
   text-align: left;
-  width: 65%;
+  width: 75%;
   padding-bottom: 2px;
-  position: relative; top: -450px;
+
   word-wrap: break-word;
 }
 
 .topic > h3{
-  font-size: 43px;
+  font-size: 40px;
 
 }
 
 .topic > p{
 
   font-size: 18px;
+
+}
+.metaDataContainer{
+  display: flex;
+  justify-content:right;
+  background-color:gray;
+  height: 1000px;
+  width: auto;
+  flex-direction: column;
+  width: 22%;
+  float: right;
+  margin-top: 55px;
+  border-radius: 25px;
+
+
+
+
 }
 .genInformationContainer{
-position: relative; left:  1320px;
-position: relative; top: -100px;
-background-color: red;
-width: 25%;
-text-align: center;
+  color: white;
+
+  text-align: center;
+
 
 }
 
-.nativeName{
-  position: relative; top: -500px;
+.longCountryInfoFlag{ /*changes some css for flags on country pages  */
+
+  border: solid 1px black;
+  height: 200px;
+  border-radius: 25px;
+
 }
+
+.shortCountryInfoFlag{
+  border: solid 1px black;
+  border-radius: 25px;
+  height: 200px;
+  margin-top: 1px ;
+
+}
+#nepalInfoFlag{
+  /* specific only to nepal because its flag isnt usually a full rectangle  */
+  height: 200px;
+  margin-top: 1px;
+  border-radius: 25px;
+
+}
+
 
 
 /* everything below this line modifies footer css */
@@ -272,10 +292,6 @@ footer{
   color: white;
   text-align: center;
 
-
-
-
-
 }
 
 footer > ul{
@@ -283,6 +299,8 @@ footer > ul{
   list-style-type: none;
 
 }
+
+
 
 .footerIcon{ /*resizing the icons ion the footer*/
   width: 42px;
@@ -348,5 +366,6 @@ font-size: 22px;
   font-size: 20px
 
 }
+
 
 
