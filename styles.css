@@ -107,6 +107,7 @@ margin-top: 15px;
   height: 50px;
   width: auto;
   position: relative; top: 20px;
+  position: relative; left: -15px
 }
 
 
@@ -342,17 +343,16 @@ footer > ul{
 
 /* CONTACT PAGE STUFF BELOW THIS LINE  */
 #contactContainer{
-display: grid;
-grid-template-columns: 260px  ;
-justify-content: center;
-text-align: center;
-height: 400px;
-width: 600px;
-padding: 100px;
-position: relative; top:-100px;
-position:relative; left: 570px;
-color: white;
-background-color: transparent
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  background-color:gray;
+  border-radius: 25px;
+  color: white;
+  background-color: black
+
 }
 
 

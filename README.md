@@ -60,19 +60,22 @@ As mentioned in [The How](https://github.com/SchoolyB/Capstone/tree/master#the-w
 <img src="./assets/images/README/storeDirectory.JPG">
 
 ### The Home Page -
-
-### The Country Button -
-
+<img src="./assets/images/README/homeScreen.JPG">
 ### The Search Bar -
+<img src= "./assets/images/README/searchbtn.jpg">
+<img src= "./assets/images/README/specificCountryFilter.JPG">
+<img src= "./assets/images/README/notSoSpecificCountryFilter.JPG">
 
-### The Example Page -
+### The View Countries Button -
+<img src= "./assets/images/README/viewcContriesBtn.jpg" >
 
-### The Country Selection Page -
+### Country Selection Page    -
 
 ### A Country Page -
 
-### The Translator -
-
 ### The Contact Page -
 
+### The Example Page -
 
+
+### The Translator -
