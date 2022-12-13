@@ -12,7 +12,7 @@ export default state => html`
         ${state.header}
         <div id="searchContainer">
           <form class="searchForm "action="/Countries" method="get">
-            <input placeholder="Search Countries" id="countryFilter" name="countryFilter" type="text"></input>
+            <input placeholder="Search Countries" id="countryFilter" name="countryFilter" type="text" required></input>
             <input id="searchBtn" type="image" src=${globe} atl="TEST"></input>
           </form>
         </div>
