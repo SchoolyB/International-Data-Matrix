@@ -12,7 +12,8 @@ export default () => html`
       <label class="contactLabel" id="contactMsg">
         <textarea id="contactTextArea" rows="16" cols="35" name="message" placeholder="Enter your message"></textarea>
       </label>
-      <button  id="contactSubmitBtn" type="submit">Send</button>
+      <button  id="contactSubmitBtn" type="submit"></button>
+
     </form>
   </div>
 `;

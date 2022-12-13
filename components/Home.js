@@ -14,6 +14,6 @@ export default () => html`
     </p>
     <div id="welcomeBtnContainer">
       <a href="Countries" role="button" id="welcomeBtn">View Countries</a>
-      </div>
+    </div>
   </div>
 `;

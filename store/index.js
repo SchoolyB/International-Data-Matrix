@@ -11,3 +11,4 @@ export { default as Home } from "./Home";
 export { default as Links } from "./Links";
 export { default as Contact } from "./Contact";
 export { default as Countries } from "./Countries";
+export { default as Translator } from "./Translator";

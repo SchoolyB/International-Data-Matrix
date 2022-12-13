@@ -48,6 +48,7 @@ font-size: 19px;
 #welcomeBtnContainer{
   display: flex;
   justify-content:center ;
+  font-family: "Raleway";
 }
 
 
@@ -63,7 +64,7 @@ header{
   margin-bottom: 200px;
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: 1em;
+  grid-column-gap: 3em;
 
 
 
@@ -78,6 +79,7 @@ header * img{
 header > h1{
   /* background-color: blue; */
 margin-top: 15px;
+margin-left: 90px;
 
 }
 
@@ -149,7 +151,7 @@ body{
 
 .countryHeading{ /* changes the css of the heading of each countries names */
   font-family: "Raleway";
-  font-weight:900;
+  font-weight:700;
   text-align: center;
   margin-top: 2px;
   font-size: 23px;
@@ -201,6 +203,7 @@ body{
   background-color: white;
   padding: 20px;
   margin-top: -210px;
+  font-family: "Raleway";
 
 
 
@@ -292,6 +295,7 @@ body{
 footer{
   color: white;
   text-align: center;
+  margin-right:30px ;
 
 }
 
@@ -344,6 +348,7 @@ footer > ul{
 /* CONTACT PAGE STUFF BELOW THIS LINE  */
 #contactContainer{
 
+  padding-top: .5em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -351,21 +356,44 @@ footer > ul{
   background-color:gray;
   border-radius: 25px;
   color: white;
-  background-color: black
+  width: 25%;
+  height: 35em;
+  margin-bottom: 5em;
+  margin-left: 45em;
+  margin-top: -9em;
+  padding-bottom: 5em ;
 
-}
+  }
 
 
 .contactInput{
 border: none;
 font-size: 22px;
+border-radius: 25px;
+margin-bottom: .3em;
+padding-left: .3em;
 }
 
 #contactTextArea{
   resize: none;
-  font-size: 20px
+  font-size: 18px;
+  width: 14.9em;
+  border-radius: 25px;
+  padding-left: .3em;
 
 }
 
+
+#contactSubmitBtn{
+  background-image: url("./assets/images/paperPlane.png");
+  border-radius: 25px;
+  margin-right: 0.1em;
+  margin-top: 1em;
+  height: 3em;
+  width: 20em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 
