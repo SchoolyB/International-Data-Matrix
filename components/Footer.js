@@ -21,7 +21,7 @@ export default () => html`
         /></a>
       </li>
       <li>
-        <a href="#Translator"
+        <a href="Translator"
           ><img class="footerIcon" id="translateIcon" src=${footer4}
         /></a>
       </li>

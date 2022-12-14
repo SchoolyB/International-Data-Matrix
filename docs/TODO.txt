@@ -5,13 +5,10 @@ TODO: ADD NAV MENU
 TODO: TRY TO UTILIZE WIKIPEDIA API FOR "GOVERNMENT,HISTORY,ECONOMY,CULTURE,RELIGION" SECTIONS ON COUNTRY INFO PAGES
 TODO: possibly use OPENWEATHERMAP to add weather data to countries
 TODO: UPDATE CONTACT FORM AND GIVE IT STYLE
-TODO: find a way to hide the  background image in the country selection page and country pages
 TODO: continue working on documentation(README.md)
 TODO: add home button to header
-TODO: add country name in native language under country's name in country page LOL alot of country goin on
 TODO: add a "jump to" feature on a country so that the user can quickly find specific section on page
 TODO: add native saying next to sections on country page EX: History | historia or whatever
-TODO:  fix deployed version links
 TODO: ADD MEDIA QUERY FOR HOME PAGE SO THAT WHEN ON SMALLER SCREEN COLUMNS COLLAPSE INTO ONE
 
 ***COMPLETED***
@@ -24,4 +21,7 @@ TODO: LINK HOMESCREEN FLAGS TO THERE RESPECTIVE COUNTRY PAGES (completed 12/3/20
 TODO: BUILD CONTACT FORM (completed 12/7/2022)
 TODO: place search bar in header correctly (completed 12/8/22)
 TODO: ADD BETTER HEADERS (completed 12/8/2022)
+TODO: find a way to hide the  background image in the country selection page and country pages (completed 12/2022)
 TODO: make image in header smaller and justify it to the left. then add words "The International Data Matrix" To header (completed 12/8/2022)
+TODO: fix deployed Netlify version links (completed 12/2022)
+TODO: add country name in native language under country's name in country page LOL alot of country goin on(completed 12/2022)
