@@ -43,6 +43,7 @@ font-size: 19px;
   font-size: 18px;
   font-weight: bolder;
   padding: 1rem 2rem;
+  box-shadow: 5px 10px 18px black
 }
 
 #welcomeBtnContainer{
@@ -243,7 +244,7 @@ body{
 .metaDataContainer{
   display: flex;
   justify-content:right;
-  background-color:gray;
+  background-color:#89939E;
   height: 1000px;
   width: auto;
   flex-direction: column;
@@ -353,7 +354,7 @@ footer > ul{
   display: flex;
   flex-direction: column;
   justify-content:flex-end;
-  background-color:gray;
+  background-color:#89939E;
   border-radius: 25px;
   color: white;
   width: 25%;
@@ -362,7 +363,7 @@ footer > ul{
   margin-left: 45em;
   margin-top: -9em;
   padding-bottom: 5em ;
-
+ box-shadow: 5px 10px 18px black
   }
 
 
@@ -379,7 +380,7 @@ padding-left: .3em;
   font-size: 18px;
   width: 14.9em;
   border-radius: 25px;
-  padding-left: .3em;
+  padding-left: .5em;
 
 }
 
@@ -396,4 +397,72 @@ padding-left: .3em;
   background-size: contain;
 }
 
+#contactSubmitBtn:hover{
+  cursor:pointer
+}
 
+#fullTranslateContainer{
+
+  height: 40em;
+  margin-top: -10em;
+  display: flex;
+  justify-content: center;
+}
+
+#translatorContainer{
+display: flex;
+background-color:#89939E;
+padding-top: 4em;
+border-radius: 25px;
+flex-direction: row;
+justify-content: center;
+box-shadow: 5px 10px 18px black
+
+}
+
+#translateBtn{
+  height: 5em;
+  background-color: ;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 13em;
+}
+
+
+#translateInput{
+  resize: none;
+  height: 10em;
+  width: 25em;
+  font-size: 22px;
+  margin-top: 5em;
+  margin-left: 1em;
+  border-radius: 25px;
+  padding-left: .5em;
+}
+
+#translateOutput{
+ resize: none;
+ height: 10em;
+ width: 25em;
+ font-size: 22px;
+ margin-top: 5em;
+margin-right: 1em;
+border-radius: 25px;
+padding-left: .5em;
+}
+
+.langSelect{
+  font-size: 24px;
+}
+
+#inputLangSelect{
+margin-left: 1em;
+width: 23em;
+
+}
+
+#outputLangSelect{
+  margin-right: 1em;
+  width: 23em;
+
+  }
