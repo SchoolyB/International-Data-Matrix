@@ -81,10 +81,10 @@ which is located beneath the welcome prompt located at the center of the screen 
 
  - The Footer Icons -
 which located at the bottom of page/view. Currently there are four icons that will take the user to the following linked wep pages starting from left going right they are:
-    - Home (The "IDM" Home Page)
+    - [Home](https://internationaldatamatrix.netlify.app/Home)
     - [Documentation](https://github.com/SchoolyB/Capstone/blob/master/README.md) (The README for the application)
-    - Translator (The Translator Page)
-    - Contact (The Contact Page)
+    - [Translator](https://internationaldatamatrix.netlify.app/Translator)
+    - [Contact](https://internationaldatamatrix.netlify.app/Contact)
 
 
 <img src="./assets/images/README/homeScreen.JPG">
