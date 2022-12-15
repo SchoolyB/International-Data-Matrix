@@ -8,6 +8,7 @@ TODO: add home button to header
 TODO: add a "jump to" feature on a country so that the user can quickly find specific section on page
 TODO: add native saying next to sections on country page EX: History | historia or whatever
 TODO: ADD MEDIA QUERY FOR HOME PAGE SO THAT WHEN ON SMALLER SCREEN COLUMNS COLLAPSE INTO ONE
+TODO: build an example country page
 TODO: start building translator middleware
 TODO: store country info data in backend
 

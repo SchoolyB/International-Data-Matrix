@@ -99,10 +99,12 @@ The search bar is one of my favorite elements of the application. The search bar
 <img src= "./assets/images/README/viewcContriesBtn.jpg" >
 
 ### Country Selection Page    -
+<img src="./assets/images/README/countrySelectionScreen.JPG">
 
 ### A Country Page -
 
 ### The Contact Page -
+<img src="./assets/images/README/contactPage.JPG">
 
 ### The Example Page -
 
