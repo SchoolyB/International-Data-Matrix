@@ -31,19 +31,20 @@ My understanding of that decision is so that we(the students) focus on vanilla H
 - [VS Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/)
+- [serve](https://www.npmjs.com/package/serve)
 - [html-literal](https://www.npmjs.com/package/html-literal)
-- [Parcel](https://parceljs.org/)
+- [parcel](https://parceljs.org/)
 - [lodash](https://www.npmjs.com/package/lodash)
-- [Navigo](https://github.com/krasimir/navigo)
+- [navigo](https://github.com/krasimir/navigo)
 - [dotenv](https://github.com/motdotla/dotenv)
 - [nodemon](https://www.npmjs.com/package/nodemon)
-- [serve](https://www.npmjs.com/package/serve)
+- [mongoose](https://www.npmjs.com/package/mongoose)
 - [The lit-html vscode extension](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html)
-- [Netlfiy](https://www.netlify.com/?utm_source=google&utm_medium=paid_search&utm_campaign=12755510784&adgroup=118788138897&utm_term=netlify&utm_content=kwd-371509120223&creative=514583565825&device=c&matchtype=e&location=9021584)
 - [Express.js](https://expressjs.com/)
+- [Netlfiy](https://www.netlify.com/?utm_source=google&utm_medium=paid_search&utm_campaign=12755510784&adgroup=118788138897&utm_term=netlify&utm_content=kwd-371509120223&creative=514583565825&device=c&matchtype=e&location=9021584)
 - [Insomnia](https://insomnia.rest/)
 - [MongoDB](https://www.mongodb.com/)
-- [Heroku](https://www.heroku.com/)
+- [Render](https://render.com/)
 
 ### Get To The Point -
 
@@ -80,10 +81,10 @@ which is located beneath the welcome prompt located at the center of the screen 
 
  - The Footer Icons -
 which located at the bottom of page/view. Currently there are four icons that will take the user to the following linked wep pages starting from left going right they are:
-    - Home (The "IDM" Home Page)
+    - [Home](https://internationaldatamatrix.netlify.app/Home)
     - [Documentation](https://github.com/SchoolyB/Capstone/blob/master/README.md) (The README for the application)
-    - Translator (The Translator Page)
-    - Contact (The Contact Page)
+    - [Translator](https://internationaldatamatrix.netlify.app/Translator)
+    - [Contact](https://internationaldatamatrix.netlify.app/Contact)
 
 
 <img src="./assets/images/README/homeScreen.JPG">
@@ -98,10 +99,12 @@ The search bar is one of my favorite elements of the application. The search bar
 <img src= "./assets/images/README/viewcContriesBtn.jpg" >
 
 ### Country Selection Page    -
+<img src="./assets/images/README/countrySelectionScreen.JPG">
 
 ### A Country Page -
 
 ### The Contact Page -
+<img src="./assets/images/README/contactPage.JPG">
 
 ### The Example Page -
 
