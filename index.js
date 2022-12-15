@@ -15,7 +15,7 @@ function render(state = store.Home) {
   ${Header(state)}
   ${Main(state)}
   ${Footer(state)}
-`;
+  `;
   router.updatePageLinks();
 }
 router
@@ -27,8 +27,6 @@ router
     }
   })
   .resolve();
-
-//${Nav(store.Links)}, add to line 11 when done working on css
 
 var options = {
   method: "GET",
@@ -47,3 +45,5 @@ axios
   .catch(function(error) {
     console.error(error);
   });
+
+// ${Nav(store.Links)}

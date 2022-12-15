@@ -1,3 +1,4 @@
+
 #root{
   display: flex;
     flex-direction: column;
@@ -59,28 +60,25 @@ font-size: 19px;
 }
 
 header{
-  font-size: 30px;
+  font-size: 62px;
   font-family: 'Raleway', sans-serif;
   color: white;
-  margin-bottom: 200px;
+  margin-bottom: 3.5em;
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: 3em;
 
 
-
+  ;
 }
-
-
 
 header * img{
   /* background-color: red ; */
+
 }
 
 header > h1{
   /* background-color: blue; */
-margin-top: 15px;
-margin-left: 90px;
+margin-top: .2em;
 
 }
 
@@ -89,21 +87,11 @@ margin-left: 90px;
 
   display: block;
   float: right;
-  margin-top: -11px
-
-
-
-;
-    }
-
+  margin-top: .01rem;
+}
 
 .searchForm{
   color: white;
-
-
-
-
-
 }
 
 #searchBtn{
@@ -119,7 +107,7 @@ margin-left: 90px;
    search bar on home screen */
   background-color: transparent;
   height: 25px;
-  width: 12em;
+  width: 10em;
   color: black;
   font-size: 16px;
   font-weight: 900;
@@ -134,6 +122,7 @@ body{
 
   padding: 0px;
   margin: 0px;
+  font-family: Raleway;
 }
 
 
@@ -369,7 +358,7 @@ footer > ul{
 
 .contactInput{
 border: none;
-font-size: 22px;
+font-size: 25.3px;
 border-radius: 25px;
 margin-bottom: .3em;
 padding-left: .3em;
@@ -465,4 +454,66 @@ width: 23em;
   margin-right: 1em;
   width: 23em;
 
-  }
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #89939E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 6em;
+}
+
+.sidenav a {
+  padding: 10px 10px 20px 40px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black
+  ;
+
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.sidenav > h3{
+  color: white;
+  padding: 10px 10px 20px 40px;
+  font-size: 30px;
+
+}
+
+#span{
+  height: 1.7em;
+  width: 1.7em ;
+  border-radius: 50%;
+  font-size: 60px;
+  color: #f1f1f1;
+  position: absolute;left: .0001em;
+  background-color: black;
+  text-align: center;
+  opacity: 0;
+
+
+}
+
+#span:hover{
+  cursor: pointer;
+}
+
