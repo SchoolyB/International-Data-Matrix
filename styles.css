@@ -60,38 +60,39 @@ font-size: 19px;
 }
 
 header{
-  font-size: 62px;
+  font-size: 28px;
   font-family: 'Raleway', sans-serif;
   color: white;
-  margin-bottom: 3.5em;
-  display: grid;
-  grid-auto-flow: column;
+  margin-bottom: 7em;
+  display: flex;
+  justify-content: flex-start
+
+
+
 
 
   ;
 }
 
-header * img{
-  /* background-color: red ; */
-
-}
-
 header > h1{
-  /* background-color: blue; */
-margin-top: .2em;
-
+margin-top: .3em;
 }
+
+
 
 
 #searchContainer{
 
   display: block;
   float: right;
-  margin-top: .01rem;
+  margin-top: 1rem;
+  margin-left: 16em;
+
 }
 
 .searchForm{
   color: white;
+
 }
 
 #searchBtn{
@@ -99,6 +100,7 @@ margin-top: .2em;
   width: auto;
   position: relative; top: 20px;
   position: relative; left: -15px
+
 }
 
 
@@ -109,7 +111,7 @@ margin-top: .2em;
   height: 25px;
   width: 10em;
   color: black;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 900;
   border: solid white 4px;
   border-radius: 25px;
@@ -338,7 +340,7 @@ footer > ul{
 /* CONTACT PAGE STUFF BELOW THIS LINE  */
 #contactContainer{
 
-  padding-top: .5em;
+  padding-top: 1.5em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -351,7 +353,7 @@ footer > ul{
   margin-bottom: 5em;
   margin-left: 45em;
   margin-top: -9em;
-  padding-bottom: 5em ;
+  padding-bottom: 3em ;
  box-shadow: 5px 10px 18px black
   }
 
@@ -466,7 +468,7 @@ width: 23em;
   background-color: #89939E;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 6em;
+  padding-top: 2em;
 }
 
 .sidenav a {
@@ -496,6 +498,7 @@ width: 23em;
   color: white;
   padding: 10px 10px 20px 40px;
   font-size: 30px;
+  border-bottom: 1px solid white;
 
 }
 
