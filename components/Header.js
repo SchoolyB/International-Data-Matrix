@@ -6,8 +6,10 @@ export default state => html`
 
   <header>
       <img id="mainLogo"src= ${logo} >
-    <h1 id="pageHeading"></h1>
+    <h1 id="pageHeading">
       ${state.header}
+
+    </h1>
       <div id="searchContainer">
         <form class="searchForm "action="/Countries" method="get">
           <input placeholder="Search Countries" id="countryFilter" name="countryFilter" type="text" required></input>
