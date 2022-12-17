@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 dotenv.config();
 
 // we use || to provide a default value
-const PORT = process.env.PORT || 4040;
+const PORT = process.env.PORT || 4041;
 
 //initializes ExpressJs application
 const app = express();
