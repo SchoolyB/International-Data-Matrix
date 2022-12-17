@@ -2,22 +2,40 @@ import { Header, Nav, Main, Footer } from "./components";
 import * as store from "./store"; //importing everything from "./store" as an object called "store"
 import Navigo from "navigo";
 import { capitalize } from "lodash";
-import dotenv from "dotenv";
-var axios = require("axios").default;
+import axios from "axios";
+import * as deepl from "deepl-node";
 
-dotenv.config();
 const router = new Navigo("/");
 
 function render(state = store.Home) {
-  console.table(`${state}`);
   document.querySelector("#root").innerHTML = `
 
   ${Header(state)}
   ${Main(state)}
   ${Footer(state)}
   `;
+
   router.updatePageLinks();
 }
+
+const authKey = `${process.env.TRANSLATION_KEY}`;
+
+router.hooks({
+  before: (done, params) => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Home";
+    switch (view) {
+      // case "Translate":
+      //   // New Axios get request utilizing already made environment variable
+      //         //   break;
+      default:
+        done();
+    }
+  }
+});
+
 router
   .on({
     "/": () => render(),
@@ -26,24 +44,4 @@ router
       render(store[view]);
     }
   })
-  .resolve();
-
-var options = {
-  method: "GET",
-  url: "https://api.newscatcherapi.com/v2/search",
-  params: { q: "united states", lang: "en", sort_by: "relevancy", page: "1" },
-  headers: {
-    "x-api-key": `${process.env.API_ACCESS_KEY}`
-  }
-};
-
-axios
-  .request(options)
-  .then(function(response) {
-    console.log(response.data);
-  })
-  .catch(function(error) {
-    console.error(error);
-  });
-
-// ${Nav(store.Links)}
+  .resolve(); //similar to "listen" method in expressJS

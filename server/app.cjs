@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 dotenv.config();
 
 // we use || to provide a default value
-const PORT = process.env.PORT || 4040;
+const PORT = process.env.PORT || 4041;
 
 //initializes ExpressJs application
 const app = express();
@@ -27,7 +27,7 @@ db.once(
   console.log.bind(console, "Successfully opened connection to database.")
 );
 app.get("/status", (request, response) => {
-  response.status(200).json({ message: "sService healthy" });
+  response.status(200).json({ message: "Service healthy" });
 });
 
 // tells ExpressJs app to listen to a port and log what port its listening on

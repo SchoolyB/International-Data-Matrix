@@ -23,7 +23,7 @@ export default () => html`
       </div>
 
       <div>
-        <img id="translateBtn" src=${btn} />
+        <img type="submit" id="translateBtn" src=${btn} />
       </div>
 
       <div id="outputSide">
