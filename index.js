@@ -14,19 +14,11 @@ function render(state = store.Home) {
   ${Main(state)}
   ${Footer(state)}
   `;
-  afterRender(state);
+
   router.updatePageLinks();
 }
 
-const afterRender = state => {
-  //  add menu toggle to bars icon in nav bar
-  // document.querySelector(".fa-bars").addEventListener("click", () => {
-  //   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-  // });
-    document.getElementById("translateBtn").addEventListener("click", event => {
-      console.log(event);
-
-      const authKey = `${process.env.TRANSLATION_KEY}`;
+const authKey = `${process.env.TRANSLATION_KEY}`;
 
 router.hooks({
   before: (done, params) => {
