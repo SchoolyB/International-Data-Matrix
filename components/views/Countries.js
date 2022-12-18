@@ -15,6 +15,7 @@ const createCountry = countryObj => {
     countryLandMass
   } = countryObj;
 
+  //explicit return
   return `
 
 <div id="overAllContainer">

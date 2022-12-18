@@ -1,4 +1,6 @@
 export default {
   header: "Translator",
-  view: "Translator"
+  view: "Translator",
+  inputText: {},
+  outputText: {}
 };
