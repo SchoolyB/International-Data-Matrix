@@ -19,7 +19,28 @@ function render(state = store.Home) {
   router.updatePageLinks(); //navigo stuff for links
 }
 
-function afterRender(state) {}
+function afterRender(state) {
+  switch (state.view) {
+    case "Translator":
+      const form = document.getElementById("fullTranslateContainer");
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        const inputs = event.target.elements;
+        const sourceText = inputs.translateInput.value;
+        const outputLanguage = inputs.outputLangSelect.value;
+        const requestBody = {
+          sourceText,
+          outputLanguage
+        };
+        axios
+          .post("http://localhost:4040/translator", requestBody)
+          .then(response => {
+            console.log(response.data);
+          });
+      });
+      break;
+  }
+}
 
 // router hooks({}) need a switch case statement to tell the program to specify what data should appear on what particular view
 // router.hooks({}) :before does all the data collection before the render method is executed

@@ -1,7 +1,8 @@
 import html from "html-literal";
 import btn from "../../assets/images/translateBtn.png";
 export default () => html`
-  <div id="fullTranslateContainer">
+  <form id="fullTranslateContainer">
+    //change name to translateForm
     <div id="translatorContainer">
       <div id="inputSide">
         <select class="langSelect" id="inputLangSelect">
@@ -23,24 +24,20 @@ export default () => html`
       </div>
 
       <div>
-        <img type="submit" id="translateBtn" src=${btn} />
+        <button type="submit" id="translateBtn">
+          <img src=${btn} />
+        </button>
       </div>
 
       <div id="outputSide">
         <select class="langSelect" id="outputLangSelect">
-          <option>Arabic</option>
-          <option>Belarusian</option>
-          <option>English</option>
-          <option>Greek</option>
-          <option>Japanese</option>
-          <option>Nepali</option>
-          <option>Russian</option>
-          <option>Spanish</option>
+          <!-- add languages back after testing -->
+          <option value="es">Spanish</option>
         </select>
         <div>
           <textarea id="translateOutput" placeholder="Translation"></textarea>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 `;
