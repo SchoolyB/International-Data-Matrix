@@ -2,19 +2,9 @@ import html from "html-literal";
 import btn from "../../assets/images/translateBtn.png";
 export default () => html`
   <form id="fullTranslateContainer">
-    //change name to translateForm
+    <!-- change name to translateForm -->
     <div id="translatorContainer">
       <div id="inputSide">
-        <select class="langSelect" id="inputLangSelect">
-          <option>Arabic</option>
-          <option>Belarusian</option>
-          <option>English</option>
-          <option>Greek</option>
-          <option>Japanese</option>
-          <option>Nepali</option>
-          <option>Russian</option>
-          <option>Spanish</option>
-        </select>
         <div>
           <textarea
             id="translateInput"
@@ -32,7 +22,34 @@ export default () => html`
       <div id="outputSide">
         <select class="langSelect" id="outputLangSelect">
           <!-- add languages back after testing -->
+          <option value="bg">Bulgarian</option>
+          <option value="zh">Chinese</option>
+          <option value="da">Danish</option>
+          <option value="nl">Dutch</option>
+          <option value="es-us">English(American)</option>
+          <option value="en-gb">English(British)</option>
+          <option value="et">Estonian</option>
+          <option value="fi">Finnish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="el">Greek</option>
+          <option value="hu">Hungarian</option>
+          <option value="id">Indonesian</option>
+          <option value="it">Italian</option>
+          <option value="ja">Japanese</option>
+          <option value="lt">Lithuanian</option>
+          <option value="lv">Latvian</option>
+          <option value="pl">Polish</option>
+          <option value="pt-br">Portuguese(Brazilian)</option>
+          <option value="pt-pt">Portuguese(Portugal)</option>
+          <option value="ro">Romanian</option>
+          <option value="ru">Russian</option>
+          <option value="sk">Slovak</option>
+          <option value="sl">Slovenian</option>
           <option value="es">Spanish</option>
+          <option value="sw">Swedish</option>
+          <option value="tr">Turkish</option>
+          <option value="es">Ukrainian</option>
         </select>
         <div>
           <textarea id="translateOutput" placeholder="Translation"></textarea>

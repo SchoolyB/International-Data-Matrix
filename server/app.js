@@ -11,12 +11,12 @@ const PORT = process.env.PORT || 4040; // we use || to provide a default value
 
 const app = express();
 
-mongoose.connect(process.env.MONGODB);
+mongoose.connect(process.env.DATA_BASE);
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "Connection Error:"));
 db.once(
   "open",
-  console.log.bind(console, "Successfully opened connection to Mongo!")
+  console.log.bind(console, "Successfully connected to database!")
 );
 
 const logging = (request, response, next) => {
@@ -38,7 +38,6 @@ const cors = (req, res, next) => {
   res.setHeader("Access-Control-Allow-Credentials", true);
   next();
 };
-
 
 app.use(cors);
 app.use(express.json());
