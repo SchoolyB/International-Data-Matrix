@@ -58,13 +58,18 @@ As mentioned in [The How](https://github.com/SchoolyB/Capstone/tree/master#the-w
 
 ###### <i>"COMPONENTS" DIRECTORY STRUCTURE</i>
 Click [here](https://github.com/SchoolyB/Capstone/tree/master/components) to visit the "components" directory
+
 <img src="./assets/images/README/componentsDirectory.JPG">
 
 ###### <i> "VIEWS" DIRECTORY STRUCTURE</i>
 Click [here](https://github.com/SchoolyB/Capstone/tree/master/components/views) to visit the "views" directory
+
 <img src="./assets/images/README/viewsDirectory.JPG">
+
 ###### <i>"STORE" DIRECTORY STRUCTURE</i>
+
 Click [here](https://github.com/SchoolyB/Capstone/tree/master/store) to visit the "store' Directory
+
 <img src="./assets/images/README/storeDirectory.JPG">
 
  *** NOTE THAT ALL SCREENSHOTS BELOW ARE A REPRESENTATION OF HOW THE APPLICATIONS PAGES OR "VIEWS" LOOKED WHEN CREATING THE DOCUMENTATION AND WILL BE UPDATED AS THE PAGES CONTINUE TO UPDATE ***
