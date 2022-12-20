@@ -1,5 +1,5 @@
 {
-  "name": "savvy-starter",
+  "name": "tidm",
   "version": "1.0.0",
   "description": "",
 
@@ -9,7 +9,7 @@
     "app:watch": "nodemon --watch ./server -e js ./server/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marshall Burns",
   "license": "ISC",
   "devDependencies": {
     "buffer": "^5.7.1",
