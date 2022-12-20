@@ -4,6 +4,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const deepl = require("deepl-node");
+const fs = require("fs");
 
 dotenv.config();
 
@@ -70,5 +71,22 @@ app.post("/translator", (request, response) => {
       console.error(error);
     });
 });
+
+app.get("/country/:countryName", (request, response) => {
+  fs.readFile(
+    `./server/countryData/${request.params.countryName}.json`,
+    {
+      encoding: "utf8"
+    },
+    (error, data) => {
+      if (error) {
+        console.error(error);
+        response.status(404).send();
+      } else {
+        response.status(200).json(JSON.parse(data)); //json parse turns json string into json obj
+      }
+    }
+  );
+}); //countryName is a var can be manipulated
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

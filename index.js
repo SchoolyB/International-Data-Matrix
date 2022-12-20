@@ -45,6 +45,30 @@ function afterRender(state) {
 // router hooks({}) need a switch case statement to tell the program to specify what data should appear on what particular view
 // router.hooks({}) :before does all the data collection before the render method is executed
 // thats why our APIs usually are called within the function
+router.hooks({
+  before: (done, params) => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.data.view)
+        : "Australia";
+    switch (view) {
+      case "Australia":
+        axios
+          .get("http://localhost:4040/country/australia")
+          .then(response => {
+            console.log("hey");
+            store.Australia.stuffs = response.data;
+            console.log(response.data);
+
+            done();
+          })
+          .catch(err => console.log(err));
+        break;
+      default:
+        done();
+    }
+  }
+});
 // router hooks runs until thew done() function is executed
 
 router //this renders a specific view
