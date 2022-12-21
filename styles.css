@@ -520,3 +520,11 @@ width: 23em;
   cursor: pointer;
 }
 
+#translateBtn img {
+  /*
+    Set the image height to match the height of the container
+    This will scale the image down to fit the height
+    Change the size of the container to change the size of the image
+  */
+  height: 100%;
+}

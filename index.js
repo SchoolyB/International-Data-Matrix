@@ -23,6 +23,8 @@ function afterRender(state) {
   switch (state.view) {
     case "Translator":
       const form = document.getElementById("fullTranslateContainer");
+      // select the output so it can be updated later
+      const output = document.getElementById("translateOutput");
       form.addEventListener("submit", event => {
         event.preventDefault();
         const inputs = event.target.elements;
@@ -35,8 +37,10 @@ function afterRender(state) {
         axios
           .post("http://localhost:4040/translator", requestBody)
           .then(response => {
-            store.Translator.stuffs = response.data;
-            console.log(store.Translator.stuffs);
+            // this pusts the value in the 'store', but you won't read it from anywhere
+            store.Translator.outputText = response.data.text;
+            // this updates the html elment with the output
+            output.value = response.data.text;
           });
       });
       break;
