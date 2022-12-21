@@ -1,9 +1,9 @@
 {
-  "history":"TESTER" ,
-  "government": "TESTER" ,
-  "economy": "TESTER",
-  "demographics":"TESTER",
-  "culture":"TESTER",
-  "currentEvents": "TESTER"
+  "history":"History" ,
+  "government": "Government" ,
+  "economy": "Economy",
+  "demographics":"Demographics",
+  "culture":"Culture",
+  "currentEvents": "Current Events"
 
   }

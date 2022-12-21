@@ -21,7 +21,7 @@ db.once(
 );
 
 const logging = (request, response, next) => {
-  console.log(`${request.method} ${request.url} ${Date.now()}`);
+  console.log(`${request.method} ${request.url}`);
   next();
 };
 
