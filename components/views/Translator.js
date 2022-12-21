@@ -1,6 +1,6 @@
 import html from "html-literal";
 import btn from "../../assets/images/translateBtn.png";
-export default () => html`
+export default state => html`
   <form id="fullTranslateContainer">
     <!-- change name to translateForm -->
     <div id="translatorContainer">
@@ -52,7 +52,7 @@ export default () => html`
           <option value="es">Ukrainian</option>
         </select>
         <div>
-          <textarea id="translateOutput" placeholder="Translation"></textarea>
+          <textarea id="translateOutput" readonly> </textarea>
         </div>
       </div>
     </div>
