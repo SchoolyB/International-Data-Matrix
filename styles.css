@@ -417,8 +417,18 @@ box-shadow: 5px 10px 18px black
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 13em;
+  background-image: url("./assets/images/translation.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 9em;
+  height: 6em;
+  background-color: transparent;
+  border: none;
 }
-
+ #translateBtn:hover{
+  cursor: pointer;
+ }
 
 #translateInput{
   resize: none;
@@ -433,10 +443,10 @@ box-shadow: 5px 10px 18px black
 
 #translateOutput{
  resize: none;
- height: 10em;
+ height: 10.2em;
  width: 25em;
  font-size: 22px;
- margin-top: 5em;
+ margin-top: 3.5em;
 margin-right: 1em;
 border-radius: 25px;
 padding-left: .5em;

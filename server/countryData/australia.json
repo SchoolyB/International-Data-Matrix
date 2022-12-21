@@ -1,7 +1,5 @@
 {
-"history": ["this is a very long line which is not easily readble.",
-"so i would like to write it i multiple lines.",
-"but, i do NOT require any new lines in the output."],
+"history": "History",
 "government": "Government" ,
 "economy": "Economy",
 "demographics":"Demographics",

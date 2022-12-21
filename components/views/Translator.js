@@ -14,9 +14,7 @@ export default state => html`
       </div>
 
       <div>
-        <button type="submit" id="translateBtn">
-          <img src=${btn} />
-        </button>
+        <button type="submit" id="translateBtn"></button>
       </div>
 
       <div id="outputSide">

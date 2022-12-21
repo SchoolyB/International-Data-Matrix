@@ -23,6 +23,7 @@ function afterRender(state) {
   switch (state.view) {
     case "Translator":
       const form = document.getElementById("fullTranslateContainer");
+      const output = document.getElementById("translateOutput");
       form.addEventListener("submit", event => {
         event.preventDefault();
         const inputs = event.target.elements;
@@ -35,8 +36,9 @@ function afterRender(state) {
         axios
           .post("http://localhost:4040/translator", requestBody)
           .then(response => {
-            store.Translator.stuffs = response.data;
+            store.Translator.outputText = response.data.text;
             console.log(store.Translator.stuffs);
+            output.value = response.data.text;
           });
       });
       break;
