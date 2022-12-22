@@ -530,3 +530,6 @@ width: 23em;
   cursor: pointer;
 }
 
+.infoGraphic{
+  float: right;
+}
