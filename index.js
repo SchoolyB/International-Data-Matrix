@@ -3,8 +3,7 @@ import * as store from "./store"; //importing everything from "./store" as an ob
 import Navigo from "navigo"; //the navigo library is what imports the router.hooks({}):before, router.on(), and .resolve()
 import { capitalize } from "lodash";
 import axios from "axios";
-import * as deepl from "deepl-node";
-import { Stream } from "stream";
+
 const dotenv = require("dotenv");
 
 dotenv.config();
