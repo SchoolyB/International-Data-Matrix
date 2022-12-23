@@ -14,9 +14,28 @@ export default state => html`
         Australia"
       />
       <div class="genInformationContainer">
-        <p class="genInfoISOCodes">ISO CODE PLACEHOLDER</p>
-        <p class="genInfoCapitolCity">CAPITOL CITY PLACEHOLDER</p>
-        <p class="genInfoCurrency">CURRENCY PLACEHOLDER</p>
+        <p class="genInfoRegion">
+          Region: ${state.info.region}<br />
+          Subregion: ${state.info.subregion}
+        </p>
+        <p class="genInfoSubRegion"></p>
+        <p class="genInfoCapitolCity">
+          The Capitol of ${state.info.name} is: ${state.info.Capital}
+        </p>
+        <p>National Population: ${state.info.population} approx.</p>
+        <p class="genInfoISOCodes ">
+          ${state.info.name}'s Alpha 2 code is: ${state.info.Alpha2Code}<br />
+          ${state.info.name}'s Alpha 3 code is: ${state.info.Alpha3Code}
+        </p>
+        <p class="genInfoCurrency">
+          The Currency of Australia is ${state.info.Currency}
+        </p>
+        <p class="genInfoCallingCodes">
+          ${state.info.name}'s calling code is ${state.info.callingCodes}
+        </p>
+        <p class="genInfoTimezones">
+          Timezones: ${state.info.timezones}
+        </p>
       </div>
     </div>
     <div>
@@ -1654,12 +1673,6 @@ export default state => html`
         John Cornforth (1975), for chemistry, and Sir Macfarlane Burnet (1960),
         Sir John Eccles (1963), and Peter C. Doherty (1996), for work in the
         medical sciences.
-        <a href="https://www.pexels.com">
-          <img
-            class="infoGraphic"
-            src="https://images.pexels.com/lib/api/pexels-white.png"
-          />
-        </a>
       </p>
     </section>
 
@@ -1700,10 +1713,18 @@ export default state => html`
 
     <section class="currentEvents topic" id="australiaCurrentEvents">
       <h3>Current Events</h3>
-      <p>
-        ${state.currentEvents}
-        <script src="//rss.bloople.net/?url=http%3A%2F%2Fwww.9news.com.au%2Frss&limit=5&showtitle=false&type=js"></script>
-      </p>
+      <h6>
+        ${state.headlines[0]}
+      </h6>
+      <h6>
+        ${state.headlines[1]}
+      </h6>
+      <h6>
+        ${state.headlines[2]}
+      </h6>
+      <h6>
+        ${state.headlines[3]}
+      </h6>
     </section>
   </div>
 `;
