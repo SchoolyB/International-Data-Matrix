@@ -56,16 +56,6 @@ export default state => html`
         </h3>
         <p>
         <h6>
-        ${state.headlines[0]}
-      </h6>
-      <h6>
-        ${state.headlines[1]}
-      </h6>
-      <h6>
-        ${state.headlines[2]}
-      </h6>
-      <h6>
-        ${state.headlines[3]}
         </p>
       </section>
     </div>

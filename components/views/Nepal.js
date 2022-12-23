@@ -38,9 +38,9 @@ export default state => html`
         </div>
       </div>
       <div>
-      <h1 class="countryNameHeader">${state.info.name}</h1>
-      <h2 class="nativeName">${state.info.nativeName}</h2>
-    </div>
+        <h1 class="countryNameHeader">${state.info.name}</h1>
+        <h2 class="nativeName">${state.info.nativeName}</h2>
+      </div>
       <section class="history topic" id="nepalHistory">
         <h3>
           History
@@ -53,19 +53,7 @@ export default state => html`
         <h3>
           Current Events
         </h3>
-        <p>
-        <h6>
-        ${state.headlines[0]}
-      </h6>
-      <h6>
-        ${state.headlines[1]}
-      </h6>
-      <h6>
-        ${state.headlines[2]}
-      </h6>
-      <h6>
-        ${state.headlines[3]}
-        </p>
+        <p></p>
       </section>
     </div>
   </div>
