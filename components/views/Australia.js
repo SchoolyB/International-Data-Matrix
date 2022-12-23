@@ -1692,3 +1692,4 @@ const newsCard = data =>
     </h1>
     <a href="${data.url}">Click Here To Learn More</a>
   `;
+//  this is a comment
