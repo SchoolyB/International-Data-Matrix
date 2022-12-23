@@ -1,7 +1,7 @@
 import html from "html-literal";
 import { countryInfo } from "../../store/CountryData/countrySelectionScreenData";
 
-const createCountry = countryObj => {
+const createCountry = (countryObj, state) => {
   //dereferencing
   const {
     countryClass,
