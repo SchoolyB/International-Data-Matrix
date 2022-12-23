@@ -114,20 +114,20 @@ router.hooks({
                 store.Belarus.info.Region = response.data.region;
                 store.Belarus.info.Timezones = response.data.timezones;
                 store.Belarus.info.SubRegion = response.data.subRegion;
-                store.Belarus.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=belarus&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Belarus.headlines = response.data.articles;
+                // store.Belarus.info.Population = response.data.population;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=belarus&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Belarus.headlines = response.data.articles;
 
-                    store.Belarus.author = response.data.articles;
+                //     store.Belarus.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
@@ -150,19 +150,19 @@ router.hooks({
                 store.Greece.info.Timezones = response.data.timezones;
                 store.Greece.info.SubRegion = response.data.subRegion;
                 store.Greece.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=greece&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Greece.headlines = response.data.articles;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=greece&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Greece.headlines = response.data.articles;
 
-                    store.Greece.author = response.data.articles;
+                //     store.Greece.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
@@ -185,19 +185,19 @@ router.hooks({
                 store.Japan.info.Timezones = response.data.timezones;
                 store.Japan.info.SubRegion = response.data.subRegion;
                 store.Japan.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=japan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Japan.headlines = response.data.articles;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=japan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Japan.headlines = response.data.articles;
 
-                    store.Japan.author = response.data.articles;
+                //     store.Japan.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
@@ -220,19 +220,19 @@ router.hooks({
                 store.Morocco.info.Timezones = response.data.timezones;
                 store.Morocco.info.SubRegion = response.data.subRegion;
                 store.Morocco.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=morocco&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Morocco.headlines = response.data.articles;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=morocco&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Morocco.headlines = response.data.articles;
 
-                    store.Morocco.author = response.data.articles;
+                //     store.Morocco.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
@@ -255,19 +255,19 @@ router.hooks({
                 store.Nepal.info.Timezones = response.data.timezones;
                 store.Nepal.info.SubRegion = response.data.subRegion;
                 store.Nepal.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=nepal&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Nepal.headlines = response.data.articles;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=nepal&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Nepal.headlines = response.data.articles;
 
-                    store.Nepal.author = response.data.articles;
+                //     store.Nepal.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
@@ -290,19 +290,19 @@ router.hooks({
                 store.Sudan.info.Timezones = response.data.timezones;
                 store.Sudan.info.SubRegion = response.data.subRegion;
                 store.Sudan.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=sudan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Sudan.headlines = response.data.articles;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=sudan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Sudan.headlines = response.data.articles;
 
-                    store.Sudan.author = response.data.articles;
+                //     store.Sudan.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
@@ -325,19 +325,19 @@ router.hooks({
                 store.Usa.info.Timezones = response.data.timezones;
                 store.Usa.info.SubRegion = response.data.subRegion;
                 store.Usa.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=us&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Usa.headlines = response.data.articles;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=us&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Usa.headlines = response.data.articles;
 
-                    store.Usa.author = response.data.articles;
+                //     store.Usa.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
@@ -360,19 +360,19 @@ router.hooks({
                 store.Venezuela.info.Timezones = response.data.timezones;
                 store.Venezuela.info.SubRegion = response.data.subRegion;
                 store.Venezuela.info.Population = response.data.population;
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=venezuela&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Venezuela.headlines = response.data.articles;
+                // axios
+                //   .get(
+                //     `https://newsapi.org/v2/everything?q=venezuela&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                //   )
+                //   .then(response => {
+                //     store.Venezuela.headlines = response.data.articles;
 
-                    store.Venezuela.author = response.data.articles;
+                //     store.Venezuela.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                //     console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
