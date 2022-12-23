@@ -52,6 +52,8 @@ function afterRender(state) {
 // router hooks({}) need a switch case statement to tell the program to specify what data should appear on what particular view
 // router.hooks({}) :before does all the data collection before the render method is executed
 // thats why our APIs usually are called within the function
+
+// WITHIN THE ROUTER.HOOKS() ALL COUNTRIES ARE IN ALPHABETICAL ORDER
 router.hooks({
   before: (done, params) => {
     const view =
@@ -75,21 +77,10 @@ router.hooks({
             store.Australia.info.Timezones = response.data.timezones;
             store.Australia.info.SubRegion = response.data.subRegion;
             store.Australia.info.Population = response.data.population;
-            // possibly adf native name to a sub heading of country info screen
-            // possibly add population to country selection screen
-            // axios
-            // .get
-            // `https://newsapi.org/v2/everything?q=australia&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            // ()
-            // .then(response => {
-            // store.Australia.headlines = response.data.articles;
 
-            // store.Australia.author = response.data.articles;
-
-            // console.log(response.data.articles.author);.
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=C18uT2LZOqJou8zFpe0H4iJ6ZTA7N1wdvWTjP8bq&language=en&limit=3`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
                 store.Australia.news = response.data;
@@ -100,8 +91,8 @@ router.hooks({
               .finally(done);
           })
           .catch(err => console.log(err));
-        // });
         break;
+
       case "Belarus":
         axios
           .get("https://restcountries.com/v2/alpha/by")
@@ -117,31 +108,22 @@ router.hooks({
             store.Belarus.info.Region = response.data.region;
             store.Belarus.info.Timezones = response.data.timezones;
             store.Belarus.info.SubRegion = response.data.subRegion;
-            // store.Belarus.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=belarus&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Belarus.headlines = response.data.articles;
 
-            //     store.Belarus.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=by`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Belarus.newsArticle = response.data.data;
+                store.Belarus.news = response.data;
+                store.Belarus.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
-
         break;
+
       case "Greece":
         axios
           .get("https://restcountries.com/v2/alpha/gr")
@@ -158,30 +140,22 @@ router.hooks({
             store.Greece.info.Timezones = response.data.timezones;
             store.Greece.info.SubRegion = response.data.subRegion;
             store.Greece.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=greece&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Greece.headlines = response.data.articles;
 
-            //     store.Greece.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=gr`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Greece.newsArticle = response.data.data;
+                store.Greece.news = response.data;
+                store.Greece.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
-
         break;
+
       case "Japan":
         axios
           .get("https://restcountries.com/v2/alpha/jp")
@@ -198,30 +172,22 @@ router.hooks({
             store.Japan.info.Timezones = response.data.timezones;
             store.Japan.info.SubRegion = response.data.subRegion;
             store.Japan.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=japan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Japan.headlines = response.data.articles;
 
-            //     store.Japan.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=jp`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Japan.newsArticle = response.data.data;
+                store.Japan.news = response.data;
+                store.Japan.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
-
         break;
+
       case "Morocco":
         axios
           .get("https://restcountries.com/v2/alpha/ma")
@@ -238,30 +204,22 @@ router.hooks({
             store.Morocco.info.Timezones = response.data.timezones;
             store.Morocco.info.SubRegion = response.data.subRegion;
             store.Morocco.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=morocco&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Morocco.headlines = response.data.articles;
 
-            //     store.Morocco.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=ma`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Morocco.newsArticle = response.data.data;
+                store.Morocco.news = response.data;
+                store.Morocco.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
-
         break;
+
       case "Nepal":
         axios
           .get("https://restcountries.com/v2/alpha/np")
@@ -278,30 +236,22 @@ router.hooks({
             store.Nepal.info.Timezones = response.data.timezones;
             store.Nepal.info.SubRegion = response.data.subRegion;
             store.Nepal.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=nepal&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Nepal.headlines = response.data.articles;
 
-            //     store.Nepal.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=np`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Nepal.newsArticle = response.data.data;
+                store.Nepal.news = response.data;
+                store.Nepal.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
-
         break;
+
       case "Sudan":
         axios
           .get("https://restcountries.com/v2/alpha/sd")
@@ -318,29 +268,22 @@ router.hooks({
             store.Sudan.info.Timezones = response.data.timezones;
             store.Sudan.info.SubRegion = response.data.subRegion;
             store.Sudan.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=sudan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Sudan.headlines = response.data.articles;
 
-            //     store.Sudan.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=sd`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Sudan.newsArticle = response.data.data;
+                store.Sudan.news = response.data;
+                store.Sudan.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
         break;
+
       case "Usa":
         axios
           .get("https://restcountries.com/v2/alpha/us")
@@ -357,30 +300,23 @@ router.hooks({
             store.Usa.info.Timezones = response.data.timezones;
             store.Usa.info.SubRegion = response.data.subRegion;
             store.Usa.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=us&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Usa.headlines = response.data.articles;
 
-            //     store.Usa.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=us`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Usa.newsArticle = response.data.data;
+                store.Usa.news = response.data;
+                store.Usa.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
 
         break;
+
       case "Venezuela":
         axios
           .get("https://restcountries.com/v2/alpha/ve")
@@ -397,28 +333,20 @@ router.hooks({
             store.Venezuela.info.Timezones = response.data.timezones;
             store.Venezuela.info.SubRegion = response.data.subRegion;
             store.Venezuela.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=venezuela&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Venezuela.headlines = response.data.articles;
 
-            //     store.Venezuela.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=ve&languages=en`
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
               )
               .then(response => {
-                store.Australia.newsArticle = response.data.data;
+                store.Venezuela.news = response.data;
+                store.Venezuela.news.data = response.data.data;
                 console.log(response.data.data);
-                done();
-              });
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
-        // });
         break;
       default:
         done();
