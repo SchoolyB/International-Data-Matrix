@@ -57,7 +57,7 @@ router.hooks({
     const view =
       params && params.data && params.data.view
         ? capitalize(params.data.view)
-        : "Australia";
+        : "Home";
     switch (view) {
       case "Australia":
         axios

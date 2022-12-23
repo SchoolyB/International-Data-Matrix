@@ -13,8 +13,6 @@ export default state => html`
         Morocco"
       />
       <div class="genInformationContainer">
-        <
-        <div class="genInformationContainer">
           <p class="genInfoRegion">
             Region: ${state.info.region}<br />
             Subregion: ${state.info.subregion}
