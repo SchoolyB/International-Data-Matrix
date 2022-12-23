@@ -80,19 +80,19 @@ router.hooks({
                 store.Australia.info.Population = response.data.population;
                 // possibly adf native name to a sub heading of country info screen
                 // possibly add population to country selection screen
-                axios
-                  .get(
-                    `https://newsapi.org/v2/everything?q=australia&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                  )
-                  .then(response => {
-                    store.Australia.headlines = response.data.articles;
+                // axios
+                // .get
+                // `https://newsapi.org/v2/everything?q=australia&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+                // ()
+                // .then(response => {
+                // store.Australia.headlines = response.data.articles;
 
-                    store.Australia.author = response.data.articles;
+                // store.Australia.author = response.data.articles;
 
-                    console.log(response.data.articles.author);
-                    done();
-                  });
+                // console.log(response.data.articles.author);
+                done();
               });
+            // });
           })
           .catch(err => console.log(err));
         break;
