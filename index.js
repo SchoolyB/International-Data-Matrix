@@ -86,8 +86,18 @@ router.hooks({
 
             // store.Australia.author = response.data.articles;
 
-            // console.log(response.data.articles.author);
-            done();
+            // console.log(response.data.articles.author);.
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=C18uT2LZOqJou8zFpe0H4iJ6ZTA7N1wdvWTjP8bq&language=en&limit=3`
+              )
+              .then(response => {
+                store.Australia.news = response.data;
+                store.Australia.news.data = response.data.data;
+                console.log(response.data.data);
+              })
+              .catch(console.log)
+              .finally(done);
           })
           .catch(err => console.log(err));
         // });
@@ -118,7 +128,15 @@ router.hooks({
             //     store.Belarus.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=by`
+              )
+              .then(response => {
+                store.Belarus.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
@@ -150,7 +168,15 @@ router.hooks({
             //     store.Greece.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=gr`
+              )
+              .then(response => {
+                store.Greece.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
@@ -182,7 +208,15 @@ router.hooks({
             //     store.Japan.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=jp`
+              )
+              .then(response => {
+                store.Japan.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
@@ -214,7 +248,15 @@ router.hooks({
             //     store.Morocco.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=ma`
+              )
+              .then(response => {
+                store.Morocco.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
@@ -246,7 +288,15 @@ router.hooks({
             //     store.Nepal.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=np`
+              )
+              .then(response => {
+                store.Nepal.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
@@ -278,7 +328,15 @@ router.hooks({
             //     store.Sudan.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=sd`
+              )
+              .then(response => {
+                store.Sudan.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
@@ -309,7 +367,15 @@ router.hooks({
             //     store.Usa.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=us`
+              )
+              .then(response => {
+                store.Usa.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
@@ -341,7 +407,15 @@ router.hooks({
             //     store.Venezuela.author = response.data.articles;
 
             //     console.log(response.data.articles.author);
-            done();
+            axios
+              .get(
+                `http://api.mediastack.com/v1/news?access_key=${process.env.NEWS_KEY}&countries=ve&languages=en`
+              )
+              .then(response => {
+                store.Australia.newsArticle = response.data.data;
+                console.log(response.data.data);
+                done();
+              });
           })
           .catch(err => console.log(err));
         // });
