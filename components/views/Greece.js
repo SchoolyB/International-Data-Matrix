@@ -27,8 +27,10 @@ export default state => html`
             ${state.info.name}'s Alpha 3 code is: ${state.info.Alpha3Code}
           </p>
           <p class="genInfoCurrency">
-            The Currency of ${state.info.name} is ${state.info.Currency}
-          </p>
+          The National Currency of ${state.info.name} Is: <br />
+          The ${state.info.Currency[0].name} Represented As:
+          ${state.info.Currency[0].symbol}, ${state.info.Currency[0].code}
+        </p>
           <p class="genInfoCallingCodes">
             ${state.info.name}'s calling code is ${state.info.callingCodes}
           </p>
@@ -50,11 +52,16 @@ export default state => html`
         </p>
       </section>
       <section class="currentEvents topic" id="greeceCurrentEvents">
-        <h3>
-          Current Events
-        </h3>
-        <p></p>
-      </section>
+      <h3>Current Events</h3>
+      <p>${state.news.data.map(newsCard)}</p>
+    </section>
     </div>
   </div>
 `;
+const newsCard = data =>
+  html`
+    <h1>
+      ${data.title}
+    </h1>
+    <a href="${data.url}">Click Here To Learn More</a>
+  `;

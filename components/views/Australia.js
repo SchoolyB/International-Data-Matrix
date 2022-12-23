@@ -28,9 +28,9 @@ export default state => html`
           ${state.info.name}'s Alpha 3 code is: ${state.info.Alpha3Code}
         </p>
         <p class="genInfoCurrency">
-          The Currency of ${state.info.name} is ${state.info.Currency[0].name}
-          ${state.info.Currency[0].symbol} ,${state.info.Currency[0].code}
-          ${console.log(state.info.Currency)}
+          The National Currency of ${state.info.name} Is: <br />
+          The ${state.info.Currency[0].name} Represented As:
+          ${state.info.Currency[0].symbol}, ${state.info.Currency[0].code}
         </p>
         <!-- add currency changes to other countries -->
         <p class="genInfoCallingCodes">
@@ -1682,8 +1682,6 @@ export default state => html`
     <section class="currentEvents topic" id="australiaCurrentEvents">
       <h3>Current Events</h3>
       <p>${state.news.data.map(newsCard)}</p>
-
-      <p></p>
     </section>
   </div>
 `;
@@ -1692,5 +1690,5 @@ const newsCard = data =>
     <h1>
       ${data.title}
     </h1>
-    <a href="${data.url}">Read More</a>
+    <a href="${data.url}">Click Here To Learn More</a>
   `;
