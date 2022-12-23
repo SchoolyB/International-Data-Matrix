@@ -28,7 +28,7 @@ export default state => html`
             ${state.info.name}'s Alpha 3 code is: ${state.info.Alpha3Code}
           </p>
           <p class="genInfoCurrency">
-            The Currency of Australia is ${state.info.Currency}
+            The Currency of ${state.info.name} is ${state.info.Currency}
           </p>
           <p class="genInfoCallingCodes">
             ${state.info.name}'s calling code is ${state.info.callingCodes}
@@ -39,9 +39,9 @@ export default state => html`
         </div>
       </div>
       <div>
-        <h1 class="countryNameHeader">Greece</h1>
-        <h2 class="nativeName">Ελλάδα</h2>
-      </div>
+      <h1 class="countryNameHeader">${state.info.name}</h1>
+      <h2 class="nativeName">${state.info.nativeName}</h2>
+    </div>
       <section class="history topic" id="greeceHistory">
         <h3>
           History
@@ -50,40 +50,6 @@ export default state => html`
          sdfsdfsdf
         </p>
       </section>
-
-      <section class="government, topic" id="greeceGovernment">
-        <h3>
-          Government
-        </h3>
-        <p>
-          ${state.government}
-        </p>
-      </section>
-      <section class="economy topic" id="greeceEconomy">
-        <h3>
-          Economy
-        </h3>
-        <p>TEST</p>
-      </section>
-
-      <section class="demographics topic" id="greeceDemographics">
-        <h3>
-          Demographics
-        </h3>
-        <p>
-          ${state.demographics}
-        </p>
-      </section>
-
-      <section class="culture topic" id="greeceCulture">
-        <h3>
-          Culture
-        </h3>
-        <p>
-          ${state.culture}
-        </p>
-      </section>
-
       <section class="currentEvents topic" id="greeceCurrentEvents">
         <h3>
           Current Events
