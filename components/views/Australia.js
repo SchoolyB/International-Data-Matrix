@@ -1713,18 +1713,6 @@ export default state => html`
 
     <section class="currentEvents topic" id="australiaCurrentEvents">
       <h3>Current Events</h3>
-      <h6>
-        ${state.headlines[0]}
-      </h6>
-      <h6>
-        ${state.headlines[1]}
-      </h6>
-      <h6>
-        ${state.headlines[2]}
-      </h6>
-      <h6>
-        ${state.headlines[3]}
-      </h6>
     </section>
   </div>
 `;
