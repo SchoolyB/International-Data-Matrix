@@ -28,7 +28,7 @@ export default state => html`
             ${state.info.name}'s Alpha 3 code is: ${state.info.Alpha3Code}
           </p>
           <p class="genInfoCurrency">
-            The Currency of Australia is ${state.info.Currency}
+            The Currency of ${state.info.name} is ${state.info.Currency}
           </p>
           <p class="genInfoCallingCodes">
             ${state.info.name}'s calling code is ${state.info.callingCodes}
@@ -39,9 +39,9 @@ export default state => html`
         </div>
       </div>
       <div>
-        <h1 class="countryNameHeader">Sudan</h1>
-        <h2 class="nativeName">السودان</h2>
-      </div>
+      <h1 class="countryNameHeader">${state.info.name}</h1>
+      <h2 class="nativeName">${state.info.nativeName}</h2>
+    </div>
       <section class="history topic" id="sudanHistory">
         <h3>
           History
@@ -50,42 +50,6 @@ export default state => html`
           ${state.history}
         </p>
       </section>
-
-      <section class="government, topic" id="sudanGovernment">
-        <h3>
-          Government
-        </h3>
-        <p>
-          ${state.government}
-        </p>
-      </section>
-      <section class="economy topic" id="sudanEconomy">
-        <h3>
-          Economy
-        </h3>
-        <p>
-          ${state.economy}
-        </p>
-      </section>
-
-      <section class="demographics topic" id="sudanDemographics">
-        <h3>
-          Demographics
-        </h3>
-        <p>
-          ${state.demographics}
-        </p>
-      </section>
-
-      <section class="culture topic" id="sudanCulture">
-        <h3>
-          Culture
-        </h3>
-        <p>
-          ${state.culture}
-        </p>
-      </section>
-
       <section class="currentEvents topic" id="sudanCurrentEvents">
         <h3>
           Current Events

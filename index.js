@@ -61,320 +61,290 @@ router.hooks({
     switch (view) {
       case "Australia":
         axios
-          .get("")
+          .get("https://restcountries.com/v2/alpha/au")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/au")
-              .then(response => {
-                store.Australia.info = response.data;
-                store.Australia.info.Alpha2Code = response.data.alpha2Code;
-                store.Australia.info.Alpha3Code = response.data.alpha3Code;
-                store.Australia.info.CallingCodes = response.data.callingCodes;
-                store.Australia.info.Capital = response.data.capital;
-                store.Australia.info.Currency = response.data.currencies;
-                store.Australia.info.Native = response.data.nativeName;
-                store.Australia.info.Name = response.data.name;
-                store.Australia.info.Region = response.data.region;
-                store.Australia.info.Timezones = response.data.timezones;
-                store.Australia.info.SubRegion = response.data.subRegion;
-                store.Australia.info.Population = response.data.population;
-                // possibly adf native name to a sub heading of country info screen
-                // possibly add population to country selection screen
-                // axios
-                // .get
-                // `https://newsapi.org/v2/everything?q=australia&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                // ()
-                // .then(response => {
-                // store.Australia.headlines = response.data.articles;
+            store.Australia.info = response.data;
+            store.Australia.info.Alpha2Code = response.data.alpha2Code;
+            store.Australia.info.Alpha3Code = response.data.alpha3Code;
+            store.Australia.info.CallingCodes = response.data.callingCodes;
+            store.Australia.info.Capital = response.data.capital;
+            store.Australia.info.Currency = response.data.currencies;
+            store.Australia.info.Native = response.data.nativeName;
+            store.Australia.info.Name = response.data.name;
+            store.Australia.info.Region = response.data.region;
+            store.Australia.info.Timezones = response.data.timezones;
+            store.Australia.info.SubRegion = response.data.subRegion;
+            store.Australia.info.Population = response.data.population;
+            // possibly adf native name to a sub heading of country info screen
+            // possibly add population to country selection screen
+            // axios
+            // .get
+            // `https://newsapi.org/v2/everything?q=australia&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            // ()
+            // .then(response => {
+            // store.Australia.headlines = response.data.articles;
 
-                // store.Australia.author = response.data.articles;
+            // store.Australia.author = response.data.articles;
 
-                // console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            // console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
         break;
       case "Belarus":
         axios
-          .get("")
+          .get("https://restcountries.com/v2/alpha/by")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/by")
-              .then(response => {
-                store.Belarus.info = response.data;
-                store.Belarus.info.Alpha2Code = response.data.alpha2Code;
-                store.Belarus.info.Alpha3Code = response.data.alpha3Code;
-                store.Belarus.info.CallingCodes = response.data.callingCodes;
-                store.Belarus.info.Capital = response.data.capital;
-                store.Belarus.info.Currency = response.data.currencies;
-                store.Belarus.info.Native = response.data.nativeName;
-                store.Belarus.info.Name = response.data.name;
-                store.Belarus.info.Region = response.data.region;
-                store.Belarus.info.Timezones = response.data.timezones;
-                store.Belarus.info.SubRegion = response.data.subRegion;
-                // store.Belarus.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=belarus&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Belarus.headlines = response.data.articles;
+            store.Belarus.info = response.data;
+            store.Belarus.info.Alpha2Code = response.data.alpha2Code;
+            store.Belarus.info.Alpha3Code = response.data.alpha3Code;
+            store.Belarus.info.CallingCodes = response.data.callingCodes;
+            store.Belarus.info.Capital = response.data.capital;
+            store.Belarus.info.Currency = response.data.currencies;
+            store.Belarus.info.Native = response.data.nativeName;
+            store.Belarus.info.Name = response.data.name;
+            store.Belarus.info.Region = response.data.region;
+            store.Belarus.info.Timezones = response.data.timezones;
+            store.Belarus.info.SubRegion = response.data.subRegion;
+            // store.Belarus.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=belarus&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Belarus.headlines = response.data.articles;
 
-                //     store.Belarus.author = response.data.articles;
+            //     store.Belarus.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
+
         break;
       case "Greece":
         axios
-          .get("")
+          .get("https://restcountries.com/v2/alpha/gr")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/gr")
-              .then(response => {
-                store.Greece.info = response.data;
-                store.Greece.info.Alpha2Code = response.data.alpha2Code;
-                store.Greece.info.Alpha3Code = response.data.alpha3Code;
-                store.Greece.info.CallingCodes = response.data.callingCodes;
-                store.Greece.info.Capital = response.data.capital;
-                store.Greece.info.Currency = response.data.currencies;
-                store.Greece.info.Native = response.data.nativeName;
-                store.Greece.info.Name = response.data.name;
-                store.Greece.info.Region = response.data.region;
-                store.Greece.info.Timezones = response.data.timezones;
-                store.Greece.info.SubRegion = response.data.subRegion;
-                store.Greece.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=greece&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Greece.headlines = response.data.articles;
+            store.Greece.info = response.data;
+            store.Greece.info.Alpha2Code = response.data.alpha2Code;
+            store.Greece.info.Alpha3Code = response.data.alpha3Code;
+            store.Greece.info.CallingCodes = response.data.callingCodes;
+            store.Greece.info.Capital = response.data.capital;
+            store.Greece.info.Currency = response.data.currencies;
+            store.Greece.info.Native = response.data.nativeName;
+            store.Greece.info.Name = response.data.name;
+            store.Greece.info.Region = response.data.region;
+            store.Greece.info.Timezones = response.data.timezones;
+            store.Greece.info.SubRegion = response.data.subRegion;
+            store.Greece.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=greece&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Greece.headlines = response.data.articles;
 
-                //     store.Greece.author = response.data.articles;
+            //     store.Greece.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
+
         break;
       case "Japan":
         axios
-          // .get()
+          .get("https://restcountries.com/v2/alpha/jp")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/jp")
-              .then(response => {
-                store.Japan.info = response.data;
-                store.Japan.info.Alpha2Code = response.data.alpha2Code;
-                store.Japan.info.Alpha3Code = response.data.alpha3Code;
-                store.Japan.info.CallingCodes = response.data.callingCodes;
-                store.Japan.info.Capital = response.data.capital;
-                store.Japan.info.Currency = response.data.currencies;
-                store.Japan.info.Native = response.data.nativeName;
-                store.Japan.info.Name = response.data.name;
-                store.Japan.info.Region = response.data.region;
-                store.Japan.info.Timezones = response.data.timezones;
-                store.Japan.info.SubRegion = response.data.subRegion;
-                store.Japan.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=japan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Japan.headlines = response.data.articles;
+            store.Japan.info = response.data;
+            store.Japan.info.Alpha2Code = response.data.alpha2Code;
+            store.Japan.info.Alpha3Code = response.data.alpha3Code;
+            store.Japan.info.CallingCodes = response.data.callingCodes;
+            store.Japan.info.Capital = response.data.capital;
+            store.Japan.info.Currency = response.data.currencies;
+            store.Japan.info.Native = response.data.nativeName;
+            store.Japan.info.Name = response.data.name;
+            store.Japan.info.Region = response.data.region;
+            store.Japan.info.Timezones = response.data.timezones;
+            store.Japan.info.SubRegion = response.data.subRegion;
+            store.Japan.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=japan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Japan.headlines = response.data.articles;
 
-                //     store.Japan.author = response.data.articles;
+            //     store.Japan.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
+
         break;
       case "Morocco":
         axios
-          // .get("")
+          .get("https://restcountries.com/v2/alpha/ma")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/ma")
-              .then(response => {
-                store.Morocco.info = response.data;
-                store.Morocco.info.Alpha2Code = response.data.alpha2Code;
-                store.Morocco.info.Alpha3Code = response.data.alpha3Code;
-                store.Morocco.info.CallingCodes = response.data.callingCodes;
-                store.Morocco.info.Capital = response.data.capital;
-                store.Morocco.info.Currency = response.data.currencies;
-                store.Morocco.info.Native = response.data.nativeName;
-                store.Morocco.info.Name = response.data.name;
-                store.Morocco.info.Region = response.data.region;
-                store.Morocco.info.Timezones = response.data.timezones;
-                store.Morocco.info.SubRegion = response.data.subRegion;
-                store.Morocco.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=morocco&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Morocco.headlines = response.data.articles;
+            store.Morocco.info = response.data;
+            store.Morocco.info.Alpha2Code = response.data.alpha2Code;
+            store.Morocco.info.Alpha3Code = response.data.alpha3Code;
+            store.Morocco.info.CallingCodes = response.data.callingCodes;
+            store.Morocco.info.Capital = response.data.capital;
+            store.Morocco.info.Currency = response.data.currencies;
+            store.Morocco.info.Native = response.data.nativeName;
+            store.Morocco.info.Name = response.data.name;
+            store.Morocco.info.Region = response.data.region;
+            store.Morocco.info.Timezones = response.data.timezones;
+            store.Morocco.info.SubRegion = response.data.subRegion;
+            store.Morocco.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=morocco&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Morocco.headlines = response.data.articles;
 
-                //     store.Morocco.author = response.data.articles;
+            //     store.Morocco.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
+
         break;
       case "Nepal":
         axios
-          // .get()
+          .get("https://restcountries.com/v2/alpha/np")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/np")
-              .then(response => {
-                store.Nepal.info = response.data;
-                store.Nepal.info.Alpha2Code = response.data.alpha2Code;
-                store.Nepal.info.Alpha3Code = response.data.alpha3Code;
-                store.Nepal.info.CallingCodes = response.data.callingCodes;
-                store.Nepal.info.Capital = response.data.capital;
-                store.Nepal.info.Currency = response.data.currencies;
-                store.Nepal.info.Native = response.data.nativeName;
-                store.Nepal.info.Name = response.data.name;
-                store.Nepal.info.Region = response.data.region;
-                store.Nepal.info.Timezones = response.data.timezones;
-                store.Nepal.info.SubRegion = response.data.subRegion;
-                store.Nepal.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=nepal&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Nepal.headlines = response.data.articles;
+            store.Nepal.info = response.data;
+            store.Nepal.info.Alpha2Code = response.data.alpha2Code;
+            store.Nepal.info.Alpha3Code = response.data.alpha3Code;
+            store.Nepal.info.CallingCodes = response.data.callingCodes;
+            store.Nepal.info.Capital = response.data.capital;
+            store.Nepal.info.Currency = response.data.currencies;
+            store.Nepal.info.Native = response.data.nativeName;
+            store.Nepal.info.Name = response.data.name;
+            store.Nepal.info.Region = response.data.region;
+            store.Nepal.info.Timezones = response.data.timezones;
+            store.Nepal.info.SubRegion = response.data.subRegion;
+            store.Nepal.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=nepal&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Nepal.headlines = response.data.articles;
 
-                //     store.Nepal.author = response.data.articles;
+            //     store.Nepal.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
+
         break;
       case "Sudan":
         axios
-          // .get("")
+          .get("https://restcountries.com/v2/alpha/sd")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/sd")
-              .then(response => {
-                store.Sudan.info = response.data;
-                store.Sudan.info.Alpha2Code = response.data.alpha2Code;
-                store.Sudan.info.Alpha3Code = response.data.alpha3Code;
-                store.Sudan.info.CallingCodes = response.data.callingCodes;
-                store.Sudan.info.Capital = response.data.capital;
-                store.Sudan.info.Currency = response.data.currencies;
-                store.Sudan.info.Native = response.data.nativeName;
-                store.Sudan.info.Name = response.data.name;
-                store.Sudan.info.Region = response.data.region;
-                store.Sudan.info.Timezones = response.data.timezones;
-                store.Sudan.info.SubRegion = response.data.subRegion;
-                store.Sudan.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=sudan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Sudan.headlines = response.data.articles;
+            store.Sudan.info = response.data;
+            store.Sudan.info.Alpha2Code = response.data.alpha2Code;
+            store.Sudan.info.Alpha3Code = response.data.alpha3Code;
+            store.Sudan.info.CallingCodes = response.data.callingCodes;
+            store.Sudan.info.Capital = response.data.capital;
+            store.Sudan.info.Currency = response.data.currencies;
+            store.Sudan.info.Native = response.data.nativeName;
+            store.Sudan.info.Name = response.data.name;
+            store.Sudan.info.Region = response.data.region;
+            store.Sudan.info.Timezones = response.data.timezones;
+            store.Sudan.info.SubRegion = response.data.subRegion;
+            store.Sudan.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=sudan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Sudan.headlines = response.data.articles;
 
-                //     store.Sudan.author = response.data.articles;
+            //     store.Sudan.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
         break;
       case "Usa":
         axios
-          // .get("")
+          .get("https://restcountries.com/v2/alpha/us")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/us")
-              .then(response => {
-                store.Usa.info = response.data;
-                store.Usa.info.Alpha2Code = response.data.alpha2Code;
-                store.Usa.info.Alpha3Code = response.data.alpha3Code;
-                store.Usa.info.CallingCodes = response.data.callingCodes;
-                store.Usa.info.Capital = response.data.capital;
-                store.Usa.info.Currency = response.data.currencies;
-                store.Usa.info.Native = response.data.nativeName;
-                store.Usa.info.Name = response.data.name;
-                store.Usa.info.Region = response.data.region;
-                store.Usa.info.Timezones = response.data.timezones;
-                store.Usa.info.SubRegion = response.data.subRegion;
-                store.Usa.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=us&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Usa.headlines = response.data.articles;
+            store.Usa.info = response.data;
+            store.Usa.info.Alpha2Code = response.data.alpha2Code;
+            store.Usa.info.Alpha3Code = response.data.alpha3Code;
+            store.Usa.info.CallingCodes = response.data.callingCodes;
+            store.Usa.info.Capital = response.data.capital;
+            store.Usa.info.Currency = response.data.currencies;
+            store.Usa.info.Native = response.data.nativeName;
+            store.Usa.info.Name = response.data.name;
+            store.Usa.info.Region = response.data.region;
+            store.Usa.info.Timezones = response.data.timezones;
+            store.Usa.info.SubRegion = response.data.subRegion;
+            store.Usa.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=us&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Usa.headlines = response.data.articles;
 
-                //     store.Usa.author = response.data.articles;
+            //     store.Usa.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
+
         break;
       case "Venezuela":
         axios
-          .get("")
+          .get("https://restcountries.com/v2/alpha/ve")
           .then(response => {
-            axios
-              .get("https://restcountries.com/v2/alpha/ve")
-              .then(response => {
-                store.Venezuela.info = response.data;
-                store.Venezuela.info.Alpha2Code = response.data.alpha2Code;
-                store.Venezuela.info.Alpha3Code = response.data.alpha3Code;
-                store.Venezuela.info.CallingCodes = response.data.callingCodes;
-                store.Venezuela.info.Capital = response.data.capital;
-                store.Venezuela.info.Currency = response.data.currencies;
-                store.Venezuela.info.Native = response.data.nativeName;
-                store.Venezuela.info.Name = response.data.name;
-                store.Venezuela.info.Region = response.data.region;
-                store.Venezuela.info.Timezones = response.data.timezones;
-                store.Venezuela.info.SubRegion = response.data.subRegion;
-                store.Venezuela.info.Population = response.data.population;
-                // axios
-                //   .get(
-                //     `https://newsapi.org/v2/everything?q=venezuela&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-                //   )
-                //   .then(response => {
-                //     store.Venezuela.headlines = response.data.articles;
+            store.Venezuela.info = response.data;
+            store.Venezuela.info.Alpha2Code = response.data.alpha2Code;
+            store.Venezuela.info.Alpha3Code = response.data.alpha3Code;
+            store.Venezuela.info.CallingCodes = response.data.callingCodes;
+            store.Venezuela.info.Capital = response.data.capital;
+            store.Venezuela.info.Currency = response.data.currencies;
+            store.Venezuela.info.Native = response.data.nativeName;
+            store.Venezuela.info.Name = response.data.name;
+            store.Venezuela.info.Region = response.data.region;
+            store.Venezuela.info.Timezones = response.data.timezones;
+            store.Venezuela.info.SubRegion = response.data.subRegion;
+            store.Venezuela.info.Population = response.data.population;
+            // axios
+            //   .get(
+            //     `https://newsapi.org/v2/everything?q=venezuela&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
+            //   )
+            //   .then(response => {
+            //     store.Venezuela.headlines = response.data.articles;
 
-                //     store.Venezuela.author = response.data.articles;
+            //     store.Venezuela.author = response.data.articles;
 
-                //     console.log(response.data.articles.author);
-                done();
-              });
-            // });
+            //     console.log(response.data.articles.author);
+            done();
           })
           .catch(err => console.log(err));
+        // });
         break;
       default:
         done();
