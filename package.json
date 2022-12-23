@@ -1,15 +1,15 @@
 {
-  "name": "savvy-starter",
+  "name": "tidm",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+
   "scripts": {
     "parcel-build": "parcel build index.html && cp _redirects ./dist/",
     "serve": "parcel index.html",
-    "app:watch": "nodemon --watch ./server -e js,cjs ./server/app.cjs"
+    "app:watch": "nodemon --watch ./server -e js ./server/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marshall Burns",
   "license": "ISC",
   "devDependencies": {
     "buffer": "^5.7.1",

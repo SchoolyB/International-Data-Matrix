@@ -197,9 +197,32 @@ body{
   margin-top: -210px;
   font-family: "Raleway";
 
+}
 
+.countryInfo * p{
+  font-weight: bold;
+  line-height: 1.5em;
+  margin-bottom: 3em;
+}
+
+.countryInfo * h6{
+  font-size: 14px;
+  margin-bottom: 1em;
+  padding-bottom: -1em;
 
 }
+
+.countryInfo * h5{
+  font-size: 18px;
+
+}
+
+.countryInfo * h4{
+  font-size: 22px;
+  text-decoration: underline solid .2em;
+
+}
+
 
 
 
@@ -216,9 +239,8 @@ body{
 .topic{
 
   text-align: left;
-  width: 75%;
+  width: 65%;
   padding-bottom: 2px;
-
   word-wrap: break-word;
 }
 
@@ -229,7 +251,7 @@ body{
 
 .topic > p{
 
-  font-size: 18px;
+  font-size: 16px;
 
 }
 .metaDataContainer{
@@ -417,8 +439,18 @@ box-shadow: 5px 10px 18px black
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 13em;
+  background-image: url("./assets/images/translation.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 9em;
+  height: 6em;
+  background-color: transparent;
+  border: none;
 }
-
+ #translateBtn:hover{
+  cursor: pointer;
+ }
 
 #translateInput{
   resize: none;
@@ -433,10 +465,10 @@ box-shadow: 5px 10px 18px black
 
 #translateOutput{
  resize: none;
- height: 10em;
+ height: 10.2em;
  width: 25em;
  font-size: 22px;
- margin-top: 5em;
+ margin-top: 3.5em;
 margin-right: 1em;
 border-radius: 25px;
 padding-left: .5em;
@@ -520,3 +552,6 @@ width: 23em;
   cursor: pointer;
 }
 
+.infoGraphic{
+  float: right;
+}
