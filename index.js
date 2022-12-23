@@ -59,14 +59,8 @@ router.hooks({
     switch (view) {
       case "Australia":
         axios
-          .get("http://localhost:4040/country/australia")
+          .get("")
           .then(response => {
-            store.Australia.history = response.data.history;
-            store.Australia.government = response.data.government;
-            store.Australia.demographics = response.data.demographics;
-            store.Australia.economy = response.data.economy;
-            store.Australia.culture = response.data.culture;
-            store.Australia.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/au")
               .then(response => {
@@ -102,14 +96,8 @@ router.hooks({
         break;
       case "Belarus":
         axios
-          .get("http://localhost:4040/country/belarus")
+          .get()
           .then(response => {
-            store.Belarus.history = response.data.history;
-            store.Belarus.government = response.data.government;
-            store.Belarus.demographics = response.data.demographics;
-            store.Belarus.economy = response.data.economy;
-            store.Belarus.culture = response.data.culture;
-            store.Belarus.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/by")
               .then(response => {
@@ -143,14 +131,8 @@ router.hooks({
         break;
       case "Greece":
         axios
-          .get("http://localhost:4040/country/greece")
+          .get("")
           .then(response => {
-            store.Greece.history = response.data.history;
-            store.Greece.government = response.data.government;
-            store.Greece.demographics = response.data.demographics;
-            store.Greece.economy = response.data.economy;
-            store.Greece.culture = response.data.culture;
-            store.Greece.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/gr")
               .then(response => {
@@ -184,14 +166,8 @@ router.hooks({
         break;
       case "Japan":
         axios
-          .get("http://localhost:4040/country/japan")
+          .get()
           .then(response => {
-            store.Japan.history = response.data.history;
-            store.Japan.government = response.data.government;
-            store.Japan.demographics = response.data.demographics;
-            store.Japan.economy = response.data.economy;
-            store.Japan.culture = response.data.culture;
-            store.Japan.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/jp")
               .then(response => {
@@ -225,14 +201,8 @@ router.hooks({
         break;
       case "Morocco":
         axios
-          .get("http://localhost:4040/country/morocco")
+          .get("")
           .then(response => {
-            store.Morocco.history = response.data.history;
-            store.Morocco.government = response.data.government;
-            store.Morocco.demographics = response.data.demographics;
-            store.Morocco.economy = response.data.economy;
-            store.Morocco.culture = response.data.culture;
-            store.Morocco.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/ma")
               .then(response => {
@@ -266,14 +236,8 @@ router.hooks({
         break;
       case "Nepal":
         axios
-          .get("http://localhost:4040/country/nepal")
+          .get()
           .then(response => {
-            store.Nepal.history = response.data.history;
-            store.Nepal.government = response.data.government;
-            store.Nepal.demographics = response.data.demographics;
-            store.Nepal.economy = response.data.economy;
-            store.Nepal.culture = response.data.culture;
-            store.Nepal.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/np")
               .then(response => {
@@ -307,14 +271,8 @@ router.hooks({
         break;
       case "Sudan":
         axios
-          .get("http://localhost:4040/country/sudan")
+          .get("")
           .then(response => {
-            store.Sudan.history = response.data.history;
-            store.Sudan.government = response.data.government;
-            store.Sudan.demographics = response.data.demographics;
-            store.Sudan.economy = response.data.economy;
-            store.Sudan.culture = response.data.culture;
-            store.Sudan.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/sd")
               .then(response => {
@@ -348,14 +306,8 @@ router.hooks({
         break;
       case "Usa":
         axios
-          .get("http://localhost:4040/country/usa")
+          .get("")
           .then(response => {
-            store.Usa.history = response.data.history;
-            store.Usa.government = response.data.government;
-            store.Usa.demographics = response.data.demographics;
-            store.Usa.economy = response.data.economy;
-            store.Usa.culture = response.data.culture;
-            store.Usa.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/us")
               .then(response => {
@@ -389,14 +341,8 @@ router.hooks({
         break;
       case "Venezuela":
         axios
-          .get("http://localhost:4040/country/venezuela")
+          .get("")
           .then(response => {
-            store.Venezuela.history = response.data.history;
-            store.Venezuela.government = response.data.government;
-            store.Venezuela.demographics = response.data.demographics;
-            store.Venezuela.economy = response.data.economy;
-            store.Venezuela.culture = response.data.culture;
-            store.Venezuela.currentEvents = response.data.currentEvents;
             axios
               .get("https://restcountries.com/v2/alpha/ve")
               .then(response => {
