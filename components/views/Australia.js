@@ -22,7 +22,6 @@ export default state => html`
         <p class="genInfoCapitolCity">
           The Capitol of ${state.info.name} is: ${state.info.Capital}
         </p>
-
         <p>National Population: ${state.info.population} approx.</p>
         <p class="genInfoISOCodes ">
           ${state.info.name}'s Alpha 2 code is: ${state.info.Alpha2Code}<br />
@@ -40,8 +39,8 @@ export default state => html`
       </div>
     </div>
     <div>
-      <h1 class="countryNameHeader">${state.info.name}</h1>
-      <h2 class="nativeName">${state.info.nativeName}</h2>
+      <h1 class="countryNameHeader">Australia</h1>
+      <h2 class="nativeName">Australia</h2>
     </div>
     <section class="history topic" id="australiaHistory">
       <h3>
@@ -1724,7 +1723,7 @@ export default state => html`
         ${state.headlines[2]}
       </h6>
       <h6>
-        ${JSON.stringify(state.headlines[3])}
+        ${state.headlines[3]}
       </h6>
     </section>
   </div>

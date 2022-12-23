@@ -6,7 +6,6 @@ import axios from "axios";
 
 const dotenv = require("dotenv");
 
-dotenv.config();
 const router = new Navigo("/"); //initiating the "router" variable. uses the navigo library
 
 // declaring what the render() will do
@@ -37,7 +36,7 @@ function afterRender(state) {
         };
         axios
           .post(
-            "https://internationaldatamatrix.netlify.app/translator",
+            "https://theinternationaldatamatrix.onrender.com/translator",
             requestBody
           )
           .then(response => {
@@ -99,7 +98,7 @@ router.hooks({
         break;
       case "Belarus":
         axios
-          .get()
+          .get("")
           .then(response => {
             axios
               .get("https://restcountries.com/v2/alpha/by")
@@ -169,7 +168,7 @@ router.hooks({
         break;
       case "Japan":
         axios
-          .get()
+          // .get()
           .then(response => {
             axios
               .get("https://restcountries.com/v2/alpha/jp")
@@ -204,7 +203,7 @@ router.hooks({
         break;
       case "Morocco":
         axios
-          .get("")
+          // .get("")
           .then(response => {
             axios
               .get("https://restcountries.com/v2/alpha/ma")
@@ -239,7 +238,7 @@ router.hooks({
         break;
       case "Nepal":
         axios
-          .get()
+          // .get()
           .then(response => {
             axios
               .get("https://restcountries.com/v2/alpha/np")
@@ -274,7 +273,7 @@ router.hooks({
         break;
       case "Sudan":
         axios
-          .get("")
+          // .get("")
           .then(response => {
             axios
               .get("https://restcountries.com/v2/alpha/sd")
@@ -309,7 +308,7 @@ router.hooks({
         break;
       case "Usa":
         axios
-          .get("")
+          // .get("")
           .then(response => {
             axios
               .get("https://restcountries.com/v2/alpha/us")
@@ -382,7 +381,6 @@ router.hooks({
     }
   }
 });
-
 // router hooks runs until thew done() function is executed
 
 router //this renders a specific view

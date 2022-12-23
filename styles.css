@@ -197,32 +197,9 @@ body{
   margin-top: -210px;
   font-family: "Raleway";
 
-}
 
-.countryInfo * p{
-  font-weight: bold;
-  line-height: 1.5em;
-  margin-bottom: 3em;
-}
-
-.countryInfo * h6{
-  font-size: 14px;
-  margin-bottom: 1em;
-  padding-bottom: -1em;
 
 }
-
-.countryInfo * h5{
-  font-size: 18px;
-
-}
-
-.countryInfo * h4{
-  font-size: 22px;
-  text-decoration: underline solid .2em;
-
-}
-
 
 
 
@@ -241,6 +218,7 @@ body{
   text-align: left;
   width: 65%;
   padding-bottom: 2px;
+
   word-wrap: break-word;
 }
 
@@ -301,7 +279,29 @@ body{
 
 }
 
+.countryInfo * p{
+  font-weight: bold;
+  line-height: 1.5em;
+  margin-bottom: 3em;
+}
 
+.countryInfo * h6{
+  font-size: 14px;
+  margin-bottom: 1em;
+  padding-bottom: -1em;
+
+}
+
+.countryInfo * h5{
+  font-size: 18px;
+
+}
+
+.countryInfo * h4{
+  font-size: 22px;
+  text-decoration: underline solid .2em;
+
+}
 
 /* everything below this line modifies footer css */
 
