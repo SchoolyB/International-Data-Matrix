@@ -36,7 +36,10 @@ function afterRender(state) {
           outputLanguage
         };
         axios
-          .post("http://localhost:4040/translator", requestBody)
+          .post(
+            "https://internationaldatamatrix.netlify.app/translator",
+            requestBody
+          )
           .then(response => {
             store.Translator.outputText = response.data.text;
             console.log(store.Translator.stuffs);
