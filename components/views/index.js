@@ -12,4 +12,3 @@ export { default as Contact } from "./Contact";
 export { default as Countries } from "./Countries";
 export { default as Translator } from "./Translator";
 export { default as Example } from "./Example";
-export { default as Map } from "./Map";

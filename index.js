@@ -3,10 +3,13 @@ import * as store from "./store"; //importing everything from "./store" as an ob
 import Navigo from "navigo"; //the navigo library is what imports the router.hooks({}):before, router.on(), and .resolve()
 import { capitalize } from "lodash";
 import axios from "axios";
+<<<<<<< HEAD
 
 const dotenv = require("dotenv");
+=======
+import * as deepl from "deepl-node";
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
 
-dotenv.config();
 const router = new Navigo("/"); //initiating the "router" variable. uses the navigo library
 
 // declaring what the render() will do
@@ -64,6 +67,7 @@ router.hooks({
         axios
           .get("")
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/au")
               .then(response => {
@@ -94,6 +98,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Australia.history = response.data.history;
+            store.Australia.government = response.data.government;
+            store.Australia.demographics = response.data.demographics;
+            store.Australia.economy = response.data.economy;
+            store.Australia.culture = response.data.culture;
+            store.Australia.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -101,6 +115,7 @@ router.hooks({
         axios
           .get()
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/by")
               .then(response => {
@@ -129,6 +144,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Belarus.history = response.data.history;
+            store.Belarus.government = response.data.government;
+            store.Belarus.demographics = response.data.demographics;
+            store.Belarus.economy = response.data.economy;
+            store.Belarus.culture = response.data.culture;
+            store.Belarus.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -136,6 +161,7 @@ router.hooks({
         axios
           .get("")
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/gr")
               .then(response => {
@@ -164,6 +190,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Greece.history = response.data.history;
+            store.Greece.government = response.data.government;
+            store.Greece.demographics = response.data.demographics;
+            store.Greece.economy = response.data.economy;
+            store.Greece.culture = response.data.culture;
+            store.Greece.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -171,6 +207,7 @@ router.hooks({
         axios
           .get()
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/jp")
               .then(response => {
@@ -199,6 +236,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Japan.history = response.data.history;
+            store.Japan.government = response.data.government;
+            store.Japan.demographics = response.data.demographics;
+            store.Japan.economy = response.data.economy;
+            store.Japan.culture = response.data.culture;
+            store.Japan.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -206,6 +253,7 @@ router.hooks({
         axios
           .get("")
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/ma")
               .then(response => {
@@ -234,6 +282,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Morocco.history = response.data.history;
+            store.Morocco.government = response.data.government;
+            store.Morocco.demographics = response.data.demographics;
+            store.Morocco.economy = response.data.economy;
+            store.Morocco.culture = response.data.culture;
+            store.Morocco.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -241,6 +299,7 @@ router.hooks({
         axios
           .get()
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/np")
               .then(response => {
@@ -269,6 +328,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Nepal.history = response.data.history;
+            store.Nepal.government = response.data.government;
+            store.Nepal.demographics = response.data.demographics;
+            store.Nepal.economy = response.data.economy;
+            store.Nepal.culture = response.data.culture;
+            store.Nepal.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -276,6 +345,7 @@ router.hooks({
         axios
           .get("")
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/sd")
               .then(response => {
@@ -304,6 +374,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Sudan.history = response.data.history;
+            store.Sudan.government = response.data.government;
+            store.Sudan.demographics = response.data.demographics;
+            store.Sudan.economy = response.data.economy;
+            store.Sudan.culture = response.data.culture;
+            store.Sudan.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -311,6 +391,7 @@ router.hooks({
         axios
           .get("")
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/us")
               .then(response => {
@@ -339,6 +420,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Usa.history = response.data.history;
+            store.Usa.government = response.data.government;
+            store.Usa.demographics = response.data.demographics;
+            store.Usa.economy = response.data.economy;
+            store.Usa.culture = response.data.culture;
+            store.Usa.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -346,6 +437,7 @@ router.hooks({
         axios
           .get("")
           .then(response => {
+<<<<<<< HEAD
             axios
               .get("https://restcountries.com/v2/alpha/ve")
               .then(response => {
@@ -374,6 +466,16 @@ router.hooks({
                     done();
                   });
               });
+=======
+            store.Venezuela.history = response.data.history;
+            store.Venezuela.government = response.data.government;
+            store.Venezuela.demographics = response.data.demographics;
+            store.Venezuela.economy = response.data.economy;
+            store.Venezuela.culture = response.data.culture;
+            store.Venezuela.currentEvents = response.data.currentEvents;
+            console.log(response.data);
+            done();
+>>>>>>> parent of 357424e (Major changes/add dynamic meta data on country pages)
           })
           .catch(err => console.log(err));
         break;
@@ -382,7 +484,6 @@ router.hooks({
     }
   }
 });
-
 // router hooks runs until thew done() function is executed
 
 router //this renders a specific view
