@@ -78,19 +78,20 @@ router.hooks({
             store.Australia.info.Population = response.data.population;
             // possibly adf native name to a sub heading of country info screen
             // possibly add population to country selection screen
-            // axios
-            // .get
-            // `https://newsapi.org/v2/everything?q=australia&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            // ()
-            // .then(response => {
-            // store.Australia.headlines = response.data.articles;
-
-            // store.Australia.author = response.data.articles;
-
-            // console.log(response.data.articles.author);.
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=canberra&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Australia.Weather = response.data;
+                store.Australia.Weather.lat = response.data.coord.lat;
+                store.Australia.Weather.lon = response.data.coord.lon;
+                store.Australia.Weather.main = response.data.weather.main;
+                store.Australia.Weather.description = response.data.weather;
+              });
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=australia`
               )
               .then(response => {
                 store.Australia.news = response.data;
@@ -118,20 +119,21 @@ router.hooks({
             store.Belarus.info.Region = response.data.region;
             store.Belarus.info.Timezones = response.data.timezones;
             store.Belarus.info.SubRegion = response.data.subRegion;
-            // store.Belarus.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=belarus&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Belarus.headlines = response.data.articles;
 
-            //     store.Belarus.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=minsk&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Belarus.Weather = response.data;
+                store.Belarus.Weather.lat = response.data.coord.lat;
+                store.Belarus.Weather.lon = response.data.coord.lon;
+                store.Belarus.Weather.main = response.data.weather.main;
+                store.Belarus.Weather.description = response.data.weather;
+              });
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=belarus`
               )
               .then(response => {
                 store.Belarus.news = response.data;
@@ -161,19 +163,21 @@ router.hooks({
             store.Greece.info.Timezones = response.data.timezones;
             store.Greece.info.SubRegion = response.data.subRegion;
             store.Greece.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=greece&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Greece.headlines = response.data.articles;
 
-            //     store.Greece.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=athens&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Greece.Weather = response.data;
+                store.Greece.Weather.lat = response.data.coord.lat;
+                store.Greece.Weather.lon = response.data.coord.lon;
+                store.Greece.Weather.main = response.data.weather.main;
+                store.Greece.Weather.description = response.data.weather;
+              });
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=greece`
               )
               .then(response => {
                 store.Greece.news = response.data;
@@ -203,19 +207,21 @@ router.hooks({
             store.Japan.info.Timezones = response.data.timezones;
             store.Japan.info.SubRegion = response.data.subRegion;
             store.Japan.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=japan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Japan.headlines = response.data.articles;
 
-            //     store.Japan.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Japan.Weather = response.data;
+                store.Japan.Weather.lat = response.data.coord.lat;
+                store.Japan.Weather.lon = response.data.coord.lon;
+                store.Japan.Weather.main = response.data.weather.main;
+                store.Japan.Weather.description = response.data.weather;
+              });
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=japan`
               )
               .then(response => {
                 store.Japan.news = response.data;
@@ -245,19 +251,20 @@ router.hooks({
             store.Morocco.info.Timezones = response.data.timezones;
             store.Morocco.info.SubRegion = response.data.subRegion;
             store.Morocco.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=morocco&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Morocco.headlines = response.data.articles;
-
-            //     store.Morocco.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=rabat&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Morocco.Weather = response.data;
+                store.Morocco.Weather.lat = response.data.coord.lat;
+                store.Morocco.Weather.lon = response.data.coord.lon;
+                store.Morocco.Weather.main = response.data.weather.main;
+                store.Morocco.Weather.description = response.data.weather;
+              });
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=morocco`
               )
               .then(response => {
                 store.Morocco.news = response.data;
@@ -287,19 +294,21 @@ router.hooks({
             store.Nepal.info.Timezones = response.data.timezones;
             store.Nepal.info.SubRegion = response.data.subRegion;
             store.Nepal.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=nepal&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Nepal.headlines = response.data.articles;
 
-            //     store.Nepal.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=kathmandu&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Nepal.Weather = response.data;
+                store.Nepal.Weather.lat = response.data.coord.lat;
+                store.Nepal.Weather.lon = response.data.coord.lon;
+                store.Nepal.Weather.main = response.data.weather.main;
+                store.Nepal.Weather.description = response.data.weather;
+              });
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=nepal`
               )
               .then(response => {
                 store.Nepal.news = response.data;
@@ -329,19 +338,22 @@ router.hooks({
             store.Sudan.info.Timezones = response.data.timezones;
             store.Sudan.info.SubRegion = response.data.subRegion;
             store.Sudan.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=sudan&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Sudan.headlines = response.data.articles;
 
-            //     store.Sudan.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=khhartoum&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Sudan.Weather = response.data;
+                store.Sudan.Weather.lat = response.data.coord.lat;
+                store.Sudan.Weather.lon = response.data.coord.lon;
+                store.Sudan.Weather.main = response.data.weather.main;
+                store.Sudan.Weather.description = response.data.weather;
+              });
+
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=sudan`
               )
               .then(response => {
                 store.Sudan.news = response.data;
@@ -370,19 +382,22 @@ router.hooks({
             store.Usa.info.Timezones = response.data.timezones;
             store.Usa.info.SubRegion = response.data.subRegion;
             store.Usa.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=us&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Usa.headlines = response.data.articles;
 
-            //     store.Usa.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=washington%20dc&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Usa.Weather = response.data;
+                store.Usa.Weather.lat = response.data.coord.lat;
+                store.Usa.Weather.lon = response.data.coord.lon;
+                store.Usa.Weather.main = response.data.weather.main;
+                store.Usa.Weather.description = response.data.weather;
+              });
+
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=usa`
               )
               .then(response => {
                 store.Usa.news = response.data;
@@ -412,19 +427,21 @@ router.hooks({
             store.Venezuela.info.Timezones = response.data.timezones;
             store.Venezuela.info.SubRegion = response.data.subRegion;
             store.Venezuela.info.Population = response.data.population;
-            // axios
-            //   .get(
-            //     `https://newsapi.org/v2/everything?q=venezuela&from=2022-11-22&sortBy=relevancy&pageSize=4&apiKey=${process.env.NEWS_KEY}`
-            //   )
-            //   .then(response => {
-            //     store.Venezuela.headlines = response.data.articles;
 
-            //     store.Venezuela.author = response.data.articles;
-
-            //     console.log(response.data.articles.author);
             axios
               .get(
-                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3`
+                `https://api.openweathermap.org/data/2.5/weather?q=caracas&appid=${process.env.WEATHER_KEY}&units=imperial`
+              )
+              .then(response => {
+                store.Venezuela.Weather = response.data;
+                store.Venezuela.Weather.lat = response.data.coord.lat;
+                store.Venezuela.Weather.lon = response.data.coord.lon;
+                store.Venezuela.Weather.main = response.data.weather.main;
+                store.Venezuela.Weather.description = response.data.weather;
+              });
+            axios
+              .get(
+                `https://api.thenewsapi.com/v1/news/all?api_token=${process.env.NEWS_KEY}&language=en&limit=3&language=en&search=venezuela`
               )
               .then(response => {
                 store.Venezuela.news = response.data;
