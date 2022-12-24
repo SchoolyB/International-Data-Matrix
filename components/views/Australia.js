@@ -14,30 +14,43 @@ export default state => html`
         Australia"
       />
       <div class="genInformationContainer">
-        <p class="genInfoRegion">
-          Region: ${state.info.region}<br />
-          Subregion: ${state.info.subregion}
+      <p class="genInfoRegion">
+          <u>${state.info.name}</u> Is Located In The Region of
+          <u>${state.info.region}</u><br />
+          And The Subregion of <u>${state.info.subregion}</u>
         </p>
         <p class="genInfoSubRegion"></p>
         <p class="genInfoCapitolCity">
-          The Capitol of ${state.info.name} is: ${state.info.Capital}
+          The Capitol of <u>${state.info.name}</u> is
+          <u>${state.info.Capital}</u><br></br>
+          Here is a look at the current weather in <br><u>${
+            state.info.Capital
+          }</u>: <h3><br>${state.Weather.description.map(weatherBlock)}<h3></h3>
+           <br>
+
         </p>
-        <p>National Population: ${state.info.population} approx.</p>
+        <p>
+          The Population of <u>${state.info.name}</u> is is approx.
+          <u>${state.info.population}</u>
+        </p>
         <p class="genInfoISOCodes ">
-          ${state.info.name}'s Alpha 2 code is: ${state.info.Alpha2Code}<br />
-          ${state.info.name}'s Alpha 3 code is: ${state.info.Alpha3Code}
+          <u>${state.info.name}'s</u> 3 Digit Alpha code is:
+          <u>${state.info.Alpha2Code}</u><br />
+          <u>${state.info.name}'s</u> 3 Digit Alpha code is:
+          <u>${state.info.Alpha3Code}</u>
         </p>
         <p class="genInfoCurrency">
           The National Currency of ${state.info.name} Is: <br />
-          The ${state.info.Currency[0].name} Represented As:
-          ${state.info.Currency[0].symbol}, ${state.info.Currency[0].code}
+          The <u>${state.info.Currency[0].name}</u> Represented As:
+          <u>${state.info.Currency[0].symbol}</u> &
+          <u>${state.info.Currency[0].code}</u>
         </p>
-        <!-- add currency changes to other countries -->
         <p class="genInfoCallingCodes">
-          ${state.info.name}'s calling code is ${state.info.callingCodes}
+          <u>${state.info.name}'s</u> calling code is
+          <u>${state.info.callingCodes}</u>
         </p>
         <p class="genInfoTimezones">
-          Timezones: ${state.info.timezones}
+          Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
     </div>
@@ -1693,3 +1706,7 @@ const newsCard = data =>
     <a href="${data.url}">Click Here To Learn More</a>
   `;
 //  this is a comment
+const weatherBlock = weather =>
+  html`
+    <u>${weather.description}</u>
+  `;
