@@ -62,6 +62,7 @@ export default state => html`
       <h3>
         History
       </h3>
+      <h4>Australia to 1900</h4>
       <h4>Early exploration and colonization</h4>
       <h5>The Portuguese</h5>
       <p>

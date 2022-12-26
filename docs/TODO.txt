@@ -1,13 +1,6 @@
 !!!NEED TO BE DONE!!!
-TODO: UTILIZE NEW OUTLET API FOR "CURRENT EVENT" SECTIONS ON COUNTRY INFO PAGES now need to get data to post on screen
-TODO: TRY TO UTILIZE WIKIPEDIA API FOR "GOVERNMENT,HISTORY,ECONOMY,CULTURE,RELIGION" SECTIONS ON COUNTRY INFO PAGES
-TODO: possibly use OPENWEATHERMAP to add weather data to countries
 TODO: continue working on documentation(README.md)
-TODO: add a "jump to" feature on a country so that the user can quickly find specific section on page
-TODO: add native saying next to sections on country page EX: History | historia or whatever
-TODO: ADD MEDIA QUERY FOR HOME PAGE SO THAT WHEN ON SMALLER SCREEN COLUMNS COLLAPSE INTO ONE
-TODO: store country info data in backend
-TODO: possibly use GLOBE.gl api  or nasa worldwind apit to make an interactive map page
+
 
 ***COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
@@ -29,3 +22,5 @@ TODO: ADD NAV MENU (completed 12/15/2022)
 TODO: build an example country page (completed 12/15/22)
 TODO: start building translator middleware (completed 12/19/2022)
 TODO: add home button to header (completed 12/2022)
+TODO: UTILIZE NEW OUTLET API FOR "CURRENT EVENT" SECTIONS ON COUNTRY INFO PAGES now need to get data to post on screen(completed 12/23/2022)
+TODO: possibly use OPENWEATHERMAP to add weather data to countries (completed 12/24/2022)
