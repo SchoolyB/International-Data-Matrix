@@ -33,7 +33,7 @@ export default state => html`
           <u>${state.info.population}</u>
         </p>
         <p class="genInfoISOCodes ">
-          <u>${state.info.name}'s</u> 3 Digit Alpha code is:
+          <u>${state.info.name}'s</u> 2 Digit Alpha code is:
           <u>${state.info.Alpha2Code}</u><br />
           <u>${state.info.name}'s</u> 3 Digit Alpha code is:
           <u>${state.info.Alpha3Code}</u>
@@ -67,7 +67,7 @@ export default state => html`
       </section>
       <section class="currentEvents topic" id="japanCurrentEvents">
         <
-        <h3>Current Events</h3>
+        <h3>Headlines About ${state.info.name}</h3>
         <p>${state.news.data.map(newsCard)}</p>
       </section>
     </div>
