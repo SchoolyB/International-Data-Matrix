@@ -3,6 +3,7 @@ country filtering & searching by population,GDP, geographical location and maybe
 add the rest of the worlds countries to the country selection page
 build a country page for every country
 mobile responsiveness
+add dark/light mode toggle
 
 ***The items in the following list are features that I am 50% sure I want to add***
 an interactive map/globe that has layers and shows borders of nations

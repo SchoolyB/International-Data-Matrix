@@ -29,7 +29,6 @@ const createCountry = countryObj => {
       />
     </a>
       <div class="data">
-        <p>Population: ${countryPopulation}</p>
         <p> ${countryGrossDomesticProduct} </p>
         <p>${countryLandMass}</p>
         <p>

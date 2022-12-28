@@ -86,8 +86,8 @@ router.hooks({
                 store.Australia.Weather = response.data;
                 store.Australia.Weather.lat = response.data.coord.lat;
                 store.Australia.Weather.lon = response.data.coord.lon;
-                store.Australia.Weather.main = response.data.weather.main;
                 store.Australia.Weather.description = response.data.weather;
+                store.Australia.main = response.data.main;
               });
             axios
               .get(
@@ -128,8 +128,8 @@ router.hooks({
                 store.Belarus.Weather = response.data;
                 store.Belarus.Weather.lat = response.data.coord.lat;
                 store.Belarus.Weather.lon = response.data.coord.lon;
-                store.Belarus.Weather.main = response.data.weather.main;
                 store.Belarus.Weather.description = response.data.weather;
+                store.Belarus.main = response.data.main;
               });
             axios
               .get(
@@ -172,8 +172,8 @@ router.hooks({
                 store.Greece.Weather = response.data;
                 store.Greece.Weather.lat = response.data.coord.lat;
                 store.Greece.Weather.lon = response.data.coord.lon;
-                store.Greece.Weather.main = response.data.weather.main;
                 store.Greece.Weather.description = response.data.weather;
+                store.Greece.main = response.data.main;
               });
             axios
               .get(
@@ -216,8 +216,8 @@ router.hooks({
                 store.Japan.Weather = response.data;
                 store.Japan.Weather.lat = response.data.coord.lat;
                 store.Japan.Weather.lon = response.data.coord.lon;
-                store.Japan.Weather.main = response.data.weather.main;
                 store.Japan.Weather.description = response.data.weather;
+                store.Japan.main = response.data.main;
               });
             axios
               .get(
@@ -259,8 +259,8 @@ router.hooks({
                 store.Morocco.Weather = response.data;
                 store.Morocco.Weather.lat = response.data.coord.lat;
                 store.Morocco.Weather.lon = response.data.coord.lon;
-                store.Morocco.Weather.main = response.data.weather.main;
                 store.Morocco.Weather.description = response.data.weather;
+                store.Morocco.main = response.data.main;
               });
             axios
               .get(
@@ -303,8 +303,8 @@ router.hooks({
                 store.Nepal.Weather = response.data;
                 store.Nepal.Weather.lat = response.data.coord.lat;
                 store.Nepal.Weather.lon = response.data.coord.lon;
-                store.Nepal.Weather.main = response.data.weather.main;
                 store.Nepal.Weather.description = response.data.weather;
+                store.Nepal.main = response.data.main;
               });
             axios
               .get(
@@ -347,8 +347,8 @@ router.hooks({
                 store.Sudan.Weather = response.data;
                 store.Sudan.Weather.lat = response.data.coord.lat;
                 store.Sudan.Weather.lon = response.data.coord.lon;
-                store.Sudan.Weather.main = response.data.weather.main;
                 store.Sudan.Weather.description = response.data.weather;
+                store.Sudan.main = response.data.main;
               });
 
             axios
@@ -391,8 +391,8 @@ router.hooks({
                 store.Usa.Weather = response.data;
                 store.Usa.Weather.lat = response.data.coord.lat;
                 store.Usa.Weather.lon = response.data.coord.lon;
-                store.Usa.Weather.main = response.data.weather.main;
                 store.Usa.Weather.description = response.data.weather;
+                store.Usa.main = response.data.main;
               });
 
             axios
@@ -436,8 +436,8 @@ router.hooks({
                 store.Venezuela.Weather = response.data;
                 store.Venezuela.Weather.lat = response.data.coord.lat;
                 store.Venezuela.Weather.lon = response.data.coord.lon;
-                store.Venezuela.Weather.main = response.data.weather.main;
                 store.Venezuela.Weather.description = response.data.weather;
+                store.Venezuela.main = response.data.main;
               });
             axios
               .get(

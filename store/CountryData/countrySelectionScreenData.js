@@ -16,7 +16,6 @@ export const countryInfo = [
     countryLink: "Australia",
     countryFlag: flagA,
     countryFlagAltText: "Flag of Australia",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 1.54 trillion USD",
     countryLandMass: "Land Mass: 2.968 million mi2"
   },
@@ -27,7 +26,6 @@ export const countryInfo = [
     countryLink: "Belarus",
     countryFlag: flagB,
     countryFlagAltText: "Flag of Belarus",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 68.22 billion USD",
     countryLandMass: "Land Mass: 80,155 mi2"
   },
@@ -38,7 +36,6 @@ export const countryInfo = [
     countryLink: "Greece",
     countryFlag: flagC,
     countryFlagAltText: "Flag of Greece",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 216.20 billion USD",
     countryLandMass: "Land Mass: 50,949 mi2"
   },
@@ -49,7 +46,6 @@ export const countryInfo = [
     countryLink: "Japan",
     countryFlag: flagD,
     countryFlagAltText: "Flag of Japan",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 4.93 trillion USD",
     countryLandMass: "Land Mass: 145,937 mi2"
   },
@@ -60,7 +56,6 @@ export const countryInfo = [
     countryLink: "Morocco",
     countryFlag: flagE,
     countryFlagAltText: "Flag of Morocco",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 132.70 billion USD",
     countryLandMass: "Land Mass: 274,461 mi2"
   },
@@ -71,8 +66,7 @@ export const countryInfo = [
     countryLink: "Nepal",
     countryFlag: flagF,
     countryFlagAltText: "Flag of Nepal",
-    countryPopulation: 1, //correct later possibly use data from API
-    countryGrossDomesticProduct: "36.29 billion USD",
+    countryGrossDomesticProduct: "GDP: 36.29 billion USD",
     countryLandMass: "Land Mass: 56,827 mi2"
   },
   {
@@ -82,7 +76,6 @@ export const countryInfo = [
     countryLink: "Sudan",
     countryFlag: flagG,
     countryFlagAltText: "Flag of Sudan",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 34.33 billion USD",
     countryLandMass: "Land Mass: 718,700 mi2"
   },
@@ -93,7 +86,6 @@ export const countryInfo = [
     countryLink: "Usa",
     countryFlag: flagH,
     countryFlagAltText: "Flag of The United States",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 23 trillion USD",
     countryLandMass: "Land Mass: 3.797 million mi2"
   },
@@ -104,7 +96,6 @@ export const countryInfo = [
     countryLink: "Venezuela",
     countryFlag: flagI,
     countryFlagAltText: "Flag of Venezuela",
-    countryPopulation: 1, //correct later possibly use data from API
     countryGrossDomesticProduct: "GDP: 150 billion USD",
     countryLandMass: "Land Mass: 353,841 mi2"
   }
