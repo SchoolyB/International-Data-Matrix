@@ -15,7 +15,7 @@ export default state => html`
         Belarus"
       />
       <div class="genInformationContainer">
-        <p class="genInfoRegion">
+      <p class="genInfoRegion">
           <u>${state.info.name}</u> Is Located In The Region of
           <u>${state.info.region}</u><br />
           And The Subregion of <u>${state.info.subregion}</u>
@@ -24,12 +24,18 @@ export default state => html`
         <p class="genInfoCapitolCity">
           The Capitol of <u>${state.info.name}</u> is
           <u>${state.info.Capital}</u><br></br>
+          <u>${state.info.Capital}</u> is located at<br> Lat: <u>${
+  state.Weather.lat
+}</u> Lon: <u>${state.Weather.lon}</u><br><br>
+
           Here is a look at the current weather in <br><u>${
             state.info.Capital
-          }</u>: <h3><br>${state.Weather.description.map(weatherBlock)}<h3></h3>
-           <br>
+          }</u>: <br><br>
+          The Temperature is currently: °F ${state.main.temp}<br>
+          But it feels like: °F ${state.main.feels_like} <br> and
+         ${state.Weather.description.map(weatherBlock)}
 
-        </p>
+
         <p>
           The Population of <u>${state.info.name}</u> is is approx.
           <u>${state.info.population}</u>

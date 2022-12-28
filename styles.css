@@ -163,6 +163,14 @@ body{
 
 }
 
+.country:hover{
+  background-color:#89939E;
+  padding-left: .2em;
+  border-radius: 50px;
+  border-color: #f1f1f1;
+  color: white;
+}
+
 
 
 
