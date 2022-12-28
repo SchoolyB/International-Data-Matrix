@@ -67,15 +67,12 @@ export default state => html`
         <h3>
           History
         </h3>
-        <p>
-          ${state.history}
-        </p>
+
       </section>
       <section class="currentEvents topic" id="sudanCurrentEvents">
-        <h3></h3>
+        <h3>Headlines About ${state.info.name} </h3>
         <p>${state.news.data.map(newsCard)}</p>
       </section>
-    </div>
   </div>
 `;
 const newsCard = data =>

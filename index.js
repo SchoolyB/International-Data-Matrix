@@ -96,7 +96,6 @@ router.hooks({
               .then(response => {
                 store.Australia.news = response.data;
                 store.Australia.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -138,7 +137,6 @@ router.hooks({
               .then(response => {
                 store.Belarus.news = response.data;
                 store.Belarus.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -182,7 +180,6 @@ router.hooks({
               .then(response => {
                 store.Greece.news = response.data;
                 store.Greece.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -226,7 +223,6 @@ router.hooks({
               .then(response => {
                 store.Japan.news = response.data;
                 store.Japan.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -269,7 +265,6 @@ router.hooks({
               .then(response => {
                 store.Morocco.news = response.data;
                 store.Morocco.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -313,7 +308,6 @@ router.hooks({
               .then(response => {
                 store.Nepal.news = response.data;
                 store.Nepal.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -341,7 +335,7 @@ router.hooks({
 
             axios
               .get(
-                `https://api.openweathermap.org/data/2.5/weather?q=khhartoum&appid=${process.env.WEATHER_KEY}&units=imperial`
+                `https://api.openweathermap.org/data/2.5/weather?q=khartoum&appid=${process.env.WEATHER_KEY}&units=imperial`
               )
               .then(response => {
                 store.Sudan.Weather = response.data;
@@ -349,6 +343,7 @@ router.hooks({
                 store.Sudan.Weather.lon = response.data.coord.lon;
                 store.Sudan.Weather.description = response.data.weather;
                 store.Sudan.main = response.data.main;
+                console.log(response.data.coord.lon);
               });
 
             axios
@@ -358,7 +353,6 @@ router.hooks({
               .then(response => {
                 store.Sudan.news = response.data;
                 store.Sudan.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -402,7 +396,6 @@ router.hooks({
               .then(response => {
                 store.Usa.news = response.data;
                 store.Usa.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);
@@ -446,7 +439,6 @@ router.hooks({
               .then(response => {
                 store.Venezuela.news = response.data;
                 store.Venezuela.news.data = response.data.data;
-                console.log(response.data.data);
               })
               .catch(console.log)
               .finally(done);

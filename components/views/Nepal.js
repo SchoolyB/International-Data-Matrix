@@ -56,8 +56,9 @@ export default state => html`
           Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
-      <div>
-      </div>
+
+    </div>
+    <div>
         <h1 class="countryNameHeader">${state.info.name}</h1>
         <h2 class="nativeName">${state.info.nativeName}</h2>
       </div>
@@ -65,15 +66,13 @@ export default state => html`
         <h3>
           History
         </h3>
-        <p>
-          ${state.history}
-        </p>
+
       </section>
       <section class="currentEvents topic" id="nepalCurrentEvents">
         <h3>Headlines About ${state.info.name}</h3>
         <p>${state.news.data.map(newsCard)}</p>
       </section>
-    </div>
+
   </div>
 `;
 const newsCard = data =>
