@@ -4,6 +4,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const deepl = require("deepl-node");
+const countries = require("./routers/countries");
 
 dotenv.config();
 
@@ -66,5 +67,6 @@ app.post("/translator", (request, response) => {
       console.error(error);
     });
 });
+app.use("/countries", countries);
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
