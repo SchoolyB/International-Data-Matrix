@@ -16,7 +16,7 @@ export default state => html`
     </div>
 
       <div id="searchContainer">
-        <form class="searchForm "action="/Countries" method="get">
+        <form id="countryFilterForm" class="searchForm " >
           <input placeholder="Search Countries" id="countryFilter" name="countryFilter" type="text" required></input>
           <input id="searchBtn" type="image" src=${globe} atl="TEST"></input>
         </form>
