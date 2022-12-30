@@ -103,9 +103,25 @@ The search bar is one of my favorite elements of the application. The search bar
 <img src= "./assets/images/README/searchbtn.jpg">
 
 The search bar allows the user to enter a series of letters to search for a country. For example if the user wants to learn more about the "USA" they could simply type "usa" and press enter or click the search button next to the input field; any country that has the letters that the user entered in that particular order will populate on screen. If the user entered "us" any country with the letters "u" and "s" in that order in its name would populate in screen. For example: A<u>us</u>tralia & Belar<u>us</u>.
+
+<i>Code snippet for the search feature</i>
+
+```
+ const inputs = event.target.elements;
+      console.log(inputs.countryFilter.value);
+      store.Countries.filteredData = store.Countries.countryData.filter(
+        country =>
+          country.name
+            .toUpperCase()
+            .includes(inputs.countryFilter.value.toUpperCase())
+      );
+      console.log(store.Countries.filteredData);
+      router.navigate("/countries");
+```
 <img src= "./assets/images/README/specificCountryFilter.JPG">
 
 The search bar works the same way with singular letters. IF the user wants to to search through any country that has a "u" in its name they can simply type "u" and once they press enter and country with "u" in its name no matter where the letter is will populate on screen. For example: A<u>u</u>stralia, Belar<u>u</u>s, S<u>u</u>dan, <u>U</u>sa, & Venez<u>u</u>ela.
+
 <img src= "./assets/images/README/notSoSpecificCountryFilter.JPG">
 
 ### The View Countries Button -
@@ -113,11 +129,34 @@ When clicked the View Countries button on the home screen will take the user to 
 <img src= "./assets/images/README/viewcContriesBtn.jpg" >
 
 ### Country Selection Page    -
+The country selection page shows a container in the center of the page that houses a "country tab" dedicated to each country that is currently integrated into the "IDM". Each "country tab" has a countries name, GDP, land mass in square miles and an image of that countries flag. All of the data of each country tab comes directly from an API that I built. Here is a snippet the data that country tabs/objects receive from the API.
+
+``` {"_id"{"$oid":"63aca1ddf874fa4963672a43"},
+"name":"Australia",
+"link":"Australia",
+"flag":"Australia",
+"flagAlt":"The flag of austrlia",
+"landMass":"Land Mass: 2.968 million mi2",
+"gdp":"GDP: 1.54 trillion USD",
+"__v":{"$numberInt":"0"}}
+```
+<!-- possibly  build repo for api and add more data to it-->
+ The header of the "country selection" page gives clear instructions to users on what they can. Once the user hovers over a country tab's flag a bouncing animation will start. Once the user clicks on the flag they will be taken to the corresponding page for that country.
+
 <img src="./assets/images/README/countrySelectionScreen.JPG">
 
 ### A Country Page -
 ### The Translator -
 
 ### The Contact Page -
+The contact page can be used for users to send their feedback to an email that was setup just for that purpose. The form uses a POST method and a [Formspree](https://formspree.io/) url as the action to send the data on submit. Feel free to give it a try :)
+
+```
+ <form action="https://formspree.io/f/mknelldn" method="POST">
+      <label  class="contactLabel"id="contactName">
+        <input class="contactInput" type="text" name = "name" placeholder="Enter your name"></input>
+      </label>
+
+```
 <img src="./assets/images/README/contactPage.JPG">
 
