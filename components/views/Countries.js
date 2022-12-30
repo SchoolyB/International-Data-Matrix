@@ -17,6 +17,7 @@ export default state => html`
                 />
               </a>
               <div class="data">
+                <p>${country.population}</p>
                 <p>${country.gdp}</p>
                 <p>${country.landMass}</p>
                 <p></p>
