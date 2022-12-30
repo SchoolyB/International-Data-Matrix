@@ -95,7 +95,7 @@ router.hooks({
     switch (view) {
       case "Countries":
         axios
-          .get("http://localhost:4040/countries")
+          .get("https://theinternationaldatamatrix.onrender.com/countries")
           .then(response => {
             store.Countries.filteredData = response.data;
 
@@ -290,7 +290,6 @@ router.hooks({
             done();
           })
           .catch(err => console.log(err));
-
         break;
       case "Nepal":
         Promise.all([
@@ -400,7 +399,6 @@ router.hooks({
             done();
           })
           .catch(err => console.log(err));
-
         break;
       case "Venezuela":
         Promise.all([
