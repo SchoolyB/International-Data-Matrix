@@ -28,7 +28,7 @@ function afterRender(state) {
       event.preventDefault();
 
       axios
-        .get("http://localhost:4040/countries")
+        .get("https://theinternationaldatamatrix.onrender.com/countries")
         .then(response => {
           const inputs = event.target.elements;
           console.log(inputs.countryFilter.value);
@@ -95,7 +95,7 @@ router.hooks({
     switch (view) {
       case "Countries":
         axios
-          .get("http://localhost:4040/countries")
+          .get("https://theinternationaldatamatrix.onrender.com/countries")
           .then(response => {
             store.Countries.filteredData = response.data;
 
