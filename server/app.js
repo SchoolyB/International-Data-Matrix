@@ -44,6 +44,10 @@ app.use(cors);
 app.use(express.json());
 app.use(logging);
 
+app.get("/status", (request, response) => {
+  response.send(JSON.stringify({ message: "Service healthy" }));
+});
+
 app.post("/translator", (request, response) => {
   const translator = new deepl.Translator(process.env.TRANSLATION_KEY);
 
