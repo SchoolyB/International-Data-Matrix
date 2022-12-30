@@ -1,6 +1,6 @@
 !!!NEED TO BE DONE!!!
 TODO: continue working on documentation(README.md)
-
+TODO: update api GDP and land mass data
 
 ***COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
