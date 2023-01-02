@@ -46,6 +46,10 @@ font-size: 19px;
   padding: 1rem 2rem;
   box-shadow: 5px 10px 18px black
 }
+#welcomeBtn:hover{
+  background-color: #89939E;
+  color: white;
+}
 
 #welcomeBtnContainer{
   display: flex;
@@ -88,6 +92,7 @@ margin-top: .3em;
   /* margin-top: 1rem;
   margin-left: 16em; */
   width: 300px;
+  position: relative; top: .5em;
 }
 
 .searchForm{
@@ -244,7 +249,7 @@ body{
   display: flex;
   justify-content:right;
   background-color:#89939E;
-  height: 1000px;
+  height: 1100px;
   width: auto;
   flex-direction: column;
   width: 22%;
@@ -258,10 +263,11 @@ body{
 }
 .genInformationContainer{
   color: white;
+}
 
-  text-align: center;
-
-
+u{
+  color: black;
+  font-size: 18px;
 }
 
 .longCountryInfoFlag{ /*changes some css for flags on country pages  */
@@ -455,6 +461,7 @@ box-shadow: 5px 10px 18px black
   height: 6em;
   background-color: transparent;
   border: none;
+  border-radius: 50px;
 }
  #translateBtn:hover{
   cursor: pointer;
@@ -508,7 +515,7 @@ width: 23em;
   background-color: #89939E;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 .sidenav a {
