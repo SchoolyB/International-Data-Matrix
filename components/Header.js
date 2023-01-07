@@ -1,5 +1,5 @@
 import html from "html-literal";
-import globe from "../assets/images/lookingglassoverglobe.png";
+import globe from "../assets/images/globe.gif";
 import logo from "../assets/images/Branding/logo-no-background.png";
 
 export default state => html`

@@ -1,5 +1,5 @@
 import html from "html-literal";
-import btn from "../../assets/images/translateBtn.png";
+
 export default state => html`
   <form id="fullTranslateContainer">
     <!-- change name to translateForm -->
@@ -55,4 +55,7 @@ export default state => html`
       </div>
     </div>
   </form>
+  <h2 id="translateGuide">
+    To start a translation click the button between the two boxes
+  </h2>
 `;

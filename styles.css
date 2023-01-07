@@ -98,13 +98,14 @@ margin-top: .3em;
 .searchForm{
   color: white;
 
+
 }
 
 #searchBtn{
   height: 50px;
   width: auto;
   position: relative; top: 20px;
-  position: relative; left: -15px
+  position: relative; left: -5px
 
 }
 
@@ -116,12 +117,13 @@ margin-top: .3em;
   height: 25px;
   width: 10em;
   color: black;
-  font-size: 17px;
-  font-weight: 900;
+  font-size: 18px;
   border: solid white 4px;
   border-radius: 25px;
   color: white;
   padding-left: 11px;
+  font-family: Raleway;
+  font-weight: 800
 }
 
 
@@ -166,13 +168,14 @@ body{
   font-size: 16px;
   box-shadow: 5px 10px 18px black;
 
+
 }
 
 .country:hover{
   background-color:#89939E;
   padding-left: .2em;
   border-radius: 50px;
-  border-color: #f1f1f1;
+  border-color: #black;
   color: white;
 }
 
@@ -399,6 +402,8 @@ font-size: 25.3px;
 border-radius: 25px;
 margin-bottom: .3em;
 padding-left: .3em;
+font-family: Raleway;
+  font-weight: 800
 }
 
 #contactTextArea{
@@ -407,6 +412,8 @@ padding-left: .3em;
   width: 14.9em;
   border-radius: 25px;
   padding-left: .5em;
+  font-family: Raleway;
+    font-weight: 800
 
 }
 
@@ -421,10 +428,14 @@ padding-left: .3em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  box-shadow: 5px 10px 18px black
 }
 
 #contactSubmitBtn:hover{
-  cursor:pointer
+  cursor:pointer;
+  background-color: #89939E;
+
+
 }
 
 #fullTranslateContainer{
@@ -461,9 +472,11 @@ box-shadow: 5px 10px 18px black
   background-color: transparent;
   border: none;
   border-radius: 50px;
+  filter:invert()
 }
  #translateBtn:hover{
   cursor: pointer;
+    filter: invert(1%)
  }
 
 #translateInput{
@@ -475,6 +488,9 @@ box-shadow: 5px 10px 18px black
   margin-left: 1em;
   border-radius: 25px;
   padding-left: .5em;
+  box-shadow: 5px 10px 18px black;
+  font-family: Raleway;
+  font-weight: 800;
 }
 
 #translateOutput{
@@ -486,6 +502,9 @@ box-shadow: 5px 10px 18px black
 margin-right: 1em;
 border-radius: 25px;
 padding-left: .5em;
+box-shadow: 5px 10px 18px black;
+font-family: Raleway;
+font-weight: 800;
 }
 
 .langSelect{
@@ -500,9 +519,24 @@ width: 23em;
 
 #outputLangSelect{
   margin-right: 1em;
-  width: 23em;
+  float: right;
+
 
 }
+
+option{
+  background-color:#89939E;
+}
+
+#translateGuide{
+
+
+text-align: center;
+position: relative;
+bottom: 3.5em;
+color: white;
+}
+
 
 .sidenav {
   height: 100%;
