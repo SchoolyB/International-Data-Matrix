@@ -603,3 +603,9 @@ color: white;
 .infoGraphic{
   float: right;
 }
+select{
+  color:black
+}
+select:hover{
+  color: white;
+}

@@ -1,6 +1,6 @@
 !!!NEED TO BE DONE!!!
-TODO: continue working on documentation(README.md)
-TODO: update api GDP and land mass data
+TODO: Plan for the apps future
+
 
 ***COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
@@ -24,3 +24,5 @@ TODO: start building translator middleware (completed 12/19/2022)
 TODO: add home button to header (completed 12/2022)
 TODO: UTILIZE NEW OUTLET API FOR "CURRENT EVENT" SECTIONS ON COUNTRY INFO PAGES now need to get data to post on screen(completed 12/23/2022)
 TODO: possibly use OPENWEATHERMAP to add weather data to countries (completed 12/24/2022)
+TODO: update api GDP and land mass data (completed 12/2022)
+TODO: continue working on documentation(completed 1/2023)
