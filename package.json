@@ -2,7 +2,6 @@
   "name": "tidm",
   "version": "1.0.0",
   "description": "",
-
   "scripts": {
     "parcel-build": "parcel build index.html && cp _redirects ./dist/",
     "serve": "parcel index.html",

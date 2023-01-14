@@ -1,5 +1,9 @@
 !!!NEED TO BE DONE!!!
 TODO: Plan for the apps future
+TODO: continue rebuilding app using new stack: React, TypeScript, Vite,  Express, MongoDB
+TODO: add includes from root index.js to the appropriate include files in the client folder
+TODO: add appropriate dependencies
+TODO: rebuild server
 
 
 ***COMPLETED***
@@ -26,3 +30,4 @@ TODO: UTILIZE NEW OUTLET API FOR "CURRENT EVENT" SECTIONS ON COUNTRY INFO PAGES 
 TODO: possibly use OPENWEATHERMAP to add weather data to countries (completed 12/24/2022)
 TODO: update api GDP and land mass data (completed 12/2022)
 TODO: continue working on documentation(completed 1/2023)
+TODO: start rebuild of app using React and typescript (completed 1/13/2023)
