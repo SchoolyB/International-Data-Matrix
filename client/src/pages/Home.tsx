@@ -1,6 +1,8 @@
-import html from "html-literal";
+import React from 'react'
 
-export default () => html`
+export default function Home() {
+  return (
+<div>
   <div id="welcomeContainer">
     <h1 id="welcomeMainHeading">The Entire World All In One Place</h1>
     <p id="welcomeParagraph">
@@ -16,5 +18,7 @@ export default () => html`
     <div id="welcomeBtnContainer">
       <a href="Countries" role="button" id="welcomeBtn">View Countries</a>
     </div>
-  </div>
-`;
+      </div>
+</div>
+  )
+}

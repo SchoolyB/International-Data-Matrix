@@ -1,8 +1,10 @@
-import html from "html-literal";
+import React from 'react'
 
-export default state => html`
+export default function Translator() {
+  return (
+<div>
   <form id="fullTranslateContainer">
-    <!-- change name to translateForm -->
+{/*   <!-- change name to translateForm --> */}
     <div id="translatorContainer">
       <div id="inputSide">
         <div>
@@ -14,12 +16,12 @@ export default state => html`
       </div>
 
       <div>
-        <button type="submit" id="translateBtn"></button>
+        <button title="submitButton" type="submit" id="translateBtn"></button>
       </div>
 
       <div id="outputSide">
-        <select class="langSelect" id="outputLangSelect">
-          <!-- add languages back after testing -->
+        <select title="languageSelection" className="langSelect" id="outputLangSelect">
+          {/* <!-- add languages back after testing --> */}
           <option value="bg">Bulgarian</option>
           <option value="zh">Chinese</option>
           <option value="da">Danish</option>
@@ -50,7 +52,7 @@ export default state => html`
           <option value="es">Ukrainian</option>
         </select>
         <div>
-          <textarea id="translateOutput" readonly> </textarea>
+          <textarea title="commentArea" id="translateOutput" readOnly> </textarea>
         </div>
       </div>
     </div>
@@ -58,4 +60,6 @@ export default state => html`
   <h2 id="translateGuide">
     To start a translation click the button between the two boxes
   </h2>
-`;
+</div>
+  )
+}
