@@ -1,22 +1,25 @@
-import html from "html-literal";
-import * as flags from "../../assets/images";
 
-export default state => html`
+import React from 'react'
+import * as flags from "../../assets/";
+
+export default function Countries() {
+  return (
+    <div>
+
   <div id="container">
     ${state.filteredData
       .map(country => {
-        return html`
           <div id="overAllContainer">
-            <div class="country" id="${country._id}">
-              <h3 class="countryHeading">${country.name}</h3>
+            <div className="country" id="${country._id}">
+              <h3 className="countryHeading">${country.name}</h3>
               <a href="${country.link}">
                 <img
-                  class="flag"
-                  src=${flags[country.name]}
-                  alt=${country.flagAlt}
+                  className="flag"
+                  src={flags[country.name]}
+                  alt={country.flagAlt}
                 />
               </a>
-              <div class="data">
+              <div className="data">
                 <p>${country.population}</p>
                 <p>${country.gdp}</p>
                 <p>${country.landMass}</p>
@@ -24,8 +27,13 @@ export default state => html`
               </div>
             </div>
           </div>
-        `;
       })
       .join("")}
   </div>
-`;
+
+
+
+
+    </div>
+  )
+}

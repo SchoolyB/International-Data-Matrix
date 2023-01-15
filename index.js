@@ -1,10 +1,6 @@
 TODO://Need to break down  all api calls and add them to respective includes TS file.
 // ***DO NOT DELETE UNTIL DONE ADDING TO INCLUDES***
-
-import { Header, Main, Footer } from "./components";
 import * as store from "./store"; //importing everything from "./store" as an object called "store"
-import Navigo from "navigo"; //the navigo library is what imports the router.hooks({}):before, router.on(), and .resolve()
-import { capitalize } from "lodash";
 import axios from "axios";
 
 const router = new Navigo("/"); //initiating the "router" variable. uses the navigo library

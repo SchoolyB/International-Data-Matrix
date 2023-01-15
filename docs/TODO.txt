@@ -4,6 +4,7 @@ TODO: continue rebuilding app using new stack: React, TypeScript, Vite,  Express
 TODO: add includes from root index.js to the appropriate include files in the client folder
 TODO: add appropriate dependencies
 TODO: rebuild server
+TODO: format css to new project structure
 
 
 ***COMPLETED***

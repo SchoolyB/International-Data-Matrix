@@ -1,10 +1,12 @@
-import html from "html-literal";
-import footer1 from "../assets/images/Branding/home.svg";
-import footer2 from "../assets/images/Branding/mail.svg";
-import footer3 from "../assets/images/Branding/page.svg";
-import footer4 from "../assets/images/Branding/comments.svg";
+import footer1 from "../../assets/Branding/home.svg";
+import footer2 from "../../assets/Branding/email.svg";
+import footer3 from "../../assets/Branding/page.svg";
+import footer4 from "../../assets/Branding/comments.svg";
+import React from 'react'
 
-export default () => html`
+export default function Footer() {
+  return (
+    <div>
   <footer>
     <ul id="webPageInfo">
       <li>Author: Marshall Burns</li>
@@ -12,25 +14,24 @@ export default () => html`
     <ul id="footerIconContainer">
       <li>
       <li>
-        <a href="Home"
-          ><img class="footerIcon" id="homeIcon" src=${footer1}
+        <a title='Home' href="Home"
+          ><img className="footerIcon" id="homeIcon" src={footer1}
         /></a>
       </li>
         <a href="https://github.com/SchoolyB/Capstone/blob/master/README.md"
-          ><img class="footerIcon" id="docIcon" src=${footer3}
+          ><img className="footerIcon" id="docIcon" src={footer3}
         /></a>
       </li>
       <li>
-        <a href="Translator"
-          ><img class="footerIcon" id="translateIcon" src=${footer4}
-        /></a>
+        <a title='Translator'   href="Translator"><img className="footerIcon" id="translateIcon" src={footer4}/></a>
       </li>
 
       <li id="footerContactIcon">
-        <a href="Contact"
-          ><img class="footerIcon" id="ContactIcon" src=${footer2}
-        /></a>
+        <a  title='Contact' href="Contact"
+          ><img className="footerIcon" id="ContactIcon" src={footer2}/></a>
       </li>
     </ul>
   </footer>
-`;
+    </div>
+  )
+}
