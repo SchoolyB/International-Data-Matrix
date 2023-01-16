@@ -3,11 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>The International Data Matrix</title>
   </head>
-  <body>
+  <body id="renderedBody">
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <span id="span" onclick="openNav()">&#9776;</span>
+  </div>
+  <div id="root">
+    <div>
+          <script type="module" src="/src/main.tsx"></script>
+          <script>function openNav() {
+              document.getElementById("mySidenav").style.width = "16em";
+            }
+
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+          </script>
+
+
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
+          </style>
   </body>
 </html>

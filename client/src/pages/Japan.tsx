@@ -1,5 +1,6 @@
 import html from "html-literal";
 import flag from "../../assets/images/jpn.png";
+
 export default state => html`
   <div class="countryInfo" id="japanInfo">
     <div class="metaDataContainer">

@@ -1,5 +1,5 @@
 import footer1 from "../../assets/Branding/home.svg";
-import footer2 from "../../assets/Branding/email.svg";
+import footer2 from "../../assets/Branding/mail.svg";
 import footer3 from "../../assets/Branding/page.svg";
 import footer4 from "../../assets/Branding/comments.svg";
 import React from 'react'

@@ -1,0 +1,65 @@
+/* CONTACT PAGE STUFF BELOW THIS LINE  */
+@import 'main';
+
+
+
+#contactContainer {
+
+  padding-top: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #89939E;
+  border-radius: 25px;
+  color: white;
+  width: 25%;
+  height: 35em;
+  margin-bottom: 5em;
+  margin-left: 45em;
+  margin-top: -9em;
+  padding-bottom: 3em;
+  box-shadow: 5px 10px 18px black
+}
+
+
+.contactInput {
+  border: none;
+  font-size: 25.3px;
+  border-radius: 25px;
+  margin-bottom: .3em;
+  padding-left: .3em;
+  font-family: Raleway;
+  font-weight: 800
+}
+
+#contactTextArea {
+  resize: none;
+  font-size: 18px;
+  width: 14.9em;
+  border-radius: 25px;
+  padding-left: .5em;
+  font-family: Raleway;
+  font-weight: 800
+}
+
+
+#contactSubmitBtn {
+  background-image: url("./assets/images/paperPlane.png");
+  border-radius: 25px;
+  margin-right: 0.1em;
+  margin-top: 1em;
+  height: 3em;
+  width: 20em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 5px 10px 18px black
+}
+
+#contactSubmitBtn:hover {
+  cursor: pointer;
+  background-color: #89939E;
+
+
+}
