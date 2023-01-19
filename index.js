@@ -1,22 +1,7 @@
 TODO://Need to break down  all api calls and add them to respective includes TS file.
 // ***DO NOT DELETE UNTIL DONE ADDING TO INCLUDES***
-import * as store from "./store"; //importing everything from "./store" as an object called "store"
-import axios from "axios";
-
-const router = new Navigo("/"); //initiating the "router" variable. uses the navigo library
-
 // declaring what the render() will do
 //if params are not defined defaults to empty object
-function render(state = store.Home) {
-  document.querySelector("#root").innerHTML = `
-
-  ${Header(state)}
-  ${Main(state)}
-  ${Footer(state)}
-  `;
-  afterRender(state);
-  router.updatePageLinks(); //navigo stuff for links
-}
 
 function afterRender(state) {
   // console.log(params);
@@ -439,18 +424,3 @@ router.hooks({
     }
   }
 });
-// router hooks runs until thew done() function is executed
-
-router //this renders a specific view
-  .on({
-    "/": () => render(), //telling me that if the URL has no "/" then render the home page
-
-    ":view": params => {
-      //telling me that if any views are inside the URL then capitalize the first letter then render the view
-      let view = capitalize(params.data.view);
-      render(store[view]);
-    }
-  })
-  .resolve(); //similar to "listen" method in expressJS.
-// essentially says "ok I want to render the page, but first I need to run any 'router.hooks({}) :before' if there are any
-// then I can run the render function"

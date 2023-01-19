@@ -4,7 +4,8 @@ import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import Countries from "./pages/Countries"
 import Contact  from "./pages/Contact"
-import  Translator  from "./pages/Translator"
+import Translator from "./pages/Translator"
+import Example from "./pages/Example"
 // import  Australia  from "./pages/Australia"
 // import  Belarus  from "./pages/Belarus"
 // import  Greece  from "./pages/Greece"
@@ -25,6 +26,7 @@ function App() {
         <Route path='/Translator' element={<Translator />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Countries' element={<Countries />} />
+        <Route path='/Example' element={<Example />} />
         {/* <Route path='/serverAustralia' element={<Australia />} />
         <Route path='/Belarus' element={<Belarus />} />
         <Route path='/Greece' element={<Greece />} />

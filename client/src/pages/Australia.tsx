@@ -1,70 +1,72 @@
-import html from "html-literal";
+import React from 'react'
 import flag from "../../assets/images/aus.png";
 
-export default state => html`
-  <div class="countryInfo" id="australiaInfo">
-    <div class="metaDataContainer">
+export default function Australia() {
+  return (
+
+  <div className="countryInfo" id="australiaInfo">
+    <div className="metaDataContainer">
       <img
-        class="longCountryInfoFlag"
+        className="longCountryInfoFlag"
         id="australiaInfoFlag"
-        src=${flag}
+        src={flag}
         alt="The
         Flag
         of
         Australia"
       />
-      <div class="genInformationContainer">
-      <p class="genInfoRegion">
-          <u>${state.info.name}</u> Is Located In The Region of
-          <u>${state.info.region}</u><br />
-          And The Subregion of <u>${state.info.subregion}</u>
+      <div className="genInformationContainer">
+      <p className="genInfoRegion">
+          <u>${info.name}</u> Is Located In The Region of
+          <u>${info.region}</u><br />
+          And The Subregion of <u>${info.subregion}</u>
         </p>
-        <p class="genInfoSubRegion"></p>
-        <p class="genInfoCapitolCity">
-          The Capitol of <u>${state.info.name}</u> is
-          <u>${state.info.Capital}</u><br></br>
-          <u>${state.info.Capital}</u> is located at<br> Lat: <u>${
-  state.Weather.lat
-}</u> Lon: <u>${state.Weather.lon}</u><br><br>
+        <p className="genInfoSubRegion"></p>
+        <p className="genInfoCapitolCity">
+          The Capitol of <u>${info.name}</u> is
+          <u>${info.Capital}</u><br></br>
+          <u>${info.Capital}</u> is located at<br> Lat: <u>${
+  Weather.lat
+}</u> Lon: <u>${Weather.lon}</u><br><br>
 
           Here is a look at the current weather in <br><u>${
-            state.info.Capital
+            info.Capital
           }</u>: <br><br>
-          The Temperature is currently: °F ${state.main.temp}<br>
-          But it feels like: °F ${state.main.feels_like} <br> and
-         ${state.Weather.description.map(weatherBlock)}
+          The Temperature is currently: °F ${main.temp}<br>
+          But it feels like: °F ${main.feels_like} <br> and
+         ${Weather.description.map(weatherBlock)}
 
 
         <p>
-          The Population of <u>${state.info.name}</u> is is approx.
-          <u>${state.info.population}</u>
+          The Population of <u>${info.name}</u> is is approx.
+          <u>${info.population}</u>
         </p>
-        <p class="genInfoISOCodes ">
-          <u>${state.info.name}'s</u> 2 Digit Alpha code is:
-          <u>${state.info.Alpha2Code}</u><br />
-          <u>${state.info.name}'s</u> 3 Digit Alpha code is:
-          <u>${state.info.Alpha3Code}</u>
+        <p className="genInfoISOCodes ">
+          <u>${info.name}'s</u> 2 Digit Alpha code is:
+          <u>${info.Alpha2Code}</u><br />
+          <u>${info.name}'s</u> 3 Digit Alpha code is:
+          <u>${info.Alpha3Code}</u>
         </p>
-        <p class="genInfoCurrency">
-          The National Currency of ${state.info.name} Is: <br />
-          The <u>${state.info.Currency[0].name}</u> Represented As:
-          <u>${state.info.Currency[0].symbol}</u> &
-          <u>${state.info.Currency[0].code}</u>
+        <p className="genInfoCurrency">
+          The National Currency of ${info.name} Is: <br />
+          The <u>${info.Currency[0].name}</u> Represented As:
+          <u>${info.Currency[0].symbol}</u> &
+          <u>${info.Currency[0].code}</u>
         </p>
-        <p class="genInfoCallingCodes">
-          <u>${state.info.name}'s</u> calling code is
-          <u>${state.info.callingCodes}</u>
+        <p className="genInfoCallingCodes">
+          <u>${info.name}'s</u> calling code is
+          <u>${info.callingCodes}</u>
         </p>
-        <p class="genInfoTimezones">
-          Timezones: <u>${state.info.timezones}</u>
+        <p className="genInfoTimezones">
+          Timezones: <u>${info.timezones}</u>
         </p>
       </div>
     </div>
     <div>
-      <h1 class="countryNameHeader">${state.info.name}</h1>
-      <h2 class="nativeName">${state.info.nativeName}</h2>
+      <h1 className="countryNameHeader">${state.info.name}</h1>
+      <h2 className="nativeName">${state.info.nativeName}</h2>
     </div>
-    <section class="history topic" id="australiaHistory">
+    <section className="history topic" id="australiaHistory">
       <h3>
         History
       </h3>
@@ -673,7 +675,7 @@ export default state => html`
       </h6>
       <p>
         Expansion westward and northward dominated the history of Queensland.
-        Cattle and sugar became industries of substantial importance. A class of
+        Cattle and sugar became industries of substantial importance. A className of
         small farmers aspired to settle the tropics, which had been considered
         unsuitable for small-scale farming by Europeans. Conversely, the
         established “kings” of the tropical region relied on Kanakas (labourers
@@ -1717,3 +1719,9 @@ const weatherBlock = weather =>
   html`
     <u>${weather.description}</u>
   `;
+
+
+
+    </div>
+  )
+}
