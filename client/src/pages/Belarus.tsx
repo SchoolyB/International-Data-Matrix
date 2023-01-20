@@ -1,133 +1,95 @@
-import html from "html-literal";
-import { functionsIn } from "lodash";
-import flag from "../../assets/images/blr.png";
-export default state => html`
+import React from 'react'
+import flag from '../../assets/countryPageFlags/pngs/blr.png'
+import styles from '../../styles/main.css'
 
-<div class="countryInfo" id="belarusInfo">
-    <div class="metaDataContainer">
-      <img
-        class="longCountryInfoFlag"
+
+export default function Belarus() {
+  return (
+    <div className='overallCountryInfoCOntainer'>
+      <div className="countryInfo" id="belarusInfo">
+        <img className="longCountryInfoFlag"
         id="belarusInfoFlag"
-        src=${flag}
+        src={flag}
         alt="The
         Flag
         of
-        Belarus"
-      />
-      <div class="genInformationContainer">
-      <p class="genInfoRegion">
+        Belarus"/>
+      </div>
+
+      <div className="genInformationContainer">
+        <p className="genInfoRegion">
           <u>${state.info.name}</u> Is Located In The Region of
           <u>${state.info.region}</u><br />
           And The Subregion of <u>${state.info.subregion}</u>
         </p>
-        <p class="genInfoSubRegion"></p>
-        <p class="genInfoCapitolCity">
+
+        <p className='genInfoLocationAndWeather'>
           The Capitol of <u>${state.info.name}</u> is
-          <u>${state.info.Capital}</u><br></br>
-          <u>${state.info.Capital}</u> is located at<br> Lat: <u>${
-  state.Weather.lat
-}</u> Lon: <u>${state.Weather.lon}</u><br><br>
+          <u>${state.info.Capital}</u><br/><br/>
+          <u>${state.info.Capital}</u> is located at<br/> Lat: <u>${
+          state.Weather.lat
+          }</u> Lon: <u>${state.Weather.lon}</u><br/><br/>
+          Here is a look at the current weather in <br/><u>${
+          state.info.Capital}</u>: <br/><br/>
+          The Temperature is currently: °F ${state.main.temp}<br/>
+          But it feels like: °F ${state.main.feels_like} <br/> and
+          ${state.Weather.description.map(weatherBlock)}
+        </p>
 
-          Here is a look at the current weather in <br><u>${
-            state.info.Capital
-          }</u>: <br><br>
-          The Temperature is currently: °F ${state.main.temp}<br>
-          But it feels like: °F ${state.main.feels_like} <br> and
-         ${state.Weather.description.map(weatherBlock)}
-
-
-        <p>
+        <p className='genInfoPopulation'>
           The Population of <u>${state.info.name}</u> is is approx.
           <u>${state.info.population}</u>
         </p>
-        <p class="genInfoISOCodes ">
+
+        <p className="genInfoISOCodes ">
           <u>${state.info.name}'s</u> 2 Digit Alpha code is:
           <u>${state.info.Alpha2Code}</u><br />
           <u>${state.info.name}'s</u> 3 Digit Alpha code is:
           <u>${state.info.Alpha3Code}</u>
         </p>
-        <p class="genInfoCurrency">
+        <p className="genInfoCurrency">
           The National Currency of ${state.info.name} Is: <br />
           The <u>${state.info.Currency[0].name}</u> Represented As:
           <u>${state.info.Currency[0].symbol}</u> &
           <u>${state.info.Currency[0].code}</u>
         </p>
-        <p class="genInfoCallingCodes">
+        <p className="genInfoCallingCodes">
           <u>${state.info.name}'s</u> calling code is
           <u>${state.info.callingCodes}</u>
         </p>
-        <p class="genInfoTimezones">
+        <p className="genInfoTimezones">
           Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
-      </div>
-      <div>
-        <h1 class="countryNameHeader">${state.info.name}</h1>
-        <h2 class="nativeName">${state.info.nativeName}</h2>
-      </div>
-      <section class="history topic" id="belarusHistory">
-        <h1>History</h1>
-        <h4>Early History</h4>
-        <p>The Belarusian region has a long history of human settlement. Archaeology has provided evidence of Upper Paleolithic (Old Stone Age) cultures, and Neolithic (New Stone Age) remains are widespread. The area was one of the earliest to be inhabited by Slavs, who settled there between the 6th and the 8th century CE. The early Slavic tribes—the Dregovichi, Radimichi, Krivichi, and Drevlyane—had formed local principalities, such as those of Pinsk, Turaw (Russian: Turov), Polatsk (Russian: Polotsk), Slutsk, and Minsk, by the 8th to 9th century. These all came under the general suzerainty of Kievan Rus, the first East Slavic state, beginning in the mid-9th century. The regional economy was based on primitive shifting agriculture on burned-over forestland, as well as on honey collecting and fur hunting. Trade developed along the rivers, particularly on the Dnieper, which from about 930 was part of the “water road” from Constantinople (now Istanbul) and the Byzantine Empire, via Kyiv (now in Ukraine) and Novgorod (now in Russia), to the Baltic Sea. Trading settlements multiplied, and many of the towns of present-day Belarus had been founded by the end of the 12th century. Two of the earliest-mentioned towns of Slavic foundation, Polatsk and Turaw, first appear in historical documents in the years 862 and 980, respectively. Brest (formerly Brest-Litovsk) is first recorded in 1019 and Minsk in 1067.</p> <br>
 
-        <h4>Lithuanian and Polish Rule</h4>
-        <p>The overthrow of Kyiv by the Mongol invasion of 1240 brought about the dissolution of Kievan Rus. Many Belarusian towns were laid waste and became dependencies of the Golden Horde, the western portion of the Mongol Empire. Over the next 150 years the grand duchy of Lithuania expanded, absorbing much of the Belarusian population. Under Lithuanian rule, however, the conquered regions retained a large degree of autonomy. Throughout the 13th and 14th centuries the Lithuanian state grew, encompassing the city of Smolensk (now in Russia) and the lands eastward to the neighbourhood of Moscow and southward to Kyiv and the shores of the Black Sea. During this epoch of Lithuanian domination, the Belarusian language and nationality began to take shape.<br><br>
-        A personal union between the Lithuanian and Polish ruling houses commenced under the Jagiellon dynasty in 1386, when the Lithuanian grand duke Jogaila married the Polish queen Jadwiga and, taking the name Władysław II Jagiełło, became king of Poland. Roman Catholicism became the official religion of the grand duchy of Lithuania, but the peasantry remained overwhelmingly Orthodox. Between the Polish-Lithuanian realm and the rising power of the Grand Principality of Moscow, there developed an incessant and bitter struggle for land and influence. During the 15th and 16th centuries, Smolensk and Lithuania’s easternmost lands were lost to Russia, although the Belarusian population remained largely under Lithuanian control. <br><br>
-        Three sets of laws, known as the Lithuanian Statutes, codified civil and property rights in Lithuanian-controlled lands in the 16th century. In 1557 a far-reaching agrarian-reform plan was instituted, introducing the three-field crop-rotation system of agriculture and changing the obligations of peasants to landowners. The system, initially imposed on crown estates, was rapidly adopted on the properties of the nobility; it remained in operation with little modification until the 20th century. The combined effects of the changes reduced the peasants, who previously had retained at least some freedom to migrate, to full serfdom. <br><br>
-        The Union of Lublin (1569) made Poland and Lithuania a single, federated state. Although Lithuania retained the title of grand duchy and its code of laws, its western province Podlasia—which had been heavily settled by Polish colonists—was ceded to Poland, as were the steppe lands and Kyiv. Among the Belarusian population a mainly Polish-speaking Roman Catholic aristocracy developed, but the peasantry on the whole remained Orthodox. In 1596 the Union of Brest-Litovsk signaled an attempt to unify the Orthodox and Roman Catholic churches in the Polish-Lithuanian state, combining acknowledgment of papal supremacy with the Orthodox rites and traditions. This new Eastern rite church made some limited headway, particularly among Belarusians and Ukrainians. (However, it later came under pressure from Russian—and, much later, Soviet—authorities, resulting in the conversion of some of its membership to Orthodoxy.) Meanwhile, the rule of the Polish landowners was often heavy and unpopular, and many Belarusians (especially those opposed to joining the Eastern rite church) fled to the steppe lands that were home to the Cossacks. Large-scale Cossack-led revolts occurred in 1648–54, but the Belarusian lands remained under Poland until the second half of the 18th century. Economic development was slow, especially in the extensive Pripet Marshes. The Belarusian population was almost entirely engaged in agriculture, while trade lay in the hands of Poles and Jews.
-      </p>
-      <h4>Russian Rule</h4>
-      <p>
-      By way of the First Partition of Poland in 1772, Catherine II of Russia acquired the eastern portion of present-day Belarus, including the towns of Vitsyebsk (Russian: Vitebsk), Mahilyow (Mogilyov), and Homyel (Gomel). The Second Partition (1793) gave Russia Minsk and the central region, and in 1795 the Third Partition incorporated the remainder into the Russian Empire. <br><br>
-      Under Russian rule the area was divided administratively into the governorships (provinces) of Grodno (Belarusian: Hrodna), Minsk, Mogilyov, Vilnia (now Vilnius, Lith.), and Vitebsk. Until the formation of the Belorussian Soviet Socialist Republic in 1919, Belarusian history was largely tied to the course of events in the Russian Empire and revolutionary Russia. Napoleon I, emperor of France, crossed the region in his advance on Moscow in 1812 and again during his retreat. One of the heaviest battles of Napoleon’s Russian campaign took place as French troops retreated across the Byarezina River.<br><br>
-      In the 19th century small-scale industries largely based on local supplies began to grow in Belarusian towns. Among them were timber working, glassmaking, and, along the rivers, boatbuilding. Following the emancipation of the serfs in the 1860s, the tempo of industrialization increased somewhat, particularly with the introduction of railways beginning in the 1880s. Nevertheless, the generally poor economic conditions resulted in considerable emigration, especially from rural areas. In the 50 years before the Russian Revolution of 1917, nearly 1.5 million people left the provinces within which present-day Belarus is located. Most of the emigrants went to the United States or Siberia, with more than 600,000 moving to the latter between 1896 and 1915. <br><br>The first attempt to establish a Marxist party in Russia took place in Minsk in 1898, when a small congress laid the foundation for the Russian Social-Democratic Workers’ Party. During World War I (1914–18), heavy fighting between German troops and those of the Russian Empire took place in the province with considerable destruction. Following the Russian Revolution, in which a provisional government replaced the collapsed Russian monarchy only to be itself overthrown by Bolshevik revolutionaries, the new Soviet government of Russia signed the Treaty of Brest-Litovsk with Germany and its allies on March 3, 1918. Under the terms of this short-lived treaty, Russia gave up part of present-day Belarus, along with Ukrainian and Baltic lands, to Germany. With Germany’s subsequent defeat by Russia’s Western allies, the terms of Brest-Litovsk were abrogated.
-      </p>
-      <h4>The emergence of the Belorussian Soviet Socialist Republic</h4>
-      <p>
-      Belarusian nationalist and revolutionary stirrings had been evident at least since the Russian Revolution of 1905, when peasants joined the uprising against the monarchy. The creation of a Belarusian state proceeded with fits and starts amid the turmoil of World War I and the Russian Civil War, which succeeded the Revolution of l917. In 1918, while most of the region was occupied by the German army, an independent Belarusian Democratic Republic was declared. With the withdrawal of German troops after the war, however, the Bolsheviks announced the formation of the Belorussian Soviet Socialist Republic (S.S.R.) on January 1, 1919. The republic’s territorial integrity was quickly breached; beginning in April that year, troops of newly reconstituted Poland advanced eastward to the Byarezina River, only to be thrown back again in 1920. Hostilities between Russia and Poland ended with the Treaty of Riga (signed March 18, 1921), which divided the area of Belarus between Poland and Soviet Russia along the lines of the First Partition of Poland. <br><br>
-      The Belorussian S.S.R. was one of four founding republics of the Union of Soviet Socialist Republics, established on December 30, 1922. The Belorussian S.S.R. grew to the east in 1924, when Soviet authorities transferred the regions of Polotsk, Vitebsk, Orsha, and Mogilyov—which had large Belarusian populations—from the Russian Soviet Federated Socialist Republic to the Belorussian S.S.R. Gomel and Rechitsa (Belarusian: Rechytsa) followed in 1926. <br><br>
-      The Belorussian S.S.R. was one of four founding republics of the Union of Soviet Socialist Republics, established on December 30, 1922. The Belorussian S.S.R. grew to the east in 1924, when Soviet authorities transferred the regions of Polotsk, Vitebsk, Orsha, and Mogilyov—which had large Belarusian populations—from the Russian Soviet Federated Socialist Republic to the Belorussian S.S.R. Gomel and Rechitsa (Belarusian: Rechytsa) followed in 1926.
-      </p>
-      <h4>World War II</h4>
-      <p>
-      Following the German attack on Poland in 1939 and the signing of the Molotov-Ribbentrop Nonaggression Pact between Stalin’s Soviet Union and Adolf Hitler’s Germany, which divided eastern Europe into German and Soviet spheres of influence, the U.S.S.R. attacked Poland from the east. Soviet troops occupied the area up to the Bug River and including the Białystok region, home to a substantial Belarusian population. Western Belarusian territory that had been surrendered to Poland in the Treaty of Riga was reinstated as part of the Belorussian S.S.R.<br><br>
-      The German invasion of the Soviet Union in 1941 overran the Belorussian S.S.R., although the garrison of the Brest fortress made a prolonged and courageous stand. During the German retreat in 1944, there was heavy fighting in many areas of the republic, with major battles near Vitebsk, Borisov (Belarusian: Barysaw), and Minsk. German occupation and retreat produced widespread devastation and loss of life: the death toll has been estimated at about one-fourth of the population of Soviet Belarus. At the end of the war a treaty between the U.S.S.R. and Poland returned western Belarus to Soviet hands. The Polish population was forcibly deported en masse to Poland. With the establishment of the United Nations in 1945, the Belorussian S.S.R. was given a seat in the General Assembly in its own right despite its status as a constituent republic of the U.S.S.R.<br><br>
-      The first postwar Five-Year Plan was devoted to the reconstruction of war damage, an aim that it largely achieved. Thereafter, further industrialization took place, with an increasingly rapid growth of the major towns. The population of Minsk reached a million by the early 1970s. Many small towns and the population of a number of rural areas correspondingly declined.<br><br>
-      The accident at the Chernobyl nuclear power station in Ukraine in 1986 contaminated about one-fifth of neighbouring Belarus with long-lived radioactive materials. The contamination necessitated the evacuation of several areas in Belarus, some of which had not been repopulated more than 20 years after the accident. Moreover, the accident led to an increased incidence of cancer among Belarusians, particularly thyroid cancer in children. The expenditure of government funds required to address the accident’s environmental and health consequences continued into the 21st century. (For more information about the Soviet period [1922–91], see Union of Soviet Socialist Republics.)
-      </p>
-      <h4>The emergence of independent Belarus</h4>
-      <p>
-      Following Soviet leader Mikhail Gorbachev’s initiation of more moderate policies in the mid-1980s, the Belorussian S.S.R. acted somewhat less vigorously than other Soviet republics to break away from the Soviet Union, although there was a steady growth in national separatist feeling. Amid the crisis of central authority in the U.S.S.R. in the early 1990s, the Belorussian S.S.R. declared sovereignty (July 27, 1990) and independence (August 25, 1991). With the collapse of Communist Party rule and the dissolution of the Soviet Union in the wake of the failed coup against Gorbachev, the Belorussian S.S.R. changed its name to the Republic of Belarus and joined the Commonwealth of Independent States (CIS), a free association of sovereign states that were formerly part of the Soviet Union.<br><br>
-      Legislative elections in Belarus in 1990 had resulted in a communist-dominated Supreme Soviet that delayed the implementation of a market economy and vacillated for some three years before adopting a new constitution in March 1994. That document created the office of president, to which the pro-Russian Alexander Lukashenko was elected in July 1994. Legislative elections followed in 1995, but, owing to the strictures of the Belarusian electoral system (to be seated, candidates had to capture 50 percent of the vote of a turnout of 50 percent of eligible voters), four rounds of voting were required before a quorum was reached in December 1995 (even then, more than 60 seats remained vacant). Many members of the legislature were independents; indeed, the largest voting block was not a political party per se but a group that supported Lukashenko, who increasingly sought to dominate the Supreme Soviet. In a referendum in November 1996—the legitimacy of which was widely disputed—Lukashenko won approval for a constitutional change that granted him near-absolute power and extended his five-year term. The parliamentary opposition sought to impeach Lukashenko and to eliminate the office of president, but the opposition’s efforts were countered by Lukashenko’s signing of the revised constitution, which closed the Supreme Soviet and created a new legislative body (from which the opposition was excluded) with greatly reduced powers. <br><br>
-      In contrast to much of central and eastern Europe at the time, Lukashenko set Belarus on a course of isolation from the West, maintaining the economics of market socialism. Support for the government’s efforts to establish close ties with Russia was widespread but not without opposition. In 1997–99 Belarus entered the Union State, a political and economic union with Russia that had initially been negotiated with Russian Pres. Boris Yeltsin but was recast by his successor, Vladimir Putin, who lessened the burden his country had initially agreed to bear in the partnership. Although disputes arose between the two countries over the union’s impact on issues such as defense and natural resources, they agreed on the goal of a common currency, an idea first broached in the early 1990s. With Belarus firmly hitched to Russia’s fortunes, its economy responded accordingly—for example, stumbling in 1998 as a result of Russia’s financial collapse. Though Russia had long been Belarus’s main trading partner, the volume of their trade expanded in the early 21st century as Belarus experienced modest industrial growth. <br><br>
-      Many international observers were critical of the Belarusian government and of the essentially authoritarian role Lukashenko adopted beginning in 1996. Relations with the European Union (EU) were particularly strained. Widely considered the most repressive regime in Europe, Belarus staged undemocratic elections, suppressed political opposition, and silenced the press. Leaders of the political opposition often agitated from exile, while antigovernment figures who arose within Belarus were occasionally beaten, jailed, or “disappeared”—seized by the authorities and never heard from again.
-    </p>
-    <h4>Belarus in the 21st century</h4>
-    <p>The 2001 presidential elections were not recognized as free and fair by Western observers, and in October 2004 Lukashenko sponsored another successful referendum that allowed the president to serve for more than two terms. In 2006 the United Democratic Forces, a group of opposition parties and nongovernmental associations, backed pro-democracy candidate Alyaksandr Milinkevich in the presidential race, but Lukashenko was reelected with nearly 83 percent of the vote, according to the official count. Denouncing the results, opposition groups within Belarus as well as international observers accused the president of wielding his exceptional powers during the campaign to manipulate the media and intimidate his opponents; indeed, it was reported that some members of the opposition campaign teams had been detained and beaten. Protesters camped out in a public square in Minsk for several days following the election, but this and other demonstrations were broken up by the police. Another opposition presidential candidate, Alyaksandr Kazulin, was arrested at one such demonstration and imprisoned. In the September 2008 parliamentary elections the government reported a high voter turnout, with about three-fourths of eligible voters participating, but the opposition delegates did not win any seats. International monitors declared that the election could not be considered free and fair, and protests again were staged in the centre of Minsk.<br><br>
-    Meanwhile, beginning in 2002, Belarus’s relations with Russia had deteriorated, partly over the desire of Gazprom, the Russian state-owned natural gas company, to raise the price of gas exported to Belarus to world levels. Another source of discord was Russia’s military conflict with Georgia in 2008, as Lukashenko failed to follow Russia’s lead in recognizing the independence of the breakaway Georgian republics of Abkhazia and South Ossetia. Nevertheless, Belarus remained in the Russian orbit through its membership in Russian-backed regional organizations, including the Collective Security Treaty Organization and the Eurasian Economic Community, as well as—to a lesser extent—the Union State and the CIS. <br><br>
-    Lukashenko improved relations with the EU in 2008 when he agreed to the release of several political prisoners, including Kazulin, and appeared to adopt a more tolerant attitude toward the nongovernmental media. He also supported economic reforms, including the privatization of some state companies and the encouragement of foreign investment. The EU subsequently suspended a restriction that since 2006 had banned the president and most of his entourage from entering the EU. In 2009 Belarus joined the EU’s Eastern Partnership Program, which promotes ties between the EU and a number of countries in eastern Europe and the Caucasus region. However, by early 2010 the Belarusian government’s continuation of various repressive policies had renewed concerns in some EU capitals.<br><br>
-    Lukashenko easily won another term as president in elections held in late 2010, but again there were protests by opposition supporters in Minsk on the fairness of the voting, as well as objections by EU and U.S. observers. As in 2006, large numbers of demonstrators were arrested or detained by authorities, as were most of the opposition candidates for president.<br><br>
-    In April 2011 a bomb exploded on a crowded metro platform in Minsk, killing 12 and injuring more than 100. The blast heightened tensions in the country, which was struggling with a soaring budget deficit and an ongoing foreign exchange crisis. Sharply declining foreign currency reserves led to a devaluation of the Belarusian rubel, which shed more than 60 percent of its value against the U.S. dollar during 2011. The plummeting rubel triggered a wave of inflation, which peaked at almost 110 percent in January 2012. The Belarusian central bank responded by raising interest rates to 45 percent, the highest in the world at the time. A $3 billion bailout program, begun in 2011 and primarily financed by Russia, helped to stabilize the economy.<br><br>
-    The economic crisis did little to weaken Lukashenko’s regime, and opposition parties boycotted parliamentary elections held in September 2012. The elections, which Western observers characterized as unfair and lacking transparency, saw politicians allied with Lukashenko returned to every one of the parliament’s 110 seats. In 2014 Lukashenko tried to broker a deal that would bring the Russian-backed military campaign in eastern Ukraine to an end. The so-called “Minsk Agreements” between Russian Pres. Vladimir Putin and Ukrainian Pres. Petro Poroshenko did not lead to a cessation in the fighting, but Lukashenko’s emergence as a would-be regional peacemaker led some to believe that his autocratic tendencies might be on the wane. The release of political prisoners ahead of the 2015 presidential election seemed to reinforce this conclusion, but that contest was, once again, marred by irregularities. In 2020 Lukashenko’s dismissive response to the COVID-19 coronavirus pandemic fueled what was perhaps the most serious threat to his rule thus far, and Belarus saw its largest street demonstrations since the collapse of the Soviet Union. Thousands were arrested and scores were injured in confrontations with police ahead of an August 2020 presidential election that was characterized by widespread vote rigging. Opposition leaders were imprisoned or forced into exile, while Lukashenko was quietly sworn in for a sixth presidential term.<br><br>
-    Lukashenko drew almost universal condemnation in May 2021 when he dispatched a Belarusian fighter jet to intercept a commercial airliner (Ryanair flight FR4978) and force it to land in Minsk. Once the plane arrived in the Belarusian capital, Lukashenko’s security forces boarded it and arrested opposition journalist Roman Protasevich. Western leaders stated that the action was nothing less than air piracy, but Lukashenko dismissed the accusations and claimed, without providing evidence, that Belarus was the target of a Western “hybrid warfare” campaign. <br><br>
-    In September 2021 Belarus hosted tens of thousands of Russian troops for the massive Zapad (“West”) joint military drill. Zapad exercises were held every four years, and the 2021 event served as a demonstration of Russia’s commitment to the Lukashenko regime after the widespread protests of 2020. Russian troops returned to Belarus in January 2022, ostensibly for another joint military exercise, but their true purpose was revealed the following month when Russia launched a full-scale invasion of Ukraine. Russian forces, attacking from Belarusian soil, struck south along the west bank of the Dnieper River and drove toward Kyiv. While the Russian attack was ongoing, Lukashenko staged a referendum on amending the Belarusian constitution; unsurprisingly, the result aligned with Lukashenko’s wishes. Belarus formally renounced its status as a neutral power, opening the door to a permanent Russian garrison that included nuclear weapons. The new constitution also gave Lukashenko lifetime immunity from prosecution.
-    </p>
-      </section>
-      <section class="currentEvents topic" id="belarusCurrentEvents">
+      {/* everything beneath this line belongs on the left hand side of the page*/}
+
+      <div className="countryEnglishNameAndNativeName">
+        <h1 className="countryNameHeader">${state.info.name}</h1>
+        <h2 className="nativeName">${state.info.nativeName}</h2>
+      </div>
+
+      <section className="currentEvents topic" id="belarusCurrentEvents">
         <h3>Headlines About ${state.info.name}</h3>
         <p>${state.news.data.map(newsCard)}</p>
       </section>
+
+
     </div>
-  </div>
-`;
-const newsCard = data =>
-  html`
-    <h1>
-      ${data.title}
-    </h1>
-    <a href="${data.url}">Click Here To Learn More</a>
-  `;
-const weatherBlock = weather =>
-  html`
-    <u>${weather.description}</u>
-  `;
+  )
+}
+
+
+
+// need to modify everything below this line to get weather and news for country pages
+// const newsCard = data =>
+//   html`
+//     <h1>
+//       ${data.title}
+//     </h1>
+//     <a href="${data.url}">Click Here To Learn More</a>
+//   `;
+// const weatherBlock = weather =>
+//   html`
+//     <u>${weather.description}</u>
+//   `;
