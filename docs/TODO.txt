@@ -1,13 +1,15 @@
 !!!NEED TO BE DONE!!!
 TODO: add API calls for each API and country to countries.ts file in includes
-TODO: rebuild server
 TODO: add includes from root index.js to the appropriate include files in the client folder
 TODO: format css to new project structure
+TODO: contact page will not render
+TODO: continue rebuilding express sever
 TODO: continue rebuilding app using new stack: React, TypeScript, Vite,  Express, MongoDB
-TODO: Plan for the apps future
 TODO: rebuild country frontend pages
+TODO: Plan for the apps future
 
-***COMPLETED***
+
+***VERSION 1.0.0 COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
 TODO: ADJUST SIZES OF FOOTER ICONS LMAOOOOOOO (completed 12/2/2022)
 TODO: LINK CONTACT FORM TO FORMSPREE SITE (completed 12/7/2022)
@@ -31,5 +33,8 @@ TODO: UTILIZE NEW OUTLET API FOR "CURRENT EVENT" SECTIONS ON COUNTRY INFO PAGES 
 TODO: possibly use OPENWEATHERMAP to add weather data to countries (completed 12/24/2022)
 TODO: update api GDP and land mass data (completed 12/2022)
 TODO: continue working on documentation(completed 1/2023)
+
+***VERSION 2.0.0 COMPLETED***
 TODO: start rebuild of app using React and typescript (completed 1/13/2023)
 TODO: add appropriate dependencies (completed 12/18/23)
+TODO: do initial server rebuild  (completed 1/20/2023)
