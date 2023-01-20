@@ -10,7 +10,7 @@
   "editor.scrollBeyondLastColumn": 2,
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "off",
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,

@@ -1,0 +1,23 @@
+@import 'main';
+
+#welcomeBtn {
+  background-color: white;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 1rem 2rem;
+  box-shadow: 5px 10px 18px black
+}
+
+#welcomeBtn:hover {
+  background-color: #89939E;
+  color: white;
+}
+
+#welcomeBtnContainer {
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway";
+}

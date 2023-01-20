@@ -5,7 +5,7 @@ export default function Contact() {
 <div>
   <div id="contactContainer">
     <h1>Contact Me</h1>
-    <form action="https://formspree.io/f/mknelldn" method="POST">
+    <form action= {process.env.FORMSPREE_LINK} method="POST">
       <label  className="contactLabel"id="contactName">
         <input className="contactInput" type="text" name = "name" placeholder="Enter your name"></input>
       </label>
