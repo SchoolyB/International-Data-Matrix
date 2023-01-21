@@ -4,7 +4,7 @@ import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 export default function Benin() {
   return (
-    <div className='overallCosuntryInfoCOntainer'>
+    <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="BeninInfo">
         <img className="longCountryInfoFlag"
         id="BeninInfoFlag"

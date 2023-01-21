@@ -4,7 +4,7 @@ import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 export default function Azerbaijan() {
   return (
-    <div className='overallCosuntryInfoCOntainer'>
+    <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="AzerbaijanInfo">
         <img className="longCountryInfoFlag"
         id="AzerbaijanInfoFlag"

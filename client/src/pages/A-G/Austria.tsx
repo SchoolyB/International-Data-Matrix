@@ -4,7 +4,7 @@ import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 export default function Austria() {
   return (
-    <div className='overallCosuntryInfoCOntainer'>
+    <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="AustriaInfo">
         <img className="longCountryInfoFlag"
         id="AustriaInfoFlag"

@@ -4,7 +4,7 @@ import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 export default function Armenia() {
   return (
-    <div className='overallCosuntryInfoCOntainer'>
+    <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="ArmeniaInfo">
         <img className="longCountryInfoFlag"
         id="ArmeniaInfoFlag"

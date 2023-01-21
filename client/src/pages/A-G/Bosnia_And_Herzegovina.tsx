@@ -4,7 +4,7 @@ import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 export default function Bosnia_And_Herzegovina() {
   return (
-    <div className='overallCosuntryInfoCOntainer'>
+    <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="Bosnia_And_HerzegovinaInfo">
         <img className="longCountryInfoFlag"
         id="Bosnia_And_HerzegovinaInfoFlag"

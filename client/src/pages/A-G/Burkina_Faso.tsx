@@ -4,7 +4,7 @@ import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 export default function Burkina_Faso() {
   return (
-    <div className='overallCosuntryInfoCOntainer'>
+    <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="Burkina_FasoInfo">
         <img className="longCountryInfoFlag"
         id="Burkina_FasoInfoFlag"

@@ -2,17 +2,17 @@ import React from 'react'
 import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 
-export default function Comoros() {
+export default function Colombia() {
   return (
     <div className='overallCountryInfoCOntainer'>
-      <div className="countryInfo" id="ComorosInfo">
+      <div className="countryInfo" id="ColombiaInfo">
         <img className="longCountryInfoFlag"
-        id="ComorosInfoFlag"
+        id="ColombiaInfoFlag"
         src={flag}
         alt="The
         Flag
         of
-        Comoros"/>
+        Colombia"/>
       </div>
 
       <div className="genInformationContainer">

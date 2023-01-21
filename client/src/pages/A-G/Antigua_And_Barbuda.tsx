@@ -4,7 +4,7 @@ import flag from '../../assets/countryPageFlags/pngs/jpn.png'
 
 export default function Antigua_And_Barbuda() {
   return (
-    <div className='overallCosuntryInfoCOntainer'>
+    <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="Antigua_And_BarbudaInfo">
         <img className="longCountryInfoFlag"
         id="Antigua_And_BarbudaInfoFlag"
