@@ -1,8 +1,4 @@
-import { Suspense } from 'react'
-import {
-  BrowserRouter as Router,
-  useRoutes,
-} from 'react-router-dom'
+import {BrowserRouter as Router,useRoutes,} from 'react-router-dom'
 import Header from './components/Header'
 import routes from '~react-pages'
 import Footer from './components/Footer'

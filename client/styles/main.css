@@ -2,6 +2,7 @@
 @import 'contact';
 @import 'countryPages';
 @import 'countrySelection';
+@import 'homePage.css';
 
 #root{
   display: flex;

@@ -6,32 +6,39 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div>
       <footer>
+        {/* author name */}
         <ul id="webPageInfo">
           <li>Author: Marshall Burns</li>
           </ul>
+        {/*footer icons*/}
+
         <ul id="footerIconContainer">
-          <li>
+        {/* home icon */}
           <li>
             <a title='Home' href="Home"
-              ><img className="footerIcon" id="homeIcon" src={footer1}
+              ><img title="homeIcon"  className="footerIcon" id="homeIcon" src={footer1}
             /></a>
-          </li>
-            <a href="https://github.com/SchoolyB/Capstone/blob/master/README.md"
-              ><img className="footerIcon" id="docIcon" src={footer3}
-            /></a>
-          </li>
-          <li>
-            <a title='Translator'   href="Translator"><img className="footerIcon" id="translateIcon" src={footer4}/></a>
           </li>
 
+        {/* documentation icon */}
+          <li>
+            <a  title="Documentation" href="https://github.com/SchoolyB/Capstone/blob/master/README.md"
+              ><img title="docsIcon" className="footerIcon" id="docIcon" src={footer3}
+            /></a>
+          </li>
+
+          {/* translator icon */}
+          <li>
+            <a title='Translator'   href="Translator"><img title="translatorIcon" className="footerIcon" id="translateIcon" src={footer4}/></a>
+          </li>
+
+        {/* contact icon */}
           <li id="footerContactIcon">
             <a  title='Contact' href="Contact"
-              ><img className="footerIcon" id="ContactIcon" src={footer2}/></a>
+              ><img title="contactIcon" className="footerIcon" id="ContactIcon" src={footer2}/></a>
           </li>
         </ul>
       </footer>
-    </div>
   )
 }

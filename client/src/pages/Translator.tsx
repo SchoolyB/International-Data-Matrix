@@ -21,7 +21,6 @@ export default function Translator() {
 
       <div id="outputSide">
         <select title="languageSelection" className="langSelect" id="outputLangSelect">
-          {/* <!-- add languages back after testing --> */}
           <option value="bg">Bulgarian</option>
           <option value="zh">Chinese</option>
           <option value="da">Danish</option>
