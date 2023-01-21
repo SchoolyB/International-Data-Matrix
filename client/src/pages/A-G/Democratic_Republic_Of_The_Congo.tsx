@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../assets/countryPageFlags/pngs/jpn.png'
+import flag from '../../../assets/countryPageFlags'
 
 
 export default function Democratic_Republic_Of_The_Congo() {
@@ -60,3 +60,9 @@ export default function Democratic_Republic_Of_The_Congo() {
           Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
+
+    </div>
+
+  )
+}
+

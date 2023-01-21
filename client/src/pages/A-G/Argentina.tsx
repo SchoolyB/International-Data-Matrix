@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../assets/countryPageFlags/pngs/jpn.png'
+import flag from '../../../assets/countryPageFlags/svgs/arg.svg'
 
 
 export default function Argentina() {
@@ -60,3 +60,7 @@ export default function Argentina() {
           Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
+    </div>
+
+  )
+}

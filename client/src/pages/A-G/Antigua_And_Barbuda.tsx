@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../assets/countryPageFlags/pngs/jpn.png'
+import flag from '../../../assets/countryPageFlags/svgs/atg.svg'
 
 
 export default function Antigua_And_Barbuda() {
@@ -60,3 +60,7 @@ export default function Antigua_And_Barbuda() {
           Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
+    </div>
+
+  )
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../assets/countryPageFlags/pngs/jpn.png'
+import flag from '../../../assets/countryPageFlags'
 
 
 export default function Gabon() {
@@ -60,3 +60,7 @@ export default function Gabon() {
           Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
+    </div>
+
+  )
+}

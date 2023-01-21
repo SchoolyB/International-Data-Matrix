@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../assets/countryPageFlags/pngs/aus.png'
+import flag from '../../../assets/countryPageFlags'
 
 
 export default function Australia() {

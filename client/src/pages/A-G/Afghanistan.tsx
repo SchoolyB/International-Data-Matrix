@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../assets/countryPageFlags/pngs/jpn.png'
+import flag from '../../../assets/countryPageFlags/svgs/afg.svg'
 
 
 export default function Afghanistan() {
@@ -7,9 +7,9 @@ export default function Afghanistan() {
     <div className='overallCountryInfoCOntainer'>
       <div className="countryInfo" id="AfghanistanInfo">
         <img className="longCountryInfoFlag"
-        id="AfghanistanInfoFlag"
-        src={flag}
-        alt="The
+          id="AfghanistanInfoFlag"
+          src={flag}
+          alt="The
         Flag
         of
         Afghanistan"/>
@@ -24,14 +24,14 @@ export default function Afghanistan() {
 
         <p className='genInfoLocationAndWeather'>
           The Capitol of <u>${state.info.name}</u> is
-          <u>${state.info.Capital}</u><br/><br/>
-          <u>${state.info.Capital}</u> is located at<br/> Lat: <u>${
-          state.Weather.lat
-          }</u> Lon: <u>${state.Weather.lon}</u><br/><br/>
-          Here is a look at the current weather in <br/><u>${
-          state.info.Capital}</u>: <br/><br/>
-          The Temperature is currently: °F ${state.main.temp}<br/>
-          But it feels like: °F ${state.main.feels_like} <br/> and
+          <u>${state.info.Capital}</u><br /><br />
+          <u>${state.info.Capital}</u> is located at<br /> Lat: <u>${
+            state.Weather.lat
+          }</u> Lon: <u>${state.Weather.lon}</u><br /><br />
+          Here is a look at the current weather in <br /><u>${
+            state.info.Capital}</u>: <br /><br />
+          The Temperature is currently: °F ${state.main.temp}<br />
+          But it feels like: °F ${state.main.feels_like} <br /> and
           ${state.Weather.description.map(weatherBlock)}
         </p>
 
@@ -60,3 +60,7 @@ export default function Afghanistan() {
           Timezones: <u>${state.info.timezones}</u>
         </p>
       </div>
+    </div>
+
+  )
+}
