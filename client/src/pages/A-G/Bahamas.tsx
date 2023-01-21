@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../../assets/countryPageFlags'
+import flag from '../../../assets/countryPageFlags/svgs/bhs.svg'
 
 
 export default function Bahamas() {

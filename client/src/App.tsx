@@ -6,15 +6,7 @@ import Countries from "./pages/Countries"
 import Contact  from "./pages/Contact"
 import Translator from "./pages/Translator"
 import Example from "./pages/Example"
-import  Australia  from "./pages/Australia"
-import  Belarus  from "./pages/Belarus"
-import  Greece  from "./pages/Greece"
-import  Japan  from "./pages/Japan"
-import  Nepal  from "./pages/Nepal"
-import  Morocco  from "./pages/Morocco"
-import  Sudan  from "./pages/Sudan"
-import  Usa  from "./pages/Usa"
-import  Venezuela  from "./pages/Venezuela"
+import * from './pages'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {

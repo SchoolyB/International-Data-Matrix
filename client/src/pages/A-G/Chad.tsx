@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../../assets/countryPageFlags'
+import flag from '../../../assets/countryPageFlags/svgs/tcd.svg'
 
 
 export default function Chad() {

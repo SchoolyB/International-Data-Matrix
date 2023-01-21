@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../../assets/countryPageFlags'
+import flag from '../../../assets/countryPageFlags/svgs/dom.svg'
 
 
 export default function Dominican_Republic() {

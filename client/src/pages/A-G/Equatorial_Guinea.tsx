@@ -1,5 +1,5 @@
 import React from 'react'
-import flag from '../../../assets/countryPageFlags'
+import flag from '../../../assets/countryPageFlags/svgs/gnq.svg'
 
 
 export default function Equatorial_Guinea() {

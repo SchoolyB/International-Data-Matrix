@@ -1,18 +1,18 @@
 import React from 'react'
-import flag from '../../../assets/countryPageFlags/svgs/eth.svg'
+import flag from '../../../assets/countryPageFlags/svgs/gib.svg'
 
 
-export default function Ethiopia() {
+export default function Gibraltar() {
   return (
     <div className='overallCountryInfoCOntainer'>
-      <div className="countryInfo" id="EthiopiaInfo">
+      <div className="countryInfo" id="GibraltarInfo">
         <img className="longCountryInfoFlag"
-        id="EthiopiaInfoFlag"
+        id="GibraltarInfoFlag"
         src={flag}
         alt="The
         Flag
         of
-        Ethiopia"/>
+        Gibraltar"/>
       </div>
 
       <div className="genInformationContainer">
