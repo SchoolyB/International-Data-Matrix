@@ -12,7 +12,6 @@ export default function Header() {
 
     <div>
       <h1 id="pageHeading">
-        {/* ${state.header} */}
       </h1>
     </div>
 
