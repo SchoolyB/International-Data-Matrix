@@ -2,7 +2,7 @@
 const express = require("express");
 // Initialize the Express application
 const dotenv = require("dotenv");
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 // const deepl = require("deepl-node");
 // const countries = require("./routers/countries");
 
@@ -12,13 +12,13 @@ const PORT = process.env.PORT || 4040; // we use || to provide a default value
 
 const app = express();
 
-// mongoose.connect(process.env.DATA_BASE);
-// const db = mongoose.connection;
-// db.on("error", console.error.bind(console, "Connection Error:"));
-// db.once(
-//   "open",
-//   console.log.bind(console, "Successfully connected to database!")
-// );
+mongoose.connect(process.env.DATA_BASE);
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "Connection Error:"));
+db.once(
+  "open",
+  console.log.bind(console, "Successfully connected to database!")
+);
 
 // const logging = (request, response, next) => {
 //   console.log(`${request.method} ${request.url}`);
