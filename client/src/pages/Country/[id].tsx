@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getCountry } from '../../includes/countries';
 import { CountryData } from '../../types/countryData';
+import { WeatherData } from '../../types/weatherData';
+
 
 export default function countryPage(bar: string | undefined) {
   const {id} = useParams<{id:string}>()
@@ -37,9 +39,13 @@ const dynamicImgAttribute = () => {
     foo.setAttribute('alt', `The Flag of ${state.name}`)
     const bar:any = foo.attributes[1]
    }
-
 }
+
+  const independentNation = (CountryData:any) => {
+    if()
+  }
   dynamicImgAttribute();
+
   return (
 
     <div className='overallCountryInfoContainer'>
@@ -93,8 +99,10 @@ const dynamicImgAttribute = () => {
         <p className="genInfoTimezones">
           Timezones: <u>{state.timezones}</u>
         </p>
+        <p id="independentNation">
+          {state.name} is an independent nation
+        </p>
       </div>
     </div>
-
   )
 }
