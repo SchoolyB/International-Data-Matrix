@@ -1,5 +1,5 @@
 export interface WeatherData{
-  main:string
+  main: string
   lat: number
   lon: number
   description: string

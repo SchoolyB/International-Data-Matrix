@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom';
 import { getCountry } from '../../includes/countries';
 import { CountryData } from '../../types/countryData';
 import { WeatherData } from '../../types/weatherData';
-
+import { getWeather } from '../../includes/openWeather'
 
 export default function countryPage(bar: string | undefined) {
-  const {id} = useParams<{id:string}>()
+
+  const { id } = useParams<{ id: string }>()
 
   const [state, setState] = useState<CountryData>({
     name: '',
@@ -24,21 +25,34 @@ export default function countryPage(bar: string | undefined) {
     //population has a '?' so its not required
   })
 
+  const [weatherVar, setWeather] = useState<WeatherData>({
+    main: '',
+   lat: 0,
+   lon: 0,
+   description: ''
+  })
+
+
 
 //a '!' after a variable means this is definitely defined
   const fetchData = useCallback(() => getCountry(id!).then(setState),[]);
   useEffect(() => {
     console.log()
   fetchData()
-},[fetchData])
+  }, [fetchData])
+
+const fetchWeather = useCallback(() => getCountry(id!).then(setWeather),[]);
+  useEffect(() => {
+    console.log()
+  fetchWeather()
+  }, [fetchWeather])
 
   // function to make and display dynamic <img> alt attributes for each country
 const dynamicImgAttribute = () => {
   const foo = document.getElementById('countryInfoFlag');
   if (foo != null) {
     foo.setAttribute('alt', `The Flag of ${state.name}`)
-    const bar:any = foo.attributes[1]
-   }
+    const bar:any = foo.attributes[1]}
 }
 
   const independentNation = (CountryData:any) => {
