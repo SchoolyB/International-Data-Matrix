@@ -7,7 +7,7 @@ export interface CountryData {
 	alpha3Code: number
 	nativeName: string
 	region: string
-	subRegion: string
+	subregion: string
   capital: string
   population?: number //the '?' means that the property population is possibly undefined
   timezones: string
