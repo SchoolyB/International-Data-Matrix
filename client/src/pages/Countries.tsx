@@ -1,7 +1,5 @@
 import React from 'react'
 // import * as flags from "../../assets/countrySelctionFlags";
-
-
 export default function Countries() {
   return (
     <div>
