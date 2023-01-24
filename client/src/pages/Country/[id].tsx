@@ -25,11 +25,11 @@ export default function countryPage(bar: string | undefined) {
     //population has a '?' so its not required
   })
 
-  const [weatherVar, setWeather] = useState<WeatherData>({
+  const [weather, setWeather] = useState<WeatherData>({
     main: '',
-   lat: 0,
-   lon: 0,
-   description: ''
+    lat: 0,
+    lon: 0,
+    sdescription: ''
   })
 
 
@@ -41,7 +41,8 @@ export default function countryPage(bar: string | undefined) {
   fetchData()
   }, [fetchData])
 
-const fetchWeather = useCallback(() => getCountry(id!).then(setWeather),[]);
+
+const fetchWeather = useCallback(() => getWeather(id!).then(setWeather),[]);
   useEffect(() => {
     console.log()
   fetchWeather()
@@ -55,9 +56,9 @@ const dynamicImgAttribute = () => {
     const bar:any = foo.attributes[1]}
 }
 
-  const independentNation = (CountryData:any) => {
-    if()
-  }
+  // const independentNation = (CountryData:any) => {
+  //   if()
+  // }
   dynamicImgAttribute();
 
   return (
@@ -82,9 +83,8 @@ const dynamicImgAttribute = () => {
           <u>{}</u> is located at<br /> Lat: <u>{
 
           }</u> Lon: <u>{}</u><br /><br />
-          Here is a look at the current weather in <br /><u>{
-            }</u>: <br /><br />
-          The Temperature is currently: °F {}<br />
+          Here is a look at the current weather in ${state.capital}<br /><u></u>: <br /><br />
+          The Temperature is currently: °F {weather.main}<br />
           But it feels like: °F {} <br /> and
           {/* {.map(weatherBlock)} */}
         </p>
