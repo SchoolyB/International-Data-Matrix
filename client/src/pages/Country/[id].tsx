@@ -29,9 +29,8 @@ export default function countryPage(bar: string | undefined) {
     main: '',
     lat: 0,
     lon: 0,
-    sdescription: ''
+    description: ''
   })
-
 
 
 //a '!' after a variable means this is definitely defined
@@ -42,11 +41,18 @@ export default function countryPage(bar: string | undefined) {
   }, [fetchData])
 
 
-const fetchWeather = useCallback(() => getWeather(id!).then(setWeather),[]);
+
+  const fetchWeather =  useCallback( async () => {
+    if (!state.capital.length) {
+      return
+    }
+    const data = await getWeather(state.capital)
+    console.log(data)
+  }, [state]);
   useEffect(() => {
-    console.log()
+    console.log("hello", state.capital,)
   fetchWeather()
-  }, [fetchWeather])
+  }, [fetchWeather, state])
 
   // function to make and display dynamic <img> alt attributes for each country
 const dynamicImgAttribute = () => {
@@ -83,10 +89,9 @@ const dynamicImgAttribute = () => {
           <u>{}</u> is located at<br /> Lat: <u>{
 
           }</u> Lon: <u>{}</u><br /><br />
-          Here is a look at the current weather in ${state.capital}<br /><u></u>: <br /><br />
-          The Temperature is currently: °F {weather.main}<br />
+          Here is a look at the current weather in {state.capital}<br /><u></u>: <br /><br />
+          The Temperature is currently: °F {weather}<br />
           But it feels like: °F {} <br /> and
-          {/* {.map(weatherBlock)} */}
         </p>
 
         <p className='genInfoPopulation'>
@@ -107,8 +112,8 @@ const dynamicImgAttribute = () => {
           {/* <u>{[0].code}</u> */}
         </p>
         <p className="genInfoCallingCodes">
-          <u>{}'s</u> calling code is
-          <u>{}</u>
+          <u>'s</u> calling code is
+          <u></u>
         </p>
         <p className="genInfoTimezones">
           Timezones: <u>{state.timezones}</u>
