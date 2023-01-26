@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { getWeather } from '../../includes/openWeather'
 import { getCountry } from '../../includes/countries';
 import { CountryData } from '../../types/countryData';
 import { WeatherData } from '../../types/weatherData';
-import { getWeather } from '../../includes/openWeather'
 
 export default function countryPage(bar: string | undefined) {
 
@@ -32,7 +32,10 @@ export default function countryPage(bar: string | undefined) {
     description: ''
   })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 587a48dd11a33d1de18fdb694637128021b5b364
 //a '!' after a variable means this is definitely defined
   const fetchData = useCallback(() => getCountry(id!).then(setState),[]);
   useEffect(() => {
@@ -41,6 +44,7 @@ export default function countryPage(bar: string | undefined) {
   }, [fetchData])
 
 
+<<<<<<< HEAD
 
   const fetchWeather =  useCallback( async () => {
     if (!state.capital.length) {
@@ -49,6 +53,9 @@ export default function countryPage(bar: string | undefined) {
     const data = await getWeather(state.capital)
     console.log(data)
   }, [state]);
+=======
+const fetchWeather = useCallback(() => getWeather().then(setWeather),[]);
+>>>>>>> 587a48dd11a33d1de18fdb694637128021b5b364
   useEffect(() => {
     console.log("hello", state.capital,)
   fetchWeather()
@@ -66,7 +73,7 @@ const dynamicImgAttribute = () => {
   //   if()
   // }
   dynamicImgAttribute();
-
+console.log(weather.main)
   return (
 
     <div className='overallCountryInfoContainer'>
@@ -107,7 +114,7 @@ const dynamicImgAttribute = () => {
         </p>
         <p className="genInfoCurrency">
           The National Currency of {state.name} Is: <br />
-          {/* The <u>{.name}</u> Represented As: */}
+          The <u>{weather.main}</u> Represented As:
           {/* <u>{state.currencies}</u> & */}
           {/* <u>{[0].code}</u> */}
         </p>
