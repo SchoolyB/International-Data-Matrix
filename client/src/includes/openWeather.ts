@@ -1,6 +1,11 @@
 import axios from "axios";
 import { WeatherData } from "../types/weatherData";
+const weatherKey = import.meta.env.VITE_OPEN_WEATHER_KEY
 
-const getWeather = (id:string) => {
-  axios.get<WeatherData>('https://api.openweathermap.org/data/2.5/weather?q=').then((res) => res.data)
-}
+export const getWeather = (capital:string) => {
+	return axios
+						.get(
+							`https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=${weatherKey}&units=imperial`,
+						)
+						.then((res) => res.data)
+				}
