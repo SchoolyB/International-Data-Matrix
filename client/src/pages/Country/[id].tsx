@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getCountry } from '../../includes/countries';
 import { CountryData } from '../../types/countryData';
 import { WeatherData } from '../../types/weatherData';
+import CountryWeather from '../../components/countryWeather';
 import { getWeather } from '../../includes/openWeather'
 
 export default function countryPage(bar: string | undefined) {
@@ -25,12 +26,7 @@ export default function countryPage(bar: string | undefined) {
     //population has a '?' so its not required
   })
 
-  const [weather, setWeather] = useState<WeatherData>({
-    main: '',
-    lat: 0,
-    lon: 0,
-    description: ''
-  })
+
 
 
 //a '!' after a variable means this is definitely defined
@@ -39,26 +35,6 @@ export default function countryPage(bar: string | undefined) {
     console.log()
   fetchData()
   }, [fetchData])
-
-
-
-  const fetchWeather =  useCallback( async () => {
-    if (!state.capital.length) {
-      return
-    }
-    const data = await getWeather(state.capital)
-    const myCoolVar = () => {
-      const temp = data.main.temp;
-      const feelsLikeTemp = data.main.feels_like;
-      console.log(data, "hello")
-    }
-    myCoolVar();
-  }, [state]);
-  useEffect(() => {
-    console.log("The capitol of this country is", state.capital)
-  fetchWeather()
-  }, [fetchWeather, state])
-
 
 
   // function to make and display dynamic <img> alt attributes for each country
@@ -89,16 +65,7 @@ const dynamicImgAttribute = () => {
           <u>{state.region}</u><br />
           And The Subregion of <u>{state.subregion}</u>
         </p>
-
-        <p className='genInfoLocationAndWeather'>
-          The Capitol of <u>{state.name}</u> is
-          <u>{state.capital}</u><br /><br />
-          <u>{ }</u> is located at<br /> Lat: <u>{ }
-          </u> Lon: <u>{ }</u><br /><br />
-          Here is a look at the current weather in {state.capital}<br /><u></u>: <br /><br />
-          The Temperature is currently: °F <br />
-          But it feels like: °F {} <br /> and
-        </p>
+        <CountryWeather capital={state.capital} name= {state.name} />
 
         <p className='genInfoPopulation'>
           The Population of <u>{state.name}</u> is is approx.
@@ -113,20 +80,20 @@ const dynamicImgAttribute = () => {
         </p>
         <p className="genInfoCurrency">
           The National Currency of {state.name} Is: <br />
-          {/* The <u>{.name}</u> Represented As: */}
+          The <u>{state.name}</u> Represented As:
           {/* <u>{state.currencies}</u> & */}
           {/* <u>{[0].code}</u> */}
         </p>
         <p className="genInfoCallingCodes">
-          <u>'s</u> calling code is
+          <u>{state.name}'s</u> calling code is
           <u></u>
         </p>
         <p className="genInfoTimezones">
           Timezones: <u>{state.timezones}</u>
         </p>
-        <p id="independentNation">
+        {/* <p id="independentNation">
           {state.name} is an independent nation
-        </p>
+        </p> */}
       </div>
     </div>
   )
