@@ -1,10 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { getCountry } from '../../includes/countries';
 import { CountryData } from '../../types/countryData';
 import { WeatherData } from '../../types/weatherData';
-import CountryWeather from '../../components/countryWeather';
+import { getCountry } from '../../includes/countries';
 import { getWeather } from '../../includes/openWeather'
+import { countrySelectionData } from '../../types/countrySelectionData';
+import CountryWeather from '../../components/countryWeather';
 
 export default function countryPage(bar: string | undefined) {
 
