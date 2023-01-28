@@ -1,0 +1,59 @@
+import React, { useCallback, useEffect, useState } from 'react'
+import { getWeather } from '../includes/openWeather';
+import { WeatherData } from '../types/weatherData';
+
+interface Props{
+  capital: string,
+  name: string
+}
+
+
+
+export default function CountryWeather(props: Props) {
+
+
+const [weather, setWeather] = useState<WeatherData>({
+  main: '',
+  description: '',
+  temp: 0,
+  feels_like: 0,
+  lat: 0,
+  lon: 0,
+})
+
+const fetchWeather =  useCallback( async () => {
+    if (!props.capital.length) {
+      return
+    }
+    const data = await getWeather(props.capital)
+
+  setWeather({
+    main: data.weather.main,
+    description: data.weather.id,
+    temp: data.main.temp,
+    feels_like: data.main.feels_like,
+    lat: data.coord.lat,
+    lon: data.coord.lon,
+  })
+
+  }, [props.capital]);
+  useEffect(() => {
+    console.log("The capitol of this country is", props.capital)
+  fetchWeather()
+  }, [fetchWeather, props.capital])
+
+console.log(weather)
+
+  return (
+    <p className='genInfoLocationAndWeather'>
+          The Capitol of <u>{props.name}</u> is
+          <u>{props.capital}</u><br /><br />
+          <u>{props.capital}</u> is located at<br /> Lat:<u>{weather.lat}
+          </u> Lon: <u>{weather.lon}</u><br /><br />
+      Here is a look at the current weather in {props.capital}<br /><u></u>: {weather.main}<br /><br />
+      The Temperature is currently:  {weather.temp}°F <br />
+          But it feels like: °F {weather.feels_like} <br /> and
+        </p>
+
+  )
+}

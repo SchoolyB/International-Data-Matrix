@@ -5,12 +5,12 @@ export default function Countries() {
     <div>
 
   <div id="container">
-    ${state.filteredData
+    {state.filteredData
       .map(country => {
           <div id="overAllContainer">
-            <div className="country" id="${country._id}">
-              <h3 className="countryHeading">${country.name}</h3>
-              <a href="${country.link}">
+            <div className="country" id="{country._id}">
+              <h3 className="countryHeading">{country.name}</h3>
+              <a href="{country.link}">
                 <img
                   className="flag"
                   src={flags[country.name]}
@@ -18,9 +18,9 @@ export default function Countries() {
                 />
               </a>
               <div className="data">
-                <p>${country.population}</p>
-                <p>${country.gdp}</p>
-                <p>${country.landMass}</p>
+                <p>{country.population}</p>
+                <p>{country.gdp}</p>
+                <p>{country.landMass}</p>
                 <p></p>
               </div>
             </div>

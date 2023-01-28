@@ -1,4 +1,3 @@
-//TODO: add more properties from country object
 //types need to be in pascal case
 //an interface is a description of an object
 export interface CountryData {
