@@ -7,21 +7,13 @@
   padding: 20px;
   margin-top: -210px;
   font-family: "Raleway";
-
-
-
 }
-
-
 
 .countryNameHeader {
   font-size: 75px;
   margin-bottom: -15px;
-
-
 }
 
-.nativeName {}
 
 .topic {
 
@@ -59,60 +51,11 @@
 
 }
 
-.genInformationContainer {
+.overallCountryInfoContainer {
   color: white;
 }
 
 u {
   color: black;
   font-size: 18px;
-}
-
-.longCountryInfoFlag {
-  /*changes some css for flags on country pages  */
-
-  border: solid 1px black;
-  height: 200px;
-  border-radius: 25px;
-
-}
-
-.shortCountryInfoFlag {
-  border: solid 1px black;
-  border-radius: 25px;
-  height: 200px;
-  margin-top: 1px;
-
-}
-
-#nepalInfoFlag {
-  /* specific only to nepal because its flag isnt usually a full rectangle  */
-  height: 200px;
-  margin-top: 1px;
-  border-radius: 25px;
-
-}
-
-.countryInfo * p {
-  font-weight: bold;
-  line-height: 1.5em;
-  margin-bottom: 3em;
-}
-
-.countryInfo * h6 {
-  font-size: 14px;
-  margin-bottom: 1em;
-  padding-bottom: -1em;
-
-}
-
-.countryInfo * h5 {
-  font-size: 18px;
-
-}
-
-.countryInfo * h4 {
-  font-size: 22px;
-  text-decoration: underline solid .2em;
-
 }

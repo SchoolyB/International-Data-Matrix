@@ -4,7 +4,6 @@ import logo from "../../assets/Branding/logo-no-background.png";
 
 export default function Header() {
   return (
-    <div>
   <header>
     <div>
       <img title ="image" id="mainLogo"src={logo} ></img>
@@ -22,6 +21,6 @@ export default function Header() {
         </form>
       </div>
   </header>
-    </div>
+
   )
 }

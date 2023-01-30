@@ -1,5 +1,4 @@
 import axios from "axios";
-import { WeatherData } from "../types/weatherData";
 const weatherKey = import.meta.env.VITE_OPEN_WEATHER_KEY
 
 export const getWeather = (capital:string) => {
