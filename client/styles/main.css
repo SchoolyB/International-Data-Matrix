@@ -51,7 +51,7 @@ header{
   font-size: 28px;
   font-family: 'Raleway', sans-serif;
   color: white;
-  margin-bottom: 7em;
+  /* margin-bottom: 7em; */
   display: grid;
   grid-template-columns: 100px auto 10em;
 }

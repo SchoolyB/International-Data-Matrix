@@ -5,7 +5,7 @@ import { WeatherData } from '../../types/weatherData';
 import { getCountry } from '../../includes/countries';
 import { getWeather } from '../../includes/openWeather'
 import { countrySelectionData } from '../../types/countrySelectionData';
-import CountryWeather from '../../components/countryWeather';
+import CountryWeather from '../../components/CountryWeather';
 
 export default function countryPage(bar: string | undefined) {
 
@@ -26,9 +26,6 @@ export default function countryPage(bar: string | undefined) {
     independent: true
     //population has a '?' so its not required
   })
-
-
-
 
 //a '!' after a variable means this is definitely defined
   const fetchData = useCallback(() => getCountry(id!).then(setState),[]);
@@ -55,12 +52,23 @@ const dynamicImgAttribute = () => {
 
     <div className='overallCountryInfoContainer'>
       <div id="countryInfo">
+        <h1  id='countryEnglishName'>{state.name}</h1>
+        <h3 id='countryNativeName'>{ state.nativeName}</h3>
+      </div>
+      {/* TOPICS */}
+      <div>
+        <section className='topic'><h3>Geography</h3></section>
+        <section className='topic'><h3>History</h3></section>
+        <section className='topic'><h3>Demographics</h3></section>
+        <section className='topic'><h3>Culture</h3></section>
+        <section className='topic'><h3>Religion</h3></section>
+        <section className='topic'><h3>Current Events</h3></section>
+      </div>
+
+      <div className="metaDataContainer">
         <img id="countryInfoFlag"
           // src={flag}TODO:work on adding dynamic flags sources
           alt= {bar}/>
-      </div>
-
-      <div className="genInformationContainer">
         <p className="genInfoRegion">
           <u>{state.name}</u> Is Located In The Region of
           <u>{state.region}</u><br />
