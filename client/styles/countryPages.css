@@ -1,26 +1,24 @@
 /* everything below this line modifies country page css */
 @import 'main';
 
-.countryInfo {
-  /*changes css of country info pages */
-  background-color: white;
-  padding: 20px;
-  margin-top: -210px;
-  font-family: "Raleway";
-}
+.countryInfo{
+  text-align: center;
+  color: black;
+  background-color: #89939E;
+  border-top: .2em solid black ;
+  border-bottom: .2em solid black;
 
-.countryNameHeader {
-  font-size: 75px;
-  margin-bottom: -15px;
+}
+.countryInfo>h1 {
+  font-size: 3.5em;
 }
 
 
 .topic {
-
+  color: black ;
   text-align: left;
-  width: 65%;
+  width: 70%;
   padding-bottom: 2px;
-
   word-wrap: break-word;
 }
 
@@ -30,32 +28,27 @@
 }
 
 .topic>p {
-
   font-size: 16px;
-
 }
 
 .metaDataContainer {
+  position: relative; bottom: 65em;
   display: flex;
   justify-content: right;
   background-color: #89939E;
-  width: auto;
   flex-direction: column;
   width: 22%;
   float: right;
-  margin-top: 55px;
   border-radius: 25px;
-
-
-
-
 }
 
 .overallCountryInfoContainer {
-  color: white;
+  background-color: white;
+
 }
 
+
 u {
-  color: black;
+  color: white;
   font-size: 18px;
 }

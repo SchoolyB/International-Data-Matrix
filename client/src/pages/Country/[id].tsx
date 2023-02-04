@@ -47,22 +47,23 @@ const dynamicImgAttribute = () => {
   //   if()
   // }
   dynamicImgAttribute();
+  console.log(state.currencies[0])
 
   return (
 
     <div className='overallCountryInfoContainer'>
-      <div id="countryInfo">
+      <div className="countryInfo">
         <h1  id='countryEnglishName'>{state.name}</h1>
-        <h3 id='countryNativeName'>{ state.nativeName}</h3>
+        <h3 id='countryNativeName'>A.K.A { state.nativeName}</h3>
       </div>
       {/* TOPICS */}
-      <div>
-        <section className='topic'><h3>Geography</h3></section>
-        <section className='topic'><h3>History</h3></section>
-        <section className='topic'><h3>Demographics</h3></section>
-        <section className='topic'><h3>Culture</h3></section>
-        <section className='topic'><h3>Religion</h3></section>
-        <section className='topic'><h3>Current Events</h3></section>
+      <div id='topic'>
+        <section className='topic'><h3>Geography</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quam magni? Neque iste distinctio provident ab eligendi ut quas magni eos alias veniam, expedita veritatis! Ab commodi totam quod aliquid.</p></section>
+        <section className='topic'><h3>History</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iusto eius ratione nisi placeat obcaecati. Accusamus cupiditate inventore commodi illo, modi quia! Incidunt dolorem delectus magni praesentium, sit ipsum dicta.</p></section>
+        <section className='topic'><h3>Demographics</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consequuntur accusantium omnis magni, soluta eos doloremque inventore error quos sed, recusandae sunt incidunt ullam repudiandae tenetur voluptatibus iure? Excepturi, eum.</p></section>
+        <section className='topic'><h3>Culture</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem deleniti libero beatae aliquid harum corporis non nobis eum nostrum repellendus voluptatem rem, debitis vel! Voluptas omnis sunt doloremque commodi culpa!</p></section>
+        <section className='topic'><h3>Religion</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sed nobis, quos vero odio debitis harum cum dolores voluptatum aperiam aliquid dolore, mollitia aut, aliquam qui earum! Libero, laborum veritatis?</p></section>
+        <section className='topic'><h3>Current Events</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum esse sunt harum ducimus error nostrum id iure ex commodi quaerat perspiciatis necessitatibus, neque inventore, doloribus quis nesciunt excepturi animi cumque.</p></section>
       </div>
 
       <div className="metaDataContainer">
@@ -70,9 +71,9 @@ const dynamicImgAttribute = () => {
           // src={flag}TODO:work on adding dynamic flags sources
           alt= {bar}/>
         <p className="genInfoRegion">
-          <u>{state.name}</u> Is Located In The Region of
-          <u>{state.region}</u><br />
-          And The Subregion of <u>{state.subregion}</u>
+          <u>{state.name}</u> is located in
+          <u>{state.subregion}</u> subregion of the
+          <u>{state.region}region</u><br />
         </p>
         <CountryWeather capital={state.capital} name= {state.name} />
 
@@ -90,12 +91,8 @@ const dynamicImgAttribute = () => {
         <p className="genInfoCurrency">
           The National Currency of {state.name} Is: <br />
           The <u>{state.name}</u> Represented As:
-          {/* <u>{state.currencies}</u> & */}
+          {/* <u>{state.currencies[0]}</u> & */}
           {/* <u>{[0].code}</u> */}
-        </p>
-        <p className="genInfoCallingCodes">
-          <u>{state.name}'s</u> calling code is
-          <u></u>
         </p>
         <p className="genInfoTimezones">
           Timezones: <u>{state.timezones}</u>
