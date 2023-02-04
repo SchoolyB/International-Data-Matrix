@@ -7,8 +7,16 @@ import { getWeather } from '../../includes/openWeather'
 import { countrySelectionData } from '../../types/countrySelectionData';
 import CountryWeather from '../../components/CountryWeather';
 
-export default function countryPage(bar: string | undefined) {
+//countryFlags is an object which keys are a the path to the image. .glob is a vite feature that tells the program to glob up all the files in that path and imports them
+const countryFlags = import.meta.glob('../../../assets/countryPageFlags/svgs/*.svg', {
+  eager: true
+});
 
+
+
+
+export default function countryPage(bar: string | undefined) {
+  console.log(countryFlags)
   const { id } = useParams<{ id: string }>()
 
   const [state, setState] = useState<CountryData>({
@@ -36,25 +44,31 @@ export default function countryPage(bar: string | undefined) {
 
 
   // function to make and display dynamic <img> alt attributes for each country
-const dynamicImgAttribute = () => {
-  const foo = document.getElementById('countryInfoFlag');
-  if (foo != null) {
-    foo.setAttribute('alt', `The Flag of ${state.name}`)
-    const bar:any = foo.attributes[1]}
-}
+  const dynamicImgAttribute = () => {
+    const foo = document.getElementById('countryInfoFlag');
+    if (foo != null) {
+      foo.setAttribute('alt', `The Flag of ${state.name}`)
+      const bar: any = foo.attributes[1]
+    }
+  }
 
-  // const independentNation = (CountryData:any) => {
-  //   if()
-  // }
   dynamicImgAttribute();
-  console.log(state.currencies[0])
+  // console.log(state.currencies[0])
+
+  const FoundFlag = Object.entries(countryFlags).find(([file_path, url]) => {
+    const shortPath = file_path.replace("../../../assets/countryPageFlags/svgs/", '')
+    return shortPath.startsWith(id!)
+  }) as any //using "as any" is known as type casting
+  const CurrentCountryFlag = FoundFlag?FoundFlag[1].default:null
+console.log(CurrentCountryFlag)
+
 
   return (
 
     <div className='overallCountryInfoContainer'>
       <div className="countryInfo">
         <h1  id='countryEnglishName'>{state.name}</h1>
-        <h3 id='countryNativeName'>A.K.A { state.nativeName}</h3>
+        <h3 id='countryNativeName'>a.k.a { state.nativeName}</h3>
       </div>
       {/* TOPICS */}
       <div id='topic'>
@@ -68,7 +82,7 @@ const dynamicImgAttribute = () => {
 
       <div className="metaDataContainer">
         <img id="countryInfoFlag"
-          // src={flag}TODO:work on adding dynamic flags sources
+          src={CurrentCountryFlag}
           alt= {bar}/>
         <p className="genInfoRegion">
           <u>{state.name}</u> is located in
