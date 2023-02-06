@@ -38,11 +38,8 @@ const fetchWeather =  useCallback( async () => {
 
   }, [props.capital]);
   useEffect(() => {
-    console.log("The capitol of this country is", props.capital)
   fetchWeather()
   }, [fetchWeather, props.capital])
-
-console.log(weather)
 
   return (
     <p className='genInfoLocationAndWeather'>

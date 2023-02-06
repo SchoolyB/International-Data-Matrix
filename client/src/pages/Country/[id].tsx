@@ -14,9 +14,7 @@ const countryFlags = import.meta.glob('../../../assets/countryPageFlags/svgs/*.s
 
 
 
-
 export default function countryPage(bar: string | undefined) {
-  console.log(countryFlags)
   const { id } = useParams<{ id: string }>()
 
   const [state, setState] = useState<CountryData>({
@@ -35,10 +33,9 @@ export default function countryPage(bar: string | undefined) {
     //population has a '?' so its not required
   })
 
-//a '!' after a variable means this is definitely defined
+  //a '!' after a variable means this is definitely defined
   const fetchData = useCallback(() => getCountry(id!).then(setState),[]);
   useEffect(() => {
-    console.log()
   fetchData()
   }, [fetchData])
 
@@ -60,7 +57,7 @@ export default function countryPage(bar: string | undefined) {
     return shortPath.startsWith(id!)
   }) as any //using "as any" is known as type casting
   const CurrentCountryFlag = FoundFlag?FoundFlag[1].default:null
-console.log(CurrentCountryFlag)
+
 
 
   return (
@@ -85,9 +82,11 @@ console.log(CurrentCountryFlag)
           src={CurrentCountryFlag}
           alt= {bar}/>
         <p className="genInfoRegion">
-          <u>{state.name}</u> is located in
-          <u>{state.subregion}</u> subregion of the
-          <u>{state.region}region</u><br />
+          <u>{state.name}</u> is located in the
+          <u>{state.subregion}</u> subregion
+          of the <u>{state.region}</u> region <br />
+
+          The capital of <u>{state.name}</u> is
         </p>
         <CountryWeather capital={state.capital} name= {state.name} />
 
