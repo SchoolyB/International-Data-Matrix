@@ -38,22 +38,18 @@ const fetchWeather =  useCallback( async () => {
 
   }, [props.capital]);
   useEffect(() => {
-    console.log("The capitol of this country is", props.capital)
   fetchWeather()
   }, [fetchWeather, props.capital])
 
-console.log(weather)
-
   return (
     <p className='genInfoLocationAndWeather'>
-          The Capitol of <u>{props.name}</u> is
-          <u>{props.capital}</u><br /><br />
-          <u>{props.capital}</u> is located at<br /> Lat:<u>{weather.lat}
-          </u> Lon: <u>{weather.lon}</u><br /><br />
-      Here is a look at the current weather in {props.capital}<br /><u></u>: {weather.main}<br /><br />
+          The Capitol of <u>{props.name}</u> is:
+          <u> {props.capital}</u><br /><br />
+          <u>{props.capital}</u> is located at<br /> Latitude:<u>{weather.lat}
+          </u> Longitude: <u>{weather.lon}</u><br /><br />
+      Here is a look at the current weather in {props.capital}<u></u>: {weather.main}<br /><br />
       The Temperature is currently:  {weather.temp}°F <br />
-          But it feels like: °F {weather.feels_like} <br /> and
+      But it feels like: °F {weather.feels_like} <br />
         </p>
-
   )
 }
