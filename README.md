@@ -26,10 +26,10 @@ Initially The IDM was built with only HTML, CSS, and vanilla JS. The IDM was reb
   - [Express](https://expressjs.com/)
   - [mongoose](https://www.npmjs.com/package/mongoose)
 
-Deployed with [Netlify](https://www.netlify.com/)### Get To The Point -
+Deployed with [Netlify](https://www.netlify.com/)
 
-So with all of that out of the way lets talk about what The IDM is. The International Data Matrix is a web app developed by Marshall Burns a.k.a Schooly. The application is meant to act as a central place on the internet that anyone can access to gain historical, cultural, religious, geographical, geo-economical and geo-political understanding about any country in the world and the people that reside in them; Without having to go through the clutter of wikipedia or have multiple google tabs open. Another key function of this app is the built-in translator. An example of each page will be given to explain how the application works. These examples  will be provided in the form of screenshots. There will also be code snippets to explain in greater detail how some portions of the app was made.
-
+### Get To The Point -
+So with all of that out of the way lets talk about what The IDM is. The International Data Matrix is meant to act as a central place on the internet that anyone can access to gain historical, cultural, religious, geographical, geo-economical and geo-political understanding about any country in the world and the people that reside in them; Without having to go through the clutter of wikipedia or have multiple google tabs open. Another key function of this app is the built-in translator.
 ### Project Structure -
 As mentioned in [The How](https://github.com/SchoolyB/Capstone/tree/master#the-why--) section one of the stipulations for this project was that I could not use any frameworks or libraries like React, Angular, Vue, Svelte, etc. Because of that the SPA had to be built using vanilla JavaScript components, views, state, and bundled all up with vite's builtin version of [RollupJS](https://rollupjs.org/). Below are examples of the projects code directory structure.
 ###### <i>"ROOT" DIRECTORY STRUCTURE</i>

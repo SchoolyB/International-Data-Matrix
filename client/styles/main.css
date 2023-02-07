@@ -1,3 +1,4 @@
+@import "rsuite/dist/rsuite.css";
 @import 'translator';
 @import 'contact';
 @import 'countryPages';
@@ -46,14 +47,13 @@ font-size: 19px;
   height: 100px;
   width: auto;
 }
-
 header{
-  font-size: 28px;
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   color: white;
-  /* margin-bottom: 7em; */
+  margin-bottom: 7em;
   display: grid;
-  grid-template-columns: 100px auto 10em;
+  /* grid-template-columns: 100px auto 10em; */
 }
 
 header > h1{
@@ -67,7 +67,7 @@ margin-top: .3em;
   /* margin-top: 1rem;
   margin-left: 16em; */
   width: 300px;
-  position: relative; top: .5em;
+  position: relative; bottom: 1em; left: 2em;
 }
 
 .searchForm{
@@ -80,7 +80,7 @@ margin-top: .3em;
   height: 50px;
   width: auto;
   position: relative; top: 20px;
-  position: relative; left: -5px
+  position: relative; left: .2em
 
 }
 
@@ -89,14 +89,12 @@ margin-top: .3em;
   /* this is for the actual input field of the
    search bar on home screen */
   background-color: transparent;
-  height: 25px;
+  height: 2em;
   width: 10em;
   color: black;
   font-size: 18px;
-  border: solid white 4px;
+  border: solid black 4px;
   border-radius: 25px;
-  color: white;
-  padding-left: 11px;
   font-family: Raleway;
   font-weight: 800
 }
@@ -147,8 +145,7 @@ footer > ul{
   animation-name: bounce;
 
 }
-
-
+/* nav menu open button  */
 
 .sidenav {
   height: 100%;
