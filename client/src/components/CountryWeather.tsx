@@ -48,8 +48,8 @@ const fetchWeather =  useCallback( async () => {
           <u>{props.capital}</u> is located at<br /> Latitude:<u>{weather.lat}
           </u> Longitude: <u>{weather.lon}</u><br /><br />
       Here is a look at the current weather in {props.capital}<u></u>: {weather.main}<br /><br />
-      The Temperature is currently:  {weather.temp}°F <br />
-      But it feels like: °F {weather.feels_like} <br />
+      The Temperature is currently:<u>{weather.temp}°F</u> <br />
+      But it feels like:<u>{weather.feels_like}°F</u> <br />
         </p>
   )
 }

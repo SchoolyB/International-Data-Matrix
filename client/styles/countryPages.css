@@ -23,6 +23,7 @@
   width: 70%;
   padding-bottom: 2px;
   word-wrap: break-word;
+  margin-top: 2em;
 }
 
 .topic>h3 {
@@ -35,7 +36,7 @@
 }
 
 .metaDataContainer {
-  position: relative; bottom: 65em;
+  position: relative; bottom: 45em;
   display: flex;
   justify-content: right;
   background-color: #89939E;
