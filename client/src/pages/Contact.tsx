@@ -1,12 +1,11 @@
 import React from 'react'
-const baseUrl = import.meta.env.VITE_FORMSPREE_LINK
 
 export default function Contact() {
   return (
-<div>
+<div className='overallContactContainer'>
   <div id="contactContainer">
     <h1>Contact Me</h1>
-    <form action= {baseUrl} method="POST">
+    <form action='https://formspree.io/f/mknelldn' method="POST">
       <label  className="contactLabel"id="contactName">
         <input className="contactInput" type="text" name = "name" placeholder="Enter your name"></input>
       </label>

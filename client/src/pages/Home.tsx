@@ -21,10 +21,9 @@ export default function Home() {
       internet that anyone can access to gain historical,<br />
       cultural, religious, geographical, geo-economical and geo-political
       understanding about any country in the world and the<br />
-      people that reside in them. To get started you can click on the button
-      below to view a list of countries, click the logo in the <br />
-      top left corner to open the nav menu, or search for a country in the
-      search field located in the top right corner.
+      people that reside in them. To learn more about a country
+      you can click on the button below or click the "Country Selection"
+      <br/>tab in the nav menu above. Welcome To The International Data Matrix.
     </p>
     <div id="welcomeBtnContainer">
       <a href="Countries" role="button" id="welcomeBtn">View Countries</a>
