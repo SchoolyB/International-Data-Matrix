@@ -1,17 +1,39 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { api } from '../includes/api';
 
 export default function Translator() {
+
+
+
+const [sourceText, setSourceText] = useState('')
+const [outputLanguage, setOutputLanguage] = useState('bg')
+const [outputText,setOutputText ] = useState('')
+
+  async function handleTranslation(event:React.FormEvent) {
+    event.preventDefault();
+    try {
+      const res = await api.post('translator', {
+        sourceText,outputLanguage
+      })
+
+      setOutputText(res.data.text)
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
   return (
 <div>
-  <form id="fullTranslateContainer">
+  <form id="fullTranslateContainer" onSubmit={handleTranslation}>
 {/*   <!-- change name to translateForm --> */}
     <div id="translatorContainer">
       <div id="inputSide">
         <div>
           <textarea
             id="translateInput"
-            placeholder="Please enter a word or phrase to translate"
-          ></textarea>
+                placeholder="Please enter a word or phrase to translate" value={ sourceText} onChange={(event) => setSourceText(event.target.value)}
+          />
         </div>
       </div>
 
@@ -20,7 +42,7 @@ export default function Translator() {
       </div>
 
       <div id="outputSide">
-        <select title="languageSelection" className="langSelect" id="outputLangSelect">
+        <select title="languageSelection" className="langSelect" id="outputLangSelect" value={outputLanguage}  onChange={(event) => setOutputLanguage(event.target.value)}>
           <option value="bg">Bulgarian</option>
           <option value="zh">Chinese</option>
           <option value="da">Danish</option>
@@ -51,7 +73,7 @@ export default function Translator() {
           <option value="es">Ukrainian</option>
         </select>
         <div>
-          <textarea title="commentArea" id="translateOutput" readOnly> </textarea>
+          <textarea title="commentArea" id="translateOutput" readOnly value={ outputText}> </textarea>
         </div>
       </div>
     </div>
@@ -62,3 +84,4 @@ export default function Translator() {
 </div>
   )
 }
+
