@@ -1,11 +1,7 @@
 !!!NEED TO BE DONE!!!
-TODO: add API calls for each API and country to countries.ts file in includes
-TODO: add includes from root index.js to the appropriate include files in the client folder
 TODO: format css to new project structure
 TODO: contact page will not render
-TODO: continue rebuilding express sever
 TODO: continue rebuilding app using new stack: React, TypeScript, Vite,  Express, MongoDB
-TODO: rebuild country frontend pages
 TODO: Plan for the apps future
 
 
@@ -39,3 +35,7 @@ TODO: start rebuild of app using React and typescript (completed 1/13/2023)
 TODO: add appropriate dependencies (completed 12/18/23)
 TODO: do initial server rebuild  (completed 1/20/2023)
 TODO: work on adding dynamic flags sources(completed 2/4/2023 thanks Michael!!!)
+TODO: rebuild country frontend pages (completed 2/2023)
+TODO: continue rebuilding express sever(completed 2/12/2023 thanks Michael...again)
+TODO: add includes from root index.js to the appropriate include files in the client folder (completed 2/12/2023)
+TODO: add API calls for each API and country to countries.ts file in includes (completed 2/2023)
