@@ -1,9 +1,8 @@
 import React,{useState} from 'react'
 import { api } from '../includes/api';
 
+
 export default function Translator() {
-
-
 
 const [sourceText, setSourceText] = useState('')
 const [outputLanguage, setOutputLanguage] = useState('bg')
@@ -38,11 +37,11 @@ const [outputText,setOutputText ] = useState('')
       </div>
 
       <div>
-        <button title="submitButton" type="submit" id="translateBtn"></button>
+        <button title="Submit" type="submit" id="translateBtn"></button>
       </div>
 
       <div id="outputSide">
-        <select title="languageSelection" className="langSelect" id="outputLangSelect" value={outputLanguage}  onChange={(event) => setOutputLanguage(event.target.value)}>
+        <select title="Language Select" className="langSelect" id="outputLangSelect" value={outputLanguage}  onChange={(event) => setOutputLanguage(event.target.value)}>
           <option value="bg">Bulgarian</option>
           <option value="zh">Chinese</option>
           <option value="da">Danish</option>
@@ -73,7 +72,7 @@ const [outputText,setOutputText ] = useState('')
           <option value="es">Ukrainian</option>
         </select>
         <div>
-          <textarea title="commentArea" id="translateOutput" readOnly value={ outputText}> </textarea>
+          <textarea id="translateOutput" readOnly value={ outputText}> </textarea>
         </div>
       </div>
     </div>

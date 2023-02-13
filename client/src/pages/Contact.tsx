@@ -15,7 +15,7 @@ export default function Contact() {
       <label className="contactLabel" id="contactMsg">
             <textarea id="contactTextArea" rows={16} cols={35} name="message" placeholder="Enter your message"></textarea>
       </label>
-      <button  title="submitButton"role="button" id="contactSubmitBtn" type="submit"></button>
+      <button  title="Submit"role="button" id="contactSubmitBtn" type="submit"></button>
     </form>
   </div>
 </div>

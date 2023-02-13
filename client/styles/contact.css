@@ -17,7 +17,7 @@
   flex-direction: column;
   background-color: #89939E;
   border-radius: 25px;
-  color: white;
+  color: #575757;
   width: 25%;
   margin-bottom: 5em;
   margin-top: 1em;
@@ -34,7 +34,7 @@
   padding-left: .3em;
   font-family: Raleway;
   font-weight: 800;
-  color: black;
+  color: #575757;
 }
 
 #contactTextArea {
@@ -45,7 +45,7 @@
   padding-left: .5em;
   font-family: Raleway;
   font-weight: 800;
-  color: black;
+  color: #575757;
 }
 
 
