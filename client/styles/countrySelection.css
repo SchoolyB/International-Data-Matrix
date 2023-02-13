@@ -2,8 +2,13 @@
 
 @import 'main';
 
-#container {
+#overAllContainer{
+  /* background-color: red; */
+}
 
+
+#container {
+  /* background-color: aqua; */
   display: grid;
   grid-template-columns: 260px 260px 260px;
   justify-content: center;
@@ -11,6 +16,7 @@
   bottom: 120px;
   height: 600px;
   overflow-y: scroll;
+
 }
 
 
@@ -68,7 +74,7 @@
   border: solid black 1px;
 }
 
-.country>.data {
+.country>.countrySubHeading {
   font-size: 14px;
   padding-left: 10px;
 
