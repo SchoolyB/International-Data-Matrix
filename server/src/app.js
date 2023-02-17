@@ -4,7 +4,6 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const deepl = require("deepl-node");
-
 const path = require('path')
 const countries = require('./routes/countriesRoute');
 
