@@ -1,0 +1,102 @@
+@import 'main';
+
+#fullTranslateContainer {
+
+  height: 40em;
+  margin-top: -10em;
+  display: flex;
+  justify-content: center;
+  margin-top: .5em;
+}
+
+#translatorContainer {
+
+  display: flex;
+  background-color: #89939E;
+  padding-top: 4em;
+  border-radius: 25px;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 5px 10px 18px black
+}
+
+#translateBtn {
+  height: 5em;
+  background-color: ;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 13em;
+  background-image: url("../assets/translatorPageImages/translation.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 9em;
+  height: 6em;
+  background-color: transparent;
+  border: none;
+  border-radius: 50px;
+  filter: invert()
+}
+
+#translateBtn:hover {
+  cursor: pointer;
+  filter: invert(1%)
+}
+
+#translateInput {
+  resize: none;
+  height: 10em;
+  width: 25em;
+  font-size: 22px;
+  margin-top: 5em;
+  margin-left: 1em;
+  border-radius: 25px;
+  padding-left: .5em;
+  box-shadow: 5px 10px 18px black;
+  font-family: Raleway;
+  font-weight: 800;
+}
+
+#translateOutput {
+  resize: none;
+  height: 10.2em;
+  width: 25em;
+  font-size: 22px;
+  margin-top: 3.5em;
+  margin-right: 1em;
+  border-radius: 25px;
+  padding-left: .5em;
+  box-shadow: 5px 10px 18px black;
+  font-family: Raleway;
+  font-weight: 800;
+}
+
+.langSelect {
+  font-size: 24px;
+}
+
+#inputLangSelect {
+  margin-left: 1em;
+  width: 23em;
+
+}
+
+#outputLangSelect {
+  margin-right: 1em;
+  float: right;
+
+
+}
+
+option {
+  background-color: #89939E;
+}
+
+#translateGuide {
+
+
+  text-align: center;
+  position: relative;
+  bottom: 3.5em;
+  color: white;
+}

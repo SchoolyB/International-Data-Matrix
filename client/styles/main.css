@@ -1,0 +1,212 @@
+@import "rsuite/dist/rsuite.css";
+@import 'translator';
+@import 'contact';
+@import 'countryPages';
+@import 'countrySelection';
+@import 'homePage.css';
+@font-face {
+  font-family: Raleway;
+  src: url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap);
+}
+
+#root{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+#renderedBody{
+  background: linear-gradient( #000000aa , #000000aa),
+url("../assets/backgroundImage/flagOfTheWorld.png");
+}
+
+
+#renderedBody * #welcomeContainer{
+  display: grid;
+  justify-content: center;
+  color: white;
+  position: relative; bottom: 2em;
+
+
+}
+
+#renderedBody * #welcomeMainHeading{
+  height: 20px;
+  font-size: 45px;
+  margin-bottom: 1em;
+}
+
+
+#renderedBody * #welcomeParagraph{
+line-height: 24px ;
+font-size: 19px;
+margin-bottom: 1.5em;
+}
+
+
+#mainLogo{
+  height: 100px;
+  width: auto;
+}
+header{
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin-bottom: 7em;
+
+}
+
+header > h1{
+margin-top: .3em;
+}
+
+#searchContainer{
+
+  display: block;
+  float: right;
+  /* margin-top: 1rem;
+  margin-left: 16em; */
+  width: 300px;
+  position: relative; bottom: 1em; left: 2em;
+}
+
+.searchForm{
+  color: white;
+
+
+}
+
+#searchBtn{
+  height: 50px;
+  width: auto;
+  position: relative; top: 20px;
+  position: relative; left: .2em
+
+}
+
+
+#countryFilter{
+  /* this is for the actual input field of the
+   search bar on home screen */
+  background-color: transparent;
+  height: 2em;
+  width: 10em;
+  color: black;
+  font-size: 18px;
+  border: solid #89939E 4px;
+  border-radius: 25px;
+  font-family: Raleway;
+  font-weight: 800
+}
+
+
+body{
+
+  padding: 0px;
+  margin: 0px;
+  font-family: Raleway;
+}
+
+/* everything below this line modifies footer css */
+
+
+footer{
+  color: white;
+  text-align: center;
+  margin-right:30px ;
+
+}
+
+footer > ul{
+  /* takes away bullet points on footer */
+  list-style-type: none;
+
+}
+
+
+
+.footerIcon{ /*resizing the icons ion the footer*/
+  width: 42px;
+  padding: 1px;
+}
+
+#footerIconContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
+.flag:hover {
+  cursor: pointer;
+  -moz-animation-name: bounce;
+  animation-name: bounce;
+
+}
+/* nav menu open button  */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #89939E;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 1em;
+}
+
+.sidenav a {
+  padding: 10px 10px 20px 40px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black
+  ;
+
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+.sidenav > h3{
+  color: white;
+  padding: 10px 10px 20px 40px;
+  font-size: 30px;
+  border-bottom: 1px solid white;
+
+}
+
+#span{
+  height: 1.7em;
+  width: 1.7em ;
+  border-radius: 50%;
+  font-size: 60px;
+  color: #f1f1f1;
+  position: absolute;left: .0001em;
+  background-color: black;
+  text-align: center;
+  opacity: 0;
+
+
+}
+
+#span:hover{
+  cursor: pointer;
+}
+
