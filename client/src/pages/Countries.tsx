@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { api } from '../includes/api'
 import { CountryListData } from '../types/countryListData'
-import * as flags from '../../assets/countrySelectionFlags'
 
 // const countryListDataFlags = import.meta.glob('../../assets/countryPageFlags/svgs/*.svg', {
 //   eager: true
@@ -30,20 +29,22 @@ const fetchCountryList = useCallback(() => {
     return <div className='country'>
       <h3 className='countryHeading'>{country.name}</h3>
       <a href={country.link}>
-        <img className='flag'src={flags[country.name]} alt={country.flagAlt}/>
+        <img className='flag'src= {country.flag} alt={country.flagAlt}/>
       </a>
-      <p>{country.gdp}</p>
-      <p>{country.landMass}</p>
+      <div className='data'>
+        <p>{country.gdp}</p>
+        <p>{country.landMass}</p>
+      </div>
     </div>
   })
 
   return (
-    <>
-      <div id='container'>
+    <div>
+      {/* <div id='container'> */}
         <div id='overAllContainer'>
           {createCountry}
         </div>
-      </div>
-    </>
+      {/* </div> */}
+    </div>
   )
 }
