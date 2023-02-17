@@ -11,7 +11,7 @@ const countries = require('./routes/countriesRoute');
 dotenv.config();
 
 
-const PORT = process.env.PORT || 4040; // we use || to provide a default value
+const PORT = process.env.PORT || 4042; // we use || to provide a default value
 
 const app = express();
 
@@ -60,7 +60,7 @@ app.post("/translator", (request, response) => {
   translator
     .translateText(sourceText, null, outputLanguage)
     .then(result => {
-      console.log(result.text); // Bonjour, le monde !
+      console.log(result.text);
 
       const responseBody = {
         //if a key in an obj doesnt have a colon anf a value JS auto assumes that the value is itself
