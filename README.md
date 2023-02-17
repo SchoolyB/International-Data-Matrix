@@ -18,40 +18,19 @@ Initially The IDM was built with only HTML, CSS, and vanilla JS. The IDM was reb
 - [NodeJS](https://nodejs.org/en/)
 - [Express.js](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
-
 - [npm](https://www.npmjs.com/)
 <i>The following npm packages</i>
   - [dotenv](https://github.com/motdotla/dotenv)
   - [nodemon](https://www.npmjs.com/package/nodemon)
   - [Express](https://expressjs.com/)
   - [mongoose](https://www.npmjs.com/package/mongoose)
+  - [deepl node](https://www.npmjs.com/package/deepl-node)
 
-Deployed with [Netlify](https://www.netlify.com/)
+Deployed with [Vercel](https://www.vercel.com/)
 
 ### Get To The Point -
 So with all of that out of the way lets talk about what The IDM is. The International Data Matrix is meant to act as a central place on the internet that anyone can access to gain historical, cultural, religious, geographical, geo-economical and geo-political understanding about any country in the world and the people that reside in them; Without having to go through the clutter of wikipedia or have multiple google tabs open. Another key function of this app is the built-in translator.
-### Project Structure -
-As mentioned in [The How](https://github.com/SchoolyB/Capstone/tree/master#the-why--) section one of the stipulations for this project was that I could not use any frameworks or libraries like React, Angular, Vue, Svelte, etc. Because of that the SPA had to be built using vanilla JavaScript components, views, state, and bundled all up with vite's builtin version of [RollupJS](https://rollupjs.org/). Below are examples of the projects code directory structure.
-###### <i>"ROOT" DIRECTORY STRUCTURE</i>
-<img src="./assets/images/README/rootDirectory.JPG">
 
-###### <i>"COMPONENTS" DIRECTORY STRUCTURE</i>
-Click [here](https://github.com/SchoolyB/Capstone/tree/master/components) to visit the "components" directory
-
-<img src="./assets/images/README/componentsDirectory.JPG">
-
-###### <i> "VIEWS" DIRECTORY STRUCTURE</i>
-Click [here](https://github.com/SchoolyB/Capstone/tree/master/components/views) to visit the "views" directory
-
-<img src="./assets/images/README/viewsDirectory.JPG">
-
-###### <i>"STORE" DIRECTORY STRUCTURE</i>
-
-Click [here](https://github.com/SchoolyB/Capstone/tree/master/store) to visit the "store' Directory
-
-<img src="./assets/images/README/storeDirectory.JPG">
-
- *** NOTE THAT ALL SCREENSHOTS BELOW ARE A REPRESENTATION OF HOW THE APPLICATIONS PAGES OR "VIEWS" LOOKED WHEN CREATING THE DOCUMENTATION AND WILL BE UPDATED AS THE PAGES CONTINUE TO UPDATE ***
 ### The Home Page -
 Anytime someone wants to access The IDM they will be taken to the the [home page](https://internationaldatamatrix.netlify.app/Home). At present the following elements on the home page can be interacted with :
 
