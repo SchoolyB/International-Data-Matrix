@@ -4,19 +4,15 @@
 
 #overAllContainer{
   /* background-color: red; */
-}
-
-
-#container {
-  /* background-color: aqua; */
-  display: grid;
-  grid-template-columns: 260px 260px 260px;
-  justify-content: center;
-  position: relative;
-  bottom: 120px;
-  height: 600px;
-  overflow-y: scroll;
-
+  /* background-color: gray; */
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+    justify-content: center;
+    position: relative;
+    /* bottom: 1em; */
+    /* margin-top: em; */
+    height: 55em;
+    overflow-y: scroll;
 }
 
 
@@ -33,6 +29,7 @@
 
 .country {
   /*changes the countries div css within  the "../components/Home.js" file  */
+  /* flex: 33.33%; */
   background-color: white;
   border: solid 2px black;
   display: flex;
@@ -49,7 +46,7 @@
   background-color: #89939E;
   padding-left: .2em;
   border-radius: 50px;
-  border-color: #black;
+  border-color: black;
   color: white;
 }
 
@@ -103,4 +100,10 @@
     -ms-transform: translateY(-15px);
     transform: translateY(-15px)
   }
+}
+
+.country>.data {
+  font-size: 15px;
+  text-align: center;
+
 }
