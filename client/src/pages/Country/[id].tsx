@@ -6,9 +6,9 @@ import { getCountry } from '../../includes/countries';
 import { getWeather } from '../../includes/openWeather'
 import { countrySelectionData } from '../../types/countrySelectionData';
 import CountryWeather from '../../components/CountryWeather';
-
+'../../../public/assets/backgroundImage/svgs/*.svg'
 //countryFlags is an object which keys are a the path to the image. .glob is a vite feature that tells the program to glob up all the files in that path and imports them
-const countryFlags = import.meta.glob('../../../assets/countryPageFlags/svgs/*.svg', {
+const countryFlags = import.meta.glob('../../../public/assets/backgroundImage/svgs/*.svg', {
   eager: true
 });
 
