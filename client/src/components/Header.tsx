@@ -1,5 +1,5 @@
 import React from 'react'
-import globe from '../../public/assets/globe.gif';
+import globe from '../../assets/globe.gif';
 
 import { Navbar, Nav } from 'rsuite';
 import HomeIcon from '@rsuite/icons/legacy/Home';
