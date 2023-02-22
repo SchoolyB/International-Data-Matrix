@@ -1,7 +1,7 @@
-import footer1 from "../../public/assets/footerIcons/home.svg";
-import footer2 from "../../public/assets/footerIcons/mail.svg";
-import footer3 from "../../public/assets/footerIcons/page.svg";
-import footer4 from "../../public/assets/footerIcons/comments.svg";
+import footer1 from "../../assets/footerIcons/home.svg";
+import footer2 from "../../assets/footerIcons/mail.svg";
+import footer3 from "../../assets/footerIcons/page.svg";
+import footer4 from "../../assets/footerIcons/comments.svg";
 import React from 'react'
 
 export default function Footer() {
