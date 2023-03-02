@@ -2,11 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { api } from '../includes/api'
 import { CountryListData } from '../types/countryListData'
 
-// const countryListDataFlags = import.meta.glob('../../assets/countryPageFlags/svgs/*.svg', {
-//   eager: true
-// });
-
-
 export default function Countries() {
 
 // console.log(countryListDataFlags)
@@ -35,7 +30,7 @@ const fetchCountryList = useCallback(() => {
         <p>{country.region}</p>
         <p>{country.population}</p>
         <p>{country.gdp}</p>
-        <p>{country.area}</p>
+        {/* <p>{country.area}</p> */}
       </div>
     </div>
   })
