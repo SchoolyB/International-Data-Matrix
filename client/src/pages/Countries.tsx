@@ -27,21 +27,19 @@ const fetchCountryList = useCallback(() => {
         <img className='flag'src= {country.flag} alt={country.flagAlt}/>
       </a>
       <div className='data'>
-        <p>{country.region}</p>
-        <p>{country.population}</p>
-        <p>{country.gdp}</p>
-        {/* <p>{country.area}</p> */}
+        <p>Region: {country.region}</p>
+        <p>Population: {country.population}</p>
+        <p>GDP: {country.gdp}</p>
+        <p>Area(sq. mi){country.area}</p>
       </div>
     </div>
   })
 
   return (
     <div>
-      {/* <div id='container'> */}
         <div id='overAllContainer'>
           {createCountry}
         </div>
-      {/* </div> */}
     </div>
   )
 }
