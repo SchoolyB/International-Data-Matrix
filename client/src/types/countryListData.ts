@@ -4,7 +4,7 @@ export interface CountryListData{
   name: string
   region: string
   population: number
-  area: string
+  area: number
   gdp: string
   flag: string
   flagAlt: string
