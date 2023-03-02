@@ -2,10 +2,11 @@ export interface CountryListData{
 
   _id: string
   name: string
-  link: string
+  region: string
+  population: number
+  area: string
+  gdp: string
   flag: string
   flagAlt: string
-  population: number
-  gdp: string
-  landMass: string
+  link: string
 }
