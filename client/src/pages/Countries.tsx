@@ -32,8 +32,10 @@ const fetchCountryList = useCallback(() => {
         <img className='flag'src= {country.flag} alt={country.flagAlt}/>
       </a>
       <div className='data'>
+        <p>{country.region}</p>
+        <p>{country.population}</p>
         <p>{country.gdp}</p>
-        <p>{country.landMass}</p>
+        <p>{country.area}</p>
       </div>
     </div>
   })
