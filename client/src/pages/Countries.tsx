@@ -1,45 +1,37 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
 import { api } from '../includes/api'
 import { CountryListData } from '../types/countryListData'
+import { CountryContext } from '../App'
+import { SearchContext } from '../App'
 
 export default function Countries() {
+	const countryList = useContext(CountryContext)
+	const search = useContext(SearchContext)
 
-// console.log(countryListDataFlags)
-  const [countryList, setCountryList] = useState<CountryListData[]>([])
+	const countryElement = countryList
+		.filter((country) => {
+			return country.name.toLowerCase().includes(search.value.toLowerCase())
+		})
+		.map((country) => {
+			return (
+				<div className="country">
+					<h3 className="countryHeading">{country.name}</h3>
+					<a href={country.link}>
+						<img className="flag" src={country.flag} alt={country.flagAlt} />
+					</a>
+					<div className="data">
+						<p>Region: {country.region}</p>
+						<p>Population: {country.population}</p>
+						<p>GDP: {country.gdp}</p>
+						<p>Area(sq. mi){country.area}</p>
+					</div>
+				</div>
+			)
+		})
 
-const fetchCountryList = useCallback(() => {
-  return api.get('/Countries').then(res => {
-    setCountryList(res.data)
-  }).catch(error => {
-        console.error(error)
-    });
-  },[])
-  useEffect(() => {
-  fetchCountryList()
-  }, [fetchCountryList])
-  console.log(countryList)
-
-
-  const createCountry = countryList.map((country) => {
-    return <div className='country'>
-      <h3 className='countryHeading'>{country.name}</h3>
-      <a href={country.link}>
-        <img className='flag'src= {country.flag} alt={country.flagAlt}/>
-      </a>
-      <div className='data'>
-        <p>Region: {country.region}</p>
-        <p>Population: {country.population}</p>
-        <p>GDP: {country.gdp}</p>
-        <p>Area(sq. mi){country.area}</p>
-      </div>
-    </div>
-  })
-
-  return (
-    <div>
-        <div id='overAllContainer'>
-          {createCountry}
-        </div>
-    </div>
-  )
+	return (
+		<div>
+			<div id="overAllContainer">{countryElement}</div>
+		</div>
+	)
 }

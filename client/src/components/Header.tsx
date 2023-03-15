@@ -1,30 +1,46 @@
-import React from 'react'
-import globe from '../../assets/globe.gif';
-
-import { Navbar, Nav } from 'rsuite';
-import HomeIcon from '@rsuite/icons/legacy/Home';
+import React, { useContext } from 'react'
+import globe from '../../assets/globe.gif'
+import { Navbar, Nav } from 'rsuite'
+import HomeIcon from '@rsuite/icons/legacy/Home'
+import { SearchContext } from '../App'
 
 export default function Header() {
+	const search = useContext(SearchContext)
 
-  return (
-    <header>
-      <Navbar>
-    <Navbar.Brand href="Home">The International Data Matrix</Navbar.Brand>
-    <Nav>
-      <Nav.Item icon={<HomeIcon />} href="Home">Home</Nav.Item>
-      <Nav.Item href='Countries'>Country Selection</Nav.Item>
-      <Nav.Item href="Translator">Translator</Nav.Item>
-      <Nav.Item href="Contact">Contact</Nav.Item>
-        </Nav>
-        <div id="searchContainer">
-        <form id="countryFilterForm" className="searchForm " >
-          <input placeholder="Search Countries" id="countryFilter" name="countryFilter" type="text" required></input>
-          <input id="searchBtn" type="image" src={globe} alt="Spinning Globe"></input>
-        </form>
-      </div>
-  </Navbar>
-
-  </header>
-
-  )
+	return (
+		<header>
+			<Navbar>
+				<Navbar.Brand href="Home">The International Data Matrix</Navbar.Brand>
+				<Nav>
+					<Nav.Item icon={<HomeIcon />} href="Home">
+						Home
+					</Nav.Item>
+					<Nav.Item href="Countries">Country Selection</Nav.Item>
+					<Nav.Item href="Translator">Translator</Nav.Item>
+					<Nav.Item href="Contact">Contact</Nav.Item>
+				</Nav>
+				<div id="searchContainer">
+					<form id="countryFilterForm" className="searchForm ">
+						<input
+							placeholder="Search Countries"
+							id="countryFilter"
+							name="countryFilter"
+							type="text"
+							required
+							value={search.value}
+							onChange={(event) => {
+								search.value = event.target.value
+							}}
+						></input>
+						{/* <input
+							id="searchBtn"
+							type="image"
+							src={globe}
+							alt="Spinning Globe"
+						></input> */}
+					</form>
+				</div>
+			</Navbar>
+		</header>
+	)
 }
