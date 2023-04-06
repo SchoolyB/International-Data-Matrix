@@ -12,12 +12,12 @@
 #translatorContainer {
 
   display: flex;
-  background-color: #89939E;
   padding-top: 4em;
   border-radius: 25px;
   flex-direction: row;
   justify-content: center;
-  box-shadow: 5px 10px 18px black
+  /* background-color: #89939E; */
+  /* box-shadow: 5px 10px 18px black */
 }
 
 #translateBtn {

@@ -4,11 +4,8 @@
 @import 'countryPages';
 @import 'countrySelection';
 @import 'homePage.css';
-@font-face {
-  font-family: Raleway;
-  src: url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap);
-}
-
+font-family: 'Raleway',
+sans-serif;
 #root{
   display: flex;
     flex-direction: column;
