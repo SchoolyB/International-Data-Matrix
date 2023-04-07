@@ -6,12 +6,12 @@
   /* background-color: red; */
   /* background-color: gray; */
     display: grid;
-    grid-template-columns: 260px 260px 260px 260px;
+    grid-template-columns: 250px 250px 250px 250px;
     justify-content: center;
     position: relative;
     /* bottom: 1em; */
     /* margin-top: em; */
-    height: 55em;
+    height:60em;
     overflow-y: scroll;
 }
 
@@ -19,47 +19,50 @@
 
 .countryHeading {
   /* changes the css of the heading of each countries names */
-  font-family: "Raleway";
+  /* font-family: "Raleway"; */
   font-weight: 700;
   text-align: center;
-  margin-top: 2px;
-  font-size: 23px;
+  /* margin-top: 2px; */
+  font-size: 1em;
 
 }
 
 .country {
   /*changes the countries div css within  the "../components/Home.js" file  */
   /* flex: 33.33%; */
-  background-color: white;
-  border: solid 2px black;
+  /* background-color: white; */
+  /* border: solid 2px black; */
   display: flex;
-  flex-direction: column;
+  /* justify-content:; */
+  flex-direction:column;
   margin: 15px;
   margin-bottom: 50px;
   font-size: 16px;
-  box-shadow: 5px 10px 18px black;
+  /* box-shadow: 5px 10px 18px black; */
+  text-align: center;
+  height: 15em;
+  color: red;
 
 
 }
 
-.country:hover {
+/* .country:hover {
   background-color: #89939E;
   padding-left: .2em;
   border-radius: 50px;
   border-color: black;
   color: white;
-}
-
+} */
 
 
 
 .country * .flag {
   /*changes the size of the country flags img  on the home page  */
-  width: 125px;
-  height: auto;
-  display: grid;
-  position: relative;
-  left: 50px;
+  /* width: 10em; */
+  /* height: auto; */
+  /* display: grid; */
+  /* position: relative; */
+  /* left: 50px; */
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -71,36 +74,7 @@
   border: solid black 1px;
 }
 
-.country>.countrySubHeading {
-  font-size: 14px;
-  padding-left: 10px;
 
-}
-
-@keyframes bounce {
-
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0)
-  }
-
-  40% {
-    -webkit-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px)
-  }
-
-  60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px)
-  }
-}
 
 .country>.data {
   font-size: 15px;

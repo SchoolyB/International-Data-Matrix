@@ -4,8 +4,7 @@
 @import 'countryPages';
 @import 'countrySelection';
 @import 'homePage.css';
-font-family: 'Raleway',
-sans-serif;
+
 #root{
   display: flex;
     flex-direction: column;
