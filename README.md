@@ -57,47 +57,97 @@ which is located at the bottom of page/view. Currently there are four icons that
 <img src="./assets/images/README/homeScreen.JPG">
 
 ### The Search Bar -
-The search bar is one of my favorite elements of the application. The search bar is found on every page and currently acts as a quick and easy tool the user can use to enter letters or full names of a country; once the user has finished entering the desired text they can click the enter key on their keyboard or click the globe icon located to the right the bar to populate all countries whose name fits that search query on screen. *** ***Please Note that at least one letter is required before you can click the globe icon or the enter key***  ***. In the future I hope to add population, gross domestic product, and regional/continental location filtering to this feature.
+The search bar is found on every page and currently acts as a quick and easy tool the user can use to enter letters or full names of a country; once the user has finished entering the desired text they can click the enter key on their keyboard or click the globe icon located to the right the bar to populate all countries whose name fits that search query on screen. *** ***Please Note that at least one letter is required before you can click the globe icon or the enter key***  ***. In the future I hope to add population, gross domestic product, and regional/continental location filtering to this feature.
 <img src= "./assets/images/README/searchbtn.jpg">
 
 The search bar allows the user to enter a series of letters to search for a country. For example if the user wants to learn more about the "USA" they could simply type "usa" and press enter or click the search button next to the input field; any country that has the letters that the user entered in that particular order will populate on screen. If the user entered "us" any country with the letters "u" and "s" in that order in its name would populate in screen. For example: A<u>us</u>tralia & Belar<u>us</u>.
 
 <i>Code snippet for the search feature</i>
-
+[Header.tsx]("client/src/components/Header.tsx")
 ```
- const inputs = event.target.elements;
-      console.log(inputs.countryFilter.value);
-      store.Countries.filteredData = store.Countries.countryData.filter(
-        country =>
-          country.name
-            .toUpperCase()
-            .includes(inputs.countryFilter.value.toUpperCase())
-      );
-      console.log(store.Countries.filteredData);
-      router.navigate("/countries");
+<input
+    placeholder="Search Countries"
+    id="countryFilter"
+    name="countryFilter"
+    type="text"
+    required
+    value={search.value}
+    onChange={(event) => {search.value = event.target.value}}>
+</input>
 ```
-<img src= "./assets/images/README/specificCountryFilter.JPG">
-
-The search bar works the same way with singular letters. IF the user wants to to search through any country that has a "u" in its name they can simply type "u" and once they press enter and country with "u" in its name no matter where the letter is will populate on screen. For example: A<u>u</u>stralia, Belar<u>u</u>s, S<u>u</u>dan, <u>U</u>sa, & Venez<u>u</u>ela.
-
-<img src= "./assets/images/README/notSoSpecificCountryFilter.JPG">
+The search bar works the same way with singular letters. IF the user wants to to search through any country that has a "u" in its name they can simply type "u" and once they press enter and country with "u" in its name no matter where the letter is will populate on screen. For example: A<u>u</u>stralia, Belar<u>u</u>s, S<u>u</u>dan, <u>U</u>nited Kingdom, & Venez<u>u</u>ela.
 
 ### The View Countries Button -
-When clicked the View Countries button on the home screen will take the user to the [country selection](https://internationaldatamatrix.netlify.app/Countries) page where they have will be able to choose from a full list of countries that are currently supported withing the application.
-<img src= "./assets/images/README/viewcContriesBtn.jpg" >
+When clicked the View Countries button on the home screen will take the user to the [country selection](https://international-data-matrix.vercel.app/Countries) page where they have will be able to choose from a full list of countries that are currently supported withing the application.
 
 ### Country Selection Page    -
-The country selection page shows a container in the center of the page that houses a "country tab" dedicated to each country that is currently integrated into the "IDM". Each "country tab" has a countries name, GDP, land mass in square miles and an image of that countries flag. All of the data of each country tab comes directly from an API that I built. Here is a snippet the data that country tabs/objects receive from the API.
+The country selection page shows a container in the center of the page that houses a "country tab" dedicated to each country that is currently integrated into the "IDM". Each "country tab" has a country's name, region, population, GDP, land mass in square miles and an image of that countries flag.
 
-``` {"_id"{"$oid":"63aca1ddf874fa4963672a43"},
-"name":"Australia",
-"link":"Australia",
-"flag":"Australia",
-"flagAlt":"The flag of austrlia",
-"landMass":"Land Mass: 2.968 million mi2",
-"gdp":"GDP: 1.54 trillion USD",
-"__v":{"$numberInt":"0"}}
+Defining the objects from the DB with an interface
+
 ```
+export interface CountryListData{
+  _id: string
+  name: string
+  region: string
+  population: number
+  area: number
+  gdp: string
+  flag: string
+  flagAlt: string
+  link: string
+}
+```
+
+An example of a dataset within MongoDB
+
+```
+{
+  "_id": {
+    "$oid": "6411e5e9a825fe482d0215b8"
+  },
+  "name": "My Country",
+  "region": "My Region ",
+  "population": 123456789,
+  "area": 12345,
+  "gdp": "$ 1 billion USD",
+  "flag": "/assets/countrySelectionFlags/flag-of-My-Country.png",
+  "flagAlt": "The Flag of My Country",
+  "link": "country/mc"
+}
+```
+Making axios call to API to get country data from DB
+```
+import axios from "axios";
+const countryKey = import.meta.env.VITE_COUNTRY_API_KEY
+
+export const getCountrySelectionData = () => {
+  return axios
+    .get(
+      `https://countryapi.io/api/all?apikey=${countryKey}`,
+    )
+    .then((res) => res.data)
+}
+```
+
+Displaying data from the axios call response to web page
+```
+    return (
+      <div className="country">
+        <h3 className="countryHeading">{country.name}</h3>
+        <a href={country.link}>
+          <img className="flag" src={country.flag} alt={country.flagAlt} />
+        </a>
+        <div className="data">
+          <p>Region: {country.region}</p>
+          <p>Population: {country.population}</p>
+          <p>GDP: {country.gdp}</p>
+          <p>Area(sq. mi){country.area}</p>
+        </div>
+      </div>
+    )
+```
+
 <!-- possibly  build repo for api and add more data to it-->
  The header of the "country selection" page gives clear instructions to users on what they can. Once the user hovers over a country tab's flag a bouncing animation will start. Once the user clicks on the flag they will be taken to the corresponding page for that country.
 
