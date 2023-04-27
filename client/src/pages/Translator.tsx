@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { api } from '../includes/api';
 
 
+
 export default function Translator() {
 
 const [sourceText, setSourceText] = useState('')
@@ -19,7 +20,6 @@ const [outputText,setOutputText ] = useState('')
     } catch (error) {
       console.log(error)
     }
-
   }
 
   return (

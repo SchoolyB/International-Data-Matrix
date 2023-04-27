@@ -13,6 +13,10 @@ const countryFlags = import.meta.glob('../../../assets/countryPageFlags/svgs/*.s
 });
 
 
+const countryTopics = import.meta.glob('../../../public/countryTopics/txts/*txt', {
+  eager:true
+})
+
 
 export default function countryPage(bar: string | undefined) {
   const { id } = useParams<{ id: string }>()
@@ -59,6 +63,11 @@ export default function countryPage(bar: string | undefined) {
   const CurrentCountryFlag = FoundFlag?FoundFlag[1].default:null
 
 
+  const FoundTopics = Object.entries(countryTopics).find(([file_path, url]) => {
+    const shortPath = file_path.replace("../../../public/countryTopics/txts",  '')
+    return shortPath.startsWith(id!)
+  }) as any //using "as any" is known as type casting
+  const CurrentCountryTopic = FoundFlag?FoundFlag[1].default:null
 
   return (
 
@@ -94,7 +103,6 @@ export default function countryPage(bar: string | undefined) {
           The Population of <u>{state.name}</u> is is approx.
           <u>{state.population}</u>
         </p>
-
         <p className="genInfoISOCodes ">
           <u>{state.name}'s</u> 2 Digit Alpha code is:
           <u>{state.alpha2Code}</u><br />
@@ -104,15 +112,12 @@ export default function countryPage(bar: string | undefined) {
         <p className="genInfoCurrency">
           The National Currency of {state.name} Is: <br />
           The <u>{state.name}</u> Represented As:
-          {/* <u>{state.currencies[0]}</u> & */}
-          {/* <u>{[0].code}</u> */}
+          <u>{state.currencies[0]}</u> &
+          <u>{[0].code}</u>
         </p>
         <p className="genInfoTimezones">
           Timezones: <u>{state.timezones}</u>
         </p>
-        {/* <p id="independentNation">
-          {state.name} is an independent nation
-        </p> */}
       </div>
     </div>
   )
