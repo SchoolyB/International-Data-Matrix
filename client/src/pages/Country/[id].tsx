@@ -57,8 +57,8 @@ export default function countryPage(bar: string | undefined) {
 	const CurrentCountryFlag = FoundFlag ? FoundFlag[1].default : null
 
 	const showTopics = async (id: string) => {
-		await getText(id)
-		console.log()
+		const newerText = await getText(id)
+		console.log(newerText)
 	}
 
 	showTopics(id!)
