@@ -4,7 +4,14 @@ import { CountryData } from '../../types/countryData'
 import { getCountry } from '../../includes/countries'
 import CountryWeather from '../../components/CountryWeather'
 '../../../public/assets/backgroundImage/svgs/*.svg'
-import getText from '../../includes/countryTopics'
+
+import getCountryHistory from '../../includes/countryTopicImports/countryHistory'
+import getCountryCulture from '../../includes/countryTopicImports/countryCulture'
+import getCountryGovernment from '../../includes/countryTopicImports/countryGovernment'
+import getCountryEconomy from '../../includes/countryTopicImports/countryEconomy'
+import getCountryReligion from '../../includes/countryTopicImports/countryReligion'
+import getCountryDemographics from '../../includes/countryTopicImports/countryDemographics'
+import getCountryGeography from '../../includes/countryTopicImports/countryGeography'
 //countryFlags is an object which keys are a the path to the image. .glob is a vite feature that tells the program to glob up all the files in that path and imports them
 const countryFlags = import.meta.glob(
 	'../../../assets/countryPageFlags/svgs/*.svg',
@@ -32,6 +39,61 @@ export default function countryPage(bar: string | undefined) {
 		//population has a '?' so its not required
 	})
 
+	// BELOW THIS COMMENT Stores the data from the countryTopicData includes into state
+	const [culture, setCulture] = useState('')
+	const [demographics, setDemographics] = useState('')
+	const [economy, setEconomy] = useState('')
+	const [government, setGovernment] = useState('')
+	const [history, setHistory] = useState('')
+	const [religion, setReligion] = useState('')
+	const [geography, setGeography] = useState('')
+
+	// ABOVE THIS COMMENT Stores the data from the countryTopicData includes into state
+
+	// Declaring several async functions that take the id of the current page as a param. Within the async functions we create a variable called new... that awaits the response the respective countryTopicImports includes file. We then call the set... functions and pass them the variable from the line above
+	const showHistory = async (id: string) => {
+		const newHistory = await getCountryHistory(id)
+		setHistory(newHistory)
+	}
+
+	const showCulture = async (id: string) => {
+		const newCulture = await getCountryCulture(id)
+		setCulture(newCulture)
+	}
+
+	const showEconomy = async (id: string) => {
+		const newEconomy = await getCountryEconomy(id)
+		setEconomy(newEconomy)
+	}
+
+	const showGeography = async (id: string) => {
+		const newGeography = await getCountryGeography(id)
+		setGeography(newGeography)
+	}
+	const showGovernment = async (id: string) => {
+		const newGovernment = await getCountryGovernment(id)
+		setGovernment(newGovernment)
+	}
+
+	const showReligion = async (id: string) => {
+		const newReligion = await getCountryReligion(id)
+		setReligion(newReligion)
+	}
+
+	const showDemographics = async (id: string) => {
+		const newDemographics = await getCountryDemographics(id)
+		setDemographics(newDemographics)
+	}
+
+	// CALLING THE show... FUNCTIONS AND PASSING THE ID OF THE THE CURRENT COUNTRY PAGE THAT  THE USER IS ON
+	showCulture(id!)
+	showDemographics(id!)
+	showEconomy(id!)
+	showGeography(id!)
+	showGovernment(id!)
+	showHistory(id!)
+	showReligion(id!)
+
 	//a '!' after a variable means this is definitely defined
 	const fetchData = useCallback(() => getCountry(id!).then(setState), [])
 	useEffect(() => {
@@ -46,6 +108,8 @@ export default function countryPage(bar: string | undefined) {
 			const bar: any = foo.attributes[1]
 		}
 	}
+	dynamicImgAttribute()
+
 	const FoundFlag = Object.entries(countryFlags).find(([file_path, url]) => {
 		const shortPath = file_path.replace(
 			'../../../assets/countryPageFlags/svgs/',
@@ -56,73 +120,52 @@ export default function countryPage(bar: string | undefined) {
 	}) as any //using "as any" is known as type casting
 	const CurrentCountryFlag = FoundFlag ? FoundFlag[1].default : null
 
-	const showTopics = async (id: string) => {
-		const newerText = await getText(id)
-		console.log(newerText)
-	}
-
-	showTopics(id!)
-	dynamicImgAttribute()
-
 	return (
 		<div className="overallCountryInfoContainer">
 			<div className="countryInfo">
 				<h1 id="countryEnglishName">{state.name}</h1>
 				<h3 id="countryNativeName">a.k.a {state.nativeName}</h3>
 			</div>
+
 			{/* TOPICS */}
+
+			{/* Geography */}
 			<div id="topic">
 				<section className="topic" id="geography">
 					<h3>Geography</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Perferendis, quam magni? Neque iste distinctio provident ab eligendi
-						ut quas magni eos alias veniam, expedita veritatis! Ab commodi totam
-						quod aliquid.
-					</p>
+					<p>{geography}</p>
 				</section>
-				<section className="topic">
+
+				{/* History */}
+				<section className="topic" id="history">
 					<h3>History</h3>
-					<p></p>
+					<p>{history}</p>
 				</section>
+
+				{/* Demographics */}
 				<section className="topic" id="demographics">
 					<h3>Demographics</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-						consequuntur accusantium omnis magni, soluta eos doloremque
-						inventore error quos sed, recusandae sunt incidunt ullam repudiandae
-						tenetur voluptatibus iure? Excepturi, eum.
-					</p>
+					<p>{demographics}</p>
 				</section>
+
+				{/* Culture */}
 				<section className="topic" id="culture">
 					<h3>Culture</h3>
-					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-						deleniti libero beatae aliquid harum corporis non nobis eum nostrum
-						repellendus voluptatem rem, debitis vel! Voluptas omnis sunt
-						doloremque commodi culpa!
-					</p>
+					<p>{culture}</p>
 				</section>
 				<section className="topic" id="religion">
 					<h3>Religion</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-						sed nobis, quos vero odio debitis harum cum dolores voluptatum
-						aperiam aliquid dolore, mollitia aut, aliquam qui earum! Libero,
-						laborum veritatis?
-					</p>
+					<p>{religion}</p>
 				</section>
-				<section className="topic" id="currentEvents">
+
+				{/* Government */}
+				<section className="topic" id="government">
 					<h3>Current Events</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-						esse sunt harum ducimus error nostrum id iure ex commodi quaerat
-						perspiciatis necessitatibus, neque inventore, doloribus quis
-						nesciunt excepturi animi cumque.
-					</p>
+					<p>{government}</p>
 				</section>
 			</div>
 
+			{/* Start of information right side of screen */}
 			<div className="metaDataContainer">
 				<img id="countryInfoFlag" src={CurrentCountryFlag} alt={bar} />
 				<p className="genInfoRegion">
