@@ -4,6 +4,7 @@
 @import 'countryPages';
 @import 'countrySelection';
 @import 'homePage.css';
+@import 'header.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap');
 
@@ -19,6 +20,13 @@
   overflow-x: hidden;
 
 }
+
+#container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+
 
 #renderedBody {
   background: linear-gradient(#000000aa, #000000aa),
@@ -66,23 +74,7 @@ header>h1 {
   margin-top: .3em;
 }
 
-#searchContainer {
 
-  display: block;
-  float: right;
-  /* margin-top: 1rem;
-  margin-left: 16em; */
-  width: 300px;
-  position: relative;
-  bottom: 1em;
-  left: 2em;
-}
-
-.searchForm {
-  color: white;
-
-
-}
 
 #searchBtn {
   height: 50px;
@@ -94,19 +86,7 @@ header>h1 {
 }
 
 
-#countryFilter {
-  /* this is for the actual input field of the
-   search bar on home screen */
-  background-color: transparent;
-  height: 2em;
-  width: 10em;
-  color: black;
-  font-size: 18px;
-  border: solid #89939E 4px;
-  border-radius: 25px;
-  font-family: Raleway;
-  font-weight: 800
-}
+
 
 
 body {
