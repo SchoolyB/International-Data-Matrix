@@ -40,14 +40,10 @@ const App = () => {
 		return api
 			.get('/Countries')
 			.then((res) => {
-				setCountryList(res.data)
-			})
-			.catch((error) => {
-				console.error(error)
-			})
-	}, [])
-	useEffect(() => {}, [fetchCountryList])
-	fetchCountryList()
+				setCountryList(res.data)}).catch((error) => {console.error(error)})}, [])
+
+	useEffect(() => {fetchCountryList()}, [fetchCountryList])
+
 
 	return (
 		<CountryContext.Provider value={countryList}>

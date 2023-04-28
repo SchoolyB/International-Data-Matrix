@@ -1,22 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { CountryData } from '../../types/countryData'
-import { WeatherData } from '../../types/weatherData'
 import { getCountry } from '../../includes/countries'
-import { getWeather } from '../../includes/openWeather'
-import { countrySelectionData } from '../../types/countrySelectionData'
 import CountryWeather from '../../components/CountryWeather'
 '../../../public/assets/backgroundImage/svgs/*.svg'
+import getText from '../../includes/countryTopics'
 //countryFlags is an object which keys are a the path to the image. .glob is a vite feature that tells the program to glob up all the files in that path and imports them
 const countryFlags = import.meta.glob(
 	'../../../assets/countryPageFlags/svgs/*.svg',
-	{
-		eager: true,
-	},
-)
-
-const countryTopic = import.meta.glob(
-	'../../../public/countryTopics/txts/*txt',
 	{
 		eager: true,
 	},
@@ -55,27 +46,23 @@ export default function countryPage(bar: string | undefined) {
 			const bar: any = foo.attributes[1]
 		}
 	}
-
-	dynamicImgAttribute()
-	// console.log(state.currencies[0])
-
 	const FoundFlag = Object.entries(countryFlags).find(([file_path, url]) => {
 		const shortPath = file_path.replace(
 			'../../../assets/countryPageFlags/svgs/',
 			'',
 		)
+
 		return shortPath.startsWith(id!)
 	}) as any //using "as any" is known as type casting
 	const CurrentCountryFlag = FoundFlag ? FoundFlag[1].default : null
 
-	const FoundTopic = Object.entries(countryTopic).find(([file_path, url]) => {
-		const shortPath = file_path.replace(
-			'../../../assets/countryTopics/txts',
-			'',
-		)
-		return shortPath.startsWith(id!)
-	}) as any //using "as any" is known as type casting
-	const CurrentCountryTopic = FoundTopic ? FoundTopic[1].default : null
+	const showTopics = async (id: string) => {
+		await getText(id)
+		console.log()
+	}
+
+	showTopics(id!)
+	dynamicImgAttribute()
 
 	return (
 		<div className="overallCountryInfoContainer">
@@ -85,7 +72,7 @@ export default function countryPage(bar: string | undefined) {
 			</div>
 			{/* TOPICS */}
 			<div id="topic">
-				<section className="topic">
+				<section className="topic" id="geography">
 					<h3>Geography</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -96,14 +83,9 @@ export default function countryPage(bar: string | undefined) {
 				</section>
 				<section className="topic">
 					<h3>History</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iusto
-						eius ratione nisi placeat obcaecati. Accusamus cupiditate inventore
-						commodi illo, modi quia! Incidunt dolorem delectus magni
-						praesentium, sit ipsum dicta.
-					</p>
+					<p></p>
 				</section>
-				<section className="topic">
+				<section className="topic" id="demographics">
 					<h3>Demographics</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
@@ -112,7 +94,7 @@ export default function countryPage(bar: string | undefined) {
 						tenetur voluptatibus iure? Excepturi, eum.
 					</p>
 				</section>
-				<section className="topic">
+				<section className="topic" id="culture">
 					<h3>Culture</h3>
 					<p>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
@@ -121,7 +103,7 @@ export default function countryPage(bar: string | undefined) {
 						doloremque commodi culpa!
 					</p>
 				</section>
-				<section className="topic">
+				<section className="topic" id="religion">
 					<h3>Religion</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
@@ -130,7 +112,7 @@ export default function countryPage(bar: string | undefined) {
 						laborum veritatis?
 					</p>
 				</section>
-				<section className="topic">
+				<section className="topic" id="currentEvents">
 					<h3>Current Events</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
