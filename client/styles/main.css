@@ -6,7 +6,7 @@
 @import 'homePage.css';
 @import 'header.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -34,27 +34,7 @@
 }
 
 
-#renderedBody * #welcomeContainer {
-  display: grid;
-  justify-content: center;
-  color: white;
-  position: relative;
-  bottom: 2em;
 
-
-}
-
-/* #renderedBody * #welcomeMainHeading {
-  /* height: 20px;
-  font-size: 45px;
-  margin-bottom: 1em;
-} */
-
-*/ #renderedBody * #welcomeParagraph {
-  line-height: 24px;
-
-
-}
 
 
 #mainLogo {
@@ -66,7 +46,6 @@ header {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
   color: white;
-  margin-bottom: 7em;
 
 }
 
@@ -101,14 +80,19 @@ body {
 
 footer {
   color: white;
-  text-align: center;
-  margin-right: 30px;
-
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
 }
 
 footer>ul {
   /* takes away bullet points on footer */
   list-style-type: none;
+  padding: 0;
 
 }
 
@@ -116,7 +100,7 @@ footer>ul {
 
 .footerIcon {
   /*resizing the icons ion the footer*/
-  width: 42px;
+  width: 32px;
   padding: 1px;
 }
 
@@ -124,6 +108,7 @@ footer>ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: .5rem;
 }
 
 
