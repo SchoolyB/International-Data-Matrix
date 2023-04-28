@@ -19,12 +19,6 @@ export default function Countries() {
 					<a href={country.link}>
 						<img className="flag" src={country.flag} alt={country.flagAlt} />
 					</a>
-					{/* <div className="data">
-						<p>Region: {country.region}</p>
-						<p>Population: {country.population}</p>
-						<p>GDP: {country.gdp}</p>
-						<p>Area(sq. mi){country.area}</p>
-					</div> */}
 				</div>
 			)
 		})

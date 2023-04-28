@@ -2,9 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 const getCountry = () => {
-	axios.get('https://restcountries.com/v2/alpha/by').then((res) => {
-		console.log(res)
-	})
+	axios.get('https://restcountries.com/v2/alpha/by').then((res) => {})
 }
 
 getCountry()
