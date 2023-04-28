@@ -1,21 +1,16 @@
-import React, { useState, useCallback, useEffect} from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import { getCountrySelectionData } from '../includes/countrySelectionData'
 import { countrySelectionData } from '../types/countrySelectionData'
 
+export default function CountrySelection() {
+	const [countrySelectionData, setSelectionData] = useState<
+		countrySelectionData
+	>({
+		Area: 0,
+		Population: 0,
+		Continent: '',
+		Official_Name: '',
+	})
 
-
-
-export default function CountrySelection  () {
-
-  const [countrySelectionData, setSelectionData] = useState<countrySelectionData>({
-    Area: 0,
-    Population: 0,
-    Continent: '',
-    Official_Name: ''
-  })
-
-
-  return (
-    <div>CountrySelection</div>
-  )
+	return <div>CountrySelection</div>
 }
