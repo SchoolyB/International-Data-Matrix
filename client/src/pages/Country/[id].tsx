@@ -15,15 +15,16 @@ const countryFlags = import.meta.glob(
 	},
 )
 
-const countryTopic = import.meta.glob(
-	'../../../public/countryTopics/txts/*txt',
-	{
-		eager: true,
-	},
-)
-
 export default function countryPage(bar: string | undefined) {
-	const { id } = useParams<{ id: string }>()
+  const { id } = useParams<{ id: string}>()
+
+
+  const getText = (id:string) => {
+    import (`../../../assets/countryTopics${id}.text?raw`)
+    return
+  }
+
+
 
 	const [state, setState] = useState<CountryData>({
 		name: '',
@@ -63,19 +64,13 @@ export default function countryPage(bar: string | undefined) {
 		const shortPath = file_path.replace(
 			'../../../assets/countryPageFlags/svgs/',
 			'',
-		)
+    )
+
 		return shortPath.startsWith(id!)
 	}) as any //using "as any" is known as type casting
 	const CurrentCountryFlag = FoundFlag ? FoundFlag[1].default : null
 
-	const FoundTopic = Object.entries(countryTopic).find(([file_path, url]) => {
-		const shortPath = file_path.replace(
-			'../../../assets/countryTopics/txts',
-			'',
-		)
-		return shortPath.startsWith(id!)
-	}) as any //using "as any" is known as type casting
-	const CurrentCountryTopic = FoundTopic ? FoundTopic[1].default : null
+
 
 	return (
 		<div className="overallCountryInfoContainer">
