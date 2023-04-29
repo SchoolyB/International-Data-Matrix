@@ -165,6 +165,12 @@ export default function countryPage(bar: string | undefined) {
 					<h3>Government</h3>
 					<p>{government}</p>
 				</section>
+
+				{/* Economy */}
+				<section className="topic" id="economy">
+					<h3>Economy</h3>
+					<p>{economy}</p>
+				</section>
 			</div>
 
 			{/* Start of information right side of screen */}
