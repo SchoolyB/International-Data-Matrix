@@ -4,100 +4,71 @@
 @import 'countryPages';
 @import 'countrySelection';
 @import 'homePage.css';
+@import 'header.css';
 
-#root{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+#root {
   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-#renderedBody{
-  background: linear-gradient( #000000aa , #000000aa),
-url("../assets/backgroundImage/flagOfTheWorld.png");
-}
-
-
-#renderedBody * #welcomeContainer{
-  display: grid;
-  justify-content: center;
-  color: white;
-  position: relative; bottom: 2em;
-
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow-x: hidden;
 
 }
 
-#renderedBody * #welcomeMainHeading{
-  height: 20px;
-  font-size: 45px;
-  margin-bottom: 1em;
+#container {
+  width: 95%;
+  margin: 0 auto;
 }
 
 
-#renderedBody * #welcomeParagraph{
-line-height: 24px ;
-font-size: 19px;
-margin-bottom: 1.5em;
+
+#renderedBody {
+  background: linear-gradient(#000000aa, #000000aa),
+    url("../assets/backgroundImage/flagOfTheWorld.png");
 }
 
 
-#mainLogo{
+
+
+
+#mainLogo {
   height: 100px;
   width: auto;
 }
-header{
+
+header {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
   color: white;
-  margin-bottom: 7em;
 
 }
 
-header > h1{
-margin-top: .3em;
+header>h1 {
+  margin-top: .3em;
 }
 
-#searchContainer{
-
-  display: block;
-  float: right;
-  /* margin-top: 1rem;
-  margin-left: 16em; */
-  width: 300px;
-  position: relative; bottom: 1em; left: 2em;
-}
-
-.searchForm{
-  color: white;
 
 
-}
-
-#searchBtn{
+#searchBtn {
   height: 50px;
   width: auto;
-  position: relative; top: 20px;
-  position: relative; left: .2em
-
+  position: relative;
+  top: 20px;
+  position: relative;
+  left: .2em
 }
 
 
-#countryFilter{
-  /* this is for the actual input field of the
-   search bar on home screen */
-  background-color: transparent;
-  height: 2em;
-  width: 10em;
-  color: black;
-  font-size: 18px;
-  border: solid #89939E 4px;
-  border-radius: 25px;
-  font-family: Raleway;
-  font-weight: 800
-}
 
 
-body{
+
+body {
 
   padding: 0px;
   margin: 0px;
@@ -107,30 +78,37 @@ body{
 /* everything below this line modifies footer css */
 
 
-footer{
+footer {
   color: white;
-  text-align: center;
-  margin-right:30px ;
-
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
 }
 
-footer > ul{
+footer>ul {
   /* takes away bullet points on footer */
   list-style-type: none;
+  padding: 0;
 
 }
 
 
 
-.footerIcon{ /*resizing the icons ion the footer*/
-  width: 42px;
+.footerIcon {
+  /*resizing the icons ion the footer*/
+  width: 32px;
   padding: 1px;
 }
 
-#footerIconContainer{
+#footerIconContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: .5rem;
 }
 
 
@@ -142,6 +120,7 @@ footer > ul{
   animation-name: bounce;
 
 }
+
 /* nav menu open button  */
 
 .sidenav {
@@ -167,8 +146,7 @@ footer > ul{
 }
 
 .sidenav a:hover {
-  color: black
-  ;
+  color: black;
 
 }
 
@@ -180,7 +158,7 @@ footer > ul{
   margin-left: 50px;
 }
 
-.sidenav > h3{
+.sidenav>h3 {
   color: white;
   padding: 10px 10px 20px 40px;
   font-size: 30px;
@@ -188,13 +166,14 @@ footer > ul{
 
 }
 
-#span{
+#span {
   height: 1.7em;
-  width: 1.7em ;
+  width: 1.7em;
   border-radius: 50%;
   font-size: 60px;
   color: #f1f1f1;
-  position: absolute;left: .0001em;
+  position: absolute;
+  left: .0001em;
   background-color: black;
   text-align: center;
   opacity: 0;
@@ -202,7 +181,6 @@ footer > ul{
 
 }
 
-#span:hover{
+#span:hover {
   cursor: pointer;
 }
-

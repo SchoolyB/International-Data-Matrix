@@ -1,11 +1,8 @@
-import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
+import { Route, BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import Header from './components/Header'
 import routes from '~react-pages'
 import Footer from './components/Footer'
 import { CountryListData } from '../src/types/countryListData'
-import HomeIcon from '@rsuite/icons/legacy/Home'
-import CogIcon from '@rsuite/icons/legacy/Cog'
-import { Navbar, Nav, Toggle } from 'rsuite'
 import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { api } from './includes/api'
 
@@ -40,10 +37,16 @@ const App = () => {
 		return api
 			.get('/Countries')
 			.then((res) => {
-				setCountryList(res.data)}).catch((error) => {console.error(error)})}, [])
+				setCountryList(res.data)
+			})
+			.catch((error) => {
+				console.error(error)
+			})
+	}, [])
 
-	useEffect(() => {fetchCountryList()}, [fetchCountryList])
-
+	useEffect(() => {
+		fetchCountryList()
+	}, [fetchCountryList])
 
 	return (
 		<CountryContext.Provider value={countryList}>
@@ -56,5 +59,4 @@ const App = () => {
 		</CountryContext.Provider>
 	)
 }
-
 export default App
