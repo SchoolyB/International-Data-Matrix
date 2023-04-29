@@ -1,7 +1,7 @@
-import footer1 from '../../assets/footerIcons/home.svg'
-import footer2 from '../../assets/footerIcons/mail.svg'
-import footer3 from '../../assets/footerIcons/page.svg'
-import footer4 from '../../assets/footerIcons/comments.svg'
+import home from '../../assets/footerIcons/home.svg'
+import contact from '../../assets/footerIcons/mail.svg'
+import documentation from '../../assets/footerIcons/page.svg'
+import translator from '../../assets/footerIcons/comments.svg'
 import React from 'react'
 
 export default function Footer() {
@@ -17,12 +17,7 @@ export default function Footer() {
 				{/* home icon */}
 				<li>
 					<a title="Home" href="/">
-						<img
-							title="Home"
-							className="footerIcon"
-							id="homeIcon"
-							src={footer1}
-						/>
+						<img title="Home" className="footerIcon" id="homeIcon" src={home} />
 					</a>
 				</li>
 
@@ -36,7 +31,7 @@ export default function Footer() {
 							title="Documentation"
 							className="footerIcon"
 							id="docIcon"
-							src={footer3}
+							src={documentation}
 						/>
 					</a>
 				</li>
@@ -48,7 +43,7 @@ export default function Footer() {
 							title="Translator"
 							className="footerIcon"
 							id="translateIcon"
-							src={footer4}
+							src={translator}
 						/>
 					</a>
 				</li>
@@ -60,7 +55,7 @@ export default function Footer() {
 							title="Contact"
 							className="footerIcon"
 							id="ContactIcon"
-							src={footer2}
+							src={contact}
 						/>
 					</a>
 				</li>

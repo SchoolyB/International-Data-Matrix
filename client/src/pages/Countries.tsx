@@ -13,6 +13,7 @@ export default function Countries() {
 			return country.name.toLowerCase().includes(search.value.toLowerCase())
 		})
 		.map((country) => {
+			console.log(country)
 			return (
 				<div className="country">
 					<h3 className="countryHeading">{country.name}</h3>
@@ -22,7 +23,6 @@ export default function Countries() {
 				</div>
 			)
 		})
-
 	return (
 		<div>
 			<div id="overAllContainer">{countryElement}</div>

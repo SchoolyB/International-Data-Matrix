@@ -48,12 +48,6 @@ export default function Header() {
 											search.value = event.target.value
 										}}
 									></input>
-									{/* <input
-							id="searchBtn"
-							type="image"
-							src={globe}
-							alt="Spinning Globe"
-						></input> */}
 								</form>
 							</div>
 						</div>

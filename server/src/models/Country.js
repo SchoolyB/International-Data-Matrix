@@ -18,12 +18,20 @@ let countrySchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  landMass: {
+  area: {
     type: String,
     required: true
   },
   gdp: {
     type: String,
+    required: true
+  },
+  region: {
+    type: String,
+    required: true
+  },
+  population: {
+    type: Number,
     required: true
   }
 });
