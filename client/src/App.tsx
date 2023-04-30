@@ -6,6 +6,11 @@ import { CountryListData } from '../src/types/countryListData'
 import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { api } from './includes/api'
 
+// VERCEL ANALYTICS STUFF
+import { inject } from '@vercel/analytics'
+inject()
+// VERCEL ANALYTICS STUFF
+
 export function useCoolerState<Value>(initialValue: Value) {
 	const [value, setValue] = useState(initialValue)
 
