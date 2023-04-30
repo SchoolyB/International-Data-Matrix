@@ -150,7 +150,7 @@ app.post("/translator", (request, response) => {
 });
 ```
 
-[App.js](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/app.js)
+[App.js](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/src/app.js)
 
 ```JavaScript
 const deepl = require("deepl-node");
@@ -177,7 +177,7 @@ app.post("/translator", (request, response) => {
 });
 ```
 
-### The Contact Page -
+## [The Contact Page](https://international-data-matrix.vercel.app/Contact) -
 This simple contact page allows users to submit their feedback that will then be sent to The IDM's email. The form uses a POST method and a [Formspree](https://formspree.io/) url as the action to send the data on submit. Feel free to give it a try :)
 
 ```HTML
