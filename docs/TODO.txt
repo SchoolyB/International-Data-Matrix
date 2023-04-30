@@ -1,8 +1,8 @@
 !!!NEED TO BE DONE
 TODO: Add maps for every country page
-TODO: add country topic information
 
 ? mobile responsiveness (in progress)
+? add country topic information(in progress)
 
 ***VERSION 1.0.0 COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
