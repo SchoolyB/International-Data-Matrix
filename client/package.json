@@ -1,7 +1,7 @@
 {
-  "name": "name",
+  "name": "client",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,8 +16,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.2",
     "rsuite": "^5.26.1",
-    "three": "^0.152.2",
-    "three-orbitcontrols-ts": "^0.1.2"
+    "three": "^0.152.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
