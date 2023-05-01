@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
 let countrySchema = new mongoose.Schema({
   name: {
     type: String,
