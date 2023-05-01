@@ -15,7 +15,7 @@ export default function globe() {
 		const boxMaterial = new THREE.MeshNormalMaterial()
 		const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial)
 
-		spoolUp.scene.add(boxMesh)
+		spoolUp.scene!.add(boxMesh)
 	}, [])
 
 	return (
