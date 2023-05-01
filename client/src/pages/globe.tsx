@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import Stats from 'three/examples/jsm/libs/stats.module'
-import SceneInitializer from '../lib/SceneInitializer.js'
+import SceneInitializer from '../lib/SceneInitializer.js' //this is a warning not an error
 
 export default function globe() {
 	useEffect(() => {
