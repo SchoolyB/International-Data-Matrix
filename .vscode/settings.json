@@ -15,11 +15,9 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "stylelint.enable": true,
-  "workbench.colorTheme": "Mayukai Reversal",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.enableExperiments": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.view.alwaysShowHeaderActions": true,
-  "editor.rulers": [
-      100, 120
-  ]
+  "editor.rulers": [100, 120]
 }

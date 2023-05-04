@@ -1,119 +1,208 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
-import { CountryData } from '../../types/countryData';
-import { WeatherData } from '../../types/weatherData';
-import { getCountry } from '../../includes/countries';
-import { getWeather } from '../../includes/openWeather'
-import { countrySelectionData } from '../../types/countrySelectionData';
-import CountryWeather from '../../components/CountryWeather';
+import { useParams } from 'react-router-dom'
+import { CountryData } from '../../types/countryData'
+import { getCountry } from '../../includes/countries'
+import CountryWeather from '../../components/CountryWeather'
 '../../../public/assets/backgroundImage/svgs/*.svg'
+
+import getCountryHistory from '../../includes/countryTopicImports/countryHistory'
+import getCountryCulture from '../../includes/countryTopicImports/countryCulture'
+import getCountryGovernment from '../../includes/countryTopicImports/countryGovernment'
+import getCountryEconomy from '../../includes/countryTopicImports/countryEconomy'
+import getCountryReligion from '../../includes/countryTopicImports/countryReligion'
+import getCountryDemographics from '../../includes/countryTopicImports/countryDemographics'
+import getCountryGeography from '../../includes/countryTopicImports/countryGeography'
 //countryFlags is an object which keys are a the path to the image. .glob is a vite feature that tells the program to glob up all the files in that path and imports them
-const countryFlags = import.meta.glob('../../../assets/countryPageFlags/svgs/*.svg', {
-  eager: true
-});
-
-
+const countryFlags = import.meta.glob(
+	'../../../assets/countryPageFlags/svgs/*.svg',
+	{
+		eager: true,
+	},
+)
 
 export default function countryPage(bar: string | undefined) {
-  const { id } = useParams<{ id: string }>()
+	const { id } = useParams<{ id: string }>()
 
-  const [state, setState] = useState<CountryData>({
-    name: '',
-    nativeName: '',
-    region: '',
-    alpha2Code:  0,
-    alpha3Code: 0,
-    subregion: '',
-    capital: '',
-    population: 0,
-    timezones: '',
-    demonym: '',
-    currencies: '',
-    independent: true
-    //population has a '?' so its not required
-  })
+	const [state, setState] = useState<CountryData>({
+		name: '',
+		nativeName: '',
+		region: '',
+		alpha2Code: 0,
+		alpha3Code: 0,
+		subregion: '',
+		capital: '',
+		population: 0,
+		timezones: '',
+		demonym: '',
+		currencies: '',
+		independent: true,
+		//population has a '?' so its not required
+	})
 
-  //a '!' after a variable means this is definitely defined
-  const fetchData = useCallback(() => getCountry(id!).then(setState),[]);
-  useEffect(() => {
-  fetchData()
-  }, [fetchData])
+	// BELOW THIS COMMENT Stores the data from the countryTopicData includes into state
+	const [culture, setCulture] = useState('')
+	const [demographics, setDemographics] = useState('')
+	const [economy, setEconomy] = useState('')
+	const [government, setGovernment] = useState('')
+	const [history, setHistory] = useState('')
+	const [religion, setReligion] = useState('')
+	const [geography, setGeography] = useState('')
 
+	// ABOVE THIS COMMENT Stores the data from the countryTopicData includes into state
 
-  // function to make and display dynamic <img> alt attributes for each country
-  const dynamicImgAttribute = () => {
-    const foo = document.getElementById('countryInfoFlag');
-    if (foo != null) {
-      foo.setAttribute('alt', `The Flag of ${state.name}`)
-      const bar: any = foo.attributes[1]
-    }
-  }
+	// Declaring several async functions that take the id of the current page as a param. Within the async functions we create a variable called new... that awaits the response the respective countryTopicImports includes file. We then call the set... functions and pass them the variable from the line above
+	const showHistory = async (id: string) => {
+		const newHistory = await getCountryHistory(id)
+		setHistory(newHistory)
+	}
 
-  dynamicImgAttribute();
-  // console.log(state.currencies[0])
+	const showCulture = async (id: string) => {
+		const newCulture = await getCountryCulture(id)
+		setCulture(newCulture)
+	}
 
-  const FoundFlag = Object.entries(countryFlags).find(([file_path, url]) => {
-    const shortPath = file_path.replace("../../../assets/countryPageFlags/svgs/", '')
-    return shortPath.startsWith(id!)
-  }) as any //using "as any" is known as type casting
-  const CurrentCountryFlag = FoundFlag?FoundFlag[1].default:null
+	const showEconomy = async (id: string) => {
+		const newEconomy = await getCountryEconomy(id)
+		setEconomy(newEconomy)
+	}
 
+	const showGeography = async (id: string) => {
+		const newGeography = await getCountryGeography(id)
+		setGeography(newGeography)
+	}
+	const showGovernment = async (id: string) => {
+		const newGovernment = await getCountryGovernment(id)
+		setGovernment(newGovernment)
+	}
 
+	const showReligion = async (id: string) => {
+		const newReligion = await getCountryReligion(id)
+		setReligion(newReligion)
+	}
 
-  return (
+	const showDemographics = async (id: string) => {
+		const newDemographics = await getCountryDemographics(id)
+		setDemographics(newDemographics)
+	}
 
-    <div className='overallCountryInfoContainer'>
-      <div className="countryInfo">
-        <h1  id='countryEnglishName'>{state.name}</h1>
-        <h3 id='countryNativeName'>a.k.a { state.nativeName}</h3>
-      </div>
-      {/* TOPICS */}
-      <div id='topic'>
-        <section className='topic'><h3>Geography</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quam magni? Neque iste distinctio provident ab eligendi ut quas magni eos alias veniam, expedita veritatis! Ab commodi totam quod aliquid.</p></section>
-        <section className='topic'><h3>History</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iusto eius ratione nisi placeat obcaecati. Accusamus cupiditate inventore commodi illo, modi quia! Incidunt dolorem delectus magni praesentium, sit ipsum dicta.</p></section>
-        <section className='topic'><h3>Demographics</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consequuntur accusantium omnis magni, soluta eos doloremque inventore error quos sed, recusandae sunt incidunt ullam repudiandae tenetur voluptatibus iure? Excepturi, eum.</p></section>
-        <section className='topic'><h3>Culture</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem deleniti libero beatae aliquid harum corporis non nobis eum nostrum repellendus voluptatem rem, debitis vel! Voluptas omnis sunt doloremque commodi culpa!</p></section>
-        <section className='topic'><h3>Religion</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sed nobis, quos vero odio debitis harum cum dolores voluptatum aperiam aliquid dolore, mollitia aut, aliquam qui earum! Libero, laborum veritatis?</p></section>
-        <section className='topic'><h3>Current Events</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum esse sunt harum ducimus error nostrum id iure ex commodi quaerat perspiciatis necessitatibus, neque inventore, doloribus quis nesciunt excepturi animi cumque.</p></section>
-      </div>
+	// CALLING THE show... FUNCTIONS AND PASSING THE ID OF THE THE CURRENT COUNTRY PAGE THAT  THE USER IS ON
+	showCulture(id!)
+	showDemographics(id!)
+	showEconomy(id!)
+	showGeography(id!)
+	showGovernment(id!)
+	showHistory(id!)
+	showReligion(id!)
 
-      <div className="metaDataContainer">
-        <img id="countryInfoFlag"
-          src={CurrentCountryFlag}
-          alt= {bar}/>
-        <p className="genInfoRegion">
-          <u>{state.name}</u> is located in the
-          <u>{state.subregion}</u> subregion
-          of the <u>{state.region}</u> region <br />
+	//a '!' after a variable means this is definitely defined
+	const fetchData = useCallback(() => getCountry(id!).then(setState), [])
+	useEffect(() => {
+		fetchData()
+	}, [fetchData])
 
-          The capital of <u>{state.name}</u> is
-        </p>
-        <CountryWeather capital={state.capital} name= {state.name} />
+	// function to make and display dynamic <img> alt attributes for each country this will show in the case that an image of a flag doesn't load
+	const dynamicImgAttribute = () => {
+		const foo = document.getElementById('countryInfoFlag')
+		if (foo != null) {
+			foo.setAttribute('alt', `The Flag of ${state.name}`)
+			const bar: any = foo.attributes[1]
+		}
+	}
+	dynamicImgAttribute()
 
-        <p className='genInfoPopulation'>
-          The Population of <u>{state.name}</u> is is approx.
-          <u>{state.population}</u>
-        </p>
+	const FoundFlag = Object.entries(countryFlags).find(([file_path, url]) => {
+		const shortPath = file_path.replace(
+			'../../../assets/countryPageFlags/svgs/',
+			'',
+		)
 
-        <p className="genInfoISOCodes ">
-          <u>{state.name}'s</u> 2 Digit Alpha code is:
-          <u>{state.alpha2Code}</u><br />
-          <u>{state.name}'s</u> 3 Digit Alpha code is:
-          <u>{state.alpha3Code}</u>
-        </p>
-        <p className="genInfoCurrency">
-          The National Currency of {state.name} Is: <br />
-          The <u>{state.name}</u> Represented As:
-          {/* <u>{state.currencies[0]}</u> & */}
-          {/* <u>{[0].code}</u> */}
-        </p>
-        <p className="genInfoTimezones">
-          Timezones: <u>{state.timezones}</u>
-        </p>
-        {/* <p id="independentNation">
-          {state.name} is an independent nation
-        </p> */}
-      </div>
-    </div>
-  )
+		return shortPath.startsWith(id!)
+	}) as any //using "as any" is known as type casting
+	const CurrentCountryFlag = FoundFlag ? FoundFlag[1].default : null
+
+	return (
+		<div className="overallCountryInfoContainer">
+			<div className="countryInfo">
+				<h1 id="countryEnglishName">{state.name}</h1>
+				<h3 id="countryNativeName">a.k.a {state.nativeName}</h3>
+			</div>
+
+			{/* TOPICS */}
+
+			{/* Geography */}
+			<div id="topic">
+				<section className="topic" id="geography">
+					<h3>Geography</h3>
+					<p>{geography}</p>
+				</section>
+
+				{/* History */}
+				<section className="topic" id="history">
+					<h3>History</h3>
+					<p>{history}</p>
+				</section>
+
+				{/* Demographics */}
+				<section className="topic" id="demographics">
+					<h3>Demographics</h3>
+					<p>{demographics}</p>
+				</section>
+
+				{/* Culture */}
+				<section className="topic" id="culture">
+					<h3>Culture</h3>
+					<p>{culture}</p>
+				</section>
+
+				{/* Religion */}
+				<section className="topic" id="religion">
+					<h3>Religion</h3>
+					<p>{religion}</p>
+				</section>
+
+				{/* Government */}
+				<section className="topic" id="government">
+					<h3>Government</h3>
+					<p>{government}</p>
+				</section>
+
+				{/* Economy */}
+				<section className="topic" id="economy">
+					<h3>Economy</h3>
+					<p>{economy}</p>
+				</section>
+			</div>
+
+			{/* Start of information right side of screen */}
+			<div className="metaDataContainer">
+				<img id="countryInfoFlag" src={CurrentCountryFlag} alt={bar} />
+				<p className="genInfoRegion">
+					<u>{state.name}</u> is located in the
+					<u>{state.subregion}</u> subregion of the <u>{state.region}</u>
+					<br />
+					<p className="genInfoPopulation">
+						The Population of <u>{state.name}</u> is is approx.
+						<u>{state.population}</u>
+					</p>
+				</p>
+				<p className="genInfoISOCodes ">
+					<u>{state.name}'s</u> 2 Digit Alpha code is:
+					<u>{state.alpha2Code}</u> and it's 3 Digit Alpha code is:
+					<u>{state.alpha3Code}</u>
+				</p>
+
+				{/* Start of weather component from '../../components/CountryWeather.tsx' */}
+				<CountryWeather capital={state.capital} name={state.name} />
+				<p className="genInfoCurrency">
+					The National Currency of {state.name} Is: <br />
+					The <u>{state.name}</u> Represented As:
+				</p>
+				{/* End of weather component from '../../components/CountryWeather.tsx' */}
+
+				<p className="genInfoTimezones">
+					Timezones: <u>{state.timezones}</u>
+				</p>
+			</div>
+		</div>
+	)
 }

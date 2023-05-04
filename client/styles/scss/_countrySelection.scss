@@ -1,0 +1,37 @@
+#overAllContainer {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  justify-content: center;
+  position: relative;
+  height: 60em;
+  overflow-y: scroll;
+}
+
+
+
+.countryHeading {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1em;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  text-align: center;
+  height: 15em;
+  color: white;
+}
+
+.country * .flag {
+  border: solid black 1px;
+}
+
+.country>.data {
+  font-size: 15px;
+  text-align: center;
+
+}

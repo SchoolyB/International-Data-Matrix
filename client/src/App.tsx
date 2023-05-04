@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, useRoutes } from 'react-router-dom'
+import { Route, BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import Header from './components/Header'
 import routes from '~react-pages'
 import Footer from './components/Footer'
 import { CountryListData } from '../src/types/countryListData'
-import HomeIcon from '@rsuite/icons/legacy/Home'
-import CogIcon from '@rsuite/icons/legacy/Cog'
-import { Navbar, Nav, Toggle } from 'rsuite'
 import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { api } from './includes/api'
+
+// VERCEL ANALYTICS STUFF
+import { inject } from '@vercel/analytics'
+inject()
+// VERCEL ANALYTICS STUFF
 
 export function useCoolerState<Value>(initialValue: Value) {
 	const [value, setValue] = useState(initialValue)
@@ -46,10 +48,10 @@ const App = () => {
 				console.error(error)
 			})
 	}, [])
+
 	useEffect(() => {
 		fetchCountryList()
 	}, [fetchCountryList])
-	console.log(countryList)
 
 	return (
 		<CountryContext.Provider value={countryList}>
@@ -62,5 +64,4 @@ const App = () => {
 		</CountryContext.Provider>
 	)
 }
-
 export default App
