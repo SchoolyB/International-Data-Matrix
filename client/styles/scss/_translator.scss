@@ -1,5 +1,4 @@
-@import 'main';
-
+$color: white;
 #fullTranslateContainer {
 
   height: 40em;
@@ -22,11 +21,10 @@
 
 #translateBtn {
   height: 5em;
-  background-color: ;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 13em;
-  background-image: url("../assets/translatorPageImages/translation.png");
+  background-image: url("../../assets/translatorPageImages/translation.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -35,7 +33,7 @@
   background-color: transparent;
   border: none;
   border-radius: 50px;
-  filter: invert()
+  filter: invert($color, $weight:100%)
 }
 
 #translateBtn:hover {

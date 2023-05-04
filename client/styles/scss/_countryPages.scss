@@ -1,24 +1,22 @@
-/* everything below this line modifies country page css */
-@import 'main';
-
-.countryInfo{
+.countryInfo {
   text-align: center;
   color: black;
   background-color: #89939E;
-  border-top: .2em solid black ;
+  border-top: .2em solid black;
   border-bottom: .2em solid black;
 
 }
+
 .countryInfo>h1 {
   font-size: 3.5em;
 }
 
-#countryInfoFlag{
+#countryInfoFlag {
   border-radius: 20px;
 }
 
 .topic {
-  color: black ;
+  color: black;
   text-align: left;
   width: 70%;
   padding-bottom: 2px;
@@ -36,7 +34,8 @@
 }
 
 .metaDataContainer {
-  position: relative; bottom: 45em;
+  position: relative;
+  bottom: 45em;
   display: flex;
   justify-content: right;
   background-color: #89939E;

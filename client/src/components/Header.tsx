@@ -3,9 +3,7 @@ import { useContext, useState } from 'react'
 import { Nav, Navbar } from 'rsuite'
 import { SearchContext } from '../App'
 import Container from './helpers/Container'
-import '../../styles/darkMode.css'
 import { ChangeEventHandler } from 'react'
-import DarkMode from './darkMode'
 
 export default function Header() {
 	const search = useContext(SearchContext)
@@ -13,38 +11,6 @@ export default function Header() {
 	const [openMenu, setOpenMenu] = useState(false)
 
 	const handleMenu = () => setOpenMenu((state) => !state)
-
-	const setDark = () => {
-		localStorage.setItem('theme', 'dark')
-
-		document.documentElement.setAttribute('data-theme', 'dark')
-	}
-
-	const setLight = () => {
-		localStorage.setItem('theme', 'light')
-		document.documentElement.setAttribute('data-theme', 'light')
-	}
-
-	const storedTheme = localStorage.getItem('theme')
-
-	const prefersDark =
-		window.matchMedia &&
-		window.matchMedia('(prefers-color-scheme: dark)').matches
-
-	const defaultDark =
-		storedTheme === 'dark' || (storedTheme === null && prefersDark)
-
-	if (defaultDark) {
-		setDark()
-	}
-
-	const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
-		if (e.target.checked) {
-			setDark()
-		} else {
-			setLight()
-		}
-	}
 
 	return (
 		<header>
@@ -56,7 +22,6 @@ export default function Header() {
 						</Navbar.Brand>
 						<div onClick={handleMenu}>{/* <HomeIcon /> */}</div>
 					</div>
-					<DarkMode />
 					{openMenu && (
 						<div id="menu">
 							<Nav id="nav">
