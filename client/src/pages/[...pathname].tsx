@@ -3,7 +3,7 @@ import React from 'react'
 export default function PageNotFound() {
 	return (
 		<div>
-			<h1>404 this page was not found sorry :(</h1>
+			<h1 id="pageNotFound">404 - This Page Could Not Be Found</h1>
 		</div>
 	)
 }

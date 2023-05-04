@@ -1,7 +1,7 @@
 {
-  "name": "name",
+  "name": "client",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,12 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.0",
     "axios": "^1.2.3",
     "dotenv": "^16.0.3",
+    "ol": "^7.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.2",
-    "rsuite": "^5.26.1"
+    "rsuite": "^5.26.1",
+    "sass": "^1.62.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

@@ -100,7 +100,7 @@ export default function countryPage(bar: string | undefined) {
 		fetchData()
 	}, [fetchData])
 
-	// function to make and display dynamic <img> alt attributes for each country
+	// function to make and display dynamic <img> alt attributes for each country this will show in the case that an image of a flag doesn't load
 	const dynamicImgAttribute = () => {
 		const foo = document.getElementById('countryInfoFlag')
 		if (foo != null) {
@@ -153,6 +153,8 @@ export default function countryPage(bar: string | undefined) {
 					<h3>Culture</h3>
 					<p>{culture}</p>
 				</section>
+
+				{/* Religion */}
 				<section className="topic" id="religion">
 					<h3>Religion</h3>
 					<p>{religion}</p>
@@ -160,8 +162,14 @@ export default function countryPage(bar: string | undefined) {
 
 				{/* Government */}
 				<section className="topic" id="government">
-					<h3>Current Events</h3>
+					<h3>Government</h3>
 					<p>{government}</p>
+				</section>
+
+				{/* Economy */}
+				<section className="topic" id="economy">
+					<h3>Economy</h3>
+					<p>{economy}</p>
 				</section>
 			</div>
 
@@ -170,27 +178,27 @@ export default function countryPage(bar: string | undefined) {
 				<img id="countryInfoFlag" src={CurrentCountryFlag} alt={bar} />
 				<p className="genInfoRegion">
 					<u>{state.name}</u> is located in the
-					<u>{state.subregion}</u> subregion of the <u>{state.region}</u> region{' '}
+					<u>{state.subregion}</u> subregion of the <u>{state.region}</u>
 					<br />
-					The capital of <u>{state.name}</u> is
-				</p>
-				<CountryWeather capital={state.capital} name={state.name} />
-
-				<p className="genInfoPopulation">
-					The Population of <u>{state.name}</u> is is approx.
-					<u>{state.population}</u>
+					<p className="genInfoPopulation">
+						The Population of <u>{state.name}</u> is is approx.
+						<u>{state.population}</u>
+					</p>
 				</p>
 				<p className="genInfoISOCodes ">
 					<u>{state.name}'s</u> 2 Digit Alpha code is:
-					<u>{state.alpha2Code}</u>
-					<br />
-					<u>{state.name}'s</u> 3 Digit Alpha code is:
+					<u>{state.alpha2Code}</u> and it's 3 Digit Alpha code is:
 					<u>{state.alpha3Code}</u>
 				</p>
+
+				{/* Start of weather component from '../../components/CountryWeather.tsx' */}
+				<CountryWeather capital={state.capital} name={state.name} />
 				<p className="genInfoCurrency">
 					The National Currency of {state.name} Is: <br />
 					The <u>{state.name}</u> Represented As:
 				</p>
+				{/* End of weather component from '../../components/CountryWeather.tsx' */}
+
 				<p className="genInfoTimezones">
 					Timezones: <u>{state.timezones}</u>
 				</p>

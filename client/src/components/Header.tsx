@@ -3,6 +3,7 @@ import { useContext, useState } from 'react'
 import { Nav, Navbar } from 'rsuite'
 import { SearchContext } from '../App'
 import Container from './helpers/Container'
+import { ChangeEventHandler } from 'react'
 
 export default function Header() {
 	const search = useContext(SearchContext)
@@ -19,12 +20,8 @@ export default function Header() {
 						<Navbar.Brand id="logoText" href="/">
 							The International Data Matrix
 						</Navbar.Brand>
-
-						<div onClick={handleMenu}>
-							<HomeIcon />
-						</div>
+						<div onClick={handleMenu}>{/* <HomeIcon /> */}</div>
 					</div>
-
 					{openMenu && (
 						<div id="menu">
 							<Nav id="nav">
@@ -48,12 +45,6 @@ export default function Header() {
 											search.value = event.target.value
 										}}
 									></input>
-									{/* <input
-							id="searchBtn"
-							type="image"
-							src={globe}
-							alt="Spinning Globe"
-						></input> */}
 								</form>
 							</div>
 						</div>

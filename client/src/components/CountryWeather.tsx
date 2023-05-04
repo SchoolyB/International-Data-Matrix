@@ -41,12 +41,11 @@ export default function CountryWeather(props: Props) {
 			The Capitol of <u>{props.name}</u> is:
 			<u> {props.capital}</u>
 			<br />
-			<br />
 			<u>{props.capital}</u> is located at
 			<br /> Latitude:<u>{weather.lat}</u> Longitude: <u>{weather.lon}</u>
 			<br />
 			<br />
-			Here is a look at the current weather in {props.capital}
+			Here is a look at the current weather in <u>{props.capital}</u>
 			<u></u>: {weather.main}
 			<br />
 			<br />

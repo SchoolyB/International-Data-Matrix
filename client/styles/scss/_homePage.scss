@@ -1,0 +1,53 @@
+#welcomeContainer {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 4rem 0;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#welcomeMainHeading {
+  font-size: 2rem;
+  line-height: 130%;
+  text-align: center;
+}
+
+
+#welcomeParagraph {
+  font-weight: 300;
+  text-align: center;
+
+}
+
+#welcomeBtn {
+  background-color: white;
+  border-radius: 25px;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: .6rem 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+#welcomeBtn:hover {
+  background-color: #89939E;
+  color: white;
+}
+
+#welcomeBtnContainer {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+@media (min-width: 768px) {
+  #welcomeMainHeading {
+    font-size: 3.5rem;
+  }
+
+}
