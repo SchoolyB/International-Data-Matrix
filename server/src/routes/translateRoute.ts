@@ -1,19 +1,19 @@
-const newDeepl = require('deepl-node')
-const newApp = require('app')
+import { Router } from 'express'
+import * as deepl from 'deepl-node'
 
-app.post('/translator', (request: any, response: any) => {
-	const translator = new newDeepl.Translator(process.env.TRANSLATION_KEY)
-
-	const sourceText = request.body.sourceText
+const router = Router()
+router.post('', async (request: any, response: any) => {
 	const outputLanguage = request.body.outputLanguage //the language we want the output to be
+	const sourceText = request.body.sourceText
+	const translator = new deepl.Translator(`${process.env.TRANSLATOR_KEY}`)
 
-	translator
+	const results = await translator
 		.translateText(sourceText, null, outputLanguage)
 		.then((result: any) => {
+			console.log(result.text)
+			// get response on page
 			const responseBody = {
-				//if a key in an obj doesn't have a colon and a value JS auto assumes that the value is itself
-				// same as writing sourceText: sourceText
-				text: result.text, //this
+				text: result.text,
 			}
 			response.json(responseBody)
 		})
@@ -21,3 +21,5 @@ app.post('/translator', (request: any, response: any) => {
 			console.error(error)
 		})
 })
+
+export default router
