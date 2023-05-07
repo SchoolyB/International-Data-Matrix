@@ -23,8 +23,8 @@ const logging = (request: any, response: any, next: any) => {
 	console.log(`${request.method} ${request.url}`)
 	next()
 }
-// const allowedOrigins = ['https://international-data-matrix.vercel.app']
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = ['https://international-data-matrix.vercel.app']
+//const allowedOrigins = ['http://localhost:5173']
 const options: cors.CorsOptions = {
 	origin: allowedOrigins,
 }
