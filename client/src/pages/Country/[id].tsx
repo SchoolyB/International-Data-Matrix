@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom'
 import { CountryData } from '../../types/countryData'
 import { getCountry } from '../../includes/countries'
 import CountryWeather from '../../components/CountryWeather'
-'../../../public/assets/backgroundImage/svgs/*.svg'
-
+;('../../../public/assets/backgroundImage/svgs/*.svg')
 import getCountryHistory from '../../includes/countryTopicImports/countryHistory'
 import getCountryCulture from '../../includes/countryTopicImports/countryCulture'
 import getCountryGovernment from '../../includes/countryTopicImports/countryGovernment'
@@ -20,7 +19,14 @@ const countryFlags = import.meta.glob(
 	},
 )
 
-export default function countryPage(bar: string | undefined) {
+const countryMaps = import.meta.glob('../../../assets/maps/*.png', {
+	eager: true,
+})
+
+export default function countryPage(
+	flagAlter: string | undefined,
+	mapAlter: string | undefined,
+) {
 	const { id } = useParams<{ id: string }>()
 
 	const [state, setState] = useState<CountryData>({
@@ -102,13 +108,22 @@ export default function countryPage(bar: string | undefined) {
 
 	// function to make and display dynamic <img> alt attributes for each country this will show in the case that an image of a flag doesn't load
 	const dynamicImgAttribute = () => {
-		const foo = document.getElementById('countryInfoFlag')
-		if (foo != null) {
-			foo.setAttribute('alt', `The Flag of ${state.name}`)
-			const bar: any = foo.attributes[1]
+		const newFlagAlt = document.getElementById('countryInfoFlag')
+		if (newFlagAlt != null) {
+			newFlagAlt.setAttribute('alt', `The Flag of ${state.name}`)
+			const FlagAlter: any = newFlagAlt.attributes[1]
 		}
 	}
 	dynamicImgAttribute()
+
+	const dynamicMapAttribute = () => {
+		const newMapAlt = document.getElementById('countryMap')
+		if (newMapAlt != null) {
+			newMapAlt.setAttribute('alt', `A map of ${state.name}`)
+			const MapAlter: any = newMapAlt.attributes[1]
+		}
+	}
+	dynamicMapAttribute()
 
 	const FoundFlag = Object.entries(countryFlags).find(([file_path, url]) => {
 		const shortPath = file_path.replace(
@@ -119,6 +134,13 @@ export default function countryPage(bar: string | undefined) {
 		return shortPath.startsWith(id!)
 	}) as any //using "as any" is known as type casting
 	const CurrentCountryFlag = FoundFlag ? FoundFlag[1].default : null
+
+	const FoundMap = Object.entries(countryMaps).find(([file_path, url]) => {
+		const shorterPath = file_path.replace('../../../assets/maps/', '')
+
+		return shorterPath.startsWith(id!)
+	}) as any
+	const CurrentCountryMap = FoundMap ? FoundMap[1].default : null
 
 	return (
 		<div className="overallCountryInfoContainer">
@@ -131,43 +153,64 @@ export default function countryPage(bar: string | undefined) {
 
 			{/* Geography */}
 			<div id="topic">
-				<section className="topic" id="geography">
+				<section
+					className="topic"
+					id="geography"
+				>
 					<h3>Geography</h3>
 					<p>{geography}</p>
 				</section>
 
 				{/* History */}
-				<section className="topic" id="history">
+				<section
+					className="topic"
+					id="history"
+				>
 					<h3>History</h3>
 					<p>{history}</p>
 				</section>
 
 				{/* Demographics */}
-				<section className="topic" id="demographics">
+				<section
+					className="topic"
+					id="demographics"
+				>
 					<h3>Demographics</h3>
 					<p>{demographics}</p>
 				</section>
 
 				{/* Culture */}
-				<section className="topic" id="culture">
+				<section
+					className="topic"
+					id="culture"
+				>
 					<h3>Culture</h3>
 					<p>{culture}</p>
 				</section>
 
 				{/* Religion */}
-				<section className="topic" id="religion">
+				<section
+					className="topic"
+					id="religion"
+				>
 					<h3>Religion</h3>
 					<p>{religion}</p>
 				</section>
 
 				{/* Government */}
-				<section className="topic" id="government">
+				<section
+					className="topic"
+					id="government"
+				>
 					<h3>Government</h3>
 					<p>{government}</p>
 				</section>
 
 				{/* Economy */}
-				<section className="topic" id="economy">
+				<section
+					className="topic"
+					id="economy"
+				>
 					<h3>Economy</h3>
 					<p>{economy}</p>
 				</section>
@@ -175,7 +218,16 @@ export default function countryPage(bar: string | undefined) {
 
 			{/* Start of information right side of screen */}
 			<div className="metaDataContainer">
-				<img id="countryInfoFlag" src={CurrentCountryFlag} alt={bar} />
+				<img
+					id="countryInfoFlag"
+					src={CurrentCountryFlag}
+					alt={flagAlter}
+				/>
+				<img
+					id="countryMap"
+					src={CurrentCountryMap}
+					alt={mapAlter}
+				/>
 				<p className="genInfoRegion">
 					<u>{state.name}</u> is located in the
 					<u>{state.subregion}</u> subregion of the <u>{state.region}</u>
@@ -192,7 +244,10 @@ export default function countryPage(bar: string | undefined) {
 				</p>
 
 				{/* Start of weather component from '../../components/CountryWeather.tsx' */}
-				<CountryWeather capital={state.capital} name={state.name} />
+				<CountryWeather
+					capital={state.capital}
+					name={state.name}
+				/>
 				<p className="genInfoCurrency">
 					The National Currency of {state.name} Is: <br />
 					The <u>{state.name}</u> Represented As:
