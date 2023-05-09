@@ -1,4 +1,5 @@
 //types need to be in pascal case
+import countryCurrencyData from './countryCurrencyData'
 //an interface is a description of an object
 export interface CountryData {
 	name: string
@@ -11,6 +12,6 @@ export interface CountryData {
 	population?: number //the '?' means that the property population is possibly undefined
 	timezones: string
 	demonym: string
-	currencies: string
+	currencies: Array<countryCurrencyData>
 	independent: boolean
 }

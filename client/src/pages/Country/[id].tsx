@@ -141,6 +141,11 @@ export default function countryPage(
 		? foundSimpleMap[1].default
 		: null
 
+	const primaryCurrency = state.currencies[0]
+	if (primaryCurrency) {
+		console.log(primaryCurrency.code)
+	}
+
 	//function that finds a locator map image based off the current url
 	const foundLocatorMap = Object.entries(locatorCountryMap).find(
 		([file_path, url]) => {
