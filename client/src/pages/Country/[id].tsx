@@ -50,7 +50,7 @@ export default function countryPage(
 		population: 0,
 		timezones: '',
 		demonym: '',
-		currencies: '',
+		currencies: [],
 		independent: true,
 		//population has a '?' so its not required
 	})
