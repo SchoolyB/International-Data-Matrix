@@ -156,10 +156,8 @@ export default function countryPage(
 		? foundLocatorMap[1].default
 		: null
 
-	const primaryCurrency = state.currencies[0]
-	if (primaryCurrency) {
-		console.log(primaryCurrency.code)
-	}
+	// extracts the object from the currency array
+	const currencyInfo = state.currencies[0]
 
 	return (
 		<div className="overallCountryInfoContainer">
@@ -275,9 +273,12 @@ export default function countryPage(
 
 				<p className="genInfoCurrency">
 					The National Currency of {state.name} Is: <br />
-					{/* The <u>{state.currencies}</u> Represented As: <br /> */}
+					The <u>{currencyInfo?.name}</u> Represented As:
+					<u>
+						{currencyInfo?.symbol} and <u>{currencyInfo?.code}</u>
+					</u>
+					<br />
 				</p>
-
 				<p className="genInfoTimezones">
 					Timezones: <u>{state.timezones}</u>
 				</p>
