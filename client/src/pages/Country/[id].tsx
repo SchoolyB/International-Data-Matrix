@@ -50,7 +50,7 @@ export default function countryPage(
 		population: 0,
 		timezones: '',
 		demonym: '',
-		currencies: '',
+		currencies: [],
 		independent: true,
 		//population has a '?' so its not required
 	})
@@ -141,11 +141,6 @@ export default function countryPage(
 		? foundSimpleMap[1].default
 		: null
 
-	const primaryCurrency = state.currencies[0]
-	if (primaryCurrency) {
-		console.log(primaryCurrency.code)
-	}
-
 	//function that finds a locator map image based off the current url
 	const foundLocatorMap = Object.entries(locatorCountryMap).find(
 		([file_path, url]) => {
@@ -156,9 +151,15 @@ export default function countryPage(
 			return locatorMapPath.startsWith(id!)
 		},
 	) as any
+
 	const CurrentCountryLocatorMap = foundLocatorMap
 		? foundLocatorMap[1].default
 		: null
+
+	const primaryCurrency = state.currencies[0]
+	if (primaryCurrency) {
+		console.log(primaryCurrency.code)
+	}
 
 	return (
 		<div className="overallCountryInfoContainer">
@@ -270,11 +271,12 @@ export default function countryPage(
 					capital={state.capital}
 					name={state.name}
 				/>
+				{/* End of weather component from '../../components/CountryWeather.tsx' */}
+
 				<p className="genInfoCurrency">
 					The National Currency of {state.name} Is: <br />
-					The <u>{state.name}</u> Represented As:
+					{/* The <u>{state.currencies}</u> Represented As: <br /> */}
 				</p>
-				{/* End of weather component from '../../components/CountryWeather.tsx' */}
 
 				<p className="genInfoTimezones">
 					Timezones: <u>{state.timezones}</u>
