@@ -6,7 +6,7 @@ export function getCountry(id: string) {
 		axios
 			// .get<CountryData>(`https://restcountries.com/v2/alpha/${id}`)
 			// .then((res) => res.data)
-			.get<CountryData>(`http://schoolyb.github.io/Data/${id}.json`)
+			.get<CountryData>(`http://schoolyb.github.io/v1/data/country/${id}.json`)
 			.then((res) => res.data)
 	)
 }
