@@ -13,5 +13,5 @@ export interface CountryData {
 	timezones: string
 	demonym: string
 	currencies: Array<countryCurrencyData>
-	independent: boolean
+	flags: { svg: string; png: string }
 }
