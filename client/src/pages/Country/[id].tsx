@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { CountryData } from '../../types/countryData'
 import { getCountry } from '../../includes/countries'
 import CountryWeather from '../../components/CountryWeather'
-;('../../../public/assets/backgroundImage/svgs/*.svg')
 import getCountryHistory from '../../includes/countryTopicImports/countryHistory'
 import getCountryCulture from '../../includes/countryTopicImports/countryCulture'
 import getCountryGovernment from '../../includes/countryTopicImports/countryGovernment'
@@ -14,13 +13,6 @@ import getCountryGeography from '../../includes/countryTopicImports/countryGeogr
 //countryFlags is an object which keys are a the path to the image. .glob is a vite feature that tells the program to glob up all the files in that path and imports them
 
 // USING VITE'S GLOB METHOD TO STORE IMAGES FROM FOLDERS INTO VARIABLES
-const countryFlags = import.meta.glob(
-	'../../../assets/countryPageFlags/svgs/*.svg',
-	{
-		eager: true,
-	},
-)
-
 const simpleCountryMaps = import.meta.glob('../../../assets/simpleMaps/*.png', {
 	eager: true,
 })
@@ -33,7 +25,6 @@ const locatorCountryMap = import.meta.glob(
 )
 
 export default function countryPage(
-	flagAlter: string | undefined,
 	simpleMapAlter: string | undefined,
 	locatorMapAlter: string | undefined,
 ) {
@@ -51,7 +42,10 @@ export default function countryPage(
 		timezones: '',
 		demonym: '',
 		currencies: [],
-		independent: true,
+		flags: {
+			svg: '',
+			png: '',
+		},
 		//population has a '?' so its not required
 	})
 
@@ -101,11 +95,6 @@ export default function countryPage(
 
 	// A function that dynamically generates all the alt attributes of images on a country page
 	const setDynamicAltAttributes = () => {
-		const newFlagAlt = document.getElementById('countryInfoFlag')
-		if (newFlagAlt != null) {
-			newFlagAlt.setAttribute('alt', `The Flag of ${state.name}`)
-			const FlagAlter: any = newFlagAlt.attributes[1]
-		}
 		const newSimpleMap = document.getElementById('simpleMap')
 		if (newSimpleMap != null) {
 			newSimpleMap.setAttribute('alt', `A map of ${state.name}`)
@@ -118,16 +107,6 @@ export default function countryPage(
 		}
 	}
 	setDynamicAltAttributes()
-
-	//function that finds a flag image based off the current url
-	const FoundFlag = Object.entries(countryFlags).find(([file_path, url]) => {
-		const flagPath = file_path.replace(
-			'../../../assets/countryPageFlags/svgs/',
-			'',
-		)
-		return flagPath.startsWith(id!)
-	}) as any
-	const CurrentCountryFlag = FoundFlag ? FoundFlag[1].default : null
 
 	//function that finds a simple map image based off the current url
 	const foundSimpleMap = Object.entries(simpleCountryMaps).find(
@@ -158,8 +137,13 @@ export default function countryPage(
 
 	// extracts the object from the currency array
 	const currencyInfo = state.currencies[0]
+	// extract key value from flags obj
+	const flagsInfo = state.flags.svg
+	// set 'alt' attribute for each flag
+	const flagAltValue = `The Flag of ${state.name}`
 
 	return (
+		// COUNTRY HEADER INFO
 		<div className="overallCountryInfoContainer">
 			<div className="countryInfo">
 				<h1 id="countryEnglishName">{state.name}</h1>
@@ -236,8 +220,8 @@ export default function countryPage(
 			<div className="metaDataContainer">
 				<img
 					id="countryInfoFlag"
-					src={CurrentCountryFlag}
-					alt={flagAlter}
+					src={state.flags.svg}
+					alt={flagAltValue}
 				/>
 				<img
 					id="simpleMap"
@@ -251,7 +235,7 @@ export default function countryPage(
 				/>
 				<p className="genInfoRegion">
 					<u>{state.name}</u> is located in the
-					<u>{state.subregion}</u> subregion of the <u>{state.region}</u>
+					<u>{state.subregion}</u> subregion of <u>{state.region}</u>
 					<br />
 					<p className="genInfoPopulation">
 						The Population of <u>{state.name}</u> is is approx.
@@ -286,3 +270,4 @@ export default function countryPage(
 		</div>
 	)
 }
+1
