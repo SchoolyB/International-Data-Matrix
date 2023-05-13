@@ -22,9 +22,11 @@ export default function Translator() {
 
 	return (
 		<div>
-			<form id="fullTranslateContainer" onSubmit={handleTranslation}>
-				{/*   <!-- change name to translateForm --> */}
-				<div id="translatorContainer">
+			<form
+				id="fullTranslateContainer"
+				onSubmit={handleTranslation}
+			>
+				<div id="translateForm">
 					<div id="inputSide">
 						<div>
 							<textarea
@@ -37,7 +39,11 @@ export default function Translator() {
 					</div>
 
 					<div>
-						<button title="Submit" type="submit" id="translateBtn"></button>
+						<button
+							title="Submit"
+							type="submit"
+							id="translateBtn"
+						></button>
 					</div>
 
 					<div id="outputSide">

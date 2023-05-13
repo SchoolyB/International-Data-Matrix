@@ -19,22 +19,6 @@ let countrySchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
-	area: {
-		type: String,
-		required: true,
-	},
-	gdp: {
-		type: String,
-		required: true,
-	},
-	region: {
-		type: String,
-		required: true,
-	},
-	population: {
-		type: Number,
-		required: true,
-	},
 })
 const Country = mongoose.model('Country', countrySchema)
 module.exports = Country
