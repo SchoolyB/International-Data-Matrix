@@ -10,8 +10,6 @@ import getCountryEconomy from '../../includes/countryTopicImports/countryEconomy
 import getCountryReligion from '../../includes/countryTopicImports/countryReligion'
 import getCountryDemographics from '../../includes/countryTopicImports/countryDemographics'
 import getCountryGeography from '../../includes/countryTopicImports/countryGeography'
-//countryFlags is an object which keys are a the path to the image. .glob is a vite feature that tells the program to glob up all the files in that path and imports them
-
 // USING VITE'S GLOB METHOD TO STORE IMAGES FROM FOLDERS INTO VARIABLES
 const simpleCountryMaps = import.meta.glob('../../../assets/simpleMaps/*.png', {
 	eager: true,
@@ -270,4 +268,3 @@ export default function countryPage(
 		</div>
 	)
 }
-1

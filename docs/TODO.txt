@@ -1,11 +1,11 @@
 !!!NEED TO BE DONE
-TODO: Add maps for every country page
 
 ? mobile responsiveness (in progress)
 ? add country topic information(in progress)
 ? add interactive map page(in progress)
+? Add maps for every country page(in progress)
 
-***VERSION 0.0.1 COMPLETED***
+***VERSION 0.1.0 COMPLETED***
 TODO: IMPORT IMAGES TO HOME SCREEN (completed 12/1/2022)
 TODO: ADJUST SIZES OF FOOTER ICONS LMAOOOOOOO (completed 12/2/2022)
 TODO: LINK CONTACT FORM TO FORMSPREE SITE (completed 12/7/2022)
@@ -42,3 +42,4 @@ TODO: continue rebuilding app using new stack: React, TypeScript, Vite,  Express
 TODO: build a country page for every country (completed 3/2023)
 TODO: add the rest of the worlds countries to the country selection page (completed 3/2023)
 TODO: rebuild server in TypeScript(completed 5/1/2023)
+TODO: update server to use ES6(completed 5/1/2023)
