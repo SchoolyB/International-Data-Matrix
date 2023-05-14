@@ -19,7 +19,7 @@
 - Frontend hosted on [Vercel](https://www.vercel.com/)
 - Backend hosted on [Render](https://www.render.com/)
 
-## [The Home Page](https://international-data-matrix.vercel.app/Home) -
+## [The Home Page](https://international-data-matrix.vercel.app/) -
  ###### "Simplistic Design"
  <br>
  - The "View Countries" Button
@@ -32,7 +32,7 @@ Located top right of the header
 
 
  - Footer Icons
-    - [Home](https://international-data-matrix.vercel.app/Home)
+    - [Home](https://international-data-matrix.vercel.app/)
     - [Documentation](https://github.com/SchoolyB/International-Data-Matrix#readme)
     - [Translator](https://international-data-matrix.vercel.app/Translator)
     - [Contact](https://international-data-matrix.vercel.app/Contact)

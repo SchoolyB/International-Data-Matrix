@@ -1,8 +1,5 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
-import { api } from '../includes/api'
-import { CountryListData } from '../types/countryListData'
-import { CountryContext } from '../App'
-import { SearchContext } from '../App'
+import { useContext } from 'react'
+import { CountryContext, SearchContext } from '../App'
 
 export default function Countries() {
 	const countryList = useContext(CountryContext)
@@ -18,7 +15,7 @@ export default function Countries() {
 				<div className="country">
 					<h3 className="countryHeading">{country.name}</h3>
 					<a href={country.link}>
-						<img className="flag" src={country.flag} alt={country.flagAlt} />
+						<img className="flag" src={country.flag} alt={country.flagAlt} loading="lazy" />
 					</a>
 				</div>
 			)
