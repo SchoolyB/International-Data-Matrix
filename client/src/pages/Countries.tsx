@@ -10,12 +10,16 @@ export default function Countries() {
 			return country.name.toLowerCase().includes(search.value.toLowerCase())
 		})
 		.map((country) => {
-			console.log(country)
 			return (
 				<div className="country">
 					<h3 className="countryHeading">{country.name}</h3>
 					<a href={country.link}>
-						<img className="flag" src={country.flag} alt={country.flagAlt} loading="lazy" />
+						<img
+							className="flag"
+							src={country.flag}
+							alt={country.flagAlt}
+							loading="lazy"
+						/>
 					</a>
 				</div>
 			)
