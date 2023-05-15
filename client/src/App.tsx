@@ -35,11 +35,11 @@ export type StateRef<Value> = {
 }
 
 const App = () => {
-	const [countryList, setCountryList] = useState<CountryListData[]>([])
+	const [countryList, setCountryList] = useState([])
 	const search = useCoolerState('')
 
-	const fetchCountryList = useCallback(() => {
-		return api
+	useEffect(() => {
+		api
 			.get('/Countries')
 			.then((res) => {
 				setCountryList(res.data)
@@ -48,10 +48,6 @@ const App = () => {
 				console.error(error)
 			})
 	}, [])
-
-	useEffect(() => {
-		fetchCountryList()
-	}, [fetchCountryList])
 
 	return (
 		<CountryContext.Provider value={countryList}>
