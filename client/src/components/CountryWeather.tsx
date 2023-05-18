@@ -34,7 +34,7 @@ export default function CountryWeather(props: Props) {
 	}, [props.capital])
 	useEffect(() => {
 		fetchWeather()
-	}, [fetchWeather, props.capital])
+	}, [props.capital])
 
 	return (
 		<p className="genInfoLocationAndWeather">
