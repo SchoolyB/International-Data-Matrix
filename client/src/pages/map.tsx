@@ -11,7 +11,7 @@ const map = () => {
 	return (
 		<div className="map">
 			{!isLoaded ? (
-				<h1>Loading...</h1>
+				<h1 id="mapLoading">Loading...</h1>
 			) : (
 				<GoogleMap
 					mapContainerClassName="map-container"
