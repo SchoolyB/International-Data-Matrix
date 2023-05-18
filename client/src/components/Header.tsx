@@ -17,15 +17,24 @@ export default function Header() {
 			<Navbar id="navbar">
 				<Container>
 					<div id="navHead">
-						<Navbar.Brand id="logoText" href="/">
+						<Navbar.Brand
+							id="logoText"
+							href="/"
+						>
 							The International Data Matrix
 						</Navbar.Brand>
-						<div onClick={handleMenu}>{/* <HomeIcon /> */}</div>
+						<div onClick={handleMenu}>
+							<HomeIcon />
+						</div>
 					</div>
 					{openMenu && (
 						<div id="menu">
 							<Nav id="nav">
-								<Nav.Item id="item" icon={<HomeIcon />} href="/">
+								<Nav.Item
+									id="item"
+									icon={<HomeIcon />}
+									href="/"
+								>
 									Home
 								</Nav.Item>
 								<Nav.Item href="Countries">Country Selection</Nav.Item>
@@ -33,7 +42,10 @@ export default function Header() {
 								<Nav.Item href="Contact">Contact</Nav.Item>
 							</Nav>
 							<div id="searchContainer">
-								<form id="countryFilterForm" className="searchForm ">
+								<form
+									id="countryFilterForm"
+									className="searchForm "
+								>
 									<input
 										placeholder="Search Countries"
 										id="countryFilter"
