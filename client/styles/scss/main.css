@@ -211,11 +211,10 @@ u {
 
 #overAllContainer {
   display: grid;
-  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1em;
   justify-content: center;
   position: relative;
-  height: 60em;
-  overflow-y: scroll;
 }
 
 .countryHeading {
@@ -369,6 +368,16 @@ u {
 #pageNotFound {
   color: white;
   text-align: center;
+}
+
+.map {
+  height: 100vh;
+  width: 100vw;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
 }
 
 * {
