@@ -243,6 +243,26 @@ u {
   text-align: center;
 }
 
+#searchContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchForm {
+  color: white;
+}
+
+#countryFilter {
+  background-color: transparent;
+  color: #89939E;
+  font-size: 1rem;
+  border: solid #89939E 1px;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+}
+
 #welcomeContainer {
   display: grid;
   place-items: center;
@@ -345,26 +365,6 @@ u {
   font-weight: 300;
 }
 
-#searchContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.searchForm {
-  color: white;
-}
-
-#countryFilter {
-  background-color: transparent;
-  color: #89939E;
-  font-size: 1rem;
-  border: solid #89939E 1px;
-  border-radius: 25px;
-  padding: 0.5rem 1rem;
-  font-weight: 300;
-}
-
 #pageNotFound {
   color: white;
   text-align: center;
@@ -378,6 +378,11 @@ u {
 .map-container {
   height: 100%;
   width: 100%;
+}
+
+#mapLoading {
+  color: white;
+  text-align: center;
 }
 
 * {

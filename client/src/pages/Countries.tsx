@@ -26,6 +26,28 @@ export default function Countries() {
 		})
 	return (
 		<div>
+			<div id="searchBox">
+				<div id="searchContainer">
+					<form
+						id="countryFilterForm"
+						className="searchForm "
+					>
+						<input
+							placeholder="Search Countries"
+							id="countryFilter"
+							name="countryFilter"
+							type="text"
+							required
+							value={search.value}
+							onChange={(event) => {
+								search.value = event.target.value
+							}}
+						></input>
+					</form>
+				</div>
+				<br />
+				<br />
+			</div>
 			<div id="overAllContainer">{countryElement}</div>
 		</div>
 	)
