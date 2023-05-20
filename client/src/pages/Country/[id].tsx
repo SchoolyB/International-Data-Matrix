@@ -3,13 +3,9 @@ import { useParams } from 'react-router-dom'
 import { CountryData } from '../../types/countryData'
 import { getCountry } from '../../includes/countries'
 import CountryWeather from '../../components/CountryWeather'
-import getCountryHistory from '../../includes/countryTopicImports/countryHistory'
-import getCountryCulture from '../../includes/countryTopicImports/countryCulture'
-import getCountryGovernment from '../../includes/countryTopicImports/countryGovernment'
-import getCountryEconomy from '../../includes/countryTopicImports/countryEconomy'
-import getCountryReligion from '../../includes/countryTopicImports/countryReligion'
-import getCountryDemographics from '../../includes/countryTopicImports/countryDemographics'
-import getCountryGeography from '../../includes/countryTopicImports/countryGeography'
+import getCountryTopic from '../../includes/countryTopicImports/countryCulture'
+import MarkdownIt from 'markdown-it'
+
 // USING VITE'S GLOB METHOD TO STORE IMAGES FROM FOLDERS INTO VARIABLES
 const simpleCountryMaps = import.meta.glob('../../../assets/simpleMaps/*.png', {
 	eager: true,
@@ -27,7 +23,7 @@ export default function countryPage(
 	locatorMapAlter: string | undefined,
 ) {
 	const { id } = useParams<{ id: string }>()
-
+	const md = new MarkdownIt()
 	const [state, setState] = useState<CountryData>({
 		name: '',
 		nativeName: '',
@@ -47,46 +43,36 @@ export default function countryPage(
 		//population has a '?' so its not required
 	})
 
-	// BELOW THIS COMMENT Stores the data from the countryTopicData includes into state
-	const [culture, setCulture] = useState('')
-	const [demographics, setDemographics] = useState('')
-	const [economy, setEconomy] = useState('')
-	const [government, setGovernment] = useState('')
-	const [history, setHistory] = useState('')
-	const [religion, setReligion] = useState('')
-	const [geography, setGeography] = useState('')
+	const [error, setError] = useState<any>(null)
 
-	// ABOVE THIS COMMENT Stores the data from the countryTopicData includes into state
-
+	//A Record is a built in type that allows you to create an object with a key and value
+	const [topics, setTopics] = useState<Record<string, string>>({
+		history: '',
+		culture: '',
+		government: '',
+		economy: '',
+		geography: '',
+		religion: '',
+		demographics: '',
+	})
 	// Declaring several async functions that take the id of the current page as a param. Within the async functions we create a variable called new... that awaits the response the respective countryTopicImports includes file. We then call the set... functions and pass them the variable from the line above
-	const showAllTopics = async (id: string) => {
-		const newHistory = await getCountryHistory(id)
-		setHistory(newHistory)
-
-		const newCulture = await getCountryCulture(id)
-		setCulture(newCulture)
-
-		const newGovernment = await getCountryGovernment(id)
-		setGovernment(newGovernment)
-
-		const newEconomy = await getCountryEconomy(id)
-		setEconomy(newEconomy)
-
-		const newGeography = await getCountryGeography(id)
-		setGeography(newGeography)
-
-		const newReligion = await getCountryReligion(id)
-		setReligion(newReligion)
-
-		const newDemographics = await getCountryDemographics(id)
-		setDemographics(newDemographics)
+	const showAllTopics = async () => {
+		for (const topic of Object.keys(topics)) {
+			const data = await getCountryTopic(id!, topic).catch(
+				() => 'No Data Found', //if there is an error, fall back to 'No Data Found'
+			)
+			topics[topic] = md.render(data || '#### - Data Not Found -') //if data is undefined, fall back to 'No Data Found'
+		}
+		setTopics({ ...topics })
 	}
 
-	// CALLING THE show... FUNCTIONS AND PASSING THE ID OF THE THE CURRENT COUNTRY PAGE THAT THE USER IS ON
-	showAllTopics(id!)
+	// CALLING THE show...FUNCTIONS AND PASSING THE ID OF THE THE CURRENT COUNTRY PAGE THAT THE USER IS ON
 
 	//a '!' after a variable means this is definitely defined
-	const fetchData = useCallback(() => getCountry(id!).then(setState), [])
+	const fetchData = useCallback(
+		() => getCountry(id!).then(setState, setError).then(showAllTopics),
+		[],
+	)
 	useEffect(() => {
 		fetchData()
 	}, [fetchData])
@@ -140,6 +126,14 @@ export default function countryPage(
 	// set 'alt' attribute for each flag
 	const flagAltValue = `The Flag of ${state.name}`
 
+	if (error) {
+		return (
+			<div>
+				<h1 id="pageNotFound">404 - This Page Could Not Be Found</h1>
+			</div>
+		)
+	}
+
 	return (
 		// COUNTRY HEADER INFO
 		<div className="overallCountryInfoContainer">
@@ -157,7 +151,7 @@ export default function countryPage(
 					id="geography"
 				>
 					<h3>Geography</h3>
-					<p>{geography}</p>
+					<p dangerouslySetInnerHTML={{ __html: topics.geography }}></p>
 				</section>
 
 				{/* History */}
@@ -166,7 +160,7 @@ export default function countryPage(
 					id="history"
 				>
 					<h3>History</h3>
-					<p>{history}</p>
+					<p dangerouslySetInnerHTML={{ __html: topics.history }}></p>
 				</section>
 
 				{/* Demographics */}
@@ -175,7 +169,7 @@ export default function countryPage(
 					id="demographics"
 				>
 					<h3>Demographics</h3>
-					<p>{demographics}</p>
+					<p dangerouslySetInnerHTML={{ __html: topics.demographics }}></p>
 				</section>
 
 				{/* Culture */}
@@ -184,7 +178,7 @@ export default function countryPage(
 					id="culture"
 				>
 					<h3>Culture</h3>
-					<p>{culture}</p>
+					<p dangerouslySetInnerHTML={{ __html: topics.culture }}></p>
 				</section>
 
 				{/* Religion */}
@@ -193,7 +187,7 @@ export default function countryPage(
 					id="religion"
 				>
 					<h3>Religion</h3>
-					<p>{religion}</p>
+					<p dangerouslySetInnerHTML={{ __html: topics.religion }}></p>
 				</section>
 				{/* Government */}
 				<section
@@ -201,7 +195,7 @@ export default function countryPage(
 					id="government"
 				>
 					<h3>Government</h3>
-					<p>{government}</p>
+					<p dangerouslySetInnerHTML={{ __html: topics.government }}></p>
 				</section>
 
 				{/* Economy */}
@@ -210,7 +204,7 @@ export default function countryPage(
 					id="economy"
 				>
 					<h3>Economy</h3>
-					<p>{economy}</p>
+					<p dangerouslySetInnerHTML={{ __html: topics.economy }}></p>
 				</section>
 			</div>
 
@@ -231,7 +225,7 @@ export default function countryPage(
 					src={CurrentCountryLocatorMap}
 					alt={locatorMapAlter}
 				/>
-				<p className="genInfoRegion">
+				<div className="genInfoRegion">
 					<u>{state.name}</u> is located in the
 					<u>{state.subregion}</u> subregion of <u>{state.region}</u>
 					<br />
@@ -239,7 +233,7 @@ export default function countryPage(
 						The Population of <u>{state.name}</u> is is approx.
 						<u>{state.population}</u>
 					</p>
-				</p>
+				</div>
 				<p className="genInfoISOCodes ">
 					<u>{state.name}'s</u> 2 Digit Alpha code is:
 					<u>{state.alpha2Code}</u> and it's 3 Digit Alpha code is:
