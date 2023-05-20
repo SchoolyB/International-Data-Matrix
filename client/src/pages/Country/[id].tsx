@@ -142,6 +142,62 @@ export default function countryPage(
 				<h3 id="countryNativeName">a.k.a {state.nativeName}</h3>
 			</div>
 
+			{/* Start of information right side of screen */}
+			<div className="metaDataContainer">
+				<div className="countryFlagsAndMaps">
+					<img
+						id="countryInfoFlag"
+						src={state.flags.svg}
+						alt={flagAltValue}
+					/>
+					<img
+						id="simpleMap"
+						src={CurrentCountrySimpleMap}
+						alt={simpleMapAlter}
+					/>
+					<img
+						id="locatorMap"
+						src={CurrentCountryLocatorMap}
+						alt={locatorMapAlter}
+					/>
+				</div>
+				<div className="genInfoRegion">
+					<u>{state.name}</u> is located in the
+					<u>{state.subregion}</u> subregion of <u>{state.region}</u>
+					<br />
+					<p className="genInfoPopulation">
+						The Population of <u>{state.name}</u> is is approx.
+						<u>{state.population}</u>
+					</p>
+				</div>
+				<p className="genInfoISOCodes ">
+					<u>{state.name}'s</u> 2 Digit Alpha code is:
+					<u>{state.alpha2Code}</u> and it's 3 Digit Alpha code is:
+					<u>{state.alpha3Code}</u>
+				</p>
+
+				{/* Start of weather component from '../../components/CountryWeather.tsx' */}
+				<CountryWeather
+					capital={state.capital}
+					name={state.name}
+				/>
+				{/* End of weather component from '../../components/CountryWeather.tsx' */}
+
+				<p className="genInfoCurrency">
+					The National Currency of {state.name} Is: <br />
+					The <u>{currencyInfo?.name}</u> Represented As:
+					<u>
+						{currencyInfo?.symbol} and <u>{currencyInfo?.code}</u>
+					</u>
+					<br />
+				</p>
+				<p className="genInfoTimezones">
+					Timezones:
+					<br />
+					<u>{state.timezones}</u>
+				</p>
+			</div>
+
 			{/* TOPICS */}
 
 			{/* Geography */}
@@ -206,58 +262,6 @@ export default function countryPage(
 					<h3>Economy</h3>
 					<p dangerouslySetInnerHTML={{ __html: topics.economy }}></p>
 				</section>
-			</div>
-
-			{/* Start of information right side of screen */}
-			<div className="metaDataContainer">
-				<img
-					id="countryInfoFlag"
-					src={state.flags.svg}
-					alt={flagAltValue}
-				/>
-				<img
-					id="simpleMap"
-					src={CurrentCountrySimpleMap}
-					alt={simpleMapAlter}
-				/>
-				<img
-					id="locatorMap"
-					src={CurrentCountryLocatorMap}
-					alt={locatorMapAlter}
-				/>
-				<div className="genInfoRegion">
-					<u>{state.name}</u> is located in the
-					<u>{state.subregion}</u> subregion of <u>{state.region}</u>
-					<br />
-					<p className="genInfoPopulation">
-						The Population of <u>{state.name}</u> is is approx.
-						<u>{state.population}</u>
-					</p>
-				</div>
-				<p className="genInfoISOCodes ">
-					<u>{state.name}'s</u> 2 Digit Alpha code is:
-					<u>{state.alpha2Code}</u> and it's 3 Digit Alpha code is:
-					<u>{state.alpha3Code}</u>
-				</p>
-
-				{/* Start of weather component from '../../components/CountryWeather.tsx' */}
-				<CountryWeather
-					capital={state.capital}
-					name={state.name}
-				/>
-				{/* End of weather component from '../../components/CountryWeather.tsx' */}
-
-				<p className="genInfoCurrency">
-					The National Currency of {state.name} Is: <br />
-					The <u>{currencyInfo?.name}</u> Represented As:
-					<u>
-						{currencyInfo?.symbol} and <u>{currencyInfo?.code}</u>
-					</u>
-					<br />
-				</p>
-				<p className="genInfoTimezones">
-					Timezones: <u>{state.timezones}</u>
-				</p>
 			</div>
 		</div>
 	)
