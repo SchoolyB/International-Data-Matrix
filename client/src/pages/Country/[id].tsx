@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { CountryData } from '../../types/countryData'
 import { getCountry } from '../../includes/countries'
 import CountryWeather from '../../components/CountryWeather'
-import getCountryTopic from '../../includes/countryTopicImports/countryCulture'
+import getCountryTopic from '../../includes/countryTopicImports/countryTopics'
 import MarkdownIt from 'markdown-it'
 
 // USING VITE'S GLOB METHOD TO STORE IMAGES FROM FOLDERS INTO VARIABLES
