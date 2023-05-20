@@ -37,14 +37,14 @@
 
 .metaDataContainer {
   position: relative;
-  bottom: 45em;
+color: black;
   display: flex;
-  justify-content: right;
   background-color: #89939E;
   flex-direction: column;
-  width: 22%;
+  width: 25%;
   float: right;
   border-radius: 25px;
+  margin-right: .5em;
 }
 
 .overallCountryInfoContainer {
@@ -54,6 +54,13 @@
 
 
 u {
-  color: white;
-  font-size: 18px;
+  font-size: 1.2em;
+}
+
+.countryFlagsAndMaps{
+
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 25px;
 }
