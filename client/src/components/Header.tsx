@@ -1,13 +1,9 @@
 import HomeIcon from '@rsuite/icons/legacy/Home'
 import { useContext, useState } from 'react'
 import { Nav, Navbar } from 'rsuite'
-import { SearchContext } from '../App'
 import Container from './helpers/Container'
-import { ChangeEventHandler } from 'react'
 
 export default function Header() {
-	const search = useContext(SearchContext)
-
 	const [openMenu, setOpenMenu] = useState(false)
 
 	const handleMenu = () => setOpenMenu((state) => !state)

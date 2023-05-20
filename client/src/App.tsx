@@ -53,7 +53,6 @@ const App = () => {
 		<CountryContext.Provider value={countryList}>
 			<SearchContext.Provider value={search}>
 				<Header />
-				{search.value}
 				{useRoutes(routes)}
 				<Footer />
 			</SearchContext.Provider>
