@@ -1,6 +1,6 @@
-export default function getCountryGeography(id: string) {
+export default function getCountryTopic(id: string, type: string) {
 	// import the contents of any file within the countryTopics directory by its {id} then exports it
-	return import(`../countryTopics/${id}/geography.txt?raw`).then(
+	return import(`../countryTopics/${id}/${type}.txt?raw`).then(
 		(mod) => mod?.default,
 	) //change the result of what is read form .txt file
 	// without this the import would return the module object with excess information
