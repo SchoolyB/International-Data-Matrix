@@ -75,8 +75,7 @@ export default function Footer() {
 					</a>
 				</li>
 
-				{/* map icon */}
-				<li id="footerContactIcon">
+				<li>
 					<a
 						title="Map"
 						href="Map"
@@ -84,7 +83,7 @@ export default function Footer() {
 						<img
 							title="Map"
 							className="footerIcon"
-							id="ContactIcon"
+							id="MapIcon"
 							src={map}
 						/>
 					</a>

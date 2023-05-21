@@ -1,7 +1,9 @@
-import HomeIcon from '@rsuite/icons/legacy/Home'
 import { useContext, useState } from 'react'
 import { Nav, Navbar } from 'rsuite'
+import { SearchContext } from '../App'
 import Container from './helpers/Container'
+import MenuIcon from '@rsuite/icons/Menu'
+import { ChangeEventHandler } from 'react'
 
 export default function Header() {
 	const [openMenu, setOpenMenu] = useState(false)
@@ -20,7 +22,7 @@ export default function Header() {
 							The International Data Matrix
 						</Navbar.Brand>
 						<div onClick={handleMenu}>
-							<HomeIcon />
+							<MenuIcon />
 						</div>
 					</div>
 					{openMenu && (
@@ -28,7 +30,6 @@ export default function Header() {
 							<Nav id="nav">
 								<Nav.Item
 									id="item"
-									icon={<HomeIcon />}
 									href="/"
 								>
 									Home
@@ -36,6 +37,7 @@ export default function Header() {
 								<Nav.Item href="Countries">Country Selection</Nav.Item>
 								<Nav.Item href="Translator">Translator</Nav.Item>
 								<Nav.Item href="Contact">Contact</Nav.Item>
+								<Nav.Item href="Map">Map</Nav.Item>
 							</Nav>
 						</div>
 					)}
