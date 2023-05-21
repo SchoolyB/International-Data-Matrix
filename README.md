@@ -8,24 +8,24 @@
 - [NodeJS](https://nodejs.org/en/)
 - [Express.js](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
-- [npm](https://www.npmjs.com/)
- ##### <i> The following npm packages:</i>
+- [yarn](https://yarnpkg.com/)
+ ##### <i> The following yarn packages:</i>
 - <strong><i>Client Side</i></strong>
-  - [sass](https://www.npmjs.com/package/sass)
-  - [google-map-react](https://www.npmjs.com/package/google-map-react)
-  - [rsuite](https://www.npmjs.com/package/rsuite)
-  - [vite-pages-plugin](https://www.npmjs.com/package/vite-plugin-pages?activeTab=readme)
-  - [react-dom](https://www.npmjs.com/package/react-dom)
-  - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
-  - [axios](https://www.npmjs.com/package/axios)
-  - [markdown-it](https://www.npmjs.com/package/markdown-it)
+  - [sass](https://yarnpkg.com/?q=sass&p=1)
+  - [google-map-react](https://yarnpkg.com/package/google-map-react)
+  - [rsuite](https://yarnpkg.com/package/rsuite)
+  - [vite-plugin-pages](https://yarnpkg.com/package/vite-plugin-pages)
+  - [react-dom](https://www.yarnpkg.com/package/react-dom)
+  - [react-router-dom](https://www.yarnpkg.com/package/react-router-dom)
+  - [axios](https://www.yarnpkg.com/package/axios)
+  - [markdown-it](https://www.yarnpkg.com/package/markdown-it)
 - <strong><i>Server Side</i></strong>
-  - [dotenv](https://github.com/motdotla/dotenv)
-  - [nodemon](https://www.npmjs.com/package/nodemon)
-  - [express](https://expressjs.com/)
-  - [mongoose](https://www.npmjs.com/package/mongoose)
-  - [axios](https://www.npmjs.com/package/axios)
-  - [deepl node](https://www.npmjs.com/package/deepl-node)
+  - [dotenv](https://yarnpkg.com/package/dotenv)
+  - [nodemon](https://www.yarnpkg.com/package/nodemon)
+  - [express](https://yarnpkg.com/package/express)
+  - [mongoose](https://www.yarnpkg.com/package/mongoose)
+  - [axios](https://www.yarnpkg.com/package/axios)
+  - [deepl node](https://www.yarnpkg.com/package/deepl-node)
 
 <br/>
 
