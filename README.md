@@ -207,23 +207,23 @@ Builds map using the Google Maps API and the [google-map-react](https://www.npmj
 ```JSX
 
 const map = () => {
-	const { isLoaded } = useLoadScript({
-		googleMapsApiKey: `${mapKey}` || '',
-	})
-	const center = useMemo(() => ({ lat: 0, lng: 0 }), [])
+const { isLoaded } = useLoadScript({
+  googleMapsApiKey: `${mapKey}` || '',
+})
+const center = useMemo(() => ({ lat: 0, lng: 0 }), [])
 
-	return (
-		<div className="map">
-			{!isLoaded ? (
-				<h1 id="mapLoading">Loading...</h1>
-			) : (
-				<GoogleMap
-					mapContainerClassName="map-container"
-					center={center}
-					zoom={3.5}
-				></GoogleMap>
-			)}
-		</div>
-	)
+return (
+<div className="map">
+  {!isLoaded ? (
+  <h1 id="mapLoading">Loading...</h1>
+) : (
+  <GoogleMap
+    mapContainerClassName="map-container"
+    center={center}
+    zoom={3.5}
+  ></GoogleMap>
+  )}
+</div>
+  )
 }
 ```
