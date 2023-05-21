@@ -200,4 +200,30 @@ This simple contact page allows users to submit their feedback that will then be
         <input class="contactInput" type="text" name = "name" placeholder="Enter your name"></input>
       </label>
 ```
+## [The Map Page](https://international-data-matrix.vercel.app/Map) -
 
+Builds map using the Google Maps API and the [google-map-react](https://www.npmjs.com/package/google-map-react) package
+
+```JSX
+
+const map = () => {
+	const { isLoaded } = useLoadScript({
+		googleMapsApiKey: `${mapKey}` || '',
+	})
+	const center = useMemo(() => ({ lat: 0, lng: 0 }), [])
+
+	return (
+		<div className="map">
+			{!isLoaded ? (
+				<h1 id="mapLoading">Loading...</h1>
+			) : (
+				<GoogleMap
+					mapContainerClassName="map-container"
+					center={center}
+					zoom={3.5}
+				></GoogleMap>
+			)}
+		</div>
+	)
+}
+```
