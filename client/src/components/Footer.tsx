@@ -1,7 +1,8 @@
-import home from '../../assets/footerIcons/home.svg'
-import contact from '../../assets/footerIcons/mail.svg'
-import documentation from '../../assets/footerIcons/page.svg'
-import translator from '../../assets/footerIcons/comments.svg'
+import home from '../../assets/footerIcons/home.png'
+import contact from '../../assets/footerIcons/contact.png'
+import documentation from '../../assets/footerIcons/documentation.png'
+import translator from '../../assets/footerIcons/translate.png'
+import map from '../../assets/footerIcons/map.png'
 import React from 'react'
 
 export default function Footer() {
@@ -16,8 +17,16 @@ export default function Footer() {
 			<ul id="footerIconContainer">
 				{/* home icon */}
 				<li>
-					<a title="Home" href="/">
-						<img title="Home" className="footerIcon" id="homeIcon" src={home} />
+					<a
+						title="Home"
+						href="/"
+					>
+						<img
+							title="Home"
+							className="footerIcon"
+							id="homeIcon"
+							src={home}
+						/>
 					</a>
 				</li>
 
@@ -38,7 +47,10 @@ export default function Footer() {
 
 				{/* translator icon */}
 				<li>
-					<a title="Translator" href="Translator">
+					<a
+						title="Translator"
+						href="Translator"
+					>
 						<img
 							title="Translator"
 							className="footerIcon"
@@ -50,12 +62,29 @@ export default function Footer() {
 
 				{/* contact icon */}
 				<li id="footerContactIcon">
-					<a title="Contact" href="Contact">
+					<a
+						title="Contact"
+						href="Contact"
+					>
 						<img
 							title="Contact"
 							className="footerIcon"
 							id="ContactIcon"
 							src={contact}
+						/>
+					</a>
+				</li>
+
+				<li>
+					<a
+						title="Map"
+						href="Map"
+					>
+						<img
+							title="Map"
+							className="footerIcon"
+							id="MapIcon"
+							src={map}
 						/>
 					</a>
 				</li>

@@ -8,16 +8,29 @@
 - [NodeJS](https://nodejs.org/en/)
 - [Express.js](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
-- [npm](https://www.npmjs.com/)
-<i>The following npm packages</i>
-  - [dotenv](https://github.com/motdotla/dotenv)
-  - [nodemon](https://www.npmjs.com/package/nodemon)
-  - [Express](https://expressjs.com/)
-  - [mongoose](https://www.npmjs.com/package/mongoose)
-  - [deepl node](https://www.npmjs.com/package/deepl-node)
+- [yarn](https://yarnpkg.com/)
+ ##### <i> The following yarn packages:</i>
+- <strong><i>Client Side</i></strong>
+  - [sass](https://yarnpkg.com/?q=sass&p=1)
+  - [google-map-react](https://yarnpkg.com/package/google-map-react)
+  - [rsuite](https://yarnpkg.com/package/rsuite)
+  - [vite-plugin-pages](https://yarnpkg.com/package/vite-plugin-pages)
+  - [react-dom](https://www.yarnpkg.com/package/react-dom)
+  - [react-router-dom](https://www.yarnpkg.com/package/react-router-dom)
+  - [axios](https://www.yarnpkg.com/package/axios)
+  - [markdown-it](https://www.yarnpkg.com/package/markdown-it)
+- <strong><i>Server Side</i></strong>
+  - [dotenv](https://yarnpkg.com/package/dotenv)
+  - [nodemon](https://www.yarnpkg.com/package/nodemon)
+  - [express](https://yarnpkg.com/package/express)
+  - [mongoose](https://www.yarnpkg.com/package/mongoose)
+  - [axios](https://www.yarnpkg.com/package/axios)
+  - [deepl node](https://www.yarnpkg.com/package/deepl-node)
 
-- Frontend hosted on [Vercel](https://www.vercel.com/)
-- Backend hosted on [Render](https://www.render.com/)
+<br/>
+
+- Client hosted on [Vercel](https://www.vercel.com/)
+- Server hosted on [Render](https://www.render.com/)
 
 ## [The Home Page](https://international-data-matrix.vercel.app/) -
  ###### "Simplistic Design"
@@ -33,9 +46,10 @@ Located top right of the header
 
  - Footer Icons
     - [Home](https://international-data-matrix.vercel.app/)
-    - [Documentation](https://github.com/SchoolyB/International-Data-Matrix#readme)
     - [Translator](https://international-data-matrix.vercel.app/Translator)
     - [Contact](https://international-data-matrix.vercel.app/Contact)
+    - [Map](https://international-data-matrix.vercel.app/Map)
+    - [Documentation](https://github.com/SchoolyB/International-Data-Matrix#readme)
 
 ### The Search Bar
 [Header.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/components/Header.tsx)
@@ -125,7 +139,7 @@ Every country that is currently supported in the International Data Matrix has i
 ## [The Translator](https://international-data-matrix.vercel.app/Translator) -
 Built using the [DeepL](https://www.deepl.com/translator) translator API.  ***NOTE THAT CURRENTLY THE ONLY SUPPORTED INPUT LANGUAGE IS ENGLISH***
 
-[translateRoute.js](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/src/routes/translateRoute.js)
+[translateRoute.ts](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/src/routes/translateRoute.ts)
 ```JavaScript
 const deepl = require("deepl-node");
 app.post("/translator", (request, response) => {
@@ -150,7 +164,7 @@ app.post("/translator", (request, response) => {
 });
 ```
 
-[App.js](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/src/app.js)
+[App.ts](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/src/app.ts)
 
 ```JavaScript
 const deepl = require("deepl-node");
@@ -186,4 +200,30 @@ This simple contact page allows users to submit their feedback that will then be
         <input class="contactInput" type="text" name = "name" placeholder="Enter your name"></input>
       </label>
 ```
+## [The Map Page](https://international-data-matrix.vercel.app/Map) -
 
+Builds map using the Google Maps API and the [google-map-react](https://www.npmjs.com/package/google-map-react) package
+
+```JSX
+
+const map = () => {
+const { isLoaded } = useLoadScript({
+  googleMapsApiKey: `${mapKey}` || '',
+})
+const center = useMemo(() => ({ lat: 0, lng: 0 }), [])
+
+return (
+<div className="map">
+  {!isLoaded ? (
+  <h1 id="mapLoading">Loading...</h1>
+) : (
+  <GoogleMap
+    mapContainerClassName="map-container"
+    center={center}
+    zoom={3.5}
+  ></GoogleMap>
+  )}
+</div>
+  )
+}
+```
