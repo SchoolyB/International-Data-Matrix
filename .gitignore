@@ -8,3 +8,5 @@ node_modules
 .env.*
 .vscode/**/*
 .prettierrc
+yarn-error.log
+```

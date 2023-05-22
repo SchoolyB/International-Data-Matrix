@@ -139,7 +139,7 @@ export default function countryPage(
 		<div className="overallCountryInfoContainer">
 			<div className="countryInfo">
 				<h1 id="countryEnglishName">{state.name}</h1>
-				<h3 id="countryNativeName">a.k.a {state.nativeName}</h3>
+				<h4 id="countryNativeName">{state.nativeName}</h4>
 			</div>
 
 			{/* Start of information right side of screen */}
