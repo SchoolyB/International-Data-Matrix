@@ -1,25 +1,27 @@
-import { Router } from 'express'
 import * as deepl from 'deepl-node'
+import { FastifyInstance } from 'fastify/types/instance'
+import dotenv from 'dotenv'
 
-const router = Router()
-router.post('', async (request: any, response: any) => {
-	const outputLanguage = request.body.outputLanguage //the language we want the output to be
-	const sourceText = request.body.sourceText
-	const translator = new deepl.Translator(`${process.env.TRANSLATOR_KEY}`)
+dotenv.config()
 
-	const results = await translator
-		.translateText(sourceText, null, outputLanguage)
-		.then((result: any) => {
-			console.log(result.text)
-			// get response on page
-			const responseBody = {
-				text: result.text,
-			}
-			response.json(responseBody)
-		})
-		.catch((error: any) => {
-			console.error(error)
-		})
-})
+export async function translateRoute(instance: FastifyInstance) {
+  instance.post('/', async (request: any, response: any) => {
+    const outputLanguage = request.body.outputLanguage //the language we want the output to be
+    const sourceText = request.body.sourceText
+    const translator = new deepl.Translator(`${process.env.TRANSLATOR_KEY}`)
 
-export default router
+    const results = await translator
+      .translateText(sourceText, null, outputLanguage)
+      // console.log(results)
+      .then((result: any) => {
+        const responseBody = {
+          text: result.text,
+        }
+        // get response on page
+        response.send(responseBody)
+      })
+      .catch((error: any) => {
+        console.error(error)
+      })
+  })
+}

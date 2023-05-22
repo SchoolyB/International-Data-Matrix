@@ -1,11 +1,9 @@
-import Router from 'express'
 import Country from '../models/Country'
-const router = Router()
-router.get('/', (request: any, response: any) => {
-	Country.find({}, (error: any, record: any) => {
-		if (error) return response.status(500).json(error)
-		return response.json(record)
-	})
-})
+import { FastifyInstance } from 'fastify'
 
-export default router
+export async function countriesRoute(instance: FastifyInstance) {
+  instance.get('/', async (_, reply) => {
+    const result = await Country.find({})
+    return result
+  })
+}
