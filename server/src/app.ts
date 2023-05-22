@@ -1,10 +1,9 @@
 import fastify from 'fastify'
 import cors from '@fastify/cors'
-import { FastifyInstance } from 'fastify/types/instance'
-import mongodb from '@fastify/mongodb'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import { countriesRoute } from './routes/countriesRoute'
+import { translateRoute } from './routes/translateRoute'
 
 dotenv.config()
 
@@ -22,6 +21,10 @@ const start = async () => {
 
   await app.register(countriesRoute, {
     prefix: '/Countries',
+  })
+
+  await app.register(translateRoute, {
+    prefix: '/Translator',
   })
 
   try {
