@@ -14,11 +14,10 @@ export async function translateRoute(instance: FastifyInstance) {
       .translateText(sourceText, null, outputLanguage)
       // console.log(results)
       .then((result: any) => {
-        console.log(result.text)
-        // get response on page
         const responseBody = {
           text: result.text,
         }
+        // get response on page
         response.send(responseBody)
       })
       .catch((error: any) => {
