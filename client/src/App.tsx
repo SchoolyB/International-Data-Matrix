@@ -12,51 +12,51 @@ inject()
 // VERCEL ANALYTICS STUFF
 
 export function useCoolerState<Value>(initialValue: Value) {
-	const [value, setValue] = useState(initialValue)
+  const [value, setValue] = useState(initialValue)
 
-	return {
-		get value() {
-			return value
-		},
-		set value(value) {
-			setValue(value)
-		},
-	}
+  return {
+    get value() {
+      return value
+    },
+    set value(value) {
+      setValue(value)
+    },
+  }
 }
 
 export const CountryContext = createContext<CountryListData[]>([])
 
 export const SearchContext = createContext<StateRef<string>>({
-	value: '',
+  value: '',
 })
 
 export type StateRef<Value> = {
-	value: Value
+  value: Value
 }
 
 const App = () => {
-	const [countryList, setCountryList] = useState([])
-	const search = useCoolerState('')
+  const [countryList, setCountryList] = useState([])
+  const search = useCoolerState('')
 
-	useEffect(() => {
-		api
-			.get('/Countries')
-			.then((res) => {
-				setCountryList(res.data)
-			})
-			.catch((error) => {
-				console.error(error)
-			})
-	}, [])
+  useEffect(() => {
+    api
+      .get('/Countries')
+      .then(res => {
+        setCountryList(res.data)
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }, [])
 
-	return (
-		<CountryContext.Provider value={countryList}>
-			<SearchContext.Provider value={search}>
-				<Header />
-				{useRoutes(routes)}
-				<Footer />
-			</SearchContext.Provider>
-		</CountryContext.Provider>
-	)
+  return (
+    <CountryContext.Provider value={countryList}>
+      <SearchContext.Provider value={search}>
+        <Header />
+        {useRoutes(routes)}
+        <Footer />
+      </SearchContext.Provider>
+    </CountryContext.Provider>
+  )
 }
 export default App
