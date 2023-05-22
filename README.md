@@ -1,5 +1,7 @@
 ![TIDM Logo](./client/assets//Branding/logo-no-background.png)
 
+  **Contributing**
+Please see [CONTRIBUTING.md](https://github.com/SchoolyB/International-Data-Matrix/blob/master/CONTRIBUTING.md)
 ### The Tech Stack -
 - [TypeScript](https://www.typescriptlang.org/)
 - [JavaScript](https://www.javascript.com/)
