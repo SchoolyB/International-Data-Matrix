@@ -20,12 +20,13 @@
   - [axios](https://www.yarnpkg.com/package/axios)
   - [markdown-it](https://www.yarnpkg.com/package/markdown-it)
 - <strong><i>Server Side</i></strong>
+  - [deepl node](https://www.yarnpkg.com/package/deepl-node)
   - [dotenv](https://yarnpkg.com/package/dotenv)
   - [nodemon](https://www.yarnpkg.com/package/nodemon)
-  - [express](https://yarnpkg.com/package/express)
   - [mongoose](https://www.yarnpkg.com/package/mongoose)
-  - [axios](https://www.yarnpkg.com/package/axios)
-  - [deepl node](https://www.yarnpkg.com/package/deepl-node)
+  - [fastify](https://yarnpkg.com/package/fastify)
+  - [fastify/mongodb](https://yarnpkg.com/package/@fastify/mongodb)
+  - [fastify/cors](https://yarnpkg.com/package/@fastify/cors)
 
 <br/>
 
