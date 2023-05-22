@@ -15,8 +15,8 @@ const start = async () => {
   await mongoose.connect(`${process.env.DATA_BASE}`)
 
   await app.register(cors, {
-    // options: 'https://international-data-matrix.vercel.app' //for production
-    origin: 'http://localhost:5173', //for development
+    origin: 'https://international-data-matrix.vercel.app', //for production
+    // origin: 'http://localhost:5173', //for development
   })
 
   await app.register(countriesRoute, {
