@@ -25,7 +25,8 @@
 
 <p><b>Bug Reporting</b></p>
 
-1.If the issue pertains to a bug that you or someone else has found prefix the issue with `Bug:` Following the colon add a brief description of the bug. <i>Example:</i>
+1. If the issue pertains to a bug that you or someone else has found prefix the issue with `Bug:` Following the colon add a brief description of the bug. <i>Example:</i>
 ```Bug: Country names showing as {state.name} rather than actual names ```
+
 2. Add a comment explaining where the bug was found. This can be done in text or a screenshot. Include if have been able to recreate the bug and the steps taken to do so. ***NOTE*** If you have have guidance or thoughts on a possible course of action to fix the bug add it to the comment as well. <i>Example:</i>
 ```I found this bug when looking at https://international-data-matrix.vercel.app/Country/us.  The name of the country should be appearing but all I am seeing is {state.name}. Not sure how exactly to fix it but maybe its in the [id].tsx file```
