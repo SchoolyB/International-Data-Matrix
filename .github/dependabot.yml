@@ -5,14 +5,13 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "./client" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "./client"
     schedule:
       interval: "daily"
 
-
-  - package-ecosystem: "npm" # See documentation for possible values
-      directory: "./server" # Location of package manifests
-      schedule:
-        interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "./server"
+    schedule:
+      interval: "daily"
 
