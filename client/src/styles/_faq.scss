@@ -1,0 +1,29 @@
+#faqContainer{
+  color: white;
+}
+
+#faqContainer>h1{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+.faqQuestion{
+  margin-bottom: 2rem;
+  // background-color: black;
+
+}
+
+.faqQuestionHeading{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+.faqQuestionParagraph{
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
