@@ -33,6 +33,8 @@
 #renderedBody {
   background: linear-gradient(#000000aa, #000000aa),
     url("../../assets/backgroundImage/flagOfTheWorld.png");
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 0px);
 }
 
 #mainLogo {
