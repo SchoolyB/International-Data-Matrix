@@ -108,6 +108,25 @@ export default function FAQ() {
               information about a country.
             </p>
           </div>
+          <div id='faq7' className='faqQuestion'>
+            <h2 className='faqQuestionHeading'>
+              How do I contribute to the International Data Matrix?
+            </h2>
+            <p className='faqQuestionParagraph'>
+              To contribute to the International Data Matrix you can submit a
+              start by reading the CONTRIBUTING.md in the International Data
+              Matrix GitHub Repository. The International Data Matrix GitHub
+              repository can be found by clicking
+              <a
+                href='https://github.com/SchoolyB/International-Data-Matrix/blob/master/CONTRIBUTING.md'
+                target='_blank'
+              >
+                <i>here</i>
+              </a>
+              or by clicking the documentation icon in the footer of the
+              website.
+            </p>
+          </div>
         </div>
       </div>
     </>
