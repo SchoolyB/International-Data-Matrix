@@ -1,23 +1,24 @@
 #faqContainer{
-  color: white;
+
   // background-color: red;
   display: flex;
   flex-direction: column;
+  // background-color: white;
 }
 
-#faqContainer>h1{
-  font-size: 2rem;
-  font-weight: 700;
-  // margin-bottom: 1rem;
+#faqMainHeading{
+  font-size: 3rem;
   text-align: center;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+    color: white;
 }
-
-
 
 .faqQuestionHeading{
   font-size: 2rem;
   font-weight: 700;
-  // margin-bottom: .5rem;
+  margin-top: .5rem;
 }
 
 .faqQuestionParagraph{
@@ -28,22 +29,42 @@
 
 
 
-
-
 .faqRowContainer{
   display: flex;
   flex-direction: column;
- border: solid 1px red;
+//  border: solid 1px red;
 
 }
 
 
 .faqRow{
   display: flex;
-border: solid 1px red;
+// border: solid 1px red;
 }
 
 
+.faqQuestion > h3 {
+
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.faqQuestion>p {
+
+  // text-align: center;
+  font-size: 1.2rem;
+}
+
 .faqQuestion {
-border: solid 1px red;
+background-color: white;
+width: 50rem;
+height: auto;
+padding: 2rem;
+margin: 2rem;
+}
+
+.faqQuestionParagraph{
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 2rem;
 }
