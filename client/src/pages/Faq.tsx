@@ -27,7 +27,7 @@ export default function FAQ() {
               </h3>
               <p className='faqQuestionParagraph'>
                 The International Data Matrix has several features that allow
-                users gain more knowledge and understanding about a country.
+                users to gain more knowledge and understanding about a country.
                 Currently those features include:
                 <br />
                 <br />
