@@ -28,11 +28,11 @@ export default function Header() {
                 <Nav.Item id='item' href='/'>
                   Home
                 </Nav.Item>
-                <Nav.Item href='Countries'>Country Selection</Nav.Item>
-                <Nav.Item href='Translator'>Translator</Nav.Item>
-                <Nav.Item href='Contact'>Contact</Nav.Item>
-                <Nav.Item href='Map'>Map</Nav.Item>
-                <Nav.Item href='FAQ'>FAQ</Nav.Item>
+                <Nav.Item href='/Countries'>Country Selection</Nav.Item>
+                <Nav.Item href='/Translator'>Translator</Nav.Item>
+                <Nav.Item href='/Contact'>Contact</Nav.Item>
+                <Nav.Item href='/Map'>Map</Nav.Item>
+                <Nav.Item href='/FAQ'>FAQ</Nav.Item>
               </Nav>
             </div>
           )}
