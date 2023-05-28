@@ -1,68 +1,68 @@
-$darkGray : #575757;
-$lightGray:#89939E;
+$darkGray: #575757;
+$lightGray: #89939e;
 $middle: center;
 
-.overallContactContainer{
+.overallContactContainer {
   text-align: $middle;
   display: flex;
   justify-content: $middle;
-}
+  padding: 2rem 0;
 
-#contactContainer{
-  margin: auto;
-  padding-top: 1.5em;
-  text-align: $middle;
-  display: flex;
-  flex-direction: column;
-  background-color: $lightGray;
-  border-radius: 25px;
-  color: $darkGray;
-  width: 25%;
-  margin-bottom: 5em;
-  margin-top: 1em;
-  padding-bottom: 3em;
-  box-shadow: 5px 10px 18px;
-}
+  #contactContainer {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
 
-.contactInput {
-  border: none;
-  font-size: 25.3px;
-  border-radius: 25px;
-  margin-bottom: .3em;
-  padding-left: .3em;
-  font-family: Raleway;
-  font-weight: 800;
-  color: $darkGray;
-}
+    h1 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
 
-#contactTextArea {
-  resize: none;
-  font-size: 18px;
-  width: 14.9em;
-  border-radius: 25px;
-  padding-left: .5em;
-  font-family: Raleway;
-  font-weight: 800;
-  color: $darkGray;
-}
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
 
+      input {
+        width: 100%;
+        border: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        padding: 0.5em;
+        color: $darkGray;
 
-#contactSubmitBtn {
-  background-image: url("../../assets/contactPageImages/paperPlane.png");
-  border-radius: 25px;
-  margin-right: 0.1em;
-  margin-top: 1em;
-  height: 3em;
-  width: 20em;
-  background-position: $middle;
-  background-repeat: no-repeat;
-  background-size: contain;
-  box-shadow: 5px 10px 18px black
-}
+        &:focus {
+          outline: none;
+        }
+      }
 
-#contactSubmitBtn:hover {
-  cursor: pointer;
-  background-color: $lightGray;
+      #contactTextArea {
+        width: 100%;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        color: $darkGray;
+        padding: 0.5em;
+      }
 
+      #contactSubmitBtn {
+        background-image: url("../../assets/contactPageImages/paperPlane.png");
+        border-radius: 5px;
+        width: 100%;
+        height: 3em;
 
+        background-position: $middle;
+        background-repeat: no-repeat;
+        background-size: contain;
+        box-shadow: 5px 10px 18px black;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $lightGray;
+        }
+      }
+    }
+  }
 }
