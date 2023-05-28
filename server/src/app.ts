@@ -1,5 +1,6 @@
 import fastify from 'fastify'
 import cors from '@fastify/cors'
+import limit from '@fastify/rate-limit'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import { countriesRoute } from './routes/countriesRoute'
@@ -17,6 +18,11 @@ const start = async () => {
   await app.register(cors, {
     origin: 'https://international-data-matrix.vercel.app', //for production
     // origin: 'http://localhost:5173', //for development
+  })
+  // Rate limiter
+  await app.register(limit, {
+    max: 50, //limits each IP to 50 requests per windowMs
+    timeWindow: '1 minute',
   })
 
   await app.register(countriesRoute, {

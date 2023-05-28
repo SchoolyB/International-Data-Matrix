@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # Fetch and update latest `npm` packages
+  - package-ecosystem: npm
+    directory: '/client'
+    schedule:
+      interval: daily
+      time: '00:00'
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: npm
+    directory: '/server'
+    schedule:
+      interval: daily
+      time: '00:00'
+    open-pull-requests-limit: 10
+  # Added to see if directory needs to be root
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '00:00'
+    open-pull-requests-limit: 10

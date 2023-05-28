@@ -7,6 +7,7 @@
 @import 'header';
 @import 'pageNotFound';
 @import 'map';
+@import 'faq';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -33,6 +34,8 @@
 #renderedBody {
   background: linear-gradient(#000000aa, #000000aa),
     url("../../assets/backgroundImage/flagOfTheWorld.png");
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 0px);
 }
 
 #mainLogo {

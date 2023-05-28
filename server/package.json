@@ -16,6 +16,7 @@
   "dependencies": {
     "@fastify/cors": "^8.2.1",
     "@fastify/mongodb": "^7.0.0",
+    "@fastify/rate-limit": "^8.0.0",
     "@types/express": "^4.17.17",
     "deepl-node": "^1.7.2",
     "dotenv": "^16.0.3",
