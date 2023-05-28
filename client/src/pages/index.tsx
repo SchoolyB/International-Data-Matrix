@@ -1,12 +1,6 @@
 import axios from 'axios'
 import Container from '../components/helpers/Container'
 
-const getCountry = () => {
-  axios.get('https://restcountries.com/v2/alpha/by').then(res => {})
-}
-
-getCountry()
-
 export default function Home() {
   return (
     <Container>
