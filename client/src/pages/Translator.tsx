@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { api } from '../includes/api'
+import translateIcon from '../../assets/translatorPageImages/translation.png'
 
 export default function Translator() {
   const [sourceText, setSourceText] = useState('')
@@ -42,7 +43,7 @@ export default function Translator() {
                     <img
                       alt='A submit button'
                       className='translateIcon'
-                      src='../../assets/translatorPageImages/translation.png'
+                      src={translateIcon}
                     />
                   </button>
                 </div>
