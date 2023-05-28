@@ -1,100 +1,165 @@
-$color: white;
-#fullTranslateContainer {
-
-  height: 40em;
-  margin-top: -10em;
+.translatorContainer{
+  margin-top: 2rem ;
+  margin-bottom: 2.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: .5em;
+
+
 }
 
-#translateForm {
+.translatorForm {
 
+  height: 35rem;
+  width: 100%;
   display: flex;
-  padding-top: 4em;
-  border-radius: 25px;
-  flex-direction: row;
   justify-content: center;
-  /* background-color: #89939E; */
-  /* box-shadow: 5px 10px 18px black */
+  margin: auto
 }
 
-#translateBtn {
+.translatorBoxes {
+  height: auto;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  margin: auto;
+}
+
+.translateBtn { /*TODO: NEED TO CHANGE THIS TO A REAL BUTTON OR LITERALLY ANYTHING DIFFERENT*/
   height: 5em;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-top: 13em;
-  background-image: url("../../assets/translatorPageImages/translation.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 9em;
+  margin: auto;
+  width: 6em;
   height: 6em;
-  background-color: transparent;
-  border: none;
+  // background-color: transparent;
   border-radius: 50px;
-  filter: invert($color, $weight:100%)
+  background-color: transparent;
+ }
+
+.translatorTextAreas {
+  resize: none;
+  height: 15rem;
+  width: 30rem;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 5rem;
+  border-radius: 25px;
+  padding: auto;
+  box-shadow: 5px 10px 18px black;
+  font-family: Raleway;
+  padding: .5rem;
+  color: black;
+
 }
 
-#translateBtn:hover {
+.submission{
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.translateIcon{
+  height:4rem;
+}
+
+.translateIcon:hover{
   cursor: pointer;
-  filter: invert(1%)
+  filter: invert(100);
 }
-
-#translateInput {
-  resize: none;
-  height: 10em;
-  width: 25em;
-  font-size: 22px;
-  margin-top: 5em;
-  margin-left: 1em;
-  border-radius: 25px;
-  padding-left: .5em;
-  box-shadow: 5px 10px 18px black;
-  font-family: Raleway;
-  font-weight: 800;
-}
-
-#translateOutput {
-  resize: none;
-  height: 10.2em;
-  width: 25em;
-  font-size: 22px;
-  margin-top: 3.5em;
-  margin-right: 1em;
-  border-radius: 25px;
-  padding-left: .5em;
-  box-shadow: 5px 10px 18px black;
-  font-family: Raleway;
-  font-weight: 800;
+.languageSelectContainer{
+// TODO ADD STYLING TO THIS
+// background-color: aliceblue;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: auto;
 }
 
 .langSelect {
-  font-size: 24px;
+  font-size: .9rem;
+  font-weight: 800;
+  text-align: center;
+  margin: auto;
+  // width: 19rem;
 }
 
-#inputLangSelect {
-  margin-left: 1em;
-  width: 23em;
-
-}
-
-#outputLangSelect {
-  margin-right: 1em;
-  float: right;
-
-
-}
 
 option {
   background-color: #89939E;
 }
 
-#translateGuide {
+@media screen and (max-width: 1300px) {
 
 
-  text-align: center;
-  position: relative;
-  bottom: 3.5em;
-  color: white;
+
+  .translatorContainer {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+    }
+
+
+    .translatorForm {
+      height: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+    }
+
+  .translatorBoxes{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .translatorTextAreas{
+    width: 20rem;
+    height: 12.5rem;
+    font-size: 17px;
+    font-weight: 900;
+    margin: 1rem;
+  }
+
+
+    .langSelect {
+      font-size: .9rem;
+      font-weight: 800;
+      text-align: center;
+
+    }
+
+
+        .submission {
+          display: flex;
+          flex-direction: column;
+
+          text-align: center;
+        }
+
+        .translateIcon {
+          height: 4rem;
+        }
+
+        .translateIcon::after {
+          cursor: pointer;
+          filter: invert(100);
+        }
+
+        .translateIcon::before {
+          cursor: pointer;
+          // filter: invert(100);
+        }
+
+        select
+        option{
+          font-weight: 850;
+// color: white;
+
+        }
 }
