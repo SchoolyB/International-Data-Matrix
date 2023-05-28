@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { api } from '../includes/api'
-import translateIcon from '../assets/translatorPageImages/translation.png'
+import translateIcon from '../../assets/translatorPageImages/translation.png'
 
 export default function Translator() {
   const [sourceText, setSourceText] = useState('')
