@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  margin-bottom: 13rem;
 
 }
 
@@ -25,12 +25,11 @@
   margin: auto;
 }
 
-.translateBtn { /*TODO: NEED TO CHANGE THIS TO A REAL BUTTON OR LITERALLY ANYTHING DIFFERENT*/
+.translateBtn {
   height: 5em;
   margin: auto;
   width: 6em;
   height: 6em;
-  // background-color: transparent;
   border-radius: 50px;
   background-color: transparent;
  }
@@ -60,15 +59,14 @@
 
 .translateIcon{
   height:4rem;
+  filter: invert(1)
 }
 
 .translateIcon:hover{
   cursor: pointer;
-  filter: invert(100);
+  filter: invert(0);
 }
 .languageSelectContainer{
-// TODO ADD STYLING TO THIS
-// background-color: aliceblue;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -98,6 +96,7 @@ option {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 6.5rem;
 
 
     }
@@ -153,13 +152,11 @@ option {
 
         .translateIcon::before {
           cursor: pointer;
-          // filter: invert(100);
         }
 
         select
         option{
           font-weight: 850;
-// color: white;
 
         }
 }
