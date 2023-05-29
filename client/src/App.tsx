@@ -54,7 +54,7 @@ const App = () => {
       <SearchContext.Provider value={search}>
         <Header />
         {useRoutes(routes)}
-        <Footer />
+        {/* <Footer /> */}
       </SearchContext.Provider>
     </CountryContext.Provider>
   )

@@ -1,9 +1,7 @@
 #faqContainer{
 
-  // background-color: red;
   display: flex;
   flex-direction: column;
-  // background-color: white;
 }
 
 #faqMainHeading{
@@ -31,14 +29,12 @@
 .faqRowContainer{
   display: flex;
   flex-direction: column;
-//  border: solid 1px red;
 
 }
 
 
 .faqRow{
   display: flex;
-// border: solid 1px red;
 }
 
 
@@ -49,8 +45,6 @@
 }
 
 .faqQuestion>p {
-
-  // text-align: center;
   font-size: 1.2rem;
 }
 
