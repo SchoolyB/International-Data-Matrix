@@ -1,7 +1,6 @@
 import { Route, BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import Header from './components/Header'
 import routes from '~react-pages'
-import Footer from './components/Footer'
 import { CountryListData } from '../src/types/countryListData'
 import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { api } from './includes/api'
@@ -54,7 +53,6 @@ const App = () => {
       <SearchContext.Provider value={search}>
         <Header />
         {useRoutes(routes)}
-        <Footer />
       </SearchContext.Provider>
     </CountryContext.Provider>
   )
