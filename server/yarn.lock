@@ -1213,10 +1213,10 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-deepl-node@^1.7.2:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/deepl-node/-/deepl-node-1.9.0.tgz#0d39cc20dcbd0f295cccdbee72487a3b795306d2"
-  integrity sha512-Sr7Ak417skFewcrAaAexr2mi1zaGm8bLdgbcXjVbS5oAp8S8zTMPNzguzTJIRiJ5lbHocNytSdxab2g8A5NR+w==
+deepl-node@^1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/deepl-node/-/deepl-node-1.10.2.tgz#35d8af9b54b5a1026685bfbe9f7f7667599f1c12"
+  integrity sha512-MWif2j54Cb0284FFNO8hJSGB2W9xfF0dfRICYicVtfM2FF1ClSU7Fqdf4ct27i5H9YLe32PLvbcwxVaaT+BiQQ==
   dependencies:
     "@types/node" ">=12.0"
     axios ">=0.21.2 <1.2.0 || >=1.2.1"
