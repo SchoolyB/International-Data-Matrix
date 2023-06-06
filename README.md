@@ -54,89 +54,180 @@ Located top right of the header
     - [Map](https://international-data-matrix.vercel.app/Map)
     - [Documentation](https://github.com/SchoolyB/International-Data-Matrix#readme)
 
-### The Search Bar
-[Header.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/components/Header.tsx)
-```JSX
-<form id="countryFilterForm" className="searchForm ">
-  <input
-    placeholder="Search Countries"
-    id="countryFilter"
-    name="countryFilter"
-    type="text"
-    required
-    value={search.value}
-    onChange={(event) => {
-      search.value = event.target.value
-    }}
-  ></input>
-</form>
-```
+
 
 ## The View Countries Button -
 Will take the user to the [country selection](https://international-data-matrix.vercel.app/Countries) page.
 
 ## [Country Selection Page](https://international-data-matrix.vercel.app/Countries) -
-Shows a full list of countries currently supported in the application. Shows a country's name and it's flag.
+Show a full list of all names and flags of all countries currently supported in the application. Also contains a search bar to filter through the list of countries.
 
-### A Country Page -
+
+[Countries.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/Pages/Countries.tsx)
+```JSX
+export default function Countries() {
+  const countryList = useContext(CountryContext)
+  const search = useContext(SearchContext)
+
+  const countryElement = countryList
+    .filter(country => {
+      return country.name.toLowerCase().includes(search.value.toLowerCase())
+    })
+    .map((country, index) => {
+      return (
+        <div key={index} className='country'>
+          <h3 className='countryHeading'>{country.name}</h3>
+          <a href={country.link}>
+            <img
+              className='flag'
+              src={country.flag}
+              alt={country.flagAlt}
+              loading='lazy'
+            />
+          </a>
+        </div>
+      )
+    })
+```
+
+
+### Country Informational Page -
 Every country that is currently supported in the International Data Matrix has its own "Country Page". The all country pages are generated generated through the [id.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/pages/Country/%5Bid%5D.tsx) file.
 
 
 [id.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/pages/Country/%5Bid%5D.tsx)
 
 ```JSX
-<div className="overallCountryInfoContainer">
-  <div className="countryInfo">
-    <h1 id="countryEnglishName">{state.name}</h1>
-    <h3 id="countryNativeName">a.k.a {state.nativeName}</h3>
-  </div>
+<div className='overallCountryInfoContainer'>
+      <div className='countryInfo'>
+        <h1 id='countryEnglishName'>{state.name}</h1>
+        <h4 id='countryNativeName'>{state.nativeName}</h4>
+      </div>
 
-    <section className="topic" id="culture">
-      <h3>Culture</h3>
-      <p>{culture}</p>
-    </section>
+      {/* Start of information right side of screen */}
+      <div className='metaDataContainer'>
+        <div className='countryFlagsAndMaps'>
+          <img id='countryInfoFlag' src={state.flags.svg} alt={flagAltValue} />
+          <img
+            id='simpleMap'
+            src={CurrentCountrySimpleMap}
+            alt={simpleMapAlter}
+          />
+          <img
+            id='locatorMap'
+            src={CurrentCountryLocatorMap}
+            alt={locatorMapAlter}
+          />
+        </div>
+        {/* START OF META DATA CONTAINER TEXT */}
 
-    <section className="topic" id="religion">
-      <h3>Religion</h3>
-      <p>{religion}</p>
-    </section>
+        {/* region & sub region information */}
+        <div className='genInfoRegionAndSubregion metaDataSection'>
+          <div className='region'>
+            <h6>Region</h6> <u>{state.region}</u>
+          </div>
+          <div className='subregion'>
+            <h6>Subregion</h6> <u>{state.subregion}</u>
+          </div>
+        </div>
 
-    <section className="topic" id="government">
-      <h3>Government</h3>
-      <p>{government}</p>
-    </section>
-  </div>
+        {/* population information */}
+        <div className='genInfoPopulation metaDataSection'>
+          <h6>Population</h6>
+          Approx.<u>{state.population}</u>
+        </div>
 
-  <div className="metaDataContainer">
-    <img id="countryInfoFlag" src={CurrentCountryFlag} alt={bar} />
-    <p className="genInfoRegion">
-      <u>{state.name}</u> is located in the
-      <u>{state.subregion}</u> subregion of the <u>{state.region}</u>
-      <br />
-      <p className="genInfoPopulation">
-        The Population of <u>{state.name}</u> is is approx.
-        <u>{state.population}</u>
-      </p>
-    </p>
-    <p className="genInfoISOCodes ">
-      <u>{state.name}'s</u> 2 Digit Alpha code is:
-      <u>{state.alpha2Code}</u> and it's 3 Digit Alpha code is:
-      <u>{state.alpha3Code}</u>
-    </p>
+        {/* demonym information */}
+        <div className='genInfoDemonym metaDataSection'>
+          <h6>Demonym</h6>
+          <u>{state.demonym}</u>
+        </div>
 
-    {/*This comes from the countryWeather component from '../../components/CountryWeather.tsx' */}
-    <CountryWeather capital={state.capital} name={state.name} />
-    <p className="genInfoCurrency">
-      The National Currency of {state.name} Is: <br />
-      The <u>{state.name}</u> Represented As:
-    </p>
-    {/* End of countryWeather component */}
+        {/* iso code information */}
+        <div className='genInfoISOCodes metaDataSection'>
+          <div className='alpha2Code'>
+            <h6>ISO 2 Code</h6>
+            <u>{state.alpha2Code}</u>
+          </div>
+          <div className='alpha3Code'>
+            <h6>ISO 3 Code</h6>
+            <u>{state.alpha3Code}</u>
+          </div>
+        </div>
 
-    <p className="genInfoTimezones">
-      Timezones: <u>{state.timezones}</u>
-    </p>
-  </div>
-</div>
+        {/* Start of weather component from '../../components/CountryWeather.tsx' */}
+        <CountryWeather capital={state.capital} name={state.name} />
+        {/* End of weather component from '../../components/CountryWeather.tsx' */}
+
+        {/* start of currency information */}
+        <div className='genInfoCurrency metaDataSection'>
+          <div className='currencyName'>
+            <h6>Currency Name</h6>
+            <u>{currencyInfo?.name}</u>
+          </div>
+          <div className='currencySymbol'>
+            <h6>Currency Symbol</h6>
+            <u>{currencyInfo?.symbol}</u>
+          </div>
+          <div className='currencyCode'>
+            <h6>Currency Code</h6>
+            <u>{currencyInfo?.code}</u>
+          </div>
+        </div>
+
+        {/* start of timezone information */}
+        <div className='genInfoTimezones metaDataSection'>
+          <h6>Timezones</h6>
+          <u>{state.timezones}</u>
+        </div>
+      </div>
+      {/* END OF META DATA CONTAINER TEXT */}
+
+      {/* TOPICS */}
+
+      {/* Geography */}
+      <div id='topic'>
+        <section className='topic' id='geography'>
+          <h3>Geography</h3>
+          <p dangerouslySetInnerHTML={{ __html: topics.geography }}></p>
+        </section>
+
+        {/* History */}
+        <section className='topic' id='history'>
+          <h3>History</h3>
+          <p dangerouslySetInnerHTML={{ __html: topics.history }}></p>
+        </section>
+
+        {/* Demographics */}
+        <section className='topic' id='demographics'>
+          <h3>Demographics</h3>
+          <p dangerouslySetInnerHTML={{ __html: topics.demographics }}></p>
+        </section>
+
+        {/* Culture */}
+        <section className='topic' id='culture'>
+          <h3>Culture</h3>
+          <p dangerouslySetInnerHTML={{ __html: topics.culture }}></p>
+        </section>
+
+        {/* Religion */}
+        <section className='topic' id='religion'>
+          <h3>Religion</h3>
+          <p dangerouslySetInnerHTML={{ __html: topics.religion }}></p>
+        </section>
+        {/* Government */}
+        <section className='topic' id='government'>
+          <h3>Government</h3>
+          <p dangerouslySetInnerHTML={{ __html: topics.government }}></p>
+        </section>
+
+        {/* Economy */}
+        <section className='topic' id='economy'>
+          <h3>Economy</h3>
+          <p dangerouslySetInnerHTML={{ __html: topics.economy }}></p>
+        </section>
+      </div>
+    </div>
 ```
 
 ## [The Translator](https://international-data-matrix.vercel.app/Translator) -
