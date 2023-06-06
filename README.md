@@ -62,6 +62,7 @@ Will take the user to the [country selection](https://international-data-matrix.
 ## [Country Selection Page](https://international-data-matrix.vercel.app/Countries) -
 Show a full list of all names and flags of all countries currently supported in the application. Also contains a search bar to filter through the list of countries.
 
+<img src="/client/assets/README_assets/countryPage.JPG">
 
 [Countries.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/Pages/Countries.tsx)
 ```JSX
@@ -93,7 +94,6 @@ export default function Countries() {
 
 ### Country Informational Page -
 Every country that is currently supported in the International Data Matrix has its own "Country Page". The all country pages are generated generated through the [id.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/pages/Country/%5Bid%5D.tsx) file.
-
 
 [id.tsx](https://github.com/SchoolyB/International-Data-Matrix/blob/master/client/src/pages/Country/%5Bid%5D.tsx)
 
@@ -233,6 +233,7 @@ Every country that is currently supported in the International Data Matrix has i
 ## [The Translator](https://international-data-matrix.vercel.app/Translator) -
 Built using the [DeepL](https://www.deepl.com/translator) translator API.  ***NOTE THAT CURRENTLY THE ONLY SUPPORTED INPUT LANGUAGE IS ENGLISH***
 
+<img src="/client/assets/README_assets/translatorPage.JPG">
 [translateRoute.ts](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/src/routes/translateRoute.ts)
 ```JavaScript
 const deepl = require("deepl-node");
@@ -288,6 +289,7 @@ app.post("/translator", (request, response) => {
 ## [The Contact Page](https://international-data-matrix.vercel.app/Contact) -
 This simple contact page allows users to submit their feedback that will then be sent to The IDM's email. The form uses a POST method and a [Formspree](https://formspree.io/) url as the action to send the data on submit. Feel free to give it a try :)
 
+<img src="/client/assets/README_assets/contactPage.JPG">
 ```HTML
  <form action="https://formspree.io/f/mknelldn" method="POST">
       <label  class="contactLabel"id="contactName">
@@ -298,8 +300,9 @@ This simple contact page allows users to submit their feedback that will then be
 
 Builds map using the Google Maps API and the [google-map-react](https://www.npmjs.com/package/google-map-react) package
 
-```JSX
 
+<img src="/client/assets/README_assets/mapPage.JPG">
+```JSX
 const map = () => {
 const { isLoaded } = useLoadScript({
   googleMapsApiKey: `${mapKey}` || '',
