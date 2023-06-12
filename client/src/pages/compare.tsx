@@ -14,13 +14,13 @@ export default function compare() {
         <div className='generalComparisonInfo'>
           <div className='countryNumberOne'>
             {/* place holder */}
-            <h1 id='leftCountryHeading'>Country 1 Name</h1>
+            <h3 id='leftCountryHeading'>Country 1 Name</h3>
             {/* IMAGE OF FLAG */}
           </div>
 
           <div className='countryNumberTwo'>
             {/* place holder */}
-            <h1 id='rightCountryHeading'>Country 2 Name</h1>
+            <h3 id='rightCountryHeading'>Country 2 Name</h3>
             {/* IMAGE OF FLAG */}
           </div>
         </div>
@@ -29,7 +29,6 @@ export default function compare() {
         <div className='statsContainer'>
           {/* Country number one box */}
           <div className='countryOneStatContainer' id='leftStats'></div>
-
           <div className='statNames'>
             Population
             <br />
@@ -39,32 +38,16 @@ export default function compare() {
             <br />
             Government Type
             <br />
-            Continent
+            Year of Independence
             <br />
-            {/* bool */}
-            Independent
-            <br />
-            Currency
-            <br />
-            Dominant Language
-            <br />
-            Number of Spoken Languages
-            <br />
-            Number of Bordering Countries
-            <br />
-            Number of Cities
-            <br />
-            Region
-            <br />
-            Religion
-            <br />
-            Number of Religions
+            Area
             <br />
           </div>
           <div className='countryTwoStatContainer' id='rightStats'></div>
         </div>
       </div>
 
+      {/* footer */}
       <footer>
         {/* author name */}
         <ul id='webPageInfo'>
