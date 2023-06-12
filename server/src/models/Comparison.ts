@@ -42,6 +42,16 @@ let comparisonSchema = new mongoose.Schema({
     required: true,
     validate: /^[A-Za-z ]*$/,
   },
+  link: {
+    type: String,
+    required: true,
+    validate: /^[A-Za-z ]*$/,
+  },
+  timezones: {
+    type: [String],
+    required: true,
+    validate: /^[A-Za-z ]*$/,
+  },
   // To achieve MVP, for now this schema will be limited to the above fields.
   // In the future, will add more fields
 })

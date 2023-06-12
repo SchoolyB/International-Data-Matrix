@@ -9,7 +9,7 @@ import { comparisonRoute } from './routes/comparisonRoute'
 
 dotenv.config()
 
-// Start server instance one
+// Start server instance one aka country data api
 const serverInstanceOne = fastify({
   logger: false, // set to true for production
 })
@@ -18,8 +18,8 @@ const startServerInstanceOne = async () => {
   await mongoose.connect(`${process.env.DATA_BASE}`)
 
   await serverInstanceOne.register(cors, {
-    origin: 'https://international-data-matrix.vercel.serverInstanceOne', //for production
-    // origin: 'http://localhost:5173', //for development
+    // origin: 'https://international-data-matrix.vercel.serverInstanceOne', //for production
+    origin: 'http://localhost:5173', //for development
   })
   // Rate limiter
   await serverInstanceOne.register(limit, {
@@ -29,10 +29,6 @@ const startServerInstanceOne = async () => {
 
   await serverInstanceOne.register(countriesRoute, {
     prefix: '/Countries',
-  })
-
-  await serverInstanceOne.register(translateRoute, {
-    prefix: '/Translator',
   })
 
   try {
@@ -48,7 +44,7 @@ const startServerInstanceOne = async () => {
 }
 // end of server instance one
 
-// Start server instance two
+// Start server instance two aka comparison data api
 const serverInstanceTwo = fastify({
   logger: false, // set to true for production
 })
@@ -67,7 +63,7 @@ const startServerInstanceTwo = async () => {
 
   serverInstanceTwo.register(cors, {
     // origin: 'https://international-data-matrix.vercel.serverInstanceTwo', //for production
-    // origin: 'http://localhost:5173', //for development
+    origin: 'http://localhost:5173', //for development
   })
 
   try {
@@ -86,6 +82,45 @@ const startServerInstanceTwo = async () => {
 }
 // end of server instance two
 
-// Start both server instances
+// Start server instance three aka translator
+const serverInstanceThree = fastify({
+  logger: false, // set to true for production
+})
+
+const startServerInstanceThree = async () => {
+  await mongoose.connect(`${process.env.DATA_BASE}`)
+
+  serverInstanceThree.register(translateRoute, {
+    prefix: '/Translator',
+  })
+
+  serverInstanceThree.register(limit, {
+    max: 25, //limits each IP to 50 requests per windowMs
+    timeWindow: '1 minute',
+  })
+
+  serverInstanceThree.register(cors, {
+    // origin: 'https://international-data-matrix.vercel.serverInstanceThree', //for production
+    origin: 'http://localhost:5173', //for development
+  })
+
+  try {
+    const address = await serverInstanceThree.listen(
+      {
+        port: 4044,
+        host: '',
+      },
+      (err, address) => {
+        console.log(`Server listening on ${address}`)
+      },
+    )
+  } catch (e) {
+    serverInstanceThree.log.error(e)
+  }
+}
+// end of server instance three
+
+// Start all server instances
 startServerInstanceOne()
 startServerInstanceTwo()
+startServerInstanceThree()
