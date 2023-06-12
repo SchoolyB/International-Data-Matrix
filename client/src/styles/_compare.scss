@@ -1,20 +1,23 @@
 .comparisonContainer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   color: white;
-}
-
-.generalComparisonInfo{
-  display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  width: 100%;
-  margin-top: 1em;
+  margin-top: 10em;
 }
 
-.statNames{
+.statsContainer{
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 2em;
-  font-size: 2.2em;
+  font-size: 2em;
+  line-height: 2.5em;
+  width: 50%;
+  margin: auto;
+background-color: white;
+
+
 }

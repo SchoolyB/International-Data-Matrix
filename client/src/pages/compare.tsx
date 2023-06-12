@@ -11,41 +11,105 @@ export default function compare() {
   return (
     <>
       <div className='comparisonContainer'>
-        <div className='generalComparisonInfo'>
-          <div className='countryNumberOne'>
-            {/* place holder */}
-            <h3 id='leftCountryHeading'>Country 1 Name</h3>
-            {/* IMAGE OF FLAG */}
+        {/* start of left country container */}
+        <div className='leftCountryContainer'>
+          <div className='leftCountryName'>
+            <h3>
+              <input type='text' placeholder='Left Country' readOnly />
+            </h3>
           </div>
-
-          <div className='countryNumberTwo'>
-            {/* place holder */}
-            <h3 id='rightCountryHeading'>Country 2 Name</h3>
-            {/* IMAGE OF FLAG */}
+          <div className='leftCountryFlag'></div>
+          <div className='leftCountryStats'>
+            <h4 className='countryStats populationStat' id='leftPopulation'>
+              <input type='text' placeholder='population' readOnly />
+            </h4>
+            <h4
+              className='countryStats number_of_timezones_stat'
+              id='leftNumOfTimezones'
+            >
+              <input type='text' placeholder='number of timezones' readOnly />
+            </h4>
+            <h4 className='countryStats yearFoundedStat' id='leftYearFounded'>
+              <input type='text' placeholder='year founded' readOnly />
+            </h4>
+            <h4 className='countryStats governmentTypeStat' id='leftGovType'>
+              <input type='text' placeholder='government type' readOnly />
+            </h4>
+            <h4
+              className='countryStats yearOfIndependenceStat'
+              id='leftIndependenceYear'
+            >
+              <input type='text' placeholder='year of independence' readOnly />
+            </h4>
+            <h4 className='countryStats areaStat' id='leftArea'>
+              <input type='text' placeholder='area' readOnly />
+            </h4>
           </div>
         </div>
+        {/* end of left country container */}
 
-        {/* Start of stats */}
-        <div className='statsContainer'>
-          {/* Country number one box */}
-          <div className='countryOneStatContainer' id='leftStats'></div>
-          <div className='statNames'>
-            Population
-            <br />
-            Number of Timezones
-            <br />
-            Year Founded
-            <br />
-            Government Type
-            <br />
-            Year of Independence
-            <br />
-            Area
-            <br />
+        {/* start of right country container */}
+        <div className='rightCountryContainer'>
+          <div className='rightCountryName'>
+            <h3>
+              <input type='text' placeholder='Right Country' readOnly />
+            </h3>
           </div>
-          <div className='countryTwoStatContainer' id='rightStats'></div>
+          <div className='rightCountryFlag'></div>
+          <div className='rightCountryStats'>
+            <h4 className='countryStats populationStat' id='rightPopulation'>
+              <input type='text' placeholder='population' readOnly />
+            </h4>
+            <h4
+              className='countryStats number_of_timezones_stat'
+              id='rightNumOfTimezones'
+            >
+              <input type='text' placeholder='number of timezones' readOnly />
+            </h4>
+            <h4 className='countryStats yearFoundedStat' id='rightYearFounded'>
+              <input type='text' placeholder='year founded' readOnly />
+            </h4>
+            <h4 className='countryStats governmentTypeStat' id='rightGovType'>
+              <input type='text' placeholder='government type' readOnly />
+            </h4>
+            <h4
+              className='countryStats yearOfIndependenceStat'
+              id='rightIndependenceYear'
+            >
+              <input type='text' placeholder='year of independence' readOnly />
+            </h4>
+            <h4 className='countryStats areaStat' id='rightArea'>
+              <input type='text' placeholder='area' readOnly />
+            </h4>
+          </div>
+        </div>
+        {/*end of right country container */}
+      </div>
+
+      {/* Start of stats */}
+      <div className='statsContainer'>
+        <div className='statNames'>
+          Population
+          <br />
+          <hr />
+          Number of Timezones
+          <br />
+          <hr />
+          Year Founded
+          <br />
+          <hr />
+          Government Type
+          <br />
+          <hr />
+          Year of Independence
+          <br />
+          <hr />
+          Area
+          <br />
+          <hr />
         </div>
       </div>
+      {/* end of stats */}
 
       {/* footer */}
       <footer>
