@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { api } from '../includes/api'
+import { translatorAPICall } from '../includes/translator'
 import translateIcon from '../../assets/translatorPageImages/translation.png'
 import home from '../../assets/footerIcons/home.png'
 import contact from '../../assets/footerIcons/contact.png'
@@ -16,7 +16,7 @@ export default function Translator() {
   async function handleTranslation(event: React.FormEvent) {
     event.preventDefault()
     try {
-      const res = await api.post('Translator', {
+      const res = await translatorAPICall.post('Translator', {
         sourceText,
         outputLanguage,
       })
