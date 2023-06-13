@@ -5,9 +5,10 @@ import translator from '../../assets/footerIcons/translate.png'
 import mapIcon from '../../assets/footerIcons/map.png'
 import faq from '../../assets/footerIcons/faq.png'
 
-import React from 'react'
+import React, { useState } from 'react'
 import countryDropdown from '../components/countryDropdown'
 import { useParams } from 'react-router-dom'
+import { comparisonData } from '../types/comparisonData'
 
 // USING VITE'S GLOB METHOD TO STORE FLAG IMAGES FROM FOLDER INTO VARIABLE
 const countryComparisonFlags = import.meta.glob('../../assets/flags/*.png', {
@@ -18,6 +19,21 @@ export default function compare(
   leftAlt: string | undefined,
   rightAlt: string | undefined,
 ) {
+  const [state, setState] = useState<comparisonData>({
+    name: '',
+    flag: '',
+    flagAlt: '',
+    population: 0,
+    number_of_timezones: 0,
+    timezones: [],
+    area: '',
+    year_founded: 0,
+    year_of_independence: 0,
+    government_type: '',
+    link: '',
+  })
+
+  // todo - add error handling, store data in state, and display data on page
   //this function set the alt attributes for the each country flag that will populate on the page
   const setDynamicAltAttributes = () => {
     const lefty = document.getElementById('leftCountryFlag')
