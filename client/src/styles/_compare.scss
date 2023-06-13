@@ -7,20 +7,40 @@
   margin-top: 10em;
 }
 
+// for statsContainer within the comparisonContainer
 .statsContainer{
   display: flex;
   flex-direction: row;
-  // align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   font-size: 2em;
   line-height: 2.5em;
-  // width: 50%;
-  // margin: auto;
-background-color: white;
-
-
+  background-color: white;
 }
+
+// LEFT SIDE country heading within the statsContainer
+.leftCountryHeading{
+  text-align: center;
+}
+
+// for country LEFT side stats within the statsContainer
+.leftSideStats{
+  border: solid 3px brown;
+}
+
+
+// RIGHT country heading within the statsContainer
+.rightCountryHeading{
+  text-align: center;
+}
+
+// for country RIGHT side stats within the statsContainer
+.rightSideStats {
+  border: solid 3px brown;
+}
+
+// applies to both country dropdowns 
 .countryDropdown{
   color: black;
+  text-align: center;
 }

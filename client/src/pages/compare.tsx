@@ -7,28 +7,62 @@ import faq from '../../assets/footerIcons/faq.png'
 
 import React from 'react'
 import countryDropdown from '../components/countryDropdown'
+import { useParams } from 'react-router-dom'
 
-export default function compare() {
+// USING VITE'S GLOB METHOD TO STORE FLAG IMAGES FROM FOLDER INTO VARIABLE
+const countryComparisonFlags = import.meta.glob('../../assets/flags/*.png', {
+  eager: true, //eager loading
+})
+
+export default function compare(
+  leftAlt: string | undefined,
+  rightAlt: string | undefined,
+) {
+  //this function set the alt attributes for the each country flag that will populate on the page
+  const setDynamicAltAttributes = () => {
+    const lefty = document.getElementById('leftCountryFlag')
+
+    if (lefty != null) {
+      lefty.setAttribute('alt', `The flag of ${state.leftCountry}`) //todo: fix this
+      const leftAlt: any = lefty.attributes[1] // this uses the second attribute of the flag element, which is the alt attribute
+    }
+    const righty = document.getElementById('rightCountryFlag')
+    if (righty != null) {
+      righty.setAttribute('alt', `The flag of ${state.rightCountry}`) //todo: fix this
+      const rightAlt: any = righty.attributes[1] // this uses the second attribute of the flag element, which is the alt attribute
+    }
+  }
+
+  setDynamicAltAttributes() // call the dynamic alt attribute function
+
   return (
     <>
       <div className='comparisonContainer'>
         {/* start of left country container */}
         <div className='leftCountryContainer'>
-          <div className='leftCountryName'>
+          <div className='leftCountryHeading'>
             <h3>Left Country Placeholder</h3>
-            {countryDropdown()} {/* injects the country dropdown component */}
+            <div className='leftCountryFlagContainer'>
+              {/* images of each flag needs to load dynamically */}
+              <img />
+            </div>
+            {countryDropdown()}
+            {/* injects the country dropdown component to left side */}
           </div>
-          <div className='leftCountryFlag'></div>
         </div>
         {/* end of left country container */}
 
         {/* start of right country container */}
         <div className='rightCountryContainer'>
-          <div className='rightCountryName'>
+          <div className='rightCountryHeading'>
             <h3>Right Country Placeholder</h3>
-            {countryDropdown()} {/* injects the country dropdown component */}
+            <div className='rightCountryFlagContainer'>
+              {/* images of each flag needs to load dynamically */}
+              <img />
+            </div>
+            {countryDropdown()}
+            {/* injects the country dropdown component to right side */}
           </div>
-          <div className='rightCountryFlag'></div>
         </div>
         {/*end of right country container */}
       </div>
