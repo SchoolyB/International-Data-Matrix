@@ -6,6 +6,7 @@ import mapIcon from '../../assets/footerIcons/map.png'
 import faq from '../../assets/footerIcons/faq.png'
 
 import React from 'react'
+import countryDropdown from '../components/countryDropdown'
 
 export default function compare() {
   return (
@@ -14,80 +15,31 @@ export default function compare() {
         {/* start of left country container */}
         <div className='leftCountryContainer'>
           <div className='leftCountryName'>
-            <h3>
-              <input type='text' placeholder='Left Country' readOnly />
-            </h3>
+            <h3>Left Country Placeholder</h3>
+            {countryDropdown()} {/* injects the country dropdown component */}
           </div>
           <div className='leftCountryFlag'></div>
-          <div className='leftCountryStats'>
-            <h4 className='countryStats populationStat' id='leftPopulation'>
-              <input type='text' placeholder='population' readOnly />
-            </h4>
-            <h4
-              className='countryStats number_of_timezones_stat'
-              id='leftNumOfTimezones'
-            >
-              <input type='text' placeholder='number of timezones' readOnly />
-            </h4>
-            <h4 className='countryStats yearFoundedStat' id='leftYearFounded'>
-              <input type='text' placeholder='year founded' readOnly />
-            </h4>
-            <h4 className='countryStats governmentTypeStat' id='leftGovType'>
-              <input type='text' placeholder='government type' readOnly />
-            </h4>
-            <h4
-              className='countryStats yearOfIndependenceStat'
-              id='leftIndependenceYear'
-            >
-              <input type='text' placeholder='year of independence' readOnly />
-            </h4>
-            <h4 className='countryStats areaStat' id='leftArea'>
-              <input type='text' placeholder='area' readOnly />
-            </h4>
-          </div>
         </div>
         {/* end of left country container */}
 
         {/* start of right country container */}
         <div className='rightCountryContainer'>
           <div className='rightCountryName'>
-            <h3>
-              <input type='text' placeholder='Right Country' readOnly />
-            </h3>
+            <h3>Right Country Placeholder</h3>
+            {countryDropdown()} {/* injects the country dropdown component */}
           </div>
           <div className='rightCountryFlag'></div>
-          <div className='rightCountryStats'>
-            <h4 className='countryStats populationStat' id='rightPopulation'>
-              <input type='text' placeholder='population' readOnly />
-            </h4>
-            <h4
-              className='countryStats number_of_timezones_stat'
-              id='rightNumOfTimezones'
-            >
-              <input type='text' placeholder='number of timezones' readOnly />
-            </h4>
-            <h4 className='countryStats yearFoundedStat' id='rightYearFounded'>
-              <input type='text' placeholder='year founded' readOnly />
-            </h4>
-            <h4 className='countryStats governmentTypeStat' id='rightGovType'>
-              <input type='text' placeholder='government type' readOnly />
-            </h4>
-            <h4
-              className='countryStats yearOfIndependenceStat'
-              id='rightIndependenceYear'
-            >
-              <input type='text' placeholder='year of independence' readOnly />
-            </h4>
-            <h4 className='countryStats areaStat' id='rightArea'>
-              <input type='text' placeholder='area' readOnly />
-            </h4>
-          </div>
         </div>
         {/*end of right country container */}
       </div>
 
-      {/* Start of stats */}
+      {/* Start of stats container */}
       <div className='statsContainer'>
+        {/* start of left side stats */}
+        <div className='leftSideStats'></div>
+        {/* end of left side stats */}
+
+        {/* start of stat names in middle of page */}
         <div className='statNames'>
           Population
           <br />
@@ -108,6 +60,11 @@ export default function compare() {
           <br />
           <hr />
         </div>
+        {/* end of stat names in middle of page */}
+
+        {/* start of right side stats */}
+        <div className='rightSideStats'></div>
+        {/* end of right side stats */}
       </div>
       {/* end of stats */}
 

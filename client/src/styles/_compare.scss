@@ -9,15 +9,18 @@
 
 .statsContainer{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   // align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 2em;
   line-height: 2.5em;
-  width: 50%;
-  margin: auto;
+  // width: 50%;
+  // margin: auto;
 background-color: white;
 
 
+}
+.countryDropdown{
+  color: black;
 }
