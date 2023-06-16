@@ -5,7 +5,7 @@ import translator from '../../assets/footerIcons/translate.png'
 import mapIcon from '../../assets/footerIcons/map.png'
 import faq from '../../assets/footerIcons/faq.png'
 
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import countryDropdown from '../components/countryDropdown'
 import { useParams } from 'react-router-dom'
 import { comparisonData } from '../types/comparisonData'
@@ -19,6 +19,7 @@ export default function compare(
   leftAlt: string | undefined,
   rightAlt: string | undefined,
 ) {
+  const { id } = useParams<{ id: string }>() // this gets the 2 letter country code from the url and stores it in the id variable
   const [state, setState] = useState<comparisonData>({
     name: '',
     flag: '',
@@ -34,17 +35,18 @@ export default function compare(
   })
 
   // todo - add error handling, store data in state, and display data on page
+
   //this function set the alt attributes for the each country flag that will populate on the page
   const setDynamicAltAttributes = () => {
     const lefty = document.getElementById('leftCountryFlag')
 
     if (lefty != null) {
-      lefty.setAttribute('alt', `The flag of ${state.leftCountry}`) //todo: fix this
+      lefty.setAttribute('alt', `The flag of ${state.flag}`) //todo: fix this
       const leftAlt: any = lefty.attributes[1] // this uses the second attribute of the flag element, which is the alt attribute
     }
     const righty = document.getElementById('rightCountryFlag')
     if (righty != null) {
-      righty.setAttribute('alt', `The flag of ${state.rightCountry}`) //todo: fix this
+      righty.setAttribute('alt', `The flag of ${state.flag}`) //todo: fix this
       const rightAlt: any = righty.attributes[1] // this uses the second attribute of the flag element, which is the alt attribute
     }
   }
