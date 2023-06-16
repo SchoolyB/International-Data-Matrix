@@ -41,7 +41,7 @@ color: black;
   display: flex;
   background-color: #89939E;
   flex-direction: column;
-  width: 25%;
+  width: 25.5%;
   float: right;
   border-radius: 25px;
   margin-right: .5em;
@@ -65,6 +65,19 @@ u {
   border-radius: 25px;
 }
 
+
+.timeZoneList{
+list-style: none;  
+text-align: center;
+}
+
+.timeZoneListItem{
+  font-size: 1.2em;
+  margin: auto;
+  text-align: center;
+  list-style: none;
+}
+
 .metaDataSection{
 text-align: center;
 border-bottom: .2em solid black;
@@ -83,5 +96,47 @@ border-bottom: .2em solid black;
   }
   .topic{
     width: 100%;
+  }
+}
+
+.downloadBtnContainer{
+  text-align: center;
+  margin: auto;
+}
+.timeZoneListItem{
+  margin: auto;
+}
+
+#downloadBtn{
+  cursor: pointer;
+  width: 5%;
+  height:auto;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+  animation: downloadBtnShakeAnimation 1s infinite;
+
+}
+
+@keyframes downloadBtnShakeAnimation {
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(1px)
+  }
+
+  50% {
+    transform: translateX(-2px)
+  }
+
+  75% {
+    transform: translateX(2px)
+  }
+
+  100% {
+    transform: translateX(0)
   }
 }
