@@ -6,6 +6,7 @@ import CountryWeather from '../../components/CountryWeather'
 import getCountryTopic from '../../includes/countryTopicImports/countryTopics'
 import MarkdownIt from 'markdown-it'
 import PageNotFound from '../[...pathname]'
+import download from '../../../assets/downloadBtn.png'
 
 // USING VITE'S GLOB METHOD TO STORE IMAGES FROM FOLDERS INTO VARIABLES
 const simpleCountryMaps = import.meta.glob('../../../assets/simpleMaps/*.png', {
@@ -241,11 +242,7 @@ export default function countryPage(
 
         <div className='downloadBtnContainer'>
           <a>
-            <img
-              id='downloadBtn'
-              alt='Download Button'
-              src='../../../assets/downloadBtn.png'
-            />
+            <img id='downloadBtn' src={download} alt='Download Button' />
           </a>
         </div>
       </div>
