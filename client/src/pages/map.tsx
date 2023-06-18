@@ -24,7 +24,7 @@ const map = () => {
           <GoogleMap
             mapContainerClassName='map-container'
             center={center}
-            zoom={3.5}
+            zoom={3.4}
           ></GoogleMap>
         )}
       </div>
