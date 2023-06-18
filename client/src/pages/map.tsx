@@ -1,11 +1,5 @@
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api'
 import { useMemo } from 'react'
-import home from '../../assets/footerIcons/home.png'
-import contact from '../../assets/footerIcons/contact.png'
-import documentation from '../../assets/footerIcons/documentation.png'
-import translator from '../../assets/footerIcons/translate.png'
-import mapIcon from '../../assets/footerIcons/map.png'
-import faq from '../../assets/footerIcons/faq.png'
 import Footer from '../components/Footer'
 
 const mapKey = import.meta.env.VITE_MAP_KEY

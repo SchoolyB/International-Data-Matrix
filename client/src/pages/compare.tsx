@@ -1,10 +1,3 @@
-import home from '../../assets/footerIcons/home.png'
-import contact from '../../assets/footerIcons/contact.png'
-import documentation from '../../assets/footerIcons/documentation.png'
-import translator from '../../assets/footerIcons/translate.png'
-import mapIcon from '../../assets/footerIcons/map.png'
-import faq from '../../assets/footerIcons/faq.png'
-
 import React, { useCallback, useEffect, useState } from 'react'
 import countryDropdown from '../components/Comparison-Components/countryDropdown'
 import { useParams } from 'react-router-dom'
