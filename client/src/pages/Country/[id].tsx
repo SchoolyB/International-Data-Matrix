@@ -129,12 +129,6 @@ export default function countryPage(
   // set 'alt' attribute for each flag
   const flagAltValue = `The Flag of ${state.name}`
 
-  // DOWNLOAD BUTTON STUFF
-  const downloadBtn = document.getElementById('downloadBtn') // targets download button
-  downloadBtn?.addEventListener('click', () => {
-    print() // opens browser print dialog
-  })
-
   // if there is an error when trying to go to load
   // data for a country  that does not exist,
   // return the PageNotFound component
@@ -242,7 +236,8 @@ export default function countryPage(
 
         <div className='downloadBtnContainer'>
           <a>
-            <img id='downloadBtn' src={download} alt='Download Button' />
+	    {/* onClick event handler opens browser print dialog */}
+            <img onClick={print} id='downloadBtn' src={download} alt='Download Button' />
           </a>
         </div>
       </div>
