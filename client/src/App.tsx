@@ -1,9 +1,9 @@
 import { Route, BrowserRouter as Router, useRoutes } from 'react-router-dom'
 import Header from './components/Header'
 import routes from '~react-pages'
+import { countryData } from './includes/countryDataAPI'
 import { CountryListData } from '../src/types/countryListData'
 import React, { createContext, useCallback, useEffect, useState } from 'react'
-import { api } from './includes/api'
 
 // VERCEL ANALYTICS STUFF
 import { inject } from '@vercel/analytics'
@@ -38,7 +38,7 @@ const App = () => {
   const search = useCoolerState('')
 
   useEffect(() => {
-    api
+    countryData
       .get('/Countries')
       .then(res => {
         setCountryList(res.data)

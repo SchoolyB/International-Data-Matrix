@@ -21,5 +21,4 @@ let countrySchema = new mongoose.Schema({
 	},
 })
 const Country = mongoose.model('Country', countrySchema)
-module.exports = Country
 export default Country

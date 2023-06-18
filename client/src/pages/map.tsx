@@ -19,7 +19,7 @@ const map = () => {
     <>
       <div className='map'>
         {!isLoaded ? (
-          <h1 id='mapLoading'>Loading...</h1>
+          <div className='mapLoading'>Loading...</div>
         ) : (
           <GoogleMap
             mapContainerClassName='map-container'
