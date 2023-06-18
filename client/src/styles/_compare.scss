@@ -8,9 +8,9 @@
 }
 
 // for statsContainer within the comparisonContainer
-.statsContainer{
+.statsOverallContainer{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
   font-size: 2em;
@@ -23,10 +23,6 @@
   text-align: center;
 }
 
-// for country LEFT side stats within the statsContainer
-.leftSideStats{
-  border: solid 3px brown;
-}
 
 
 // RIGHT country heading within the statsContainer
@@ -34,13 +30,23 @@
   text-align: center;
 }
 
-// for country RIGHT side stats within the statsContainer
-.rightSideStats {
-  border: solid 3px brown;
-}
 
 // applies to both country dropdowns 
 .countryDropdown{
   color: black;
   text-align: center;
+}
+
+
+.stat{
+  font-size: 1.5em;
+  line-height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.statContainer{
+  // background-color: yellow;
 }

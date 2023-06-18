@@ -6,9 +6,10 @@ import mapIcon from '../../assets/footerIcons/map.png'
 import faq from '../../assets/footerIcons/faq.png'
 
 import React, { useCallback, useEffect, useState } from 'react'
-import countryDropdown from '../components/countryDropdown'
+import countryDropdown from '../components/Comparison-Components/countryDropdown'
 import { useParams } from 'react-router-dom'
 import { comparisonData } from '../types/comparisonData'
+import Stats from '../components/Comparison-Components/stats'
 
 // USING VITE'S GLOB METHOD TO STORE FLAG IMAGES FROM FOLDER INTO VARIABLE
 const countryComparisonFlags = import.meta.glob('../../assets/flags/*.png', {
@@ -85,40 +86,10 @@ export default function compare(
         {/*end of right country container */}
       </div>
 
-      {/* Start of stats container */}
-      <div className='statsContainer'>
-        {/* start of left side stats */}
-        <div className='leftSideStats'></div>
-        {/* end of left side stats */}
-
-        {/* start of stat names in middle of page */}
-        <div className='statNames'>
-          Population
-          <br />
-          <hr />
-          Number of Timezones
-          <br />
-          <hr />
-          Year Founded
-          <br />
-          <hr />
-          Government Type
-          <br />
-          <hr />
-          Year of Independence
-          <br />
-          <hr />
-          Area
-          <br />
-          <hr />
-        </div>
-        {/* end of stat names in middle of page */}
-
-        {/* start of right side stats */}
-        <div className='rightSideStats'></div>
-        {/* end of right side stats */}
+      {/* overall stats container */}
+      <div className='statsOverallContainer'>
+        <Stats /> {/* injects the stats component */}
       </div>
-      {/* end of stats */}
 
       {/* footer */}
       <footer>
