@@ -235,6 +235,7 @@ Built using the [DeepL](https://www.deepl.com/translator) translator API.  ***NO
 
 <img src="/client/assets/README_assets/translatorPage.JPG">
 [translateRoute.ts](https://github.com/SchoolyB/International-Data-Matrix/blob/master/server/src/routes/translateRoute.ts)
+
 ```JavaScript
 const deepl = require("deepl-node");
 app.post("/translator", (request, response) => {
@@ -290,6 +291,7 @@ app.post("/translator", (request, response) => {
 This simple contact page allows users to submit their feedback that will then be sent to The IDM's email. The form uses a POST method and a [Formspree](https://formspree.io/) url as the action to send the data on submit. Feel free to give it a try :)
 
 <img src="/client/assets/README_assets/contactPage.JPG">
+
 ```HTML
  <form action="https://formspree.io/f/mknelldn" method="POST">
       <label  class="contactLabel"id="contactName">
@@ -302,6 +304,7 @@ Builds map using the Google Maps API and the [google-map-react](https://www.npmj
 
 
 <img src="/client/assets/README_assets/mapPage.JPG">
+
 ```JSX
 const map = () => {
 const { isLoaded } = useLoadScript({

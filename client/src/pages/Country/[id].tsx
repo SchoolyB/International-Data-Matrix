@@ -5,6 +5,7 @@ import { getCountry } from '../../includes/countries'
 import CountryWeather from '../../components/CountryWeather'
 import getCountryTopic from '../../includes/countryTopicImports/countryTopics'
 import MarkdownIt from 'markdown-it'
+import PageNotFound from '../[...pathname]'
 
 // USING VITE'S GLOB METHOD TO STORE IMAGES FROM FOLDERS INTO VARIABLES
 const simpleCountryMaps = import.meta.glob('../../../assets/simpleMaps/*.png', {
@@ -127,12 +128,17 @@ export default function countryPage(
   // set 'alt' attribute for each flag
   const flagAltValue = `The Flag of ${state.name}`
 
+  // DOWNLOAD BUTTON STUFF
+  const downloadBtn = document.getElementById('downloadBtn') // targets download button
+  downloadBtn?.addEventListener('click', () => {
+    print() // opens browser print dialog
+  })
+
+  // if there is an error when trying to go to load
+  // data for a country  that does not exist,
+  // return the PageNotFound component
   if (error) {
-    return (
-      <div>
-        <h1 id='pageNotFound'>404 - This Page Could Not Be Found</h1>
-      </div>
-    )
+    return <PageNotFound />
   }
 
   return (
@@ -158,6 +164,7 @@ export default function countryPage(
             alt={locatorMapAlter}
           />
         </div>
+
         {/* START OF META DATA CONTAINER TEXT */}
 
         {/* region & sub region information */}
@@ -217,9 +224,32 @@ export default function countryPage(
         {/* start of timezone information */}
         <div className='genInfoTimezones metaDataSection'>
           <h6>Timezones</h6>
-          <u>{state.timezones}</u>
+          <li className='timeZoneListItem'>{state.timezones[0]}</li>
+          <li className='timeZoneListItem'>{state.timezones[1]}</li>
+          <li className='timeZoneListItem'>{state.timezones[2]}</li>
+          <li className='timeZoneListItem'>{state.timezones[3]}</li>
+          <li className='timeZoneListItem'>{state.timezones[4]}</li>
+          <li className='timeZoneListItem'>{state.timezones[5]}</li>
+          <li className='timeZoneListItem'>{state.timezones[6]}</li>
+          <li className='timeZoneListItem'>{state.timezones[7]}</li>
+          <li className='timeZoneListItem'>{state.timezones[8]}</li>
+          <li className='timeZoneListItem'>{state.timezones[9]}</li>
+          <li className='timeZoneListItem'>{state.timezones[10]}</li>
+          <li className='timeZoneListItem'>{state.timezones[11]}</li>
+          <li className='timeZoneListItem'>{state.timezones[12]}</li>
+        </div>
+
+        <div className='downloadBtnContainer'>
+          <a>
+            <img
+              id='downloadBtn'
+              alt='Download Button'
+              src='../../../assets/downloadBtn.png'
+            />
+          </a>
         </div>
       </div>
+
       {/* END OF META DATA CONTAINER TEXT */}
 
       {/* TOPICS */}
