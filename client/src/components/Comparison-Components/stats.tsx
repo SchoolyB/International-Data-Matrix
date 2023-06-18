@@ -8,7 +8,7 @@ export default function stats() {
         <div className='populationContainer stat'>
           <div className='leftSidePopulationContainer'>
             <textarea
-              className='leftPopulationTextArea'
+              className='leftPopulationTextArea comparisonTextArea'
               readOnly
               placeholder='Left population'
             />
@@ -16,7 +16,7 @@ export default function stats() {
           <h3 className='statHeading'>Population</h3>
           <div className='rightSidePopulationContainer '>
             <textarea
-              className='rightPopulationTextArea'
+              className='rightPopulationTextArea comparisonTextArea'
               readOnly
               placeholder='Right population'
             />
@@ -31,7 +31,7 @@ export default function stats() {
         <div className='numOfTimezonesContainer stat'>
           <div className='leftSideNumOfTimezonesContainer'>
             <textarea
-              className='leftNumOfTimezonesTextArea'
+              className='leftNumOfTimezonesTextArea comparisonTextArea'
               readOnly
               placeholder='Left Number of Timezones'
             />
@@ -39,7 +39,7 @@ export default function stats() {
           <h3 className='statHeading'>Number of Time zones</h3>
           <div className='rightSideNumOfTimezonesContainer '>
             <textarea
-              className='rightNumOfTimezonesTextArea'
+              className='rightNumOfTimezonesTextArea comparisonTextArea'
               readOnly
               placeholder='Right Number of Timezones'
             />
@@ -54,7 +54,7 @@ export default function stats() {
         <div className='timezonesContainer stat'>
           <div className='leftTimezonesContainer'>
             <textarea
-              className='leftTimezonesTextArea'
+              className='leftTimezonesTextArea comparisonTextArea'
               readOnly
               placeholder='Left Timezones'
             />
@@ -62,7 +62,7 @@ export default function stats() {
           <h3 className='statHeading'>Time zones</h3>
           <div className='rightSideTimezonesContainer '>
             <textarea
-              className='rightTimezonesTextArea'
+              className='rightTimezonesTextArea comparisonTextArea'
               readOnly
               placeholder='Right Timezones'
             />
@@ -77,7 +77,7 @@ export default function stats() {
         <div className='areaContainer stat'>
           <div className='leftSideAreaContainer'>
             <textarea
-              className='leftAreaTextArea'
+              className='leftAreaTextArea comparisonTextArea'
               readOnly
               placeholder='Left Area'
             />
@@ -85,7 +85,7 @@ export default function stats() {
           <h3 className='statHeading'>Area</h3>
           <div className='rightSideAreaContainer '>
             <textarea
-              className='rightAreaTextArea'
+              className='rightAreaTextArea comparisonTextArea'
               readOnly
               placeholder='Right Area'
             />
@@ -100,7 +100,7 @@ export default function stats() {
         <div className='yearFoundedContainer stat'>
           <div className='leftSideYearFoundedContainer'>
             <textarea
-              className='leftYearFoundedTextArea'
+              className='leftYearFoundedTextArea comparisonTextArea'
               readOnly
               placeholder='Left Year Founded'
             />
@@ -108,7 +108,7 @@ export default function stats() {
           <h3 className='statHeading'>Year Founded</h3>
           <div className='rightSideYearFoundedContainer '>
             <textarea
-              className='rightYearFoundedTextArea'
+              className='rightYearFoundedTextArea comparisonTextArea'
               readOnly
               placeholder='Right Year Founded'
             />
@@ -123,7 +123,7 @@ export default function stats() {
         <div className='yearOfIndependenceContainer stat'>
           <div className='leftSideYearOfIndependenceContainer'>
             <textarea
-              className='leftYearOfIndependenceTextArea'
+              className='leftYearOfIndependenceTextArea comparisonTextArea'
               readOnly
               placeholder='Left Year of Independence'
             />
@@ -131,7 +131,7 @@ export default function stats() {
           <h3 className='statHeading'>Year of Independence</h3>
           <div className='rightSideYearOfIndependenceContainer '>
             <textarea
-              className='rightYearOfIndependenceTextArea'
+              className='rightYearOfIndependenceTextArea comparisonTextArea'
               readOnly
               placeholder='Right Year of Independence'
             />
@@ -146,7 +146,7 @@ export default function stats() {
         <div className='governmentTypeContainer stat'>
           <div className='leftSideGovernmentTypeContainer'>
             <textarea
-              className='leftGovernmentTypeTextArea'
+              className='leftGovernmentTypeTextArea comparisonTextArea'
               readOnly
               placeholder='Left Government Type'
             />
@@ -154,7 +154,7 @@ export default function stats() {
           <h3 className='statHeading'>Government Type</h3>
           <div className='rightSideGovernmentTypeContainer '>
             <textarea
-              className='rightGovernmentTypeTextArea'
+              className='rightGovernmentTypeTextArea comparisonTextArea'
               readOnly
               placeholder='Right Government Type'
             />

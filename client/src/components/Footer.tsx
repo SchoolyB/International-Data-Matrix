@@ -5,6 +5,7 @@ import documentation from '../../assets/footerIcons/documentation.png'
 import translator from '../../assets/footerIcons/translate.png'
 import map from '../../assets/footerIcons/map.png'
 import faq from '../../assets/footerIcons/faq.png'
+import compare from '../../assets/footerIcons/compare.png'
 
 export default function Footer() {
   return (
@@ -76,6 +77,18 @@ export default function Footer() {
                 className='footerIcon'
                 id='docIcon'
                 src={documentation}
+              />
+            </a>
+          </li>
+
+          {/* compare icon */}
+          <li>
+            <a title='Compare' href='Compare'>
+              <img
+                title='Compare'
+                className='footerIcon'
+                id='compareIcon'
+                src={compare}
               />
             </a>
           </li>

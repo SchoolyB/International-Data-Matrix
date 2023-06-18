@@ -30,6 +30,7 @@ export default function Header() {
                 </Nav.Item>
                 <Nav.Item href='/Countries'>Country Selection</Nav.Item>
                 <Nav.Item href='/Translator'>Translator</Nav.Item>
+                <Nav.Item href='/Compare'>Compare</Nav.Item>
                 <Nav.Item href='/Contact'>Contact</Nav.Item>
                 <Nav.Item href='/Map'>Map</Nav.Item>
                 <Nav.Item href='/FAQ'>FAQ</Nav.Item>
