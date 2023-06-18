@@ -18,7 +18,7 @@ const startServerInstanceOne = async () => {
   await mongoose.connect(`${process.env.DATA_BASE}`)
 
   await serverInstanceOne.register(cors, {
-    origin: 'https://international-data-matrix.vercel.serverInstanceOne', //for production
+    origin: 'https://international-data-matrix.vercel', //for production
     // origin: 'http://localhost:5173', //for development
   })
   // Rate limiter
@@ -62,7 +62,7 @@ const startServerInstanceTwo = async () => {
   })
 
   serverInstanceTwo.register(cors, {
-    origin: 'https://international-data-matrix.vercel.serverInstanceTwo', //for production
+    origin: 'https://international-data-matrix.vercel', //for production
     // origin: 'http://localhost:5173', //for development
   })
 
@@ -100,7 +100,7 @@ const startServerInstanceThree = async () => {
   })
 
   serverInstanceThree.register(cors, {
-    origin: 'https://international-data-matrix.vercel.serverInstanceThree', //for production
+    origin: 'https://international-data-matrix.vercel', //for production
     // origin: 'http://localhost:5173', //for development
   })
 
