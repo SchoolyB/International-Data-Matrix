@@ -1,5 +1,6 @@
 import React from 'react'
 import sad from '../../assets/pageNotFound/sad404.png'
+import Footer from '../components/Footer'
 // 404 Error page not found. vite requires file name to be in format [...fileName].tsx
 export default function PageNotFound() {
   return (
@@ -12,6 +13,7 @@ export default function PageNotFound() {
         <h2 className='pageNotFound'>This Page Could Not Be Found</h2>
         <h2 className='pageNotFound'>Please check the URL and try again</h2>
       </div>
+      <Footer />
     </>
   )
 }

@@ -10,6 +10,7 @@ import countryDropdown from '../components/Comparison-Components/countryDropdown
 import { useParams } from 'react-router-dom'
 import { comparisonData } from '../types/comparisonData'
 import Stats from '../components/Comparison-Components/stats'
+import Footer from '../components/Footer'
 
 // USING VITE'S GLOB METHOD TO STORE FLAG IMAGES FROM FOLDER INTO VARIABLE
 const countryComparisonFlags = import.meta.glob('../../assets/flags/*.png', {
@@ -21,7 +22,21 @@ export default function compare(
   rightAlt: string | undefined,
 ) {
   const { id } = useParams<{ id: string }>() // this gets the 2 letter country code from the url and stores it in the id variable
-  const [state, setState] = useState<comparisonData>({
+  const [leftState, setLeftState] = useState<comparisonData>({
+    name: '',
+    flag: '',
+    flagAlt: '',
+    population: 0,
+    number_of_timezones: 0,
+    timezones: [],
+    area: '',
+    year_founded: 0,
+    year_of_independence: 0,
+    government_type: '',
+    link: '',
+  })
+
+  const [rightState, setRightState] = useState<comparisonData>({
     name: '',
     flag: '',
     flagAlt: '',
@@ -42,12 +57,12 @@ export default function compare(
     const lefty = document.getElementById('leftCountryFlag')
 
     if (lefty != null) {
-      lefty.setAttribute('alt', `The flag of ${state.flag}`) //todo: fix this
+      lefty.setAttribute('alt', `The flag of ${leftState.flag}`) //todo: fix this
       const leftAlt: any = lefty.attributes[1] // this uses the second attribute of the flag element, which is the alt attribute
     }
     const righty = document.getElementById('rightCountryFlag')
     if (righty != null) {
-      righty.setAttribute('alt', `The flag of ${state.flag}`) //todo: fix this
+      righty.setAttribute('alt', `The flag of ${rightState.flag}`) //todo: fix this
       const rightAlt: any = righty.attributes[1] // this uses the second attribute of the flag element, which is the alt attribute
     }
   }
@@ -60,10 +75,12 @@ export default function compare(
         {/* start of left country container */}
         <div className='leftCountryContainer'>
           <div className='leftCountryHeading'>
-            <h3>Left Country Placeholder</h3>
+            <h3>{leftState.name}</h3>
             <div className='leftCountryFlagContainer'>
               {/* images of each flag needs to load dynamically */}
-              <img />
+              <a href={leftState.link}>
+                <img src={leftState.flag} />
+              </a>
             </div>
             {countryDropdown()}
             {/* injects the country dropdown component to left side */}
@@ -74,10 +91,12 @@ export default function compare(
         {/* start of right country container */}
         <div className='rightCountryContainer'>
           <div className='rightCountryHeading'>
-            <h3>Right Country Placeholder</h3>
+            <h3>{rightState.name}</h3>
             <div className='rightCountryFlagContainer'>
               {/* images of each flag needs to load dynamically */}
-              <img />
+              <a href={rightState.link}>
+                <img src={rightState.flag} />
+              </a>
             </div>
             {countryDropdown()}
             {/* injects the country dropdown component to right side */}
@@ -91,84 +110,7 @@ export default function compare(
         <Stats /> {/* injects the stats component */}
       </div>
 
-      {/* footer */}
-      <footer>
-        {/* author name */}
-        <ul id='webPageInfo'>
-          <li>Author: Marshall Burns</li>
-        </ul>
-        {/*footer icons*/}
-
-        <ul id='footerIconContainer'>
-          {/* home icon */}
-          <li>
-            <a title='Home' href='/'>
-              <img
-                title='Home'
-                className='footerIcon'
-                id='homeIcon'
-                src={home}
-              />
-            </a>
-          </li>
-
-          {/* translator icon */}
-          <li>
-            <a title='Translator' href='Translator'>
-              <img
-                title='Translator'
-                className='footerIcon'
-                id='translateIcon'
-                src={translator}
-              />
-            </a>
-          </li>
-
-          {/* contact icon */}
-          <li id='footerContactIcon'>
-            <a title='Contact' href='Contact'>
-              <img
-                title='Contact'
-                className='footerIcon'
-                id='ContactIcon'
-                src={contact}
-              />
-            </a>
-          </li>
-          {/* map icon */}
-          <li>
-            <a title='Map' href='Map'>
-              <img
-                title='Map'
-                className='footerIcon'
-                id='MapIcon'
-                src={mapIcon}
-              />
-            </a>
-          </li>
-          {/* faq icon */}
-          <li>
-            <a title='FAQ' href='FAQ'>
-              <img title='FAQ' className='footerIcon' id='FAQIcon' src={faq} />
-            </a>
-          </li>
-
-          {/* documentation icon */}
-          <li>
-            <a
-              title='Documentation'
-              href='https://github.com/SchoolyB/Capstone/blob/master/README.md'
-            >
-              <img
-                title='Documentation'
-                className='footerIcon'
-                id='docIcon'
-                src={documentation}
-              />
-            </a>
-          </li>
-        </ul>
-      </footer>
+      <Footer />
     </>
   )
 }
