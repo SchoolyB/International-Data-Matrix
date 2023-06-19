@@ -8,8 +8,8 @@
 .countryInfo {
   text-align: center;
   color: black;
-  margin-bottom: 1.5em;
-  
+  margin-bottom: 2.5em;
+  border-top: .2em solid black;
 
 }
 
@@ -28,6 +28,7 @@
   padding-bottom: 2px;
   word-wrap: break-word;
   margin-top: 2em;
+
 }
 .topic>h3 {
   font-size: 3.5em;
