@@ -40,6 +40,7 @@
   grid-template-columns: 1fr;
   place-items: center;
   width: 100%;
+
 }
 
 #nav a {
@@ -50,3 +51,12 @@
   font-weight: 300;
 }
 
+.rs-icon:hover{
+  cursor: pointer;
+  
+}
+
+.rs-navbar-brand{
+  // color: #89939e;
+
+}
