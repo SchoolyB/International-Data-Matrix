@@ -53,7 +53,7 @@ const startServerInstanceTwo = async () => {
   await mongoose.connect(`${process.env.DATA_BASE}`)
 
   serverInstanceTwo.register(comparisonRoute, {
-    prefix: '/Comparison',
+    prefix: '/Compare',
   })
 
   serverInstanceTwo.register(limit, {

@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import countryDropdown from '../components/Comparison-Components/countryDropdown'
+import React, { createContext, useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { comparisonData } from '../types/comparisonData'
-import Stats from '../components/Comparison-Components/stats'
+import { comparisonListData } from '../types/comparisonListData'
 import Footer from '../components/Footer'
-
+import { comparisonData } from '../includes/comparisonDataAPI'
+import CountryDropdown from '../components/Comparison-Components/countryDropdown'
+import Stats from '../components/Comparison-Components/stats'
 // USING VITE'S GLOB METHOD TO STORE FLAG IMAGES FROM FOLDER INTO VARIABLE
 const countryComparisonFlags = import.meta.glob('../../assets/flags/*.png', {
   eager: true, //eager loading
@@ -15,7 +15,7 @@ export default function compare(
   rightAlt: string | undefined,
 ) {
   const { id } = useParams<{ id: string }>() // this gets the 2 letter country code from the url and stores it in the id variable
-  const [leftState, setLeftState] = useState<comparisonData>({
+  const [leftState, setLeftState] = useState<comparisonListData>({
     name: '',
     flag: '',
     flagAlt: '',
@@ -29,7 +29,7 @@ export default function compare(
     link: '',
   })
 
-  const [rightState, setRightState] = useState<comparisonData>({
+  const [rightState, setRightState] = useState<comparisonListData>({
     name: '',
     flag: '',
     flagAlt: '',
@@ -62,6 +62,18 @@ export default function compare(
 
   setDynamicAltAttributes() // call the dynamic alt attribute function
 
+  useEffect(() => {
+    comparisonData
+      .get('/Compare')
+      .then(res => {
+        setLeftState(res.data)
+        console.log(res.data)
+      })
+      .catch(error => {
+        console.error(error)
+      })
+  }, [])
+
   return (
     <>
       <div className='comparisonContainer'>
@@ -75,7 +87,8 @@ export default function compare(
                 <img src={leftState.flag} />
               </a>
             </div>
-            {countryDropdown()}
+            <CountryDropdown />
+
             {/* injects the country dropdown component to left side */}
           </div>
         </div>
@@ -91,7 +104,7 @@ export default function compare(
                 <img src={rightState.flag} />
               </a>
             </div>
-            {countryDropdown()}
+            <CountryDropdown />
             {/* injects the country dropdown component to right side */}
           </div>
         </div>
