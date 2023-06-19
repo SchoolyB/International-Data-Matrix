@@ -7,6 +7,7 @@ import getCountryTopic from '../../includes/countryTopicImports/countryTopics'
 import MarkdownIt from 'markdown-it'
 import PageNotFound from '../[...pathname]'
 import download from '../../../assets/downloadBtn.png'
+import jsonBtn from '../../../assets/jsonBtn.png'
 
 // USING VITE'S GLOB METHOD TO STORE IMAGES FROM FOLDERS INTO VARIABLES
 const simpleCountryMaps = import.meta.glob('../../../assets/simpleMaps/*.png', {
@@ -237,9 +238,13 @@ export default function countryPage(
         <div className='downloadBtnContainer'>
           <a>
 	    {/* onClick event handler opens browser print dialog */}
-            <img onClick={print} id='downloadBtn' src={download} alt='Download Button' />
+            <img onClick={print} className='downloadBtn' src={download} alt='Download Button' />
           </a>
+          <a href = {`https://schoolyb.github.io/v1/data/country/${id}.json`}>
+          <img src={jsonBtn} alt='JSON Button' className='jsonBtn' />
+        </a>
         </div>
+        
       </div>
 
       {/* END OF META DATA CONTAINER TEXT */}
