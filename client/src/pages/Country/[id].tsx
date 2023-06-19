@@ -165,34 +165,34 @@ export default function countryPage(
         {/* region & sub region information */}
         <div className='genInfoRegionAndSubregion metaDataSection'>
           <div className='region'>
-            <h6>Region</h6> <u>{state.region}</u>
+            <h6>Region</h6> {state.region}
           </div>
           <div className='subregion'>
-            <h6>Subregion</h6> <u>{state.subregion}</u>
+            <h6>Subregion</h6> {state.subregion}
           </div>
         </div>
 
         {/* population information */}
         <div className='genInfoPopulation metaDataSection'>
           <h6>Population</h6>
-          Approx.<u>{state.population}</u>
+          Approx.{state.population}
         </div>
 
         {/* demonym information */}
         <div className='genInfoDemonym metaDataSection'>
           <h6>Demonym</h6>
-          <u>{state.demonym}</u>
+          {state.demonym}
         </div>
 
         {/* iso code information */}
         <div className='genInfoISOCodes metaDataSection'>
           <div className='alpha2Code'>
             <h6>ISO 2 Code</h6>
-            <u>{state.alpha2Code}</u>
+            {state.alpha2Code}
           </div>
           <div className='alpha3Code'>
             <h6>ISO 3 Code</h6>
-            <u>{state.alpha3Code}</u>
+            {state.alpha3Code}
           </div>
         </div>
 
@@ -204,15 +204,15 @@ export default function countryPage(
         <div className='genInfoCurrency metaDataSection'>
           <div className='currencyName'>
             <h6>Currency Name</h6>
-            <u>{currencyInfo?.name}</u>
+            {currencyInfo?.name}
           </div>
           <div className='currencySymbol'>
             <h6>Currency Symbol</h6>
-            <u>{currencyInfo?.symbol}</u>
+            {currencyInfo?.symbol}
           </div>
           <div className='currencyCode'>
             <h6>Currency Code</h6>
-            <u>{currencyInfo?.code}</u>
+            {currencyInfo?.code}
           </div>
         </div>
 
