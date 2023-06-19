@@ -40,23 +40,22 @@ export default function CountryWeather(props: Props) {
     <div className='genInfoLocationAndWeather metaDataSection'>
       <div className='capital'>
         <h6>Capital</h6>
-        <u>{props.capital}</u>
+        {props.capital}
       </div>
       <br />
       {/* start of location information */}
       <div className='location'>
         <h6>Location of Capital</h6>
-        Latitude:<u>{weather.lat}</u> Longitude: <u>{weather.lon}</u>
+        Latitude:{weather.lat} Longitude: {weather.lon}
       </div>
       <br />
       {/* start of weather information */}
       <div className='weather'>
-        <h6>Current Weather {props.capital}</h6>
-        {/* {weather.main} */}
-        {/* <br /> */}
-        Currently <u>{weather.temp}°F</u>
+        <h6>Current Weather In {props.capital}</h6>
+        
+        Currently {weather.temp}°F
         <br />
-        Feels like <u>{weather.feels_like}°F</u>
+        Feels like {weather.feels_like}°F
       </div>
     </div>
   )
