@@ -51,9 +51,8 @@ export default function CountryWeather(props: Props) {
       <br />
       {/* start of weather information */}
       <div className='weather'>
-        <h6>Current Weather {props.capital}</h6>
-        {/* {weather.main} */}
-        {/* <br /> */}
+        <h6>Current Weather In {props.capital}</h6>
+        
         Currently {weather.temp}°F
         <br />
         Feels like {weather.feels_like}°F
