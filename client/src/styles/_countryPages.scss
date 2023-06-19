@@ -97,6 +97,7 @@ border-bottom: .2em solid black;
   }
   .countryInfo {
     width: 100%;
+    font-size: .8em;
   }
   .countryFlagsAndMaps{
     width: 100%;
@@ -106,6 +107,23 @@ border-bottom: .2em solid black;
   }
 }
 
+
+@media only screen and (max-width: 600px) {
+  .metaDataContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+  .countryInfo {
+    width: 100%;
+    font-size: .8em;
+  }
+  .countryFlagsAndMaps{
+    width: 100%;
+  }
+  .topic{
+    width: 100%;
+  }
+}
 .downloadBtnContainer{
   text-align: center;
   margin: auto;
