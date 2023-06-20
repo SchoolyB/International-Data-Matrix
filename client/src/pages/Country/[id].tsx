@@ -20,11 +20,11 @@ const locatorCountryMap = import.meta.glob(
     eager: true,
   },
 )
-
-export default function countryPage(
-  simpleMapAlter: string | undefined,
-  locatorMapAlter: string | undefined,
-) {
+type Props = {
+  simpleMapAlter: string | undefined
+  locatorMapAlter: string | undefined
+}
+export default function countryPage(props: Props) {
   const { id } = useParams<{ id: string }>()
   const md = new MarkdownIt()
   const [state, setState] = useState<CountryData>({
@@ -81,17 +81,18 @@ export default function countryPage(
     fetchData()
   }, [fetchData])
 
+  // destructuring the props object
+  const { simpleMapAlter, locatorMapAlter } = props
+
   // A function that dynamically generates all the alt attributes of images on a country page
   const setDynamicAltAttributes = () => {
     const newSimpleMap = document.getElementById('simpleMap')
     if (newSimpleMap != null) {
       newSimpleMap.setAttribute('alt', `A map of ${state.name}`)
-      const MapAlter: any = newSimpleMap.attributes[1]
     }
     const newLocatorMap = document.getElementById('locatorMap')
     if (newLocatorMap != null) {
       newLocatorMap.setAttribute('alt', `A locator map of ${state.name}`)
-      const locatorMapAlter: any = newLocatorMap.attributes[1]
     }
   }
   setDynamicAltAttributes()
@@ -125,8 +126,6 @@ export default function countryPage(
 
   // extracts the object from the currency array
   const currencyInfo = state.currencies[0]
-  // extract key value from flags obj
-  const flagsInfo = state.flags.svg
   // set 'alt' attribute for each flag
   const flagAltValue = `The Flag of ${state.name}`
 
@@ -220,6 +219,7 @@ export default function countryPage(
         {/* start of timezone information */}
         <div className='genInfoTimezones metaDataSection'>
           <h6>Timezones</h6>
+
           <li className='timeZoneListItem'>{state.timezones[0]}</li>
           <li className='timeZoneListItem'>{state.timezones[1]}</li>
           <li className='timeZoneListItem'>{state.timezones[2]}</li>
@@ -237,14 +237,18 @@ export default function countryPage(
 
         <div className='downloadBtnContainer'>
           <a>
-	    {/* onClick event handler opens browser print dialog */}
-            <img onClick={print} className='downloadBtn' src={download} alt='Download Button' />
+            {/* onClick event handler opens browser print dialog */}
+            <img
+              onClick={print}
+              className='downloadBtn'
+              src={download}
+              alt='Download Button'
+            />
           </a>
-          <a href = {`https://schoolyb.github.io/v1/data/country/${id}.json`}>
-          <img src={jsonBtn} alt='JSON Button' className='jsonBtn' />
-        </a>
+          <a href={`https://schoolyb.github.io/v1/data/country/${id}.json`}>
+            <img src={jsonBtn} alt='JSON Button' className='jsonBtn' />
+          </a>
         </div>
-        
       </div>
 
       {/* END OF META DATA CONTAINER TEXT */}
