@@ -1,18 +1,24 @@
+#countryEnglishName {
+  margin-top: .6em;
+  // margin-bottom: 1em;
+  letter-spacing: .04em;
+  font-size: 5em;
+}
+
 .countryInfo {
   text-align: center;
   color: black;
-  background-color: #89939E;
+  margin-bottom: 2.5em;
   border-top: .2em solid black;
-  border-bottom: .2em solid black;
 
 }
 
-.countryInfo>h1 {
-  font-size: 3.5em;
-}
+
 
 #countryInfoFlag {
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  
 }
 
 .topic {
@@ -22,9 +28,11 @@
   padding-bottom: 2px;
   word-wrap: break-word;
   margin-top: 2em;
+
 }
 .topic>h3 {
-  font-size: 40px;
+  font-size: 3.5em;
+  margin-bottom: .5em;
 
 }
 
@@ -41,10 +49,12 @@ color: black;
   display: flex;
   background-color: #89939E;
   flex-direction: column;
-  width: 25.5%;
+  width: 20%;
   float: right;
   border-radius: 25px;
   margin-right: .5em;
+  border: .5em solid black;
+  
 }
 
 .overallCountryInfoContainer {
@@ -85,11 +95,12 @@ border-bottom: .2em solid black;
 
 @media only screen and (max-width: 1000px) {
   .metaDataContainer {
-    width: 100%;
+    width: 25%;
     margin-right: 0;
   }
   .countryInfo {
     width: 100%;
+    font-size: .8em;
   }
   .countryFlagsAndMaps{
     width: 100%;
@@ -99,6 +110,23 @@ border-bottom: .2em solid black;
   }
 }
 
+
+@media only screen and (max-width: 600px) {
+  .metaDataContainer {
+    width: 100%;
+    margin-right: 0;
+  }
+  .countryInfo {
+    width: 100%;
+    font-size: .8em;
+  }
+  .countryFlagsAndMaps{
+    width: 100%;
+  }
+  .topic{
+    width: 100%;
+  }
+}
 .downloadBtnContainer{
   text-align: center;
   margin: auto;
@@ -107,19 +135,30 @@ border-bottom: .2em solid black;
   margin: auto;
 }
 
-#downloadBtn{
+.downloadBtn{
   cursor: pointer;
   width: 5%;
   height:auto;
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
-  
-  animation: downloadBtnShakeAnimation 1s infinite;
+  margin-right: 1em;
+  animation: downloadAndJsonAnimation 1s infinite;
 
 }
+.jsonBtn{
+  cursor: pointer;
+  width: 7%;
+  height:auto;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+  animation: downloadAndJsonAnimation 1s infinite;
+}
 
-@keyframes downloadBtnShakeAnimation {
+
+@keyframes downloadAndJsonAnimation {
   0% {
     transform: translateX(0)
   }
