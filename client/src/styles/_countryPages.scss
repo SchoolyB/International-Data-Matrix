@@ -1,115 +1,92 @@
+.overallCountryInfoContainer {
+  padding: 2rem 0;
+}
+
+.country-grid {
+  display: grid;
+  width: calc(100% - 2em);
+}
+
 #countryEnglishName {
-  margin-top: .6em;
-  // margin-bottom: 1em;
-  letter-spacing: .04em;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.04em;
   font-size: 5em;
 }
 
 .countryInfo {
   text-align: center;
   color: black;
-  margin-bottom: 2.5em;
-  border-top: .2em solid black;
-
-}
-
-
-
-#countryInfoFlag {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  
+  margin-bottom: 0.4em;
 }
 
 .topic {
   color: black;
   text-align: left;
-  width: 70%;
+
   padding-bottom: 2px;
   word-wrap: break-word;
   margin-top: 2em;
-
-}
-.topic>h3 {
-  font-size: 3.5em;
-  margin-bottom: .5em;
-
 }
 
-.topic>p {
+.topic > h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.topic > p {
   font-size: 16px;
   white-space: pre-wrap;
 }
 
-
-
 .metaDataContainer {
-  position: relative;
-color: black;
+  color: black;
   display: flex;
-  background-color: #89939E;
+  // background-color: rgb(201, 201, 201);
   flex-direction: column;
-  width: 20%;
-  float: right;
-  border-radius: 25px;
-  margin-right: .5em;
-  border: .5em solid black;
-  
+  border: 0.5em solid rgb(201, 201, 201);
+
+  .countryFlagsAndMaps {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+
+    figure {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .overallCountryInfoContainer {
   background-color: white;
-
 }
-
 
 u {
   font-size: 1.2em;
 }
 
-.countryFlagsAndMaps{
-
-  display: flex;
-  background-color: white;
-  flex-direction: column;
-  border-radius: 25px;
+.timeZoneList {
+  list-style: none;
+  text-align: center;
 }
 
-
-.timeZoneList{
-list-style: none;  
-text-align: center;
-}
-
-.timeZoneListItem{
+.timeZoneListItem {
   font-size: 1.2em;
   margin: auto;
   text-align: center;
   list-style: none;
 }
 
-.metaDataSection{
-text-align: center;
-border-bottom: .2em solid black;
+#metaDataSection {
+  // text-align: center;
+  border-bottom: 0.2em solid black;
 }
-
-@media only screen and (max-width: 1000px) {
-  .metaDataContainer {
-    width: 25%;
-    margin-right: 0;
-  }
-  .countryInfo {
-    width: 100%;
-    font-size: .8em;
-  }
-  .countryFlagsAndMaps{
-    width: 100%;
-  }
-  .topic{
-    width: 100%;
-  }
-}
-
 
 @media only screen and (max-width: 600px) {
   .metaDataContainer {
@@ -118,64 +95,84 @@ border-bottom: .2em solid black;
   }
   .countryInfo {
     width: 100%;
-    font-size: .8em;
+    font-size: 0.8em;
   }
-  .countryFlagsAndMaps{
+  .countryFlagsAndMaps {
     width: 100%;
   }
-  .topic{
+  .topic {
     width: 100%;
   }
 }
-.downloadBtnContainer{
+.downloadBtnContainer {
   text-align: center;
   margin: auto;
 }
-.timeZoneListItem{
+.timeZoneListItem {
   margin: auto;
 }
 
-.downloadBtn{
+.downloadBtn {
   cursor: pointer;
   width: 5%;
-  height:auto;
+  height: auto;
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-right: 1em;
   animation: downloadAndJsonAnimation 1s infinite;
-
 }
-.jsonBtn{
+.jsonBtn {
   cursor: pointer;
   width: 7%;
-  height:auto;
+  height: auto;
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
-  
+
   animation: downloadAndJsonAnimation 1s infinite;
 }
 
-
 @keyframes downloadAndJsonAnimation {
   0% {
-    transform: translateX(0)
+    transform: translateX(0);
   }
 
   25% {
-    transform: translateX(1px)
+    transform: translateX(1px);
   }
 
   50% {
-    transform: translateX(-2px)
+    transform: translateX(-2px);
   }
 
   75% {
-    transform: translateX(2px)
+    transform: translateX(2px);
   }
 
   100% {
-    transform: translateX(0)
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 600px) {
+  .country-grid {
+    grid-template-columns: 60% 40%;
+    place-items: start start;
+    place-content: start start;
+    gap: 2em;
+  }
+
+  .countryInfo {
+    text-align: left;
+  }
+  .country-details {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .country-grid {
+    grid-template-columns: 70% 30%;
   }
 }
