@@ -23,7 +23,15 @@ export function useCoolerState<Value>(initialValue: Value) {
   }
 }
 
-export const CountryContext = createContext<CountryListData[]>([])
+type ContextType = {
+  countryList: CountryListData[]
+  isLoading: boolean
+}
+
+export const CountryContext = createContext<ContextType>({
+  countryList: [],
+  isLoading: false,
+})
 
 export const SearchContext = createContext<StateRef<string>>({
   value: '',
@@ -36,8 +44,10 @@ export type StateRef<Value> = {
 const App = () => {
   const [countryList, setCountryList] = useState([])
   const search = useCoolerState('')
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    setIsLoading(true)
     countryData
       .get('/Countries')
       .then(res => {
@@ -46,10 +56,11 @@ const App = () => {
       .catch(error => {
         console.error(error)
       })
+    setIsLoading(false)
   }, [])
 
   return (
-    <CountryContext.Provider value={countryList}>
+    <CountryContext.Provider value={{ countryList, isLoading }}>
       <SearchContext.Provider value={search}>
         <Header />
         {useRoutes(routes)}

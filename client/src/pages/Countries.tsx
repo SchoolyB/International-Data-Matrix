@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { CountryContext, SearchContext } from '../App'
 import home from '../../assets/footerIcons/home.png'
 import contact from '../../assets/footerIcons/contact.png'
@@ -8,8 +8,16 @@ import map from '../../assets/footerIcons/map.png'
 import faq from '../../assets/footerIcons/faq.png'
 
 export default function Countries() {
-  const countryList = useContext(CountryContext)
+  const { countryList, isLoading } = useContext(CountryContext)
   const search = useContext(SearchContext)
+
+  if (isLoading) {
+    return (
+      <div id='loader'>
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
 
   const countryElement = countryList
     .filter(country => {
