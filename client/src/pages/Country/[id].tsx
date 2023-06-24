@@ -36,7 +36,7 @@ export default function countryPage(props: Props) {
     subregion: '',
     capital: '',
     population: 0,
-    timezones: '',
+    timezones: [],
     demonym: '',
     currencies: [],
     flags: {
@@ -129,9 +129,15 @@ export default function countryPage(props: Props) {
   // set 'alt' attribute for each flag
   const flagAltValue = `The Flag of ${state.name}`
 
+  // this is the list of timezones
+  const listTimezones = state.timezones.map(timezone => {
+    return <li className='timeZoneListItem'>{timezone}</li>
+  })
+
   // if there is an error when trying to go to load
   // data for a country  that does not exist,
   // return the PageNotFound component
+
   if (error) {
     return <PageNotFound />
   }
@@ -219,20 +225,7 @@ export default function countryPage(props: Props) {
         {/* start of timezone information */}
         <div className='genInfoTimezones metaDataSection'>
           <h6>Timezones</h6>
-
-          <li className='timeZoneListItem'>{state.timezones[0]}</li>
-          <li className='timeZoneListItem'>{state.timezones[1]}</li>
-          <li className='timeZoneListItem'>{state.timezones[2]}</li>
-          <li className='timeZoneListItem'>{state.timezones[3]}</li>
-          <li className='timeZoneListItem'>{state.timezones[4]}</li>
-          <li className='timeZoneListItem'>{state.timezones[5]}</li>
-          <li className='timeZoneListItem'>{state.timezones[6]}</li>
-          <li className='timeZoneListItem'>{state.timezones[7]}</li>
-          <li className='timeZoneListItem'>{state.timezones[8]}</li>
-          <li className='timeZoneListItem'>{state.timezones[9]}</li>
-          <li className='timeZoneListItem'>{state.timezones[10]}</li>
-          <li className='timeZoneListItem'>{state.timezones[11]}</li>
-          <li className='timeZoneListItem'>{state.timezones[12]}</li>
+          {listTimezones}
         </div>
 
         <div className='downloadBtnContainer'>
