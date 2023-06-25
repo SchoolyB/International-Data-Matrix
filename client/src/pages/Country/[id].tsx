@@ -174,7 +174,7 @@ export default function countryPage(props: Props) {
         {/* Alternate names information */}
 
         <div className='genInfoAltSpellings metaDataSection'>
-          <h6>Alternate Names</h6>
+          <h6>Names, Spellings, and Abbreviations</h6>
           {listAltSpellings}
         </div>
 
