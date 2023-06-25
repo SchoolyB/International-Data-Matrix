@@ -1,0 +1,57 @@
+.comparisonContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  justify-content: space-evenly;
+  margin-top: 10em;
+}
+
+// for statsContainer within the comparisonContainer
+.statsOverallContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2.5em;
+  background-color: white;
+}
+
+// LEFT SIDE country heading within the statsContainer
+.leftCountryHeading{
+  text-align: center;
+}
+
+
+
+// RIGHT country heading within the statsContainer
+.rightCountryHeading{
+  text-align: center;
+}
+
+
+// applies to both country dropdowns 
+.countryDropdown{
+  color: black;
+  text-align: center;
+}
+
+
+.stat{
+  font-size: 1.5em;
+  line-height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comparisonTextArea{
+  width: 100%;
+  height: 1em;
+  overflow: hidden;
+  resize: none;
+  text-align: center;
+  color: black;
+}
+

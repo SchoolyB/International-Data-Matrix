@@ -1,4 +1,4 @@
-export interface CountryComparison {
+export interface comparisonListData {
   name: string // name of country
   flag: string // url of flag
   flagAlt: string // alt text for flag

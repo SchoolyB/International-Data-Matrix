@@ -8,6 +8,7 @@
 @import 'pageNotFound';
 @import 'map';
 @import 'faq';
+@import 'compare';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -95,4 +96,10 @@ footer>ul {
   flex-direction: row;
   justify-content: center;
   gap: .5rem;
+}
+
+#compareIcon{
+  width: 1.8rem;
+  height: 1.8rem;
+  // margin-top: .5rem;
 }
