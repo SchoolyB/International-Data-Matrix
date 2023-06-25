@@ -29,7 +29,6 @@ export default function countryPage(props: Props) {
   const md = new MarkdownIt()
   const [state, setState] = useState<CountryData>({
     name: '',
-    nativeName: '',
     region: '',
     alpha2Code: 0,
     alpha3Code: 0,
@@ -43,6 +42,7 @@ export default function countryPage(props: Props) {
       svg: '',
       png: '',
     },
+    altSpellings: [],
     //population has a '?' so its not required
   })
 
@@ -134,6 +134,10 @@ export default function countryPage(props: Props) {
     return <li className='timeZoneListItem'>{timezone}</li>
   })
 
+  const listAltSpellings = state.altSpellings.map(altSpelling => {
+    return <p className='altSpellingsListItem'>{altSpelling}</p>
+  })
+
   // if there is an error when trying to go to load
   // data for a country  that does not exist,
   // return the PageNotFound component
@@ -147,7 +151,6 @@ export default function countryPage(props: Props) {
     <div className='overallCountryInfoContainer'>
       <div className='countryInfo'>
         <h1 id='countryEnglishName'>{state.name}</h1>
-        <h4 id='countryNativeName'>{state.nativeName}</h4>
       </div>
 
       {/* Start of information right side of screen */}
@@ -167,6 +170,13 @@ export default function countryPage(props: Props) {
         </div>
 
         {/* START OF META DATA CONTAINER TEXT */}
+
+        {/* Alternate names information */}
+
+        <div className='genInfoAltSpellings metaDataSection'>
+          <h6>Alternate Names</h6>
+          {listAltSpellings}
+        </div>
 
         {/* region & sub region information */}
         <div className='genInfoRegionAndSubregion metaDataSection'>

@@ -5,7 +5,6 @@ export interface CountryData {
   name: string
   alpha2Code: number
   alpha3Code: number
-  nativeName: string
   region: string
   subregion: string
   capital: string
@@ -14,4 +13,5 @@ export interface CountryData {
   demonym: string
   currencies: Array<countryCurrencyData>
   flags: { svg: string; png: string }
+  altSpellings: []
 }
