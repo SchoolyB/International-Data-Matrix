@@ -783,14 +783,14 @@
     fastify-plugin "^4.0.0"
     mongodb "^5.0.0"
 
-"@fastify/rate-limit@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@fastify/rate-limit/-/rate-limit-8.0.0.tgz#81cacb05ef75a21e9c87f7b71fe967cc64e84398"
-  integrity sha512-73pQFgpx6RMmY5nriYQW0AIATZpa/OAvWa5PQ9JHEqgjKMLNv9zLAphWIRh5914aN6sqtv8sLICr3Tp1NbXQIQ==
+"@fastify/rate-limit@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@fastify/rate-limit/-/rate-limit-8.0.2.tgz#4b392119cb61d8cdf3fe0d88a071217e63c41832"
+  integrity sha512-qJ556TLhihlRsU4DQmGWmG4otP7mLTfdknpv8cQAmlzVw/CCIpSEcaFi3ABsr2Bc+NJdO0fPcTiale0299AZbw==
   dependencies:
     fastify-plugin "^4.0.0"
     ms "^2.1.3"
-    tiny-lru "^10.0.0"
+    tiny-lru "^11.0.0"
 
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.1.1"
@@ -2136,12 +2136,7 @@ thread-stream@^2.0.0:
   dependencies:
     real-require "^0.2.0"
 
-tiny-lru@^10.0.0:
-  version "10.4.1"
-  resolved "https://registry.yarnpkg.com/tiny-lru/-/tiny-lru-10.4.1.tgz#dec67a62115a4cb31d2065b8116d010daac362fe"
-  integrity sha512-buLIzw7ppqymuO3pt10jHk/6QMeZLbidihMQU+N6sogF6EnBzG0qtDWIHuhw1x3dyNgVL/KTGIZsTK81+yCzLg==
-
-tiny-lru@^11.0.1:
+tiny-lru@^11.0.0, tiny-lru@^11.0.1:
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/tiny-lru/-/tiny-lru-11.0.1.tgz#629d6ddd88bd03c0929722680167f1feadf576f2"
   integrity sha512-iNgFugVuQgBKrqeO/mpiTTgmBsTP0WL6yeuLfLs/Ctf0pI/ixGqIRm8sDCwMcXGe9WWvt2sGXI5mNqZbValmJg==
