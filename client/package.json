@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.18.1",
+    "@react-google-maps/api": "^2.19.2",
     "@vercel/analytics": "^1.0.0",
     "axios": "^1.2.3",
     "dotenv": "^16.1.3",
