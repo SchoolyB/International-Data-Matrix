@@ -4,20 +4,20 @@ updates:
   - package-ecosystem: npm
     directory: '/client'
     schedule:
-      interval: daily
+      interval: monthly
       time: '00:00'
     open-pull-requests-limit: 10
 
   - package-ecosystem: npm
     directory: '/server'
     schedule:
-      interval: daily
+      interval: monthly
       time: '00:00'
     open-pull-requests-limit: 10
   # Added to see if directory needs to be root
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: daily
+      interval: monthly
       time: '00:00'
     open-pull-requests-limit: 10
