@@ -4,7 +4,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.13",
     "@types/node": "^20.2.5",
-    "typescript": "5.1.3"
+    "typescript": "5.2.2"
   },
   "nodemonConfig": {
     "exec": "ts-node src/app.ts",
